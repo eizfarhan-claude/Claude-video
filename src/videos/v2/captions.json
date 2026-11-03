@@ -1,5 +1,11 @@
 [
 {
+"text": "Nak",
+"start": 0,
+"end": 0.16,
+"section": "hook"
+},
+{
 "text": "pergi",
 "start": 0.16,
 "end": 0.38,
@@ -126,15 +132,21 @@
 "section": "hook"
 },
 {
-"text": "keadaan",
+"text": "kaedah",
 "start": 7.52,
 "end": 8.08,
 "section": "hook"
 },
 {
-"text": "simpel.",
+"text": "simpanan emas.",
 "start": 8.08,
 "end": 8.46,
+"section": "hook"
+},
+{
+"text": "Kalau",
+"start": 8.5,
+"end": 9.24,
 "section": "hook"
 },
 {
@@ -192,7 +204,7 @@
 "section": "problem"
 },
 {
-"text": "tergunung",
+"text": "terguna",
 "start": 12.62,
 "end": 13.12,
 "section": "problem"
@@ -243,6 +255,12 @@
 "text": "lain?",
 "start": 15.3,
 "end": 15.74,
+"section": "problem"
+},
+{
+"text": "Simpan",
+"start": 16.04,
+"end": 16.46,
 "section": "problem"
 },
 {
@@ -376,6 +394,12 @@
 "start": 23.4,
 "end": 24.12,
 "section": "problem"
+},
+{
+"text": "Jadi",
+"start": 24.54,
+"end": 24.64,
+"section": "steps"
 },
 {
 "text": "apa",
@@ -540,6 +564,12 @@
 "section": "steps"
 },
 {
+"text": "1",
+"start": 34.44,
+"end": 34.74,
+"section": "steps"
+},
+{
 "text": "gram,",
 "start": 34.74,
 "end": 35.06,
@@ -600,13 +630,13 @@
 "section": "step3"
 },
 {
-"text": "Auto",
+"text": "auto",
 "start": 38.64,
 "end": 38.94,
 "section": "step3"
 },
 {
-"text": "Debit",
+"text": "debit",
 "start": 38.94,
 "end": 39.38,
 "section": "step3"
@@ -699,6 +729,12 @@
 "text": "bulan.",
 "start": 46.7,
 "end": 47.0,
+"section": "step3"
+},
+{
+"text": "Dan",
+"start": 47.28,
+"end": 47.42,
 "section": "step3"
 },
 {
@@ -816,14 +852,8 @@
 "section": "step4"
 },
 {
-"text": "masing",
+"text": "masing-masing,",
 "start": 55.38,
-"end": 55.64,
-"section": "step4"
-},
-{
-"text": "-masing,",
-"start": 55.64,
 "end": 55.94,
 "section": "step4"
 },
@@ -897,6 +927,12 @@
 "text": "ini.",
 "start": 60.7,
 "end": 60.86,
+"section": "step4"
+},
+{
+"text": "Sebagai",
+"start": 61.26,
+"end": 61.78,
 "section": "step4"
 },
 {
@@ -1062,6 +1098,12 @@
 "section": "cta"
 },
 {
+"text": "isi",
+"start": 71.22,
+"end": 71.52,
+"section": "cta"
+},
+{
 "text": "beg",
 "start": 71.52,
 "end": 71.62,
@@ -1152,14 +1194,8 @@
 "section": "cta"
 },
 {
-"text": "masing",
+"text": "masing-masing.",
 "start": 76.62,
-"end": 77.36,
-"section": "cta"
-},
-{
-"text": "-masing.",
-"start": 77.36,
 "end": 77.68,
 "section": "cta"
 }

@@ -31,8 +31,9 @@ for vid in sys.argv[1:]:
         for s in segs:
             for wd in s.words:
                 txt = wd.word.strip(); st = wd.start - 0.4 + t0; en = wd.end - 0.4 + t0
-                if not txt or st < t0 - 0.2 or st > t1: continue
-                if words and txt[:1] in '.,-' and len(txt) > 1 and txt[1].isdigit():
+                if not txt or st > t1: continue
+                st = max(st, t0); en = max(en, st + 0.05)
+                if words and txt[:1] in '.,-' and len(txt) > 1 and (txt[1].isdigit() or txt[0] == '-'):
                     words[-1]['text'] += txt; words[-1]['end'] = round(en, 3); continue
                 sec = next((sp[2] for sp in spans if sp[0] <= (st + en) / 2 < sp[1]), spans[-1][2])
                 words.append({'text': txt, 'start': round(max(0, st), 3), 'end': round(en, 3), 'section': sec})
