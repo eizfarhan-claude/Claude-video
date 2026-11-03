@@ -59,6 +59,26 @@ export const IconWarn: React.FC<IP> = ({size = 64}) => (
   </svg>
 );
 
+export const IconChartDown: React.FC<IP> = ({size = 64}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill="none" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6 6v52h52" stroke="rgba(255,255,255,0.7)" strokeWidth="4" />
+    <path d="M12 16l12 12 9-6 12 16 9 6" stroke="#E5484D" strokeWidth="6" />
+    <path d="M46 46h10V36" stroke="#E5484D" strokeWidth="6" />
+  </svg>
+);
+export const IconChat: React.FC<IP> = ({size = 64, color = 'white'}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill={color}>
+    <path d="M8 8h48a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H26L14 58V46H8a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z" />
+    <circle cx="20" cy="27" r="4" fill="#111" /><circle cx="32" cy="27" r="4" fill="#111" /><circle cx="44" cy="27" r="4" fill="#111" />
+  </svg>
+);
+export const IconStore: React.FC<IP> = ({size = 64, color = 'white'}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill={color}>
+    <path d="M6 22l6-14h40l6 14z" /><rect x="10" y="26" width="44" height="32" rx="2" />
+    <rect x="26" y="38" width="12" height="20" fill="#111" />
+  </svg>
+);
+
 /* ---------- generic cards (each lives in its own <Sequence>, times are local frames) ---------- */
 
 /** icon + small label + big line (gold or white), optional sub-line popping in at `subAt` */

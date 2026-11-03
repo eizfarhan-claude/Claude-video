@@ -1,0 +1,22 @@
+{
+ "id": "v4",
+ "title": "Tunggu Harga Emas Paling Rendah?",
+ "snap": 0.2,
+ "ranges": [
+  ["hook",     13.10,  18.45],
+  ["context",   0.95,  12.45],
+  ["answer",   25.00,  39.45],
+  ["serbu",    55.10,  62.75],
+  ["whynot",   63.00,  79.35],
+  ["grab",     79.40,  93.25],
+  ["better",   98.80, 104.02],
+  ["offer",   115.30, 127.85],
+  ["gap",     127.95, 138.30]
+ ],
+ "cuts": [
+  [65.40, 68.50],
+  [84.70, 88.65]
+ ],
+ "fix": {"sebu?": "serbu?", "minimal,": "minimum,", "merujukkan": "mewujudkan", "puan": "tuan"},
+ "drop": []
+}

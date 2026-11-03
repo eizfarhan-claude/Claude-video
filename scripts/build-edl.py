@@ -25,6 +25,23 @@ FIX = cfg.get("fix", {})
 DROP = {(round(s, 2), w) for s, w in cfg.get("drop", [])}
 sil = [tuple(map(float, l.split())) for l in open(D / "silences.txt") if l.strip()]
 
+# Optional: snap every range/cut boundary to the quietest 20ms within ±SNAP s (avoids clipping words)
+SNAP = cfg.get("snap", 0)
+if SNAP:
+    import wave, numpy as np
+    wf = wave.open(str(ROOT / "public" / VID / "source" / "voice.wav")); sr = wf.getframerate()
+    audio = np.frombuffer(wf.readframes(wf.getnframes()), np.int16).astype(np.float32) / 32768
+    def snap(t):
+        best, bt = 1e9, t
+        for c in np.arange(t - SNAP, t + SNAP + 1e-6, 0.01):
+            i = int(c * sr); seg = audio[max(0, i - int(0.01 * sr)): i + int(0.01 * sr)]
+            if len(seg) == 0: continue
+            e = float(np.sqrt(np.mean(seg ** 2))) * (1 + 0.15 * abs(c - t) / SNAP)  # prefer staying close
+            if e < best: best, bt = e, float(c)
+        return round(bt, 3)
+    RANGES = [(n, snap(a), snap(b)) for n, a, b in RANGES]
+    CUTS = [(snap(a), snap(b)) for a, b in CUTS]
+
 clips = []
 for name, a, b in RANGES:
     cur = a
