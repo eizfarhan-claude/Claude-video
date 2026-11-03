@@ -1,5 +1,5 @@
 export const FPS = 30;
-export const TAIL = 18; // short hold after last word
+export const TAIL = 24; // short hold after last word
 export const sec = (s: number) => Math.round(s * FPS);
 export type Word = {text: string; start: number; end: number; section: string};
 export type Clip = {section: string; srcFrom: number; durationInFrames: number; outFrom: number};

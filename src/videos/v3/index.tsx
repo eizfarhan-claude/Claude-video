@@ -102,6 +102,7 @@ const ITEMS: GItem[] = [
 ];
 
 const BROLL = [
+  {file: 'shared/broll/goldhand.mp4', from: M.d2 - 0.3, to: M.result - 0.1, srcStart: 2.0},
   {file: 'v1/broll/sand.mp4', from: M.g2125 - 0.1, to: E('step2') + 0.1, srcStart: 0.6},
   {file: 'v1/broll/coin.mp4', from: M.final - 0.1, to: E('cta') + 0.4, srcStart: 9.3},
 ];

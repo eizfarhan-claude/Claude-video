@@ -280,3 +280,31 @@ export const BRollTrack: React.FC<{cuts: BCut[]}> = ({cuts}) => (
     })}
   </AbsoluteFill>
 );
+
+/** Full-frame cutaway of a still (e.g. a news screenshot): blurred backdrop + framed image, slow push-in. */
+export const ImageCut: React.FC<{src: string; from: number; to: number; source?: string}> = ({src, from, to, source}) => {
+  const f0 = sec(from);
+  const dur = sec(to) - f0;
+  return (
+    <Sequence from={f0} durationInFrames={dur} layout="none">
+      <ImageCutInner src={src} dur={dur} source={source} />
+    </Sequence>
+  );
+};
+const ImageCutInner: React.FC<{src: string; dur: number; source?: string}> = ({src, dur, source}) => {
+  const f = useCurrentFrame();
+  const opacity = interpolate(f, [0, 5, dur - 5, dur], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const pop = interpolate(f, [0, 10], [0.9, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.back(1.6))});
+  const push = interpolate(f, [0, dur], [1, 1.06]);
+  return (
+    <AbsoluteFill style={{opacity}}>
+      <AbsoluteFill style={{backgroundImage: `url(${staticFile(src)})`, backgroundSize: 'cover', backgroundPosition: 'center', filter: 'blur(36px) brightness(0.45)', transform: 'scale(1.2)'}} />
+      <div style={{position: 'absolute', left: 90, width: 900, top: 500, transform: `scale(${pop * push})`, transformOrigin: '50% 30%'}}>
+        <img src={staticFile(src)} style={{width: '100%', borderRadius: 24, boxShadow: '0 30px 80px rgba(0,0,0,0.6)', border: '4px solid rgba(255,255,255,0.9)'}} />
+        {source && (
+          <div style={{marginTop: 14, fontFamily: FONT2, fontWeight: 700, fontSize: 26, color: 'rgba(255,255,255,0.8)', textAlign: 'right'}}>{source}</div>
+        )}
+      </div>
+    </AbsoluteFill>
+  );
+};

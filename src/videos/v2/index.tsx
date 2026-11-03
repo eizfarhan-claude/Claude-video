@@ -73,6 +73,7 @@ const ITEMS: GItem[] = [
 ];
 
 const BROLL = [
+  {file: 'shared/broll/coins2.mp4', from: M.dinar - 0.1, to: E('problem') + 0.15, srcStart: 1.0},
   {file: 'v1/broll/coin.mp4', from: M.keluarkan - 0.1, to: M.umrah + 0.6, srcStart: 0.3},
 ];
 

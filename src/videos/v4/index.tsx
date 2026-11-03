@@ -3,7 +3,7 @@ import React from 'react';
 import edlJson from './edl.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline} from '../../engine/timeline';
-import {Choices, GItem, IconChartDown, IconChat, IconStore, IconWarn, Schedule, TitleCard} from '../../engine/kit';
+import {BRollTrack, Choices, GItem, IconChartDown, IconChat, IconStore, IconWarn, ImageCut, Schedule, TitleCard} from '../../engine/kit';
 import {IconCoin} from '../../engine/ui';
 
 const tl = makeTimeline(edlJson as Edl);
@@ -19,6 +19,7 @@ const M = {
   diskaun: at('answer', 'diskaun'),
   serbu: S('serbu'),
   ramai: at('serbu', 'ramai'),
+  kedai: at('serbu', 'kedai-kedai'),
   whynot: S('whynot'),
   pakar: at('whynot', 'pakar-pakar'),
   grab: at('grab', 'grab'),
@@ -72,7 +73,18 @@ const ITEMS: GItem[] = [
   )},
 ];
 
-const Overlays: React.FC<{hq: boolean}> = () => <Schedule items={ITEMS} total={tl.total} />;
+const BROLL = [
+  {file: 'shared/broll/coins2.mp4', from: M.grab - 0.1, to: M.lagi - 0.1, srcStart: 4.0},
+  {file: 'shared/broll/goldhand.mp4', from: M.convert - 0.15, to: E('offer') + 0.15, srcStart: 5.0},
+];
+
+const Overlays: React.FC<{hq: boolean}> = () => (
+  <>
+    <BRollTrack cuts={BROLL} />
+    <ImageCut src="shared/broll/news_kosmo.jpg" from={M.kedai - 0.1} to={E('serbu') + 0.1} source="Sumber: Kosmo!, 31 Okt 2026" />
+    <Schedule items={ITEMS} total={tl.total} />
+  </>
+);
 
 const SFX: Sfx[] = [
   {t: M.hook, f: 'whoosh_cine', v: 0.45},
@@ -83,7 +95,10 @@ const SFX: Sfx[] = [
   {t: M.jatuh - 0.15, f: 'pop_hard', v: 0.38},
   {t: M.diskaun, f: 'coins', v: 0.35},
   {t: M.serbu, f: 'whoosh_small', v: 0.3},
+  {t: M.kedai - 0.12, f: 'whoosh_small', v: 0.3},
   {t: M.ramai, f: 'money_bag', v: 0.35},
+  {t: M.grab - 0.12, f: 'whoosh_small', v: 0.28},
+  {t: M.convert - 0.15, f: 'whoosh_small', v: 0.28},
   {t: M.whynot, f: 'whoosh_small', v: 0.3},
   {t: M.pakar, f: 'pop_hard', v: 0.35},
   {t: M.grab, f: 'pop_msg', v: 0.42},
