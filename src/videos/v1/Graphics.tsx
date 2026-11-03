@@ -1,11 +1,11 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, Sequence, useCurrentFrame, Easing} from 'remotion';
 import {at, FPS, sec, sectionEnd} from './timeline';
-import {FONT, FONT2, GOLD_SOLID, GREEN} from './theme';
+import {FONT, FONT2, GOLD_SOLID, GREEN} from '../../engine/theme';
 import {
   Card, GoldText, IconArrowUp, IconBank, IconCard, IconCheck, IconClock, IconCoin, IconPin, IconTarget, IconTruck,
   Label, Shine, TopBand, useEnvelope, usePop,
-} from './ui';
+} from '../../engine/ui';
 
 type Ev = Record<string, number>; // local frame events
 type GP = {dur: number; ev: Ev};

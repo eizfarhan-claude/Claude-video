@@ -1,6 +1,6 @@
 node_modules/
 out/
-public/source/
 public/sfx/
 public/music/
-public/broll/
+public/*/source/
+public/*/broll/

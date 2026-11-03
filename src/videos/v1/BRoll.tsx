@@ -20,7 +20,7 @@ const Clip: React.FC<{c: Cut; dur: number; hq: boolean}> = ({c, dur, hq}) => {
   return (
     <AbsoluteFill style={{opacity}}>
       <AbsoluteFill style={{transform: `scale(${scale})`}}>
-        <OffthreadVideo src={staticFile(hq ? c.file.replace('.mp4', '_4k.mp4') : c.file)} startFrom={sec(c.srcStart)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+        <OffthreadVideo src={staticFile('v1/' + (hq ? c.file.replace('.mp4', '_4k.mp4') : c.file))} startFrom={sec(c.srcStart)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
       </AbsoluteFill>
     </AbsoluteFill>
   );
