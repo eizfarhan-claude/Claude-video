@@ -12,6 +12,8 @@ export const SAFE = {top: 230, bottom: 1920 - 440, left: 70, right: 1080 - 150};
 // Face sits roughly y 500–1120 (head top to chin, incl. zoom) – graphics never go there.
 export const TOP_BAND = {y: 232, h: 250}; // graphics zone above the head
 export const CAPTION_Y = 1250;              // caption zone on the chest, above bottom UI
+// lower graphics zone: on the chest, below the chin (even at max zoom) and above TikTok/IG bottom UI
+export const BOTTOM_BAND = {y: 1195, h: 270};
 
 export const GOLD = 'linear-gradient(180deg,#FFF1B8 0%,#F7D774 35%,#D9A93A 70%,#B07A1F 100%)';
 export const GOLD_SOLID = '#F5C84C';

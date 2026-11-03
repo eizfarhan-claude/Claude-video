@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {createContext, useContext} from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig, Easing} from 'remotion';
-import {FONT, FONT2, GOLD, INK, SAFE, TOP_BAND} from './theme';
+import {BOTTOM_BAND, FONT, FONT2, GOLD, INK, SAFE, TOP_BAND} from './theme';
 
 /** Enter/exit envelope for an overlay living inside a <Sequence>. */
 export const useEnvelope = (duration: number, exitFrames = 8) => {
@@ -23,24 +23,34 @@ export const usePop = (at: number, damping = 12) => {
 };
 
 /** Container centred in the top graphics band (above the head, inside safe zone). */
-export const TopBand: React.FC<{children: React.ReactNode; v: number; y?: number}> = ({children, v, y = 0}) => (
-  <div
-    style={{
-      position: 'absolute',
-      left: SAFE.left,
-      width: SAFE.right - SAFE.left,
-      top: TOP_BAND.y + y,
-      height: TOP_BAND.h,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      opacity: Math.min(1, v * 1.4),
-      transform: `translateY(${(1 - v) * -40}px) scale(${0.85 + 0.15 * v})`,
-    }}
-  >
-    {children}
-  </div>
-);
+/** Which zone a card renders in. Set per scheduled item (see kit Schedule). */
+export type BandPos = 'top' | 'bottom';
+export const BandCtx = createContext<BandPos>('top');
+
+/** Container centred in the graphics band: above the head (top) or on the chest (bottom). Never over the face. */
+export const TopBand: React.FC<{children: React.ReactNode; v: number; y?: number}> = ({children, v, y = 0}) => {
+  const pos = useContext(BandCtx);
+  const band = pos === 'bottom' ? BOTTOM_BAND : TOP_BAND;
+  const dir = pos === 'bottom' ? 1 : -1;
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: SAFE.left,
+        width: SAFE.right - SAFE.left,
+        top: band.y + y,
+        height: band.h,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        opacity: Math.min(1, v * 1.4),
+        transform: `translateY(${(1 - v) * 40 * dir}px) scale(${0.85 + 0.15 * v})`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
 export const Card: React.FC<{children: React.ReactNode; style?: React.CSSProperties}> = ({children, style}) => (
   <div

@@ -64,7 +64,8 @@ def fix_end(b):
         while j < min(n - 3, i + int(LIM / FR)) and not quiet_run(j): j += 1
         if not quiet_run(j):
             j = dip(i); warn.append(f"  ~ end {b:.2f}: connected speech, cut at dip {j * FR:.2f} ({db[j]:.0f}dB)")
-            return j * FR
+            if speech[j]: return j * FR
+            while j > 0 and not speech[j - 1]: j -= 1          # dip is a real gap -> hug the last word
     else:                                                   # in silence -> pull back to last speech
         j = i
         while j > 0 and not speech[j - 1] and j > i - int(1.5 / FR): j -= 1
@@ -78,7 +79,8 @@ def fix_start(a):
         while j > max(3, i - int(LIM / FR)) and not quiet_run(j - 3): j -= 1
         if not quiet_run(j - 3):
             j = dip(i); warn.append(f"  ~ start {a:.2f}: connected speech, cut at dip {j * FR:.2f} ({db[j]:.0f}dB)")
-            return j * FR
+            if speech[j]: return j * FR
+            while j < n - 1 and not speech[j]: j += 1          # dip is a real gap -> hug the next word
     else:                                                   # in silence -> forward to first speech
         j = i
         while j < n - 1 and not speech[j] and j < i + int(1.5 / FR): j += 1

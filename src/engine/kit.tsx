@@ -2,7 +2,10 @@
 import React from 'react';
 import {AbsoluteFill, Easing, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {FONT2, GOLD_SOLID, GREEN} from './theme';
-import {Card, GoldText, IconCheck, IconCoin, IconPin, Label, Shine, TopBand, useEnvelope, usePop} from './ui';
+import {BandCtx, BandPos, Card, GoldText, IconCheck, IconCoin, IconPin, Label, Shine, TopBand, useEnvelope, usePop} from './ui';
+import {Word} from './timeline';
+import {useVideoConfig, spring} from 'remotion';
+import {FONT, SAFE, TOP_BAND} from './theme';
 import {sec} from './timeline';
 
 export const popStyle = (p: number): React.CSSProperties => ({transform: `scale(${0.6 + 0.4 * p})`, opacity: Math.min(1, p * 1.5)});
@@ -235,7 +238,7 @@ export const CtaCard: React.FC<{dur: number; head: string; pin: number; guide: n
 };
 
 /* ---------- scheduling helpers ---------- */
-export type GItem = {from: number; to: number; render: (dur: number, rel: (t: number) => number) => React.ReactNode};
+export type GItem = {from: number; to: number; pos?: BandPos; render: (dur: number, rel: (t: number) => number) => React.ReactNode};
 
 /** Places each item in a Sequence; `rel(t)` converts an output-second to a frame local to that item. */
 export const Schedule: React.FC<{items: GItem[]; total: number}> = ({items, total}) => (
@@ -246,7 +249,7 @@ export const Schedule: React.FC<{items: GItem[]; total: number}> = ({items, tota
       if (dur <= 0) return null;
       return (
         <Sequence key={i} from={f0} durationInFrames={dur} layout="none">
-          {it.render(dur, (t) => sec(t) - f0)}
+          <BandCtx.Provider value={it.pos ?? 'top'}>{it.render(dur, (t) => sec(t) - f0)}</BandCtx.Provider>
         </Sequence>
       );
     })}
@@ -306,5 +309,106 @@ const ImageCutInner: React.FC<{src: string; dur: number; source?: string}> = ({s
         )}
       </div>
     </AbsoluteFill>
+  );
+};
+
+
+/* ---------- subtitles: shown in the top band whenever no top card is on screen ---------- */
+type Page = {start: number; end: number; words: Word[]};
+const makePages = (words: Word[]): Page[] => {
+  const pages: Page[] = [];
+  let cur: Word[] = [];
+  const flush = () => { if (cur.length) pages.push({start: cur[0].start, end: cur[cur.length - 1].end, words: cur}); cur = []; };
+  words.forEach((w) => {
+    const prev = cur[cur.length - 1];
+    const chars = cur.reduce((n, x) => n + x.text.length + 1, 0) + w.text.length;
+    if (prev && (cur.length >= 5 || chars > 26 || w.start - prev.end > 0.45 || w.section !== prev.section)) flush();
+    cur.push(w);
+    if (/[.,?!]$/.test(w.text)) flush();
+  });
+  flush();
+  pages.forEach((p, i) => { const nx = pages[i + 1]; p.end = nx ? Math.min(nx.start, p.end + 0.5) : p.end + 0.5; });
+  return pages;
+};
+const EMPH = /^(rm[\d,.]+|[\d.]+|emas|gram|dinar|gap|umrah|kahwin|hutang|percuma|simpanan|minimum|peluang|diskaun|grab|target)$/i;
+const clean = (t: string) => t.replace(/[.,?!]+$/, '').toUpperCase();
+
+export const Subtitles: React.FC<{words: Word[]; busy: [number, number][]}> = ({words, busy}) => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const pages = React.useMemo(() => makePages(words), [words]);
+  const t = frame / fps;
+  if (busy.some(([a, b]) => t >= a - 0.1 && t < b + 0.1)) return null;
+  const page = pages.find((p) => t >= p.start - 0.05 && t < p.end);
+  if (!page) return null;
+  const pf = Math.round((page.start - 0.05) * fps);
+  const enter = spring({frame: frame - pf, fps, config: {damping: 15, stiffness: 220, mass: 0.5}});
+  return (
+    <div style={{position: 'absolute', left: SAFE.left + 10, width: SAFE.right - SAFE.left - 20, top: TOP_BAND.y, height: TOP_BAND.h, display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', opacity: enter, transform: `translateY(${(1 - enter) * -20}px) scale(${0.92 + 0.08 * enter})`}}>
+      {page.words.map((w, i) => {
+        const active = t >= w.start - 0.03 && t < (page.words[i + 1]?.start ?? page.end);
+        const said = t >= w.start - 0.03;
+        const emph = EMPH.test(clean(w.text));
+        return (
+          <span key={i} style={{fontFamily: FONT, fontWeight: 900, fontSize: 68, lineHeight: 1.15, margin: '0 12px', color: active && emph ? GOLD_SOLID : said ? '#FFFFFF' : 'rgba(255,255,255,0.75)', WebkitTextStroke: '12px rgba(0,0,0,0.95)', paintOrder: 'stroke fill', textShadow: '0 6px 18px rgba(0,0,0,0.5)', display: 'inline-block', transform: `scale(${active ? 1.08 : 1})`}}>
+            {clean(w.text)}
+          </span>
+        );
+      })}
+    </div>
+  );
+};
+/** top-band busy intervals (seconds) from scheduled items */
+export const busyTop = (items: GItem[], total: number): [number, number][] =>
+  items.filter((i) => (i.pos ?? 'top') === 'top').map((i) => [i.from, Math.min(i.to, total / 30)] as [number, number]);
+
+/* ---------- phone mockup cutaway (e.g. GAP app screenshot) ---------- */
+export const PhoneCut: React.FC<{src: string; from: number; to: number; aspect: number; highlight?: [number, number]; highlightAt?: number; caption?: string}> = (p) => {
+  const f0 = sec(p.from); const dur = sec(p.to) - f0;
+  return (
+    <Sequence from={f0} durationInFrames={dur} layout="none">
+      <PhoneInner {...p} dur={dur} f0={f0} />
+    </Sequence>
+  );
+};
+const PhoneInner: React.FC<{src: string; aspect: number; highlight?: [number, number]; highlightAt?: number; caption?: string; dur: number; f0: number}> = ({src, aspect, highlight, highlightAt, caption, dur, f0}) => {
+  const f = useCurrentFrame();
+  const W = 450, H = W / aspect, B = 18;
+  const opacity = interpolate(f, [0, 5, dur - 5, dur], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const rise = interpolate(f, [0, 14], [160, 0], {extrapolateRight: 'clamp', easing: Easing.out(Easing.back(1.3))});
+  const hlAt = highlightAt !== undefined ? sec(highlightAt) - f0 : 8;
+  const hl = interpolate(f, [hlAt, hlAt + 8], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const pulse = 1 + 0.03 * Math.sin((f - hlAt) / 4) * hl;
+  const top = 492;
+  return (
+    <AbsoluteFill style={{opacity}}>
+      <AbsoluteFill style={{background: 'radial-gradient(circle at 50% 55%, #3a2a08 0%, #120d03 70%)'}} />
+      <AbsoluteFill style={{backgroundImage: `url(${staticFile(src)})`, backgroundSize: 'cover', backgroundPosition: 'center', filter: 'blur(40px) brightness(0.35)', transform: 'scale(1.2)', opacity: 0.8}} />
+      <div style={{position: 'absolute', left: 540 - W / 2 - B, top: top + rise, width: W + 2 * B, height: H + 2 * B, borderRadius: 64, background: '#0b0b0d', boxShadow: '0 40px 90px rgba(0,0,0,0.7), inset 0 0 0 3px #3a3a40', padding: B}}>
+        <div style={{position: 'relative', width: W, height: H, borderRadius: 48, overflow: 'hidden', background: 'white'}}>
+          <img src={staticFile(src)} style={{width: '100%', display: 'block'}} />
+          <div style={{position: 'absolute', top: 10, left: W / 2 - 60, width: 120, height: 30, borderRadius: 16, background: '#0b0b0d'}} />
+          {highlight && (
+            <div style={{position: 'absolute', left: 8, right: 8, top: highlight[0] * H - 6, height: (highlight[1] - highlight[0]) * H + 12, borderRadius: 14, border: `5px solid ${GOLD_SOLID}`, boxShadow: '0 0 30px rgba(245,200,76,0.9)', opacity: hl, transform: `scale(${pulse})`}} />
+          )}
+        </div>
+      </div>
+      {caption && (
+        <div style={{position: 'absolute', left: 0, right: 0, top: top + rise + H + 2 * B + 8, textAlign: 'center', fontFamily: FONT2, fontWeight: 700, fontSize: 24, color: 'rgba(255,255,255,0.7)'}}>{caption}</div>
+      )}
+    </AbsoluteFill>
+  );
+};
+
+/* ---------- real comment screenshot card ---------- */
+export const CommentCard: React.FC<{dur: number; src: string; label?: string}> = ({dur, src, label}) => {
+  const {v} = useEnvelope(dur);
+  return (
+    <TopBand v={v}>
+      <div style={{width: 820}}>
+        {label && <Label size={24} color={GOLD_SOLID} style={{marginBottom: 8, textShadow: '0 2px 8px rgba(0,0,0,0.8)'}}>{label}</Label>}
+        <img src={staticFile(src)} style={{width: '100%', borderRadius: 26, boxShadow: '0 18px 50px rgba(0,0,0,0.5)', border: '3px solid rgba(247,215,116,0.7)'}} />
+      </div>
+    </TopBand>
   );
 };

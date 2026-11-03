@@ -1,9 +1,10 @@
 /* v2 — Dana Umrah 2 Tahun (simpanan emas) */
 import React from 'react';
 import edlJson from './edl.json';
+import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
-import {Edl, makeTimeline} from '../../engine/timeline';
-import {BRollTrack, Choices, CtaCard, GItem, GoldProgress, IconCalendar, IconPlane, IconRepeat, Schedule, StepCard, TitleCard} from '../../engine/kit';
+import {Edl, makeTimeline, Word} from '../../engine/timeline';
+import {BRollTrack, Choices, CtaCard, GItem, GoldProgress, IconCalendar, IconPlane, IconRepeat, Schedule, StepCard, TitleCard, PhoneCut, Subtitles, busyTop} from '../../engine/kit';
 import {IconCoin, IconCheck} from '../../engine/ui';
 import {GOLD_SOLID} from '../../engine/theme';
 
@@ -40,7 +41,7 @@ const ITEMS: GItem[] = [
   {from: M.hook, to: E('hook') + 0.2, render: (d, r) => (
     <TitleCard dur={d} icon={<IconPlane size={90} />} label="Jom target" title="UMRAH 2 TAHUN LAGI" size={54} sub="melalui simpanan emas" subAt={r(M.hookSub)} shine />
   )},
-  {from: M.problem + 0.1, to: M.dinar - 0.1, render: (d, r) => (
+  {pos: 'bottom', from: M.problem + 0.1, to: M.dinar - 0.1, render: (d, r) => (
     <Choices dur={d} items={[
       {top: 'Simpan duit', main: 'Selalu BOCOR', sub: 'terguna benda lain', at: r(M.bocor), bad: true},
       {top: 'Simpan emas', main: 'Target 2 tahun', sub: 'tak mudah terusik', at: r(M.emas), good: true},
@@ -49,22 +50,22 @@ const ITEMS: GItem[] = [
   {from: M.dinar - 0.1, to: E('problem') + 0.3, render: (d) => (
     <TitleCard dur={d} icon={<IconCoin size={90} />} label="Dana umrah 1 orang" title="= 5 DINAR EMAS" size={66} shine />
   )},
-  {from: M.steps + 0.1, to: M.s1 - 0.05, render: (d) => (
+  {pos: 'bottom', from: M.steps + 0.1, to: M.s1 - 0.05, render: (d) => (
     <TitleCard dur={d} label="Caranya" title="4 LANGKAH MUDAH" gold size={66} />
   )},
   {from: M.s1 - 0.05, to: M.s2 - 0.05, render: (d, r) => (
     <StepCard dur={d} n={1} total={4} title="Daftar akaun GAP" sub={<><IconCheck size={32} /> PERCUMA</>} subAt={r(M.percuma)} />
   )},
-  {from: M.s2 - 0.05, to: E('steps') + 0.25, render: (d, r) => (
+  {pos: 'bottom', from: M.s2 - 0.05, to: E('steps') + 0.25, render: (d, r) => (
     <StepCard dur={d} n={2} total={4} title="Konsisten setiap bulan" sub={<>1 gram × 1 bulan · 2 tahun</>} subAt={r(M.gram)} icon={<IconCalendar size={70} color={GOLD_SOLID} />} />
   )},
   {from: M.s3 + 0.05, to: E('step3') + 0.25, render: (d, r) => (
     <StepCard dur={d} n={3} total={4} title="Auto debit RM600 / bulan" sub={<>≈ 1 gram sebulan, tak miss</>} subAt={r(M.s3sub)} icon={<IconRepeat size={70} color={GOLD_SOLID} />} />
   )},
-  {from: M.s4 + 0.05, to: M.g2125 + 1.2, render: (d) => (
+  {pos: 'bottom', from: M.s4 + 0.05, to: M.g2125 + 1.2, render: (d) => (
     <StepCard dur={d} n={4} total={4} title="Cukup 21.25 gram" sub={<>dalam akaun GAP</>} subAt={10} />
   )},
-  {from: M.g2125 + 1.2, to: E('step4') + 0.3, render: (d, r) => (
+  {pos: 'bottom', from: M.g2125 + 1.2, to: E('step4') + 0.3, render: (d, r) => (
     <GoldProgress dur={d} label="Akaun GAP" target={21.25} fill0={0} fill1={r(M.jual)} doneAt={r(M.keluarkan)} done={<>Jual / keluarkan <span style={{color: GOLD_SOLID}}>5 Dinar</span> = umrah</>} />
   )},
   {from: M.cta + 0.2, to: 9999, render: (d, r) => (
@@ -80,11 +81,14 @@ const BROLL = [
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
     <BRollTrack cuts={BROLL} />
+    <PhoneCut src="shared/broll/gap_app.jpg" aspect={1163 / 2391} from={M.s1 + 0.4} to={M.s2 - 0.1} highlight={[0.400, 0.433]} highlightAt={M.percuma} />
     <Schedule items={ITEMS} total={tl.total} />
+    <Subtitles words={captionsJson as Word[]} busy={busyTop(ITEMS, tl.total)} />
   </>
 );
 
 const SFX: Sfx[] = [
+  {t: M.s1 + 0.3, f: 'whoosh_small', v: 0.3},
   {t: M.hook, f: 'whoosh_cine', v: 0.45},
   {t: M.hook + 0.05, f: 'impact_deep', v: 0.25},
   {t: M.hookSub, f: 'sparkle', v: 0.3},

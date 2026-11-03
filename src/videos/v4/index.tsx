@@ -1,9 +1,10 @@
 /* v4 — Tunggu harga emas paling rendah? */
 import React from 'react';
 import edlJson from './edl.json';
+import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
-import {Edl, makeTimeline} from '../../engine/timeline';
-import {BRollTrack, Choices, GItem, IconChartDown, IconChat, IconStore, IconWarn, ImageCut, Schedule, TitleCard} from '../../engine/kit';
+import {Edl, makeTimeline, Word} from '../../engine/timeline';
+import {BRollTrack, Choices, GItem, IconChartDown, IconChat, IconStore, IconWarn, ImageCut, Schedule, TitleCard, PhoneCut, Subtitles, busyTop, CommentCard} from '../../engine/kit';
 import {IconCoin} from '../../engine/ui';
 
 const tl = makeTimeline(edlJson as Edl);
@@ -39,9 +40,9 @@ const ITEMS: GItem[] = [
     <TitleCard dur={d} icon={<IconChartDown size={92} />} label="Berbaloi tak" title="Tunggu harga PALING RENDAH?" gold={false} size={48} sub="baru nak mula / tambah tabungan" subAt={r(M.hookSub)} />
   )},
   {from: M.komen - 0.2, to: E('context') + 0.2, render: (d) => (
-    <TitleCard dur={d} icon={<IconChat size={80} />} label="Komen penonton" title="“Tunggu harga turun minimum”" gold={false} size={44} />
+    <CommentCard dur={d} src="shared/broll/comment_yunus.jpg" label="Komen penonton" />
   )},
-  {from: M.answer + 0.1, to: M.jatuh - 0.15, render: (d) => (
+  {pos: 'bottom', from: M.answer + 0.1, to: M.jatuh - 0.15, render: (d) => (
     <TitleCard dur={d} icon={<IconCoin size={86} />} label="Kata guru emas saya" title="Emas = aset MAHAL" size={60} shine />
   )},
   {from: M.jatuh - 0.15, to: E('answer') + 0.2, render: (d, r) => (
@@ -50,10 +51,10 @@ const ITEMS: GItem[] = [
   {from: M.serbu + 0.1, to: E('serbu') + 0.2, render: (d, r) => (
     <TitleCard dur={d} icon={<IconStore size={80} />} label="Beberapa hari ini" title="KEDAI EMAS DISERBU" gold={false} size={54} sub="ramai rebut harga rendah" subAt={r(M.ramai)} />
   )},
-  {from: M.whynot + 0.1, to: E('whynot') + 0.2, render: (d, r) => (
+  {pos: 'bottom', from: M.whynot + 0.1, to: E('whynot') + 0.2, render: (d, r) => (
     <TitleCard dur={d} icon={<IconWarn size={80} />} label="Kenapa tak tunggu" title="HARGA MINIMUM?" gold={false} size={58} sub="Tiada pakar boleh ramal dengan tepat" subAt={r(M.pakar)} />
   )},
-  {from: S('grab') + 0.1, to: E('grab') + 0.2, render: (d, r) => (
+  {pos: 'bottom', from: S('grab') + 0.1, to: E('grab') + 0.2, render: (d, r) => (
     <Choices dur={d} items={[
       {top: 'Harga jatuh', main: 'GRAB peluang', at: r(M.grab), good: true},
       {top: 'Jatuh lagi?', main: 'Tambah lagi', at: r(M.lagi), good: true},
@@ -65,7 +66,7 @@ const ITEMS: GItem[] = [
       {top: 'Tunggu minimum', main: 'Duit habis', at: r(M.habis), bad: true},
     ]} />
   )},
-  {from: M.offer + 0.1, to: E('offer') + 0.2, render: (d, r) => (
+  {pos: 'bottom', from: M.offer + 0.1, to: E('offer') + 0.2, render: (d, r) => (
     <TitleCard dur={d} label="Ada lebihan duit 2–3 tahun?" title="MULA TABUNG EMAS" size={60} sub="convert simpanan duit → emas" subAt={r(M.convert)} shine />
   )},
   {from: M.gap + 0.1, to: 9999, render: (d, r) => (
@@ -82,11 +83,14 @@ const Overlays: React.FC<{hq: boolean}> = () => (
   <>
     <BRollTrack cuts={BROLL} />
     <ImageCut src="shared/broll/news_kosmo.jpg" from={M.kedai - 0.1} to={E('serbu') + 0.1} source="Sumber: Kosmo!, 31 Okt 2026" />
+    <PhoneCut src="shared/broll/gap_app.jpg" aspect={1163 / 2391} from={M.gap + 0.3} to={M.rm100 + 1.6} highlight={[0.400, 0.433]} highlightAt={M.rm100 - 0.2} />
     <Schedule items={ITEMS} total={tl.total} />
+    <Subtitles words={captionsJson as Word[]} busy={busyTop(ITEMS, tl.total)} />
   </>
 );
 
 const SFX: Sfx[] = [
+  {t: M.gap + 0.2, f: 'whoosh_small', v: 0.3},
   {t: M.hook, f: 'whoosh_cine', v: 0.45},
   {t: M.hook + 0.05, f: 'impact_deep', v: 0.25},
   {t: M.hookSub, f: 'pop_msg', v: 0.35},
