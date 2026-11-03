@@ -12,6 +12,6 @@ export const RemotionRoot: React.FC = () => (
     height={1920}
     fps={edl.fps}
     durationInFrames={edl.durationInFrames + TAIL}
-    defaultProps={{preview: false, showSafeZones: false} satisfies MainProps}
+    defaultProps={{preview: false, showSafeZones: false, hq: false} satisfies MainProps}
   />
 );

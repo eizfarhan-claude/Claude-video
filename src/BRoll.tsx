@@ -13,27 +13,27 @@ export const BROLL: Cut[] = [
   {file: 'broll/coin.mp4', from: at('cta', 'miliki') - 0.1, to: at('cta', 'simpanan', 1) + 0.2, srcStart: 9.3},
 ];
 
-const Clip: React.FC<{c: Cut; dur: number}> = ({c, dur}) => {
+const Clip: React.FC<{c: Cut; dur: number; hq: boolean}> = ({c, dur, hq}) => {
   const f = useCurrentFrame();
   const opacity = interpolate(f, [0, 5, dur - 5, dur], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const scale = interpolate(f, [0, 6, dur], [1.18, 1.08, 1.0], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
   return (
     <AbsoluteFill style={{opacity}}>
       <AbsoluteFill style={{transform: `scale(${scale})`}}>
-        <OffthreadVideo src={staticFile(c.file)} startFrom={sec(c.srcStart)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+        <OffthreadVideo src={staticFile(hq ? c.file.replace('.mp4', '_4k.mp4') : c.file)} startFrom={sec(c.srcStart)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
       </AbsoluteFill>
     </AbsoluteFill>
   );
 };
 
-export const BRoll: React.FC = () => (
+export const BRoll: React.FC<{hq: boolean}> = ({hq}) => (
   <AbsoluteFill>
     {BROLL.map((c, i) => {
       const from = sec(c.from);
       const dur = sec(c.to) - from;
       return (
         <Sequence key={i} from={from} durationInFrames={dur} layout="none">
-          <Clip c={c} dur={dur} />
+          <Clip c={c} dur={dur} hq={hq} />
         </Sequence>
       );
     })}

@@ -6,7 +6,8 @@ import {Graphics, MOMENTS as M} from './Graphics';
 import {sec, TAIL, words} from './timeline';
 import {SAFE, TOP_BAND, CAPTION_Y} from './theme';
 
-export type MainProps = {preview: boolean; showSafeZones: boolean};
+/** hq = graded 4K sources (scripts/prep-4k.sh); render with --scale=2 for 2160x3840 */
+export type MainProps = {preview: boolean; showSafeZones: boolean; hq?: boolean};
 
 type Clip = (typeof edl.clips)[number];
 const clips = edl.clips as Clip[];
@@ -24,7 +25,7 @@ const BASE: Record<string, number[]> = {
 };
 const PUNCH = [M.rm11700 - 0.3, M.gramReveal, M.carry, M.rm100, M.unlocked, M.targetAmt, M.pin].map(sec);
 
-const ClipVideo: React.FC<{clip: Clip; idx: number}> = ({clip, idx}) => {
+const ClipVideo: React.FC<{clip: Clip; idx: number; hq: boolean}> = ({clip, idx, hq}) => {
   const frame = useCurrentFrame(); // local to the clip's Sequence
   const {fps} = useVideoConfig();
   const sectionIdx = clips.filter((c, i) => i < idx && c.section === clip.section).length;
@@ -39,7 +40,7 @@ const ClipVideo: React.FC<{clip: Clip; idx: number}> = ({clip, idx}) => {
   }, 0);
   return (
     <AbsoluteFill style={{transform: `scale(${Math.min(1.16, base + drift + punch)})`, transformOrigin: '50% 36%'}}>
-      <OffthreadVideo src={staticFile('source/video.mp4')} startFrom={clip.srcFrom} muted style={{width: '100%', height: '100%'}} />
+      <OffthreadVideo src={staticFile(hq ? 'source/video_4k.mp4' : 'source/video.mp4')} startFrom={clip.srcFrom} muted style={{width: '100%', height: '100%'}} />
     </AbsoluteFill>
   );
 };
@@ -114,14 +115,14 @@ const SafeZones: React.FC = () => (
   </AbsoluteFill>
 );
 
-export const Main: React.FC<MainProps> = ({preview, showSafeZones}) => {
+export const Main: React.FC<MainProps> = ({preview, showSafeZones, hq = false}) => {
   const duck = useDuckCurve();
   const frame = useCurrentFrame();
   return (
     <AbsoluteFill style={{backgroundColor: 'black'}}>
       {clips.map((c, i) => (
         <Sequence key={i} from={c.outFrom} durationInFrames={i === clips.length - 1 ? c.durationInFrames + TAIL : c.durationInFrames}>
-          <ClipVideo clip={c} idx={i} />
+          <ClipVideo clip={c} idx={i} hq={hq} />
           <Audio src={staticFile('source/voice.wav')} startFrom={c.srcFrom} endAt={c.srcFrom + c.durationInFrames} volume={(f) => edgeFade(f, c.durationInFrames)} />
         </Sequence>
       ))}
@@ -129,7 +130,7 @@ export const Main: React.FC<MainProps> = ({preview, showSafeZones}) => {
       {/* subtle vignette keeps graphics readable without touching the face */}
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 28%, rgba(0,0,0,0) 58%, rgba(0,0,0,0.35) 100%)'}} />
 
-      <BRoll />
+      <BRoll hq={hq} />
       <Graphics total={TOTAL} />
 
       <Audio
