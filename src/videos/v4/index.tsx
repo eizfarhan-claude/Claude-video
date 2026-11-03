@@ -13,7 +13,7 @@ const M = {
   hook: 0.05,
   hookSub: at('hook', 'mulakan'),
   context: S('context'),
-  komen: at('context', 'tunggu'),
+  komen: at('context', 'komen'),
   answer: S('answer'),
   jatuh: at('answer', 'jatuh'),
   diskaun: at('answer', 'diskaun'),

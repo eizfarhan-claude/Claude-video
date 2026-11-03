@@ -90,13 +90,16 @@ export const TitleCard: React.FC<{
   const p = usePop(0);
   const s = usePop(subAt);
   const sh = interpolate(frame, [4, 30], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  // auto-fit title to one line (Montserrat 900 ≈ 0.68em per glyph)
+  const room = icon ? 690 : 800;
+  const fit = Math.min(size, Math.floor(room / (0.68 * title.length)));
   return (
     <TopBand v={v}>
       <Card style={{display: 'flex', alignItems: 'center', gap: 22, padding: '20px 34px', position: 'relative', overflow: 'hidden', maxWidth: 900}}>
         {icon && <div style={popStyle(p)}>{icon}</div>}
         <div>
           {label && <Label size={24} color={GOLD_SOLID}>{label}</Label>}
-          {gold ? <GoldText size={size}>{title}</GoldText> : <div style={{fontWeight: 900, fontSize: size, lineHeight: 1.05}}>{title}</div>}
+          {gold ? <GoldText size={fit} style={{whiteSpace: 'nowrap'}}>{title}</GoldText> : <div style={{fontWeight: 900, fontSize: fit, lineHeight: 1.05, whiteSpace: 'nowrap'}}>{title}</div>}
           {sub && (
             <div style={{fontFamily: FONT2, fontWeight: 700, fontSize: 30, color: 'rgba(255,255,255,0.85)', marginTop: 6, ...popStyle(s), transformOrigin: 'left center', height: s > 0.01 ? undefined : 0}}>
               {sub}
@@ -128,7 +131,7 @@ export const StepCard: React.FC<{dur: number; n: number; total: number; title: s
               <div key={i} style={{height: 8, flex: 1, borderRadius: 4, background: i < n ? GOLD_SOLID : 'rgba(255,255,255,0.18)'}} />
             ))}
           </div>
-          <div style={{fontWeight: 900, fontSize: 44, lineHeight: 1.08}}>{title}</div>
+          <div style={{fontWeight: 900, fontSize: title.length > 20 ? 38 : 44, lineHeight: 1.08, whiteSpace: 'nowrap'}}>{title}</div>
           {sub && (
             <div style={{display: 'flex', alignItems: 'center', gap: 10, fontFamily: FONT2, fontWeight: 700, fontSize: 30, color: GOLD_SOLID, marginTop: 4, ...popStyle(s), transformOrigin: 'left center'}}>
               {sub}

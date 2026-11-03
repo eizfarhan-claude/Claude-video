@@ -38,7 +38,7 @@ const M = {
 
 const ITEMS: GItem[] = [
   {from: M.hook, to: E('hook') + 0.2, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconPlane size={90} />} label="Jom target" title="UMRAH 2 TAHUN LAGI" size={62} sub="melalui simpanan emas" subAt={r(M.hookSub)} shine />
+    <TitleCard dur={d} icon={<IconPlane size={90} />} label="Jom target" title="UMRAH 2 TAHUN LAGI" size={54} sub="melalui simpanan emas" subAt={r(M.hookSub)} shine />
   )},
   {from: M.problem + 0.1, to: M.dinar - 0.1, render: (d, r) => (
     <Choices dur={d} items={[
