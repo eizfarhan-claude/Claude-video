@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import {AbsoluteFill, Audio, interpolate, OffthreadVideo, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import edl from './edl.json';
-import {Captions} from './Captions';
+import {BRoll, BROLL} from './BRoll';
 import {Graphics, MOMENTS as M} from './Graphics';
 import {sec, TAIL, words} from './timeline';
 import {SAFE, TOP_BAND, CAPTION_Y} from './theme';
@@ -100,6 +100,7 @@ const SFX: Sfx[] = [
   {t: M.pin, f: 'bell_notif', v: 0.32},
   {t: M.guide, f: 'pop_msg', v: 0.35},
   {t: M.final - 0.1, f: 'gold_prize', v: 0.4},
+  ...BROLL.map((b) => ({t: b.from - 0.12, f: 'whoosh_small', v: 0.28})),
 ];
 
 const SafeZones: React.FC = () => (
@@ -128,8 +129,8 @@ export const Main: React.FC<MainProps> = ({preview, showSafeZones}) => {
       {/* subtle vignette keeps graphics readable without touching the face */}
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 28%, rgba(0,0,0,0) 58%, rgba(0,0,0,0.35) 100%)'}} />
 
+      <BRoll />
       <Graphics total={TOTAL} />
-      <Captions />
 
       <Audio
         src={staticFile('music/bgm.mp3')}

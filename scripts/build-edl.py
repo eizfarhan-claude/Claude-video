@@ -11,7 +11,12 @@ RANGES = [
     ("body",     27.12, 79.85),  # cash & carry -> akaun GAP -> bajet besar/kecil
     # 81-100 & 103-112: repeated takes of the savings-target line -> dropped
     ("target",  113.25, 131.74), # best take of the savings-target line
-    ("cta",     131.74, 147.10), # CTA  (outtake "Dapat sesuatu?" dropped)
+    ("cta",     131.74, 146.97), # CTA  (outtake "Dapat sesuatu?" dropped)
+]
+# Stumbles / repeated words removed inside a range (source seconds)
+CUTS = [
+    (53.88, 54.96),  # "dia akan auto…" (repeated) -> keep "dia akan auto rekod"
+    (67.78, 69.06),  # "Jadi ikut… jadi tengok" -> keep "Jadi tengok"
 ]
 MAX_GAP, KEEP_PAD = 0.30, 0.10   # pauses longer than this get squeezed to 2*KEEP_PAD
 FIX = {"serdah": "serendah", "betul.": "bentuk", "kek": "GAP", "RM11,000,": "RM11,000", "RM12,000,": "RM12,000"}
@@ -21,9 +26,14 @@ sil = [tuple(map(float, l.split())) for l in open(ROOT/"data/silences.txt") if l
 clips = []
 for name, a, b in RANGES:
     cur = a
-    for s, e in sil:
-        if s > a and e < b and e - s > MAX_GAP:
-            clips.append((name, cur, s + KEEP_PAD)); cur = e - KEEP_PAD
+    removed = [(s + KEEP_PAD, e - KEEP_PAD) for s, e in sil if s > a and e < b and e - s > MAX_GAP]
+    removed += [(s, e) for s, e in CUTS if s > a and e < b]
+    merged = []
+    for s, e in sorted(removed):
+        if merged and s <= merged[-1][1]: merged[-1] = (merged[-1][0], max(merged[-1][1], e))
+        else: merged.append((s, e))
+    for s, e in merged:
+        clips.append((name, cur, s)); cur = e
     clips.append((name, cur, b))
 
 # words, merging split numbers ("21" ".25", "RM11" ",700.")

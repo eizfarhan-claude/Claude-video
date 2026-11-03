@@ -13,6 +13,7 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - `data/transcript.json` – Whisper large-v3 word-level transcript (Malay)
 - `scripts/build-edl.py` – story order (hook first), dropped retakes, pause squeezing, caption fixes
 - `src/Graphics.tsx` – motion graphics, all inside the band above the head (never over the face)
-- `src/Captions.tsx` – word-by-word captions on the chest, above the TikTok/IG bottom UI
+- `src/BRoll.tsx` – full-frame B-roll cutaways (put clips in `public/broll/`: `sand.mp4`, `coin.mp4`)
+- `src/Captions.tsx` – word-by-word captions (currently disabled)
 - `src/Main.tsx` – cuts, punch-in zooms, SFX cue list, BGM with auto-ducking
 - `src/theme.ts` – safe-zone constants (`--props='{"showSafeZones":true}'` draws them)
