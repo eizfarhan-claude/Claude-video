@@ -10,7 +10,7 @@ RANGES = [
     ("weight",    9.30, 13.30),  # 5 dinar emas ni beratnya adalah 21.25 gram  (false start removed)
     ("body",     27.12, 79.85),  # cash & carry -> akaun GAP -> bajet besar/kecil
     # 81-100 & 103-112: repeated takes of the savings-target line -> dropped
-    ("target",  113.25, 131.74), # best take of the savings-target line
+    ("target",  113.98, 131.74), # best take of the savings-target line
     ("cta",     131.74, 146.97), # CTA  (outtake "Dapat sesuatu?" dropped)
 ]
 # Stumbles / repeated words removed inside a range (source seconds)
