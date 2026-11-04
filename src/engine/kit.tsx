@@ -338,9 +338,10 @@ export const Subtitles: React.FC<{words: Word[]; busy: [number, number][]}> = ({
   const {fps} = useVideoConfig();
   const pages = React.useMemo(() => makePages(words), [words]);
   const t = frame / fps;
-  if (busy.some(([a, b]) => t >= a - 0.1 && t < b + 0.1)) return null;
   const page = pages.find((p) => t >= p.start - 0.05 && t < p.end);
   if (!page) return null;
+  // calm-screen rule: a page is shown only if NOTHING animates during its whole span (no flicker, one focus at a time)
+  if (busy.some(([a, b]) => page.start - 0.05 < b && page.end > a)) return null;
   const pf = Math.round((page.start - 0.05) * fps);
   const enter = spring({frame: frame - pf, fps, config: {damping: 15, stiffness: 220, mass: 0.5}});
   return (
@@ -350,7 +351,7 @@ export const Subtitles: React.FC<{words: Word[]; busy: [number, number][]}> = ({
         const said = t >= w.start - 0.03;
         const emph = EMPH.test(clean(w.text));
         return (
-          <span key={i} style={{fontFamily: FONT, fontWeight: 900, fontSize: 68, lineHeight: 1.15, margin: '0 12px', color: active && emph ? GOLD_SOLID : said ? '#FFFFFF' : 'rgba(255,255,255,0.75)', WebkitTextStroke: '12px rgba(0,0,0,0.95)', paintOrder: 'stroke fill', textShadow: '0 6px 18px rgba(0,0,0,0.5)', display: 'inline-block', transform: `scale(${active ? 1.08 : 1})`}}>
+          <span key={i} style={{fontFamily: FONT, fontWeight: 900, fontSize: 54, lineHeight: 1.18, margin: '0 10px', color: active && emph ? GOLD_SOLID : said ? '#FFFFFF' : 'rgba(255,255,255,0.75)', WebkitTextStroke: '10px rgba(0,0,0,0.95)', paintOrder: 'stroke fill', textShadow: '0 6px 18px rgba(0,0,0,0.5)', display: 'inline-block', transform: `scale(${active ? 1.08 : 1})`}}>
             {clean(w.text)}
           </span>
         );
@@ -412,3 +413,10 @@ export const CommentCard: React.FC<{dur: number; src: string; label?: string}> =
     </TopBand>
   );
 };
+
+/** Moments when something on screen moves: card in/out, every SFX-cued pop/transition, plus full-frame cutaways. */
+export const motionBusy = (items: GItem[], sfx: {t: number}[], extra: [number, number][] = []): [number, number][] => [
+  ...items.flatMap((i) => [[i.from - 0.1, i.from + 0.8], [i.to - 0.4, i.to + 0.1]] as [number, number][]),
+  ...sfx.map((s) => [s.t - 0.15, s.t + 0.7] as [number, number]),
+  ...extra,
+];

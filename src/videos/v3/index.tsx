@@ -5,7 +5,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
-import {BRollTrack, Choices, CtaCard, GItem, IconGift, Schedule, StepCard, TitleCard, PhoneCut, Subtitles, busyTop} from '../../engine/kit';
+import {BRollTrack, Choices, CtaCard, GItem, IconGift, Schedule, StepCard, TitleCard, PhoneCut, Subtitles, busyTop, motionBusy} from '../../engine/kit';
 import {Card, IconCheck, IconCoin, Label, TopBand, useEnvelope} from '../../engine/ui';
 import {GOLD_SOLID} from '../../engine/theme';
 
@@ -105,7 +105,7 @@ const ITEMS: GItem[] = [
 const BROLL = [
   {file: 'shared/broll/goldhand.mp4', from: M.d2 - 0.3, to: M.result - 0.1, srcStart: 2.0},
   {file: 'v1/broll/sand.mp4', from: M.g2125 - 0.1, to: E('step2') + 0.1, srcStart: 0.6},
-  {file: 'v1/broll/coin.mp4', from: M.final - 0.1, to: E('cta') + 0.4, srcStart: 9.3},
+  {file: 'v1/broll/coin.mp4', from: M.final - 0.1, to: tl.total / 30, srcStart: 9.3},
 ];
 
 const Overlays: React.FC<{hq: boolean}> = () => (
@@ -113,7 +113,7 @@ const Overlays: React.FC<{hq: boolean}> = () => (
     <BRollTrack cuts={BROLL} />
     <PhoneCut src="shared/broll/gap_app.jpg" aspect={1163 / 2391} from={M.s1 + 0.4} to={E('step1') + 0.2} highlight={[0.400, 0.433]} highlightAt={M.percuma} />
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={captionsJson as Word[]} busy={[[M.s1 + 0.4, E('step1') + 0.2]]} />
+    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, [[M.s1 + 0.4, E('step1') + 0.2]])} />
   </>
 );
 
@@ -144,7 +144,7 @@ const SFX: Sfx[] = [
   {t: M.pin, f: 'bell_notif', v: 0.32},
   {t: M.guide, f: 'pop_msg', v: 0.35},
   {t: M.final - 0.12, f: 'whoosh_small', v: 0.28},
-  {t: M.final, f: 'gold_prize', v: 0.4},
+  {t: M.final, f: 'gold_prize', v: 0.22},
 ];
 
 export const v3: VideoDef = {

@@ -4,7 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
-import {BRollTrack, Choices, GItem, IconChartDown, IconChat, IconStore, IconWarn, ImageCut, Schedule, TitleCard, PhoneCut, Subtitles, busyTop, CommentCard} from '../../engine/kit';
+import {BRollTrack, Choices, GItem, IconChartDown, IconChat, IconStore, IconWarn, ImageCut, Schedule, TitleCard, PhoneCut, Subtitles, busyTop, motionBusy, CommentCard} from '../../engine/kit';
 import {IconCoin} from '../../engine/ui';
 
 const tl = makeTimeline(edlJson as Edl);
@@ -85,7 +85,7 @@ const Overlays: React.FC<{hq: boolean}> = () => (
     <ImageCut src="shared/broll/news_kosmo.jpg" from={M.kedai - 0.1} to={E('serbu') + 0.1} source="Sumber: Kosmo!, 31 Okt 2026" />
     <PhoneCut src="shared/broll/gap_app.jpg" aspect={1163 / 2391} from={M.gap + 0.3} to={M.rm100 + 1.6} highlight={[0.400, 0.433]} highlightAt={M.rm100 - 0.2} />
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={captionsJson as Word[]} busy={[[M.kedai - 0.1, E('serbu') + 0.1], [M.gap + 0.3, M.rm100 + 1.6]]} />
+    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, [[M.kedai - 0.1, E('serbu') + 0.1], [M.gap + 0.3, M.rm100 + 1.6]])} />
   </>
 );
 
@@ -112,7 +112,7 @@ const SFX: Sfx[] = [
   {t: M.offer, f: 'whoosh_cine', v: 0.3},
   {t: M.convert, f: 'sparkle', v: 0.3},
   {t: M.gap, f: 'whoosh_small', v: 0.3},
-  {t: M.rm100, f: 'gold_prize', v: 0.4},
+  {t: M.rm100, f: 'gold_prize', v: 0.26},
 ];
 
 export const v4: VideoDef = {

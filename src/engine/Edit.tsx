@@ -96,7 +96,7 @@ export const Edit: React.FC<EditProps & {def: VideoDef}> = ({def, preview, showS
       <Audio
         src={staticFile(`music/${def.music.file}`)}
         startFrom={sec(def.music.startAt)}
-        volume={(f) => duck[Math.min(f, duck.length - 1)] * interpolate(f, [total - 30, total], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+        volume={(f) => duck[Math.min(f, duck.length - 1)] * interpolate(f, [total - 50, total], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
       />
       {def.sfx.map((s, i) => (
         <Sequence key={i} from={Math.max(0, sec(s.t))} durationInFrames={sec(4.5)} layout="none">
