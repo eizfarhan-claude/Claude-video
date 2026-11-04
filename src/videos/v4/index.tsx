@@ -42,7 +42,7 @@ const ITEMS: GItem[] = [
   {from: M.komen - 0.2, to: E('context') + 0.2, render: (d) => (
     <CommentCard dur={d} src="shared/broll/comment_yunus.jpg" label="Komen penonton" />
   )},
-  {pos: 'bottom', from: M.answer + 0.1, to: M.jatuh - 0.15, render: (d) => (
+  {from: M.answer + 0.1, to: M.jatuh - 0.15, render: (d) => (
     <TitleCard dur={d} icon={<IconCoin size={86} />} label="Kata guru emas saya" title="Emas = aset MAHAL" size={60} shine />
   )},
   {from: M.jatuh - 0.15, to: E('answer') + 0.2, render: (d, r) => (
@@ -51,10 +51,10 @@ const ITEMS: GItem[] = [
   {from: M.serbu + 0.1, to: E('serbu') + 0.2, render: (d, r) => (
     <TitleCard dur={d} icon={<IconStore size={80} />} label="Beberapa hari ini" title="KEDAI EMAS DISERBU" gold={false} size={54} sub="ramai rebut harga rendah" subAt={r(M.ramai)} />
   )},
-  {pos: 'bottom', from: M.whynot + 0.1, to: E('whynot') + 0.2, render: (d, r) => (
+  {from: M.whynot + 0.1, to: E('whynot') + 0.2, render: (d, r) => (
     <TitleCard dur={d} icon={<IconWarn size={80} />} label="Kenapa tak tunggu" title="HARGA MINIMUM?" gold={false} size={58} sub="Tiada pakar boleh ramal dengan tepat" subAt={r(M.pakar)} />
   )},
-  {pos: 'bottom', from: S('grab') + 0.1, to: E('grab') + 0.2, render: (d, r) => (
+  {from: S('grab') + 0.1, to: E('grab') + 0.2, render: (d, r) => (
     <Choices dur={d} items={[
       {top: 'Harga jatuh', main: 'GRAB peluang', at: r(M.grab), good: true},
       {top: 'Jatuh lagi?', main: 'Tambah lagi', at: r(M.lagi), good: true},
@@ -66,7 +66,7 @@ const ITEMS: GItem[] = [
       {top: 'Tunggu minimum', main: 'Duit habis', at: r(M.habis), bad: true},
     ]} />
   )},
-  {pos: 'bottom', from: M.offer + 0.1, to: E('offer') + 0.2, render: (d, r) => (
+  {from: M.offer + 0.1, to: E('offer') + 0.2, render: (d, r) => (
     <TitleCard dur={d} label="Ada lebihan duit 2–3 tahun?" title="MULA TABUNG EMAS" size={60} sub="convert simpanan duit → emas" subAt={r(M.convert)} shine />
   )},
   {from: M.gap + 0.1, to: 9999, render: (d, r) => (
@@ -85,7 +85,7 @@ const Overlays: React.FC<{hq: boolean}> = () => (
     <ImageCut src="shared/broll/news_kosmo.jpg" from={M.kedai - 0.1} to={E('serbu') + 0.1} source="Sumber: Kosmo!, 31 Okt 2026" />
     <PhoneCut src="shared/broll/gap_app.jpg" aspect={1163 / 2391} from={M.gap + 0.3} to={M.rm100 + 1.6} highlight={[0.400, 0.433]} highlightAt={M.rm100 - 0.2} />
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={captionsJson as Word[]} busy={busyTop(ITEMS, tl.total)} />
+    <Subtitles words={captionsJson as Word[]} busy={[[M.kedai - 0.1, E('serbu') + 0.1], [M.gap + 0.3, M.rm100 + 1.6]]} />
   </>
 );
 

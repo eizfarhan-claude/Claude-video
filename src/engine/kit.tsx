@@ -5,7 +5,7 @@ import {FONT2, GOLD_SOLID, GREEN} from './theme';
 import {BandCtx, BandPos, Card, GoldText, IconCheck, IconCoin, IconPin, Label, Shine, TopBand, useEnvelope, usePop} from './ui';
 import {Word} from './timeline';
 import {useVideoConfig, spring} from 'remotion';
-import {FONT, SAFE, TOP_BAND} from './theme';
+import {BOTTOM_BAND, FONT, SAFE} from './theme';
 import {sec} from './timeline';
 
 export const popStyle = (p: number): React.CSSProperties => ({transform: `scale(${0.6 + 0.4 * p})`, opacity: Math.min(1, p * 1.5)});
@@ -313,7 +313,7 @@ const ImageCutInner: React.FC<{src: string; dur: number; source?: string}> = ({s
 };
 
 
-/* ---------- subtitles: shown in the top band whenever no top card is on screen ---------- */
+/* ---------- subtitles: on the chest (below the chin, above TikTok/IG bottom UI); hidden during full-frame image cutaways ---------- */
 type Page = {start: number; end: number; words: Word[]};
 const makePages = (words: Word[]): Page[] => {
   const pages: Page[] = [];
@@ -344,7 +344,7 @@ export const Subtitles: React.FC<{words: Word[]; busy: [number, number][]}> = ({
   const pf = Math.round((page.start - 0.05) * fps);
   const enter = spring({frame: frame - pf, fps, config: {damping: 15, stiffness: 220, mass: 0.5}});
   return (
-    <div style={{position: 'absolute', left: SAFE.left + 10, width: SAFE.right - SAFE.left - 20, top: TOP_BAND.y, height: TOP_BAND.h, display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', opacity: enter, transform: `translateY(${(1 - enter) * -20}px) scale(${0.92 + 0.08 * enter})`}}>
+    <div style={{position: 'absolute', left: SAFE.left + 10, width: SAFE.right - SAFE.left - 20, top: BOTTOM_BAND.y, height: BOTTOM_BAND.h, display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', opacity: enter, transform: `translateY(${(1 - enter) * 20}px) scale(${0.92 + 0.08 * enter})`}}>
       {page.words.map((w, i) => {
         const active = t >= w.start - 0.03 && t < (page.words[i + 1]?.start ?? page.end);
         const said = t >= w.start - 0.03;
