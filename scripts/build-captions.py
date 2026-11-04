@@ -37,6 +37,17 @@ for vid in sys.argv[1:]:
                     words[-1]['text'] += txt; words[-1]['end'] = round(en, 3); continue
                 sec = next((sp[2] for sp in spans if sp[0] <= (st + en) / 2 < sp[1]), spans[-1][2])
                 words.append({'text': txt, 'start': round(max(0, st), 3), 'end': round(en, 3), 'section': sec})
+    # multi-word fixes: {"mula kasih panah": "mulakan simpanan"} (matched ignoring case/punctuation)
+    for k, v in [(k, v) for k, v in fix.items() if ' ' in k]:
+        ks, vs = k.lower().split(), v.split(); i = 0
+        while i + len(ks) <= len(words):
+            if [re.sub(r'[.,?!]+$', '', x['text']).lower() for x in words[i:i + len(ks)]] == ks:
+                tail = re.sub(r'^.*?([.,?!]*)$', r'\1', words[i + len(ks) - 1]['text']); end = words[i + len(ks) - 1]['end']
+                grp = words[i:i + len(ks)]
+                new = [dict(grp[min(j, len(grp) - 1)], text=t) for j, t in enumerate(vs)]
+                new[-1]['end'] = end; new[-1]['text'] += tail
+                words[i:i + len(ks)] = new; i += len(vs)
+            else: i += 1
     for wd in words:
         key = wd['text']; bare = re.sub(r'[.,?!]+$', '', key); tail = key[len(bare):]
         if key in fix: wd['text'] = fix[key]

@@ -17,3 +17,9 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - `src/Captions.tsx` – word-by-word captions (currently disabled)
 - `src/Main.tsx` – cuts, punch-in zooms, SFX cue list, BGM with auto-ducking
 - `src/theme.ts` – safe-zone constants (`--props='{"showSafeZones":true}'` draws them)
+
+## v5 / v6
+- `scripts/transcribe.py v5 v6` – chunked Whisper large-v3 word transcript -> `data/<id>/transcript.json`
+- v5 `GajiEmas` — Gaji cukup makan, macam mana nak simpan emas? (106s raw → 68.8s)
+- v6 `DuaPunca` — 2 punca masalah kewangan (92s raw → 66.1s)
+- `npm run preview:v5` / `npm run preview:v6` for low-res previews

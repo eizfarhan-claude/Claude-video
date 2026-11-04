@@ -351,7 +351,7 @@ export const Subtitles: React.FC<{words: Word[]; busy: [number, number][]}> = ({
         const said = t >= w.start - 0.03;
         const emph = EMPH.test(clean(w.text));
         return (
-          <span key={i} style={{fontFamily: FONT, fontWeight: 900, fontSize: 54, lineHeight: 1.18, margin: '0 10px', color: active && emph ? GOLD_SOLID : said ? '#FFFFFF' : 'rgba(255,255,255,0.75)', WebkitTextStroke: '10px rgba(0,0,0,0.95)', paintOrder: 'stroke fill', textShadow: '0 6px 18px rgba(0,0,0,0.5)', display: 'inline-block', transform: `scale(${active ? 1.08 : 1})`}}>
+          <span key={i} style={{fontFamily: FONT, fontWeight: 900, fontSize: 54, lineHeight: 1.18, margin: '0 13px', color: active && emph ? GOLD_SOLID : said ? '#FFFFFF' : 'rgba(255,255,255,0.75)', WebkitTextStroke: '10px rgba(0,0,0,0.95)', paintOrder: 'stroke fill', textShadow: '0 6px 18px rgba(0,0,0,0.5)', display: 'inline-block', transform: `scale(${active ? 1.08 : 1})`}}>
             {clean(w.text)}
           </span>
         );
@@ -420,3 +420,160 @@ export const motionBusy = (items: GItem[], sfx: {t: number}[], extra: [number, n
   ...sfx.map((s) => [s.t - 0.15, s.t + 0.7] as [number, number]),
   ...extra,
 ];
+
+/* ---------- v5/v6 additions ---------- */
+export const IconX: React.FC<IP> = ({size = 64, color = '#E5484D'}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="29" fill={color} />
+    <path d="M21 21 L43 43 M43 21 L21 43" stroke="white" strokeWidth="7" strokeLinecap="round" />
+  </svg>
+);
+export const IconWallet: React.FC<IP> = ({size = 64, color = 'white'}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64">
+    <rect x="5" y="14" width="50" height="40" rx="8" fill="none" stroke={color} strokeWidth="5" />
+    <path d="M10 14 L42 5 L46 14" fill="none" stroke={color} strokeWidth="5" strokeLinejoin="round" />
+    <rect x="38" y="27" width="22" height="14" rx="5" fill={GOLD_SOLID} />
+    <circle cx="46" cy="34" r="3" fill="#2a1a00" />
+  </svg>
+);
+
+const countUp = (frame: number, at: number, len: number, to: number) =>
+  Math.round(to * interpolate(frame, [at, at + len], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)}));
+const rm = (n: number) => 'RM' + n.toLocaleString('en-US');
+
+/** Equation that builds up term by term: [a] × [b] = [result counting up], optional sub-line */
+export const CalcCard: React.FC<{dur: number; label: string; a: string; aAt: number; b: string; bAt: number; result: number; rAt: number; sub?: string; subAt?: number}> = ({
+  dur, label, a, aAt, b, bAt, result, rAt, sub, subAt = 99999,
+}) => {
+  const {v, frame} = useEnvelope(dur);
+  const pa = usePop(aAt), pb = usePop(bAt), pr = usePop(rAt, 9), ps = usePop(subAt);
+  const sh = interpolate(frame, [rAt + 6, rAt + 30], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const term = (t: string, p: number, gold = false) => (
+    <div style={{fontWeight: 900, fontSize: 40, color: gold ? GOLD_SOLID : 'white', ...popStyle(p), whiteSpace: 'nowrap'}}>{t}</div>
+  );
+  const op = (t: string, p: number) => <div style={{fontWeight: 800, fontSize: 36, color: 'rgba(255,255,255,0.55)', opacity: p}}>{t}</div>;
+  return (
+    <TopBand v={v}>
+      <Card style={{padding: '18px 30px', position: 'relative', overflow: 'hidden', textAlign: 'center', width: 840, boxSizing: 'border-box'}}>
+        <Label size={24} color={GOLD_SOLID}>{label}</Label>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14, marginTop: 8}}>
+          {term(a, pa)}{op('×', pb)}{term(b, pb)}{op('=', pr)}
+          <div style={{...popStyle(pr), minWidth: 250, textAlign: 'left'}}><GoldText size={58}>{rm(countUp(frame, rAt, 18, result))}</GoldText></div>
+        </div>
+        {sub && <div style={{fontFamily: FONT2, fontWeight: 700, fontSize: 30, color: 'rgba(255,255,255,0.88)', marginTop: 8, ...popStyle(ps)}}>{sub}</div>}
+        <Shine progress={sh} />
+      </Card>
+    </TopBand>
+  );
+};
+
+/** Ticked checklist; each row pops + gets its tick at its own time */
+export const ChecklistCard: React.FC<{dur: number; label: string; rows: {text: string; at: number; bad?: boolean}[]}> = ({dur, label, rows}) => {
+  const {v} = useEnvelope(dur);
+  const frame = useCurrentFrame();
+  return (
+    <TopBand v={v}>
+      <Card style={{padding: '16px 34px', width: 760}}>
+        <Label size={22} color={GOLD_SOLID}>{label}</Label>
+        {rows.map((r, i) => {
+          const p = interpolate(frame - r.at, [0, 9], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2))});
+          const tick = interpolate(frame - r.at, [5, 13], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+          return (
+            <div key={i} style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 8, opacity: Math.min(1, p * 1.5), transform: `translateX(${(1 - p) * -40}px)`}}>
+              <div style={{transform: `scale(${0.4 + 0.6 * tick})`, opacity: tick}}>{r.bad ? <IconX size={46} /> : <IconCheck size={46} />}</div>
+              <div style={{fontWeight: 900, fontSize: 42, whiteSpace: 'nowrap'}}>{r.text}</div>
+            </div>
+          );
+        })}
+      </Card>
+    </TopBand>
+  );
+};
+
+/** Vicious cycle: nodes light up in turn around a spinning ring */
+export const CycleCard: React.FC<{dur: number; label: string; nodes: {text: string; at: number}[]; loopAt: number}> = ({dur, label, nodes, loopAt}) => {
+  const {v, frame} = useEnvelope(dur);
+  const spin = interpolate(frame, [loopAt, loopAt + 40], [0, 360], {extrapolateLeft: 'clamp', extrapolateRight: 'extend'});
+  return (
+    <TopBand v={v}>
+      <Card style={{display: 'flex', alignItems: 'center', gap: 20, padding: '16px 28px', borderColor: 'rgba(229,72,77,0.75)'}}>
+        <svg width={84} height={84} viewBox="0 0 64 64" style={{transform: `rotate(${spin}deg)`, flexShrink: 0}}>
+          <path d="M32 6a26 26 0 1 1-24 16" fill="none" stroke="#E5484D" strokeWidth="6" strokeLinecap="round" />
+          <path d="M2 18l7 7 6-9z" fill="#E5484D" />
+        </svg>
+        <div>
+          <Label size={22} color="#FF8A8E">{label}</Label>
+          <div style={{display: 'flex', alignItems: 'center', gap: 10, marginTop: 6}}>
+            {nodes.map((n, i) => {
+              const p = interpolate(frame - n.at, [0, 8], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2))});
+              return (
+                <React.Fragment key={i}>
+                  {i > 0 && <div style={{fontWeight: 900, fontSize: 30, color: '#FF8A8E', opacity: p}}>→</div>}
+                  <div style={{fontWeight: 900, fontSize: 30, whiteSpace: 'nowrap', background: 'rgba(229,72,77,0.18)', borderRadius: 14, padding: '6px 12px', ...popStyle(p)}}>{n.text}</div>
+                </React.Fragment>
+              );
+            })}
+          </div>
+        </div>
+      </Card>
+    </TopBand>
+  );
+};
+
+/** Escalating words (e.g. PERIT → PEDIH → MENJERAT): each slams in bigger + redder, with a small shake */
+export const EscalateCard: React.FC<{dur: number; label: string; words: {text: string; at: number}[]}> = ({dur, label, words}) => {
+  const {v, frame} = useEnvelope(dur);
+  const cur = words.reduce((k, w, i) => (frame >= w.at ? i : k), -1);
+  const last = cur >= 0 ? words[cur].at : 0;
+  const shake = cur >= 0 ? Math.sin((frame - last) * 2.2) * interpolate(frame - last, [0, 10], [10 + cur * 5, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 0;
+  return (
+    <TopBand v={v}>
+      <div style={{textAlign: 'center', transform: `translateX(${shake}px)`}}>
+        <Label size={26} color="rgba(255,255,255,0.85)" style={{textShadow: '0 2px 10px rgba(0,0,0,0.9)'}}>{label}</Label>
+        <div style={{display: 'flex', gap: 16, justifyContent: 'center', alignItems: 'center', marginTop: 8}}>
+          {words.map((w, i) => {
+            const p = interpolate(frame - w.at, [0, 7], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2.4))});
+            const red = ['#FFB547', '#FF7A45', '#E5484D'][Math.min(2, i)];
+            return (
+              <div key={i} style={{fontFamily: FONT, fontWeight: 900, fontSize: 48 + i * 8, color: red, WebkitTextStroke: '8px rgba(0,0,0,0.9)', paintOrder: 'stroke fill',
+                opacity: Math.min(1, p * 1.5) * (i < cur ? 0.55 : 1), transform: `scale(${(2.2 - 1.2 * p)})`, whiteSpace: 'nowrap'}}>
+                {w.text}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </TopBand>
+  );
+};
+
+/** Red debt bar draining to zero, then a success line */
+export const DebtBar: React.FC<{dur: number; label: string; drain0: number; drain1: number; doneAt: number; done: string}> = ({dur, label, drain0, drain1, doneAt, done}) => {
+  const {v, frame} = useEnvelope(dur);
+  // drains in small steps ("sedikit demi sedikit")
+  const raw = interpolate(frame, [drain0, drain1], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const steps = 6;
+  const k = Math.floor(raw * steps), fr = raw * steps - k;
+  const paid = Math.min(1, (k + Easing.out(Easing.cubic)(Math.min(1, fr * 2.5))) / steps);
+  const d = usePop(doneAt, 9);
+  const sh = interpolate(frame, [doneAt, doneAt + 24], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const left = 1 - paid;
+  return (
+    <TopBand v={v}>
+      <Card style={{width: 840, padding: '18px 32px', position: 'relative', overflow: 'hidden'}}>
+        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline'}}>
+          <Label size={24}>{label}</Label>
+          <div style={{fontWeight: 900, fontSize: 44, color: left > 0.01 ? '#FF6B6F' : GREEN}}>{Math.round(left * 100)}%</div>
+        </div>
+        <div style={{height: 30, borderRadius: 15, background: 'rgba(255,255,255,0.12)', marginTop: 10, overflow: 'hidden'}}>
+          <div style={{width: `${left * 100}%`, height: '100%', borderRadius: 15, background: 'linear-gradient(90deg,#8E1B1F,#E5484D,#FF8A8E)', boxShadow: '0 0 20px rgba(229,72,77,0.7)'}} />
+        </div>
+        <div style={{display: 'flex', alignItems: 'center', gap: 14, marginTop: 12, ...popStyle(d), transformOrigin: 'left center', whiteSpace: 'nowrap', height: d > 0.01 ? undefined : 0}}>
+          <IconCheck size={44} />
+          <div style={{fontWeight: 900, fontSize: 38}}>{done}</div>
+        </div>
+        <Shine progress={sh} />
+      </Card>
+    </TopBand>
+  );
+};

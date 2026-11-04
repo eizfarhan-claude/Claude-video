@@ -1,0 +1,1058 @@
+[
+{
+"text": "Anda",
+"start": 0,
+"end": 0.16,
+"section": "hook"
+},
+{
+"text": "tahu",
+"start": 0.16,
+"end": 0.42,
+"section": "hook"
+},
+{
+"text": "tak",
+"start": 0.42,
+"end": 0.64,
+"section": "hook"
+},
+{
+"text": "masalah",
+"start": 0.64,
+"end": 1.18,
+"section": "hook"
+},
+{
+"text": "kewangan",
+"start": 1.18,
+"end": 1.64,
+"section": "hook"
+},
+{
+"text": "ni",
+"start": 1.64,
+"end": 1.88,
+"section": "hook"
+},
+{
+"text": "sebenarnya",
+"start": 1.88,
+"end": 2.26,
+"section": "hook"
+},
+{
+"text": "dua",
+"start": 2.26,
+"end": 2.54,
+"section": "hook"
+},
+{
+"text": "je.",
+"start": 2.54,
+"end": 2.82,
+"section": "hook"
+},
+{
+"text": "Kalau",
+"start": 2.88,
+"end": 3.24,
+"section": "hook"
+},
+{
+"text": "anda",
+"start": 3.24,
+"end": 3.46,
+"section": "hook"
+},
+{
+"text": "settlekan",
+"start": 3.46,
+"end": 4.02,
+"section": "hook"
+},
+{
+"text": "dua",
+"start": 4.02,
+"end": 4.22,
+"section": "hook"
+},
+{
+"text": "ni",
+"start": 4.22,
+"end": 4.42,
+"section": "hook"
+},
+{
+"text": "maksudnya",
+"start": 4.42,
+"end": 4.94,
+"section": "hook"
+},
+{
+"text": "anda",
+"start": 4.94,
+"end": 5.1,
+"section": "hook"
+},
+{
+"text": "memang",
+"start": 5.1,
+"end": 5.34,
+"section": "hook"
+},
+{
+"text": "tak",
+"start": 5.34,
+"end": 5.56,
+"section": "hook"
+},
+{
+"text": "ada",
+"start": 5.56,
+"end": 5.72,
+"section": "hook"
+},
+{
+"text": "masalah",
+"start": 5.72,
+"end": 6.16,
+"section": "hook"
+},
+{
+"text": "kewangan",
+"start": 6.16,
+"end": 6.56,
+"section": "hook"
+},
+{
+"text": "dan",
+"start": 6.56,
+"end": 6.84,
+"section": "hook"
+},
+{
+"text": "kewangan",
+"start": 6.84,
+"end": 7.48,
+"section": "hook"
+},
+{
+"text": "anda",
+"start": 7.48,
+"end": 7.68,
+"section": "hook"
+},
+{
+"text": "berada",
+"start": 7.68,
+"end": 8.08,
+"section": "hook"
+},
+{
+"text": "dalam",
+"start": 8.08,
+"end": 8.44,
+"section": "hook"
+},
+{
+"text": "tahap",
+"start": 8.44,
+"end": 8.94,
+"section": "hook"
+},
+{
+"text": "yang",
+"start": 8.94,
+"end": 9.08,
+"section": "hook"
+},
+{
+"text": "normal.",
+"start": 9.08,
+"end": 9.66,
+"section": "hook"
+},
+{
+"text": "Jadi",
+"start": 10.1,
+"end": 10.22,
+"section": "intro"
+},
+{
+"text": "bagi",
+"start": 10.22,
+"end": 10.5,
+"section": "intro"
+},
+{
+"text": "anda",
+"start": 10.5,
+"end": 10.6,
+"section": "intro"
+},
+{
+"text": "yang",
+"start": 10.6,
+"end": 10.72,
+"section": "intro"
+},
+{
+"text": "nak",
+"start": 10.72,
+"end": 10.82,
+"section": "intro"
+},
+{
+"text": "tahu",
+"start": 10.82,
+"end": 11.04,
+"section": "intro"
+},
+{
+"text": "tentang",
+"start": 11.04,
+"end": 11.26,
+"section": "intro"
+},
+{
+"text": "2",
+"start": 11.26,
+"end": 11.54,
+"section": "intro"
+},
+{
+"text": "punca",
+"start": 11.54,
+"end": 11.94,
+"section": "intro"
+},
+{
+"text": "masalah",
+"start": 11.94,
+"end": 12.34,
+"section": "intro"
+},
+{
+"text": "kewangan",
+"start": 12.34,
+"end": 12.66,
+"section": "intro"
+},
+{
+"text": "ini,",
+"start": 12.66,
+"end": 12.96,
+"section": "intro"
+},
+{
+"text": "boleh",
+"start": 13.04,
+"end": 13.34,
+"section": "intro"
+},
+{
+"text": "tengok",
+"start": 13.34,
+"end": 13.64,
+"section": "intro"
+},
+{
+"text": "video",
+"start": 13.64,
+"end": 13.82,
+"section": "intro"
+},
+{
+"text": "ni",
+"start": 13.82,
+"end": 14.04,
+"section": "intro"
+},
+{
+"text": "sampai",
+"start": 14.04,
+"end": 14.58,
+"section": "intro"
+},
+{
+"text": "habis.",
+"start": 14.58,
+"end": 15.02,
+"section": "intro"
+},
+{
+"text": "Yang",
+"start": 15.04,
+"end": 15.36,
+"section": "p1"
+},
+{
+"text": "pertama,",
+"start": 15.36,
+"end": 15.68,
+"section": "p1"
+},
+{
+"text": "masalah",
+"start": 15.86,
+"end": 16.32,
+"section": "p1"
+},
+{
+"text": "kewangan",
+"start": 16.32,
+"end": 16.66,
+"section": "p1"
+},
+{
+"text": "adalah",
+"start": 16.66,
+"end": 16.98,
+"section": "p1"
+},
+{
+"text": "tak",
+"start": 16.98,
+"end": 17.46,
+"section": "p1"
+},
+{
+"text": "ada",
+"start": 17.46,
+"end": 17.66,
+"section": "p1"
+},
+{
+"text": "tabungan,",
+"start": 17.66,
+"end": 18.18,
+"section": "p1"
+},
+{
+"text": "tak",
+"start": 18.2,
+"end": 18.46,
+"section": "p1"
+},
+{
+"text": "ada",
+"start": 18.46,
+"end": 18.66,
+"section": "p1"
+},
+{
+"text": "simpanan.",
+"start": 18.66,
+"end": 19.18,
+"section": "p1"
+},
+{
+"text": "Dan",
+"start": 19.46,
+"end": 19.56,
+"section": "p2"
+},
+{
+"text": "bila",
+"start": 19.56,
+"end": 19.8,
+"section": "p2"
+},
+{
+"text": "mana",
+"start": 19.8,
+"end": 20.0,
+"section": "p2"
+},
+{
+"text": "tak",
+"start": 20.0,
+"end": 20.26,
+"section": "p2"
+},
+{
+"text": "ada",
+"start": 20.26,
+"end": 20.38,
+"section": "p2"
+},
+{
+"text": "tabungan",
+"start": 20.38,
+"end": 20.82,
+"section": "p2"
+},
+{
+"text": "dan",
+"start": 20.82,
+"end": 20.9,
+"section": "p2"
+},
+{
+"text": "tak",
+"start": 20.9,
+"end": 21.06,
+"section": "p2"
+},
+{
+"text": "ada",
+"start": 21.06,
+"end": 21.16,
+"section": "p2"
+},
+{
+"text": "simpanan,",
+"start": 21.16,
+"end": 21.72,
+"section": "p2"
+},
+{
+"text": "anda",
+"start": 21.74,
+"end": 22.2,
+"section": "p2"
+},
+{
+"text": "akan",
+"start": 22.2,
+"end": 22.4,
+"section": "p2"
+},
+{
+"text": "pergi",
+"start": 22.4,
+"end": 22.72,
+"section": "p2"
+},
+{
+"text": "kepada",
+"start": 22.72,
+"end": 22.96,
+"section": "p2"
+},
+{
+"text": "masalah",
+"start": 22.96,
+"end": 23.48,
+"section": "p2"
+},
+{
+"text": "yang",
+"start": 23.48,
+"end": 23.64,
+"section": "p2"
+},
+{
+"text": "kedua,",
+"start": 23.64,
+"end": 24.06,
+"section": "p2"
+},
+{
+"text": "iaitu",
+"start": 24.08,
+"end": 24.58,
+"section": "p2"
+},
+{
+"text": "bila",
+"start": 24.58,
+"end": 24.82,
+"section": "p2"
+},
+{
+"text": "kecemasan,",
+"start": 24.82,
+"end": 25.5,
+"section": "p2"
+},
+{
+"text": "anda",
+"start": 25.52,
+"end": 25.96,
+"section": "p2"
+},
+{
+"text": "akan",
+"start": 25.96,
+"end": 26.3,
+"section": "p2"
+},
+{
+"text": "terpaksa",
+"start": 26.3,
+"end": 27.16,
+"section": "p2"
+},
+{
+"text": "berhutang.",
+"start": 27.16,
+"end": 27.84,
+"section": "p2"
+},
+{
+"text": "Dan",
+"start": 27.84,
+"end": 28.2,
+"section": "p2"
+},
+{
+"text": "dua",
+"start": 28.2,
+"end": 28.48,
+"section": "punca"
+},
+{
+"text": "inilah",
+"start": 28.48,
+"end": 28.8,
+"section": "punca"
+},
+{
+"text": "punca",
+"start": 28.8,
+"end": 29.22,
+"section": "punca"
+},
+{
+"text": "kepada",
+"start": 29.22,
+"end": 29.52,
+"section": "punca"
+},
+{
+"text": "masalah",
+"start": 29.52,
+"end": 30.08,
+"section": "punca"
+},
+{
+"text": "kewangan.",
+"start": 30.08,
+"end": 30.46,
+"section": "punca"
+},
+{
+"text": "Yang",
+"start": 30.9,
+"end": 31.0,
+"section": "punca"
+},
+{
+"text": "makin",
+"start": 31.0,
+"end": 31.38,
+"section": "punca"
+},
+{
+"text": "besar",
+"start": 31.38,
+"end": 31.66,
+"section": "punca"
+},
+{
+"text": "tanpa",
+"start": 31.66,
+"end": 32.34,
+"section": "punca"
+},
+{
+"text": "ada",
+"start": 32.34,
+"end": 32.54,
+"section": "punca"
+},
+{
+"text": "kesudahan.",
+"start": 32.54,
+"end": 33.14,
+"section": "punca"
+},
+{
+"text": "Okey,",
+"start": 33.24,
+"end": 33.62,
+"section": "spiral"
+},
+{
+"text": "selagi",
+"start": 33.72,
+"end": 34.0,
+"section": "spiral"
+},
+{
+"text": "mana",
+"start": 34.0,
+"end": 34.18,
+"section": "spiral"
+},
+{
+"text": "anda",
+"start": 34.18,
+"end": 34.48,
+"section": "spiral"
+},
+{
+"text": "tak",
+"start": 34.48,
+"end": 34.72,
+"section": "spiral"
+},
+{
+"text": "ada",
+"start": 34.72,
+"end": 34.82,
+"section": "spiral"
+},
+{
+"text": "tabungan,",
+"start": 34.82,
+"end": 35.32,
+"section": "spiral"
+},
+{
+"text": "tak",
+"start": 35.38,
+"end": 35.62,
+"section": "spiral"
+},
+{
+"text": "ada",
+"start": 35.62,
+"end": 35.78,
+"section": "spiral"
+},
+{
+"text": "simpanan,",
+"start": 35.78,
+"end": 36.36,
+"section": "spiral"
+},
+{
+"text": "selagi",
+"start": 36.4,
+"end": 36.9,
+"section": "spiral"
+},
+{
+"text": "itulah",
+"start": 36.9,
+"end": 37.22,
+"section": "spiral"
+},
+{
+"text": "anda",
+"start": 37.22,
+"end": 37.4,
+"section": "spiral"
+},
+{
+"text": "sentiasa",
+"start": 37.4,
+"end": 38.02,
+"section": "spiral"
+},
+{
+"text": "kena",
+"start": 38.02,
+"end": 38.24,
+"section": "spiral"
+},
+{
+"text": "berhutang.",
+"start": 38.24,
+"end": 38.84,
+"section": "spiral"
+},
+{
+"text": "Di",
+"start": 39.1,
+"end": 39.18,
+"section": "spiral"
+},
+{
+"text": "saat",
+"start": 39.18,
+"end": 39.38,
+"section": "spiral"
+},
+{
+"text": "kecemasan",
+"start": 39.38,
+"end": 40.0,
+"section": "spiral"
+},
+{
+"text": "anda",
+"start": 40.0,
+"end": 40.16,
+"section": "spiral"
+},
+{
+"text": "tambah",
+"start": 40.16,
+"end": 40.54,
+"section": "spiral"
+},
+{
+"text": "hutang",
+"start": 40.54,
+"end": 40.96,
+"section": "spiral"
+},
+{
+"text": "dan",
+"start": 40.96,
+"end": 41.2,
+"section": "spiral"
+},
+{
+"text": "kewangan",
+"start": 41.2,
+"end": 41.7,
+"section": "spiral"
+},
+{
+"text": "anda",
+"start": 41.7,
+"end": 42.0,
+"section": "spiral"
+},
+{
+"text": "akan",
+"start": 42.0,
+"end": 42.48,
+"section": "spiral"
+},
+{
+"text": "makin",
+"start": 42.48,
+"end": 42.84,
+"section": "spiral"
+},
+{
+"text": "lama,",
+"start": 42.84,
+"end": 43.0,
+"section": "spiral"
+},
+{
+"text": "makin",
+"start": 43.18,
+"end": 43.66,
+"section": "spiral"
+},
+{
+"text": "perit,",
+"start": 43.66,
+"end": 44.04,
+"section": "spiral"
+},
+{
+"text": "makin",
+"start": 44.04,
+"end": 44.5,
+"section": "spiral"
+},
+{
+"text": "lama,",
+"start": 44.5,
+"end": 44.72,
+"section": "spiral"
+},
+{
+"text": "makin",
+"start": 44.86,
+"end": 45.36,
+"section": "spiral"
+},
+{
+"text": "pedih,",
+"start": 45.36,
+"end": 45.74,
+"section": "spiral"
+},
+{
+"text": "makin",
+"start": 45.74,
+"end": 46.16,
+"section": "spiral"
+},
+{
+"text": "lama,",
+"start": 46.16,
+"end": 46.36,
+"section": "spiral"
+},
+{
+"text": "makin",
+"start": 46.48,
+"end": 46.92,
+"section": "spiral"
+},
+{
+"text": "menjerat.",
+"start": 46.92,
+"end": 47.32,
+"section": "spiral"
+},
+{
+"text": "Jadi",
+"start": 47.66,
+"end": 47.74,
+"section": "solusi"
+},
+{
+"text": "solusinya",
+"start": 47.74,
+"end": 48.3,
+"section": "solusi"
+},
+{
+"text": "macam",
+"start": 48.3,
+"end": 48.52,
+"section": "solusi"
+},
+{
+"text": "mana?",
+"start": 48.52,
+"end": 48.76,
+"section": "solusi"
+},
+{
+"text": "Wujudkan",
+"start": 49.24,
+"end": 49.72,
+"section": "solve"
+},
+{
+"text": "tabungan,",
+"start": 49.72,
+"end": 50.26,
+"section": "solve"
+},
+{
+"text": "wujudkan",
+"start": 50.28,
+"end": 50.94,
+"section": "solve"
+},
+{
+"text": "simpanan",
+"start": 50.94,
+"end": 51.58,
+"section": "solve"
+},
+{
+"text": "dan",
+"start": 51.58,
+"end": 51.74,
+"section": "solve"
+},
+{
+"text": "pada",
+"start": 51.74,
+"end": 51.98,
+"section": "solve"
+},
+{
+"text": "masa",
+"start": 51.98,
+"end": 52.3,
+"section": "solve"
+},
+{
+"text": "yang",
+"start": 52.3,
+"end": 52.44,
+"section": "solve"
+},
+{
+"text": "sama,",
+"start": 52.44,
+"end": 52.68,
+"section": "solve"
+},
+{
+"text": "kurangkan",
+"start": 52.78,
+"end": 53.46,
+"section": "solve"
+},
+{
+"text": "hutang.",
+"start": 53.46,
+"end": 53.92,
+"section": "solve"
+},
+{
+"text": "Dan",
+"start": 54.14,
+"end": 54.24,
+"section": "solve"
+},
+{
+"text": "daripada",
+"start": 54.24,
+"end": 54.58,
+"section": "solve"
+},
+{
+"text": "simpanan",
+"start": 54.58,
+"end": 55.02,
+"section": "solve"
+},
+{
+"text": "tadi,",
+"start": 55.02,
+"end": 55.22,
+"section": "solve"
+},
+{
+"text": "cuba",
+"start": 55.34,
+"end": 55.76,
+"section": "solve"
+},
+{
+"text": "settlekan",
+"start": 55.76,
+"end": 56.1,
+"section": "solve"
+},
+{
+"text": "hutang",
+"start": 56.1,
+"end": 56.5,
+"section": "solve"
+},
+{
+"text": "sedikit",
+"start": 56.5,
+"end": 56.86,
+"section": "solve"
+},
+{
+"text": "demi",
+"start": 56.86,
+"end": 57.08,
+"section": "solve"
+},
+{
+"text": "sedikit,",
+"start": 57.08,
+"end": 57.44,
+"section": "solve"
+},
+{
+"text": "sampai",
+"start": 57.58,
+"end": 58.0,
+"section": "solve"
+},
+{
+"text": "lah",
+"start": 58.0,
+"end": 58.42,
+"section": "solve"
+},
+{
+"text": "anda",
+"start": 58.42,
+"end": 58.64,
+"section": "solve"
+},
+{
+"text": "settle",
+"start": 58.64,
+"end": 59.18,
+"section": "solve"
+},
+{
+"text": "dua",
+"start": 59.18,
+"end": 59.6,
+"section": "solve"
+},
+{
+"text": "punca",
+"start": 59.6,
+"end": 60.14,
+"section": "solve"
+},
+{
+"text": "masalah",
+"start": 60.14,
+"end": 60.66,
+"section": "solve"
+},
+{
+"text": "kewangan",
+"start": 60.66,
+"end": 60.96,
+"section": "solve"
+},
+{
+"text": "ini",
+"start": 60.96,
+"end": 61.28,
+"section": "solve"
+},
+{
+"text": "dan",
+"start": 61.28,
+"end": 61.66,
+"section": "solve"
+},
+{
+"text": "anda",
+"start": 61.66,
+"end": 62.06,
+"section": "solve"
+},
+{
+"text": "takkan",
+"start": 62.06,
+"end": 62.76,
+"section": "solve"
+},
+{
+"text": "lagi",
+"start": 62.76,
+"end": 62.96,
+"section": "solve"
+},
+{
+"text": "ada",
+"start": 63.42,
+"end": 63.58,
+"section": "solve"
+},
+{
+"text": "masalah",
+"start": 63.58,
+"end": 64.36,
+"section": "solve"
+},
+{
+"text": "kewangan.",
+"start": 64.36,
+"end": 64.72,
+"section": "solve"
+},
+{
+"text": "Dapat",
+"start": 64.88,
+"end": 65.28,
+"section": "outro"
+},
+{
+"text": "sesuatu?",
+"start": 65.28,
+"end": 65.72,
+"section": "outro"
+}
+]

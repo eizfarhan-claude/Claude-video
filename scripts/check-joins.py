@@ -19,6 +19,6 @@ for vid in sys.argv[1:]:
         t0, t1 = max(0, jt - 2.2), min(len(out) / 16000, jt + 1.8)
         x = np.concatenate([pad, out[int(t0 * 16000):int(t1 * 16000)], pad])
         segs, _ = m.transcribe(x, language='ms', beam_size=5, condition_on_previous_text=False,
-                               initial_prompt='Transkripsi verbatim bahasa Melayu, termasuk ulangan perkataan.')
+                               initial_prompt=None, temperature=[0.0, 0.2, 0.4], no_speech_threshold=0.9, log_prob_threshold=-3)
         txt = ' '.join(s.text.strip() for s in segs)
         print(f'  cut @{jt:6.2f}s [{sec}]  …{txt}', flush=True)
