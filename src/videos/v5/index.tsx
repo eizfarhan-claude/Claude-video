@@ -7,7 +7,7 @@ import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {CalcCard, ChecklistCard, Choices, GItem, IconShield, IconWallet, Schedule, StepCard, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconCoin, IconPin} from '../../engine/ui';
 
-const tl = makeTimeline(edlJson as Edl);
+const tl = makeTimeline(edlJson as Edl, 15); // 0.5s hold: ends right after the last word
 const {at, sectionStart: S, sectionEnd: E} = tl;
 
 const M = {
@@ -30,7 +30,6 @@ const M = {
   sewaktu: at('keep', 'sewaktu'),
   next: S('next'),
   emas: at('next', 'emas'),
-  jangka: at('next', 'jangka'),
   pertama: at('cta', 'pertama'),
   kedua: at('cta', 'kedua'),
   ketiga: at('cta', 'ketiga'),

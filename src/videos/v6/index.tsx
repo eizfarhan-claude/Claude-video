@@ -6,7 +6,7 @@ import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {Choices, CycleCard, DebtBar, EscalateCard, GItem, IconChat, IconShield, IconWarn, IconX, Schedule, StepCard, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 
-const tl = makeTimeline(edlJson as Edl);
+const tl = makeTimeline(edlJson as Edl, 15); // 0.5s hold: ends right after the last word
 const {at, sectionStart: S, sectionEnd: E} = tl;
 
 const M = {

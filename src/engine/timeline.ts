@@ -6,7 +6,7 @@ export type Clip = {section: string; srcFrom: number; durationInFrames: number; 
 export type Edl = {fps: number; durationInFrames: number; clips: Clip[]; words: Word[]};
 
 /** Word-anchored timing helpers for one video's EDL (all times = output seconds). */
-export const makeTimeline = (edl: Edl) => {
+export const makeTimeline = (edl: Edl, tail = TAIL) => {
   const words = edl.words;
   const norm = (t: string) => t.toLowerCase().replace(/[.,?!]+$/, '');
   /** start of the n-th occurrence of `text` inside `section` */
@@ -25,6 +25,6 @@ export const makeTimeline = (edl: Edl) => {
     if (!w) throw new Error(`section not found: ${s}`);
     return w.end;
   };
-  return {edl, words, at, sectionStart, sectionEnd, total: edl.durationInFrames + TAIL};
+  return {edl, words, at, sectionStart, sectionEnd, total: edl.durationInFrames + tail};
 };
 export type Timeline = ReturnType<typeof makeTimeline>;

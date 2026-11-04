@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
 import {AbsoluteFill, Audio, interpolate, OffthreadVideo, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
-import {Clip, sec, TAIL, Timeline} from './timeline';
+import {Clip, sec, Timeline} from './timeline';
 import {SAFE, TOP_BAND} from './theme';
 
 export type Sfx = {t: number; f: string; v: number};
@@ -82,7 +82,7 @@ export const Edit: React.FC<EditProps & {def: VideoDef}> = ({def, preview, showS
   return (
     <AbsoluteFill style={{backgroundColor: 'black'}}>
       {clips.map((c, i) => (
-        <Sequence key={i} from={c.outFrom} durationInFrames={i === clips.length - 1 ? c.durationInFrames + TAIL : c.durationInFrames}>
+        <Sequence key={i} from={c.outFrom} durationInFrames={i === clips.length - 1 ? total - c.outFrom : c.durationInFrames}>
           <ClipVideo def={def} clip={c} idx={i} hq={hq} />
           <Audio src={staticFile(`${def.id}/source/voice.wav`)} startFrom={c.srcFrom} endAt={c.srcFrom + c.durationInFrames} volume={(f) => edgeFade(f, c.durationInFrames)} />
         </Sequence>
@@ -96,7 +96,7 @@ export const Edit: React.FC<EditProps & {def: VideoDef}> = ({def, preview, showS
       <Audio
         src={staticFile(`music/${def.music.file}`)}
         startFrom={sec(def.music.startAt)}
-        volume={(f) => duck[Math.min(f, duck.length - 1)] * interpolate(f, [total - 50, total], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+        volume={(f) => duck[Math.min(f, duck.length - 1)] * interpolate(f, [total - 40, total], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
       />
       {def.sfx.map((s, i) => (
         <Sequence key={i} from={Math.max(0, sec(s.t))} durationInFrames={sec(4.5)} layout="none">
