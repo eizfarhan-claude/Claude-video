@@ -2,15 +2,58 @@
  "id": "v5",
  "title": "Gaji Cukup Makan, Nak Simpan Emas?",
  "ranges": [
-  ["hook", 5.8, 9.62],
-  ["intro", 9.62, 16.8],
-  ["priority", 16.8, 33.0],
-  ["why", 34.75, 41.6],
-  ["keep", 43.5, 55.1],
-  ["next", 60.1, 67.0],
-  ["cta", 87.5, 105.4]
+  [
+   "hook",
+   5.8,
+   9.62
+  ],
+  [
+   "intro",
+   9.62,
+   16.8
+  ],
+  [
+   "priority",
+   16.8,
+   33.0
+  ],
+  [
+   "why",
+   34.75,
+   41.6
+  ],
+  [
+   "keep",
+   43.5,
+   55.1
+  ],
+  [
+   "next",
+   60.1,
+   67.0
+  ],
+  [
+   "cta",
+   87.5,
+   105.4
+  ]
  ],
- "cuts": [[26.15, 27.6], [98.85, 100.1]],
- "fix": {"menabuk": "menabung", "kaya": "gaji", "Maka": "makan", "Prospek": "prospek", "situasinya": "situasi"},
+ "cuts": [
+  [
+   26.15,
+   27.6
+  ],
+  [
+   98.85,
+   100.1
+  ]
+ ],
+ "fix": {
+  "menabuk": "menabung",
+  "kaya": "kais",
+  "Maka": "makan",
+  "Prospek": "prospek",
+  "situasinya": "situasi"
+ },
  "drop": []
 }
