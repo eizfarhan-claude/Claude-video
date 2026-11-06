@@ -1,0 +1,18 @@
+{
+ "id": "v10",
+ "title": "3 Risiko Simpan Emas",
+ "ranges": [
+  ["hook", 7.6, 12.3],
+  ["r1", 12.3, 20.9],
+  ["r1tip", 28.0, 35.8],
+  ["r2", 35.8, 49.84],
+  ["r3", 66.6, 82.95],
+  ["untung", 91.7, 98.05],
+  ["ilmu", 107.3, 115.65],
+  ["target", 131.3, 143.9],
+  ["outro", 145.35, 146.4]
+ ],
+ "cuts": [],
+ "fix": {"meneletakkan": "meletakkan", "gemar": "emas", "simpak": "simpan", "masanya": "masa", "siku": "risiko", "resiko": "risiko", "Konsum": "Confirm", "konsum": "confirm"},
+ "drop": []
+}

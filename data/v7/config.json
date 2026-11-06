@@ -1,0 +1,20 @@
+{
+ "id": "v7",
+ "title": "Kenapa Kena Menabung? Checkpoint Kehidupan",
+ "ranges": [
+  ["hook", 13.3, 16.75],
+  ["objek", 16.75, 25.7],
+  ["answer", 26.0, 38.6],
+  ["student", 53.6, 59.7],
+  ["rumah", 60.1, 75.45],
+  ["retire", 83.4, 88.4],
+  ["why", 94.75, 109.3],
+  ["asb", 123.6, 133.35],
+  ["emas", 133.35, 152.1],
+  ["gap", 164.7, 176.25],
+  ["cta", 176.25, 189.75]
+ ],
+ "cuts": [],
+ "fix": {"menabur": "menabung", "data": "dan", "bunga": "tabungan", "tabuh": "Tabung", "resi": "isi", "get": "guide", "-puan,": "-puan,"},
+ "drop": []
+}

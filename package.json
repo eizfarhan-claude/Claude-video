@@ -9,7 +9,11 @@
     "render": "remotion render GoldDinar out/final.mp4 --crf=16 --audio-bitrate=320k",
     "render:4k": "remotion render GoldDinar out/final_4k.mp4 --scale=2 --crf=16 --x264-preset=slow --audio-bitrate=320k --timeout=180000 --props='{\"hq\":true}'",
     "preview:v5": "remotion render GajiEmas out/preview_GajiEmas.mp4 --scale=0.5 --crf=24 --props='{\"preview\":true}'",
-    "preview:v6": "remotion render DuaPunca out/preview_DuaPunca.mp4 --scale=0.5 --crf=24 --props='{\"preview\":true}'"
+    "preview:v6": "remotion render DuaPunca out/preview_DuaPunca.mp4 --scale=0.5 --crf=24 --props='{\"preview\":true}'",
+    "preview:v7": "remotion render Checkpoint out/preview_Checkpoint.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v8": "remotion render HargaJatuh out/preview_HargaJatuh.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v9": "remotion render SatuGram out/preview_SatuGram.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v10": "remotion render TigaRisiko out/preview_TigaRisiko.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.3.0",

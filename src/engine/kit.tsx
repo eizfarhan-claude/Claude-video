@@ -200,8 +200,8 @@ export const Choices: React.FC<{dur: number; items: {top: string; main: string; 
 };
 
 /** Standard closing CTA: header -> PIN VIDEO + guide pills -> optional final gold card */
-export const CtaCard: React.FC<{dur: number; head: string; pin: number; guide: number; final?: number; finalLabel?: string; finalTitle?: string}> = ({
-  dur, head, pin, guide, final, finalLabel, finalTitle,
+export const CtaCard: React.FC<{dur: number; head: string; pin: number; guide: number; final?: number; finalLabel?: string; finalTitle?: string; guideText?: string}> = ({
+  dur, head, pin, guide, final, finalLabel, finalTitle, guideText = 'Guide step by step',
 }) => {
   const {v, frame} = useEnvelope(dur, 6);
   const h = usePop(0);
@@ -220,7 +220,7 @@ export const CtaCard: React.FC<{dur: number; head: string; pin: number; guide: n
               <IconPin size={34} color="#2a1a00" /> Tengok PIN VIDEO
             </div>
             <div style={{display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.14)', borderRadius: 18, padding: '10px 20px', fontWeight: 800, fontSize: 30, whiteSpace: 'nowrap', ...popStyle(g)}}>
-              Guide step by step
+              {guideText}
             </div>
           </div>
         </Card>
@@ -575,5 +575,168 @@ export const DebtBar: React.FC<{dur: number; label: string; drain0: number; drai
         <Shine progress={sh} />
       </Card>
     </TopBand>
+  );
+};
+
+/* ---------- v7–v10 additions ---------- */
+export const IconGrad: React.FC<IP> = ({size = 64, color = 'white'}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill={color}>
+    <path d="M32 10 L62 24 L32 38 L2 24 Z" /><path d="M14 31 v12 c0 6 36 6 36 0 V31 L32 40 Z" />
+    <rect x="55" y="24" width="3" height="18" rx="1.5" fill={GOLD_SOLID} /><circle cx="56.5" cy="44" r="3.5" fill={GOLD_SOLID} />
+  </svg>
+);
+export const IconRings: React.FC<IP> = ({size = 64, color = GOLD_SOLID}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill="none" stroke={color} strokeWidth="5">
+    <circle cx="24" cy="38" r="15" /><circle cx="40" cy="38" r="15" /><path d="M36 10 l4 -5 l4 5 l-4 5z" fill="white" stroke="white" strokeWidth="2" />
+  </svg>
+);
+export const IconHouse: React.FC<IP> = ({size = 64, color = 'white'}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill={color}>
+    <path d="M32 6 L60 30 H52 V58 H12 V30 H4 Z" /><rect x="27" y="38" width="10" height="20" fill="#111" />
+  </svg>
+);
+export const IconKid: React.FC<IP> = ({size = 64, color = 'white'}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" fill={color}>
+    <circle cx="32" cy="16" r="10" /><path d="M16 60 V40 c0-10 32-10 32 0 V60 Z" /><rect x="22" y="44" width="20" height="5" rx="2" fill={GOLD_SOLID} />
+  </svg>
+);
+export const IconSun: React.FC<IP> = ({size = 64, color = GOLD_SOLID}) => (
+  <svg width={size} height={size} viewBox="0 0 64 64">
+    <circle cx="32" cy="34" r="13" fill={color} />
+    {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => (
+      <rect key={a} x="30" y="8" width="4" height="9" rx="2" fill={color} transform={`rotate(${a} 32 34)`} />
+    ))}
+    <rect x="4" y="54" width="56" height="5" rx="2.5" fill="white" />
+  </svg>
+);
+
+/** Viewer objections / quotes as chat bubbles, one popping in per `at` */
+export const QuoteStack: React.FC<{dur: number; label: string; quotes: {text: string; at: number}[]}> = ({dur, label, quotes}) => {
+  const {v} = useEnvelope(dur);
+  const frame = useCurrentFrame();
+  return (
+    <TopBand v={v}>
+      <div style={{width: 820}}>
+        <Label size={22} color={GOLD_SOLID} style={{textShadow: '0 2px 8px rgba(0,0,0,0.9)', marginBottom: 6}}>{label}</Label>
+        {quotes.map((q, i) => {
+          const p = interpolate(frame - q.at, [0, 9], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2))});
+          return (
+            <div key={i} style={{display: 'flex', justifyContent: i % 2 ? 'flex-end' : 'flex-start', marginTop: 8}}>
+              <div style={{background: i % 2 ? 'rgba(245,200,76,0.95)' : 'rgba(255,255,255,0.96)', color: '#16120a', fontFamily: FONT, fontWeight: 800, fontSize: 34,
+                padding: '10px 22px', borderRadius: 26, borderBottomLeftRadius: i % 2 ? 26 : 6, borderBottomRightRadius: i % 2 ? 6 : 26,
+                boxShadow: '0 10px 26px rgba(0,0,0,0.4)', whiteSpace: 'nowrap', opacity: Math.min(1, p * 1.5), transform: `scale(${0.6 + 0.4 * p})`, transformOrigin: i % 2 ? 'right bottom' : 'left bottom'}}>
+                {q.text}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </TopBand>
+  );
+};
+
+/** Life checkpoints along a road: progress line fills to each node as it is mentioned */
+export const JourneyCard: React.FC<{dur: number; label: string; nodes: {text: string; icon: React.ReactNode; at: number}[]}> = ({dur, label, nodes}) => {
+  const {v, frame} = useEnvelope(dur);
+  const n = nodes.length;
+  const reached = nodes.reduce((k, nd, i) => (frame >= nd.at ? i : k), -1);
+  const prevAt = reached >= 0 ? nodes[reached].at : 0;
+  const seg = interpolate(frame - prevAt, [0, 10], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+  const fill = reached < 0 ? 0 : Math.max(0, (reached - 1 + seg)) / (n - 1);
+  const W = 700, step = W / (n - 1);
+  return (
+    <TopBand v={v}>
+      <Card style={{width: 860, padding: '14px 80px 16px', boxSizing: 'border-box'}}>
+        <Label size={22} color={GOLD_SOLID} style={{marginLeft: -50}}>{label}</Label>
+        <div style={{position: 'relative', height: 150, marginTop: 6}}>
+          <div style={{position: 'absolute', left: 0, right: 0, top: 44, height: 8, borderRadius: 4, background: 'rgba(255,255,255,0.15)'}} />
+          <div style={{position: 'absolute', left: 0, width: `${fill * 100}%`, top: 44, height: 8, borderRadius: 4, background: 'linear-gradient(90deg,#B07A1F,#F7D774)', boxShadow: '0 0 16px rgba(247,215,116,0.8)'}} />
+          {nodes.map((nd, i) => {
+            const p = interpolate(frame - nd.at, [0, 9], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2.2))});
+            const on = frame >= nd.at;
+            const cur = i === reached;
+            return (
+              <div key={i} style={{position: 'absolute', left: i * step - 60, width: 120, top: 0, textAlign: 'center'}}>
+                <div style={{width: 96, height: 96, margin: '0 auto', borderRadius: 48, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  background: on ? (cur ? 'linear-gradient(180deg,#FFF1B8,#F2C14E 50%,#B07A1F)' : 'rgba(245,200,76,0.35)') : 'rgba(40,40,46,0.95)',
+                  border: `3px solid ${on ? GOLD_SOLID : 'rgba(255,255,255,0.25)'}`, transform: `scale(${on ? (cur ? 1 + 0.1 * p : 0.86) : 0.72})`,
+                  boxShadow: cur ? '0 0 26px rgba(247,215,116,0.9)' : 'none'}}>
+                  <div style={{opacity: on ? 1 : 0.35}}>{nd.icon}</div>
+                </div>
+                <div style={{fontWeight: 900, fontSize: 24, marginTop: 6, color: on ? 'white' : 'rgba(255,255,255,0.4)', whiteSpace: 'nowrap'}}>{nd.text}</div>
+              </div>
+            );
+          })}
+        </div>
+      </Card>
+    </TopBand>
+  );
+};
+
+/** Same money, two prices: bar of grams grows longer when the price drops */
+export const GramCompare: React.FC<{dur: number; label: string; aAt: number; bAt: number; sub?: string; subAt?: number}> = ({dur, label, aAt, bAt, sub, subAt = 99999}) => {
+  const {v, frame} = useEnvelope(dur);
+  const grow = (at: number, to: number) => to * interpolate(frame - at, [0, 16], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+  const ps = usePop(subAt);
+  const row = (name: string, w: number, at: number, color: string, tag: string) => (
+    <div style={{display: 'flex', alignItems: 'center', gap: 14, marginTop: 10, opacity: interpolate(frame - at, [0, 6], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
+      <div style={{width: 170, fontWeight: 800, fontSize: 26, whiteSpace: 'nowrap'}}>{name}</div>
+      <div style={{flex: 1, height: 34, borderRadius: 17, background: 'rgba(255,255,255,0.1)', overflow: 'hidden'}}>
+        <div style={{width: `${grow(at, w) * 100}%`, height: '100%', borderRadius: 17, background: color}} />
+      </div>
+      <div style={{width: 160, fontWeight: 900, fontSize: 24, color: GOLD_SOLID, whiteSpace: 'nowrap', textAlign: 'right'}}>{tag}</div>
+    </div>
+  );
+  return (
+    <TopBand v={v}>
+      <Card style={{width: 860, padding: '16px 30px', boxSizing: 'border-box'}}>
+        <Label size={22} color={GOLD_SOLID}>{label}</Label>
+        {row('Harga biasa', 0.5, aAt, 'linear-gradient(90deg,#6b6b73,#a9a9b3)', 'gram')}
+        {row('Harga jatuh', 0.85, bAt, 'linear-gradient(90deg,#B07A1F,#F7D774,#FFF1B8)', 'gram LEBIH')}
+        {sub && <div style={{fontFamily: FONT2, fontWeight: 700, fontSize: 28, color: 'rgba(255,255,255,0.9)', marginTop: 10, ...popStyle(ps), transformOrigin: 'left center', height: ps > 0.01 ? undefined : 0}}>{sub}</div>}
+      </Card>
+    </TopBand>
+  );
+};
+
+/** Gold bars per milestone (e.g. 1 / 5 / 10 years), each rising with a counting gram figure */
+export const GramTimeline: React.FC<{dur: number; label: string; cols: {top: string; grams: number; at: number; tag?: string; tagAt?: number}[]}> = ({dur, label, cols}) => {
+  const {v, frame} = useEnvelope(dur);
+  const max = Math.max(...cols.map((c) => c.grams));
+  return (
+    <TopBand v={v}>
+      <Card style={{width: 860, padding: '12px 30px 14px', boxSizing: 'border-box'}}>
+        <Label size={22} color={GOLD_SOLID}>{label}</Label>
+        <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'flex-end', height: 172, marginTop: 4}}>
+          {cols.map((c, i) => {
+            const k = interpolate(frame - c.at, [0, 20], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+            const tp = interpolate(frame - (c.tagAt ?? 99999), [0, 8], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+            const h = 18 + 82 * (c.grams / max) * k;
+            return (
+              <div key={i} style={{width: 240, textAlign: 'center', opacity: frame >= c.at ? 1 : 0.25}}>
+                <div style={{fontWeight: 900, fontSize: 40, color: GOLD_SOLID, lineHeight: 1}}>{Math.round(c.grams * k)}g</div>
+                <div style={{height: h, width: 86, margin: '6px auto 0', borderRadius: '12px 12px 4px 4px', background: 'linear-gradient(180deg,#FFF1B8,#F7D774 40%,#B07A1F)', boxShadow: k > 0 ? '0 0 20px rgba(247,215,116,0.6)' : 'none'}} />
+                <div style={{fontWeight: 900, fontSize: 26, marginTop: 6}}>{c.top}</div>
+                <div style={{fontFamily: FONT2, fontWeight: 700, fontSize: 20, color: 'rgba(255,255,255,0.85)', opacity: tp, height: 24, whiteSpace: 'nowrap'}}>{c.tag ?? ''}</div>
+              </div>
+            );
+          })}
+        </div>
+      </Card>
+    </TopBand>
+  );
+};
+
+/** Self-drawing up/down price line (for "harga naik turun") */
+export const WaveIcon: React.FC<{size?: number}> = ({size = 90}) => {
+  const f = useCurrentFrame();
+  const d = 'M4 44 L14 26 L22 38 L32 14 L40 34 L48 22 L60 48';
+  const len = 140;
+  const off = len * (1 - interpolate(f, [0, 22], [0, 1], {extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)}));
+  return (
+    <svg width={size} height={size} viewBox="0 0 64 64" fill="none" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 4 V60 H60" stroke="rgba(255,255,255,0.5)" strokeWidth="3" />
+      <path d={d} stroke={GOLD_SOLID} strokeWidth="5" strokeDasharray={len} strokeDashoffset={off} />
+    </svg>
   );
 };

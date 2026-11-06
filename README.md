@@ -23,3 +23,6 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - v5 `GajiEmas` — Gaji cukup makan, macam mana nak simpan emas? (106s raw → 68.8s)
 - v6 `DuaPunca` — 2 punca masalah kewangan (92s raw → 66.1s)
 - `npm run preview:v5` / `npm run preview:v6` for low-res previews
+- v7 `Checkpoint` (kenapa kena menabung), v8 `HargaJatuh`, v9 `SatuGram` (1g sebulan + auto debit), v10 `TigaRisiko`
+- `scripts/recaption.py <id> t0 t1` re-transcribes one window of the edited voice into captions.json
+- config edges written as `"96.70!"` are exact (not snapped to silence)

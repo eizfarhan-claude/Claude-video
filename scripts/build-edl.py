@@ -18,7 +18,13 @@ FPS = 30
 MIN_CLIP = 6  # frames; drop micro-slivers
 
 cfg = json.load(open(D / "config.json"))
-RANGES = [tuple(r) for r in cfg["ranges"]]
+# an edge given as a string ending in "!" (e.g. "96.70!") is exact: never snapped to silence
+HARD = set()
+def _edge(v):
+    if isinstance(v, str) and v.endswith("!"):
+        HARD.add(round(float(v[:-1]), 3)); return float(v[:-1])
+    return v
+RANGES = [(r[0], _edge(r[1]), _edge(r[2])) for r in cfg["ranges"]]
 CUTS = [tuple(c) for c in cfg.get("cuts", [])]
 FIX = cfg.get("fix", {})
 DROP = {(round(s, 2), w) for s, w in cfg.get("drop", [])}
@@ -92,7 +98,7 @@ _fixed = []
 for k, (nm, a, b) in enumerate(RANGES):
     joined_prev = k > 0 and abs(RANGES[k - 1][2] - a) < 0.05
     joined_next = k + 1 < len(RANGES) and abs(RANGES[k + 1][1] - b) < 0.05
-    _fixed.append((nm, a if joined_prev else round(fix_start(a), 3), b if joined_next else round(fix_end(b), 3)))
+    _fixed.append((nm, a if joined_prev or round(a, 3) in HARD else round(fix_start(a), 3), b if joined_next or round(b, 3) in HARD else round(fix_end(b), 3)))
 RANGES = _fixed
 # CUTS: [s, e] removes s..e; s is treated as an END, e as a START
 CUTS = [(round(fix_end(s), 3), round(fix_start(e), 3)) for s, e in CUTS]

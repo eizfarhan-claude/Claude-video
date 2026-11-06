@@ -27,7 +27,7 @@ for vid in sys.argv[1:]:
     for t0, t1 in zip(bounds, bounds[1:]):
         segs, _ = m.transcribe(np.concatenate([pad, x[int(t0 * R):int(t1 * R)], pad]), language='ms', word_timestamps=True,
                                beam_size=5, condition_on_previous_text=False,
-                               initial_prompt='Simpanan emas, akaun GAP Public Gold, 5 dinar emas, 21.25 gram, RM100.')
+                               initial_prompt='Simpanan emas, tabungan, akaun GAP Public Gold, auto debit, spread, dividen, ASB, Tabung Haji, RM100.')
         for s in segs:
             for wd in s.words:
                 txt = wd.word.strip(); st = wd.start - 0.4 + t0; en = wd.end - 0.4 + t0
