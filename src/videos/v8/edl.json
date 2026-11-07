@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2605,
+ "durationInFrames": 2596,
  "clips": [
   {
    "section": "hook",
@@ -59,8 +59,14 @@
   {
    "section": "cta",
    "srcFrom": 4016,
-   "durationInFrames": 441,
+   "durationInFrames": 185,
    "outFrom": 2164
+  },
+  {
+   "section": "cta",
+   "srcFrom": 4210,
+   "durationInFrames": 247,
+   "outFrom": 2349
   }
  ],
  "words": [
@@ -1381,139 +1387,139 @@
   {
    "text": "dan",
    "start": 78.027,
-   "end": 78.547,
+   "end": 78.3,
    "section": "cta"
   },
   {
    "text": "juga",
-   "start": 78.547,
-   "end": 78.927,
+   "start": 78.3,
+   "end": 78.627,
    "section": "cta"
   },
   {
    "text": "isi",
-   "start": 78.927,
-   "end": 79.667,
+   "start": 78.627,
+   "end": 79.367,
    "section": "cta"
   },
   {
    "text": "beg",
-   "start": 79.667,
-   "end": 79.787,
+   "start": 79.367,
+   "end": 79.487,
    "section": "cta"
   },
   {
    "text": "biru",
-   "start": 79.787,
-   "end": 80.167,
+   "start": 79.487,
+   "end": 79.867,
    "section": "cta"
   },
   {
    "text": "untuk",
-   "start": 80.167,
-   "end": 80.367,
+   "start": 79.867,
+   "end": 80.067,
    "section": "cta"
   },
   {
    "text": "saya",
-   "start": 80.367,
-   "end": 80.567,
+   "start": 80.067,
+   "end": 80.267,
    "section": "cta"
   },
   {
    "text": "kat",
-   "start": 80.567,
-   "end": 80.787,
+   "start": 80.267,
+   "end": 80.487,
    "section": "cta"
   },
   {
    "text": "step",
-   "start": 80.787,
-   "end": 81.007,
+   "start": 80.487,
+   "end": 80.707,
    "section": "cta"
   },
   {
    "text": "by",
-   "start": 81.007,
-   "end": 81.187,
+   "start": 80.707,
+   "end": 80.887,
    "section": "cta"
   },
   {
    "text": "step",
-   "start": 81.187,
-   "end": 81.407,
+   "start": 80.887,
+   "end": 81.107,
    "section": "cta"
   },
   {
    "text": "macam",
-   "start": 81.407,
-   "end": 81.747,
+   "start": 81.107,
+   "end": 81.447,
    "section": "cta"
   },
   {
    "text": "mana",
-   "start": 81.747,
-   "end": 82.067,
+   "start": 81.447,
+   "end": 81.767,
    "section": "cta"
   },
   {
    "text": "simpanan",
-   "start": 82.067,
-   "end": 82.887,
+   "start": 81.767,
+   "end": 82.587,
    "section": "cta"
   },
   {
    "text": "emas",
-   "start": 82.887,
-   "end": 83.187,
+   "start": 82.587,
+   "end": 82.887,
    "section": "cta"
   },
   {
    "text": "ini",
-   "start": 83.187,
-   "end": 83.367,
+   "start": 82.887,
+   "end": 83.067,
    "section": "cta"
   },
   {
    "text": "membantu",
-   "start": 83.367,
-   "end": 84.067,
+   "start": 83.067,
+   "end": 83.767,
    "section": "cta"
   },
   {
    "text": "anda",
-   "start": 84.067,
-   "end": 84.287,
+   "start": 83.767,
+   "end": 83.987,
    "section": "cta"
   },
   {
    "text": "capai",
-   "start": 84.287,
-   "end": 84.847,
+   "start": 83.987,
+   "end": 84.547,
    "section": "cta"
   },
   {
    "text": "matlamat",
-   "start": 84.847,
-   "end": 85.287,
+   "start": 84.547,
+   "end": 84.987,
    "section": "cta"
   },
   {
    "text": "dengan",
-   "start": 85.287,
-   "end": 85.507,
+   "start": 84.987,
+   "end": 85.207,
    "section": "cta"
   },
   {
    "text": "lebih",
-   "start": 85.507,
-   "end": 86.047,
+   "start": 85.207,
+   "end": 85.747,
    "section": "cta"
   },
   {
    "text": "cepat.",
-   "start": 86.047,
-   "end": 86.507,
+   "start": 85.747,
+   "end": 86.207,
    "section": "cta"
   }
  ]
