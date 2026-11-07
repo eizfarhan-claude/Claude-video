@@ -24,7 +24,6 @@ const M = {
   cepat0: at('jatuh', 'cepat'),
   peluang: S('peluang'),
   peluangW: at('peluang', 'peluang'),
-  cepat1: at('peluang', 'cepat'),
   tahu: at('panik', 'tahu'),
   panik: at('panik', 'panik'),
   nampak: at('matlamat', 'nampak'),
@@ -57,8 +56,8 @@ const ITEMS: GItem[] = [
   {from: M.jatuh + 0.05, to: E('jatuh') + 0.15, render: (d, r) => (
     <GramCompare dur={d} label="Duit sama, harga jatuh" aAt={4} bAt={r(M.lebih)} sub="lebih cepat capai 50g pertama" subAt={r(M.cepat0)} />
   )},
-  {from: M.peluang + 0.05, to: E('peluang') + 0.15, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconCoin size={86} />} label="Kejatuhan harga emas" title="= PELUANG" size={74} sub="capai matlamat lebih cepat" subAt={r(M.cepat1)} shine />
+  {from: M.peluang + 0.05, to: E('peluang') + 0.15, render: (d) => (
+    <TitleCard dur={d} icon={<IconCoin size={86} />} label="Kejatuhan harga emas" title="= PELUANG" size={74} shine />
   )},
   {from: M.tahu - 0.15, to: M.makin - 0.15, render: (d, r) => (
     <Choices dur={d} items={[
