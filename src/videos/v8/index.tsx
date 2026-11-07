@@ -4,7 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
-import {Choices, CtaCard, GItem, GramCompare, IconChartDown, IconPlane, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
+import {Choices, CtaCard, GItem, GramCompare, IconChartDown, IconPlane, PhoneCut, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconCoin, IconTarget} from '../../engine/ui';
 
 const tl = makeTimeline(edlJson as Edl, 15);
@@ -31,7 +31,10 @@ const M = {
   makin: at('matlamat', 'makin'),
   cukupkan: at('matlamat', 'cukupkan'),
   calc: S('calc'),
+  klik: at('calc', 'klik'),
   bio: at('calc', 'bio'),
+  tengok: at('calc', 'tengok'),
+  kalkulator: at('calc', 'kalkulator'),
   semak: at('calc', 'semak'),
   tagline: S('tagline'),
   peluang2: at('tagline', 'peluang'),
@@ -67,7 +70,7 @@ const ITEMS: GItem[] = [
     <TitleCard dur={d} icon={<IconChartDown size={84} />} label="Makin rendah harga" title="MAKIN BESAR PELUANG" size={56} sub="cukupkan gram · capai matlamat 2–3 tahun" subAt={r(M.cukupkan)} />
   )},
   {from: M.calc + 0.05, to: E('calc') + 0.1, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconTarget size={80} />} label="Klik link di bio" title="KALKULATOR MATLAMAT" size={56} sub="semak target 2–3 tahun anda" subAt={r(M.semak)} />
+    <TitleCard dur={d} icon={<IconTarget size={80} />} label="Klik link di bio" title="KALKULATOR MATLAMAT" size={50} sub="semak target 2–3 tahun anda" subAt={r(M.semak)} />
   )},
   {from: M.tagline, to: E('tagline') + 0.2, render: (d, r) => (
     <TitleCard dur={d} label="Simpan emas dengan matlamat" title="HARGA JATUH = PELUANG" size={60} shine />
@@ -95,7 +98,9 @@ const SFX: Sfx[] = [
   {t: M.makin - 0.15, f: 'whoosh_small', v: 0.28},
   {t: M.cukupkan, f: 'coins', v: 0.32},
   {t: M.calc + 0.05, f: 'whoosh_pop', v: 0.4},
-  {t: M.bio, f: 'click_select', v: 0.38},
+  {t: M.klik - 0.2, f: 'whoosh_small', v: 0.3},
+  {t: M.tengok, f: 'click_select', v: 0.38},
+  {t: M.kalkulator - 0.1, f: 'whoosh_pop', v: 0.38},
   {t: M.semak, f: 'atm_key', v: 0.3},
   {t: M.tagline, f: 'whoosh_cine', v: 0.3},
   {t: M.peluang2, f: 'gold_prize', v: 0.28},
@@ -105,10 +110,15 @@ const SFX: Sfx[] = [
   {t: M.membantu - 0.1, f: 'gold_prize', v: 0.3},
 ];
 
+// Screenshots in a phone frame: the bio-link page, then the goal calculator
+const PHONE: [number, number][] = [[M.klik - 0.15, M.kalkulator - 0.05], [M.kalkulator - 0.05, E('calc') + 0.1]];
+
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <PhoneCut src="v8/broll/web.jpg" aspect={694 / 1280} from={PHONE[0][0]} to={PHONE[0][1]} highlight={[0.825, 0.905]} highlightAt={M.tengok} caption="Link di bio" />
+    <PhoneCut src="v8/broll/kalkulator.jpg" aspect={540 / 1061} from={PHONE[1][0]} to={PHONE[1][1]} highlight={[0.625, 0.835]} highlightAt={M.semak} />
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
+    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, PHONE)} />
   </>
 );
 

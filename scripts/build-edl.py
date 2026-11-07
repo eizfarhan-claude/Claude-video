@@ -38,7 +38,7 @@ DROP = {(round(s, 2), w) for s, w in cfg.get("drop", [])}
 # Internal pauses longer than MAX_GAP are squeezed to PAD_OUT + PAD_IN.
 SIL_DB = -50.0
 FR = 0.02
-PAD_IN, PAD_OUT = 0.10, 0.14
+PAD_IN, PAD_OUT = cfg.get("pad_in", 0.10), cfg.get("pad_out", 0.14)  # per-video override: longer tail = softer sentence endings
 MAX_GAP = 0.40
 import wave, numpy as np
 wf = wave.open(str(ROOT / "public" / VID / "source" / "voice.wav")); sr = wf.getframerate()

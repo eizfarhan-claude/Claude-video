@@ -2,17 +2,67 @@
  "id": "v8",
  "title": "Harga Emas Jatuh = Peluang",
  "ranges": [
-  ["hook", 6.55, 19.75],
-  ["contoh", 19.75, 29.05],
-  ["jatuh", 34.2, 43.85],
-  ["peluang", 56.27, 62.85],
-  ["panik", 73.18, 78.54],
-  ["matlamat", 79.44, "96.70!"],
-  ["calc", 103.11, 114.15],
-  ["tagline", 120.05, 124.31],
-  ["cta", 133.75, 148.32]
+  [
+   "hook",
+   6.55,
+   19.75
+  ],
+  [
+   "contoh",
+   19.75,
+   29.05
+  ],
+  [
+   "jatuh",
+   34.2,
+   43.85
+  ],
+  [
+   "peluang",
+   56.27,
+   62.85
+  ],
+  [
+   "panik",
+   73.18,
+   78.54
+  ],
+  [
+   "matlamat",
+   79.44,
+   96.9
+  ],
+  [
+   "calc",
+   103.11,
+   114.15
+  ],
+  [
+   "tagline",
+   120.05,
+   124.31
+  ],
+  [
+   "cta",
+   133.75,
+   148.32
+  ]
  ],
- "cuts": [[86.25, 88.85]],
- "fix": {"Mac,": "", "maya": "emas", "simpak": "simpan", "matamak": "matlamat", "tempuh": "tempoh", "Sipan": "Simpan", "sipan": "simpan"},
- "drop": [[6.1, "Mac,"]]
+ "cuts": [],
+ "fix": {
+  "Mac,": "",
+  "maya": "emas",
+  "simpak": "simpan",
+  "matamak": "matlamat",
+  "tempuh": "tempoh",
+  "Sipan": "Simpan",
+  "sipan": "simpan"
+ },
+ "drop": [
+  [
+   6.1,
+   "Mac,"
+  ]
+ ],
+ "pad_out": 0.24
 }
