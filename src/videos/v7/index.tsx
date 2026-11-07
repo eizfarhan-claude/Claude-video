@@ -4,7 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
-import {ChecklistCard, Choices, GItem, IconGrad, IconHouse, IconKid, IconPlane, IconRings, IconSun, IconWallet, IconChat, JourneyCard, QuoteStack, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
+import {BRollTrack, ChecklistCard, Choices, GItem, IconGrad, IconHouse, IconKid, IconPlane, IconRings, IconSun, IconWallet, IconChat, JourneyCard, QuoteStack, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconCoin, IconPin, IconTarget} from '../../engine/ui';
 
 const tl = makeTimeline(edlJson as Edl, 15);
@@ -116,6 +116,7 @@ const SFX: Sfx[] = [
   {t: M.smooth, f: 'pop_msg', v: 0.35},
   {t: M.asb - 0.15, f: 'whoosh_small', v: 0.3},
   {t: M.emas, f: 'gold_prize', v: 0.28},
+  {t: M.dapat - 0.32, f: 'whoosh_cine', v: 0.3},
   {t: M.kenaikan + 0.15, f: 'click_select', v: 0.36},
   {t: M.inflasi + 0.15, f: 'click_select', v: 0.36},
   {t: M.keborosan + 0.15, f: 'ding_correct', v: 0.3},
@@ -126,10 +127,14 @@ const SFX: Sfx[] = [
   {t: M.outro - 0.1, f: 'bell_notif', v: 0.26},
 ];
 
+// B-roll: gold bars in hand, full frame while the benefits of gold are listed (voice continues underneath)
+const BROLL = [{file: 'v7/broll/gold.mp4', from: M.dapat - 0.2, to: E('emas') + 0.3, srcStart: 5.5}];
+
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <BRollTrack cuts={BROLL} />
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
+    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, BROLL.map((b) => [b.from, b.to] as [number, number]))} />
   </>
 );
 
