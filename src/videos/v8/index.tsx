@@ -22,8 +22,6 @@ const M = {
   jatuh: S('jatuh'),
   lebih: at('jatuh', 'lebih'),
   cepat0: at('jatuh', 'cepat'),
-  peluang: S('peluang'),
-  peluangW: at('peluang', 'peluang'),
   tahu: at('panik', 'tahu'),
   panik: at('panik', 'panik'),
   nampak: at('matlamat', 'nampak'),
@@ -56,9 +54,6 @@ const ITEMS: GItem[] = [
   {from: M.jatuh + 0.05, to: E('jatuh') + 0.15, render: (d, r) => (
     <GramCompare dur={d} label="Duit sama, harga jatuh" aAt={4} bAt={r(M.lebih)} sub="lebih cepat capai 50g pertama" subAt={r(M.cepat0)} />
   )},
-  {from: M.peluang + 0.05, to: E('peluang') + 0.15, render: (d) => (
-    <TitleCard dur={d} icon={<IconCoin size={86} />} label="Kejatuhan harga emas" title="= PELUANG" size={74} shine />
-  )},
   {from: M.tahu - 0.15, to: M.makin - 0.15, render: (d, r) => (
     <Choices dur={d} items={[
       {top: 'Tiada matlamat', main: 'PANIK', at: r(M.panik), bad: true},
@@ -89,8 +84,6 @@ const SFX: Sfx[] = [
   {t: M.g50, f: 'gold_prize', v: 0.28},
   {t: M.jatuh + 0.05, f: 'whoosh_small', v: 0.3},
   {t: M.lebih, f: 'coins', v: 0.36},
-  {t: M.peluang + 0.05, f: 'whoosh_cine', v: 0.3},
-  {t: M.peluangW, f: 'ding_correct', v: 0.32},
   {t: M.tahu - 0.15, f: 'whoosh_small', v: 0.28},
   {t: M.panik, f: 'pop_hard', v: 0.36},
   {t: M.nampak, f: 'ding_correct', v: 0.32},
@@ -123,8 +116,8 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 
 export const v8: VideoDef = {
   id: 'v8', tl, Overlays, sfx: SFX,
-  punches: [M.panik0, M.g50, M.lebih, M.peluangW, M.panik, M.peluang2],
-  zoom: {hook: [1.12, 1.0], contoh: [1.06], jatuh: [1.0], peluang: [1.08], panik: [1.0], matlamat: [1.06, 1.0], calc: [1.0], tagline: [1.1], cta: [1.0]},
+  punches: [M.panik0, M.g50, M.lebih, M.panik, M.peluang2],
+  zoom: {hook: [1.12, 1.0], contoh: [1.06], jatuh: [1.0], panik: [1.0], matlamat: [1.06, 1.0], calc: [1.0], tagline: [1.1], cta: [1.0]},
   music: {file: 'bgm.mp3', startAt: 100},
 };
 export const HargaJatuh: React.FC<EditProps> = (p) => <Edit def={v8} {...p} />;
