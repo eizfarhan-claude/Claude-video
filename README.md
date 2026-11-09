@@ -26,3 +26,4 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - v7 `Checkpoint` (kenapa kena menabung), v8 `HargaJatuh`, v9 `SatuGram` (1g sebulan + auto debit), v10 `TigaRisiko`
 - `scripts/recaption.py <id> t0 t1` re-transcribes one window of the edited voice into captions.json
 - config edges written as `"96.70!"` are exact (not snapped to silence)
+- `scripts/prep-vivid.sh <id> raw.mov` – high-saturation, sharper grade (used for v7 final)
