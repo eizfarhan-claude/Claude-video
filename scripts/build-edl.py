@@ -25,7 +25,7 @@ def _edge(v):
         HARD.add(round(float(v[:-1]), 3)); return float(v[:-1])
     return v
 RANGES = [(r[0], _edge(r[1]), _edge(r[2])) for r in cfg["ranges"]]
-CUTS = [tuple(c) for c in cfg.get("cuts", [])]
+CUTS = [(_edge(c[0]), _edge(c[1])) for c in cfg.get("cuts", [])]
 FIX = cfg.get("fix", {})
 DROP = {(round(s, 2), w) for s, w in cfg.get("drop", [])}
 # ---------------------------------------------------------------------------------------------
@@ -101,7 +101,7 @@ for k, (nm, a, b) in enumerate(RANGES):
     _fixed.append((nm, a if joined_prev or round(a, 3) in HARD else round(fix_start(a), 3), b if joined_next or round(b, 3) in HARD else round(fix_end(b), 3)))
 RANGES = _fixed
 # CUTS: [s, e] removes s..e; s is treated as an END, e as a START
-CUTS = [(round(fix_end(s), 3), round(fix_start(e), 3)) for s, e in CUTS]
+CUTS = [(s if round(s, 3) in HARD else round(fix_end(s), 3), e if round(e, 3) in HARD else round(fix_start(e), 3)) for s, e in CUTS]
 
 # internal pauses from the energy map
 sil, i = [], 0

@@ -13,7 +13,13 @@
     "preview:v7": "remotion render Checkpoint out/preview_Checkpoint.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v8": "remotion render HargaJatuh out/preview_HargaJatuh.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v9": "remotion render SatuGram out/preview_SatuGram.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
-    "preview:v10": "remotion render TigaRisiko out/preview_TigaRisiko.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
+    "preview:v10": "remotion render TigaRisiko out/preview_TigaRisiko.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v11": "remotion render TigaTips out/preview_TigaTips.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v12": "remotion render DuaCara out/preview_DuaCara.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v13": "remotion render AutoDebit out/preview_AutoDebit.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v14": "remotion render JualHutang out/preview_JualHutang.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v15": "remotion render HargaTurun out/preview_HargaTurun.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v16": "remotion render SatuKilo out/preview_SatuKilo.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.3.0",

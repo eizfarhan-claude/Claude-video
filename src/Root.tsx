@@ -11,6 +11,12 @@ import {Checkpoint, v7} from './videos/v7';
 import {HargaJatuh, v8} from './videos/v8';
 import {SatuGram, v9} from './videos/v9';
 import {TigaRisiko, v10} from './videos/v10';
+import {TigaTips, v11} from './videos/v11';
+import {DuaCara, v12} from './videos/v12';
+import {AutoDebit, v13} from './videos/v13';
+import {JualHutang, v14} from './videos/v14';
+import {HargaTurun, v15} from './videos/v15';
+import {SatuKilo, v16} from './videos/v16';
 
 const defaults: EditProps = {preview: false, showSafeZones: false, hq: false};
 const common = {width: 1080, height: 1920, fps: 30, defaultProps: defaults};
@@ -27,5 +33,11 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="HargaJatuh" component={HargaJatuh} durationInFrames={v8.tl.total} {...common} />
     <Composition id="SatuGram" component={SatuGram} durationInFrames={v9.tl.total} {...common} />
     <Composition id="TigaRisiko" component={TigaRisiko} durationInFrames={v10.tl.total} {...common} />
+    <Composition id="TigaTips" component={TigaTips} durationInFrames={v11.tl.total} {...common} />
+    <Composition id="DuaCara" component={DuaCara} durationInFrames={v12.tl.total} {...common} />
+    <Composition id="AutoDebit" component={AutoDebit} durationInFrames={v13.tl.total} {...common} />
+    <Composition id="JualHutang" component={JualHutang} durationInFrames={v14.tl.total} {...common} />
+    <Composition id="HargaTurun" component={HargaTurun} durationInFrames={v15.tl.total} {...common} />
+    <Composition id="SatuKilo" component={SatuKilo} durationInFrames={v16.tl.total} {...common} />
   </>
 );

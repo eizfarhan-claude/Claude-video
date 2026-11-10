@@ -1,0 +1,17 @@
+{
+ "id": "v11",
+ "title": "3 Tips Mudah Menabung Emas",
+ "ranges": [
+  ["hook", 2.2, 4.15],
+  ["t1", 4.15, 10.4],
+  ["t2", 12.6, 17.9],
+  ["t3", 18.1, 23.72],
+  ["kahwin", 23.72, 27.6],
+  ["haji", 30.6, 33.1],
+  ["rumah", 37.1, 44.6],
+  ["outro", 54.5, 59.3]
+ ],
+ "cuts": [],
+ "fix": {"menabur": "menabung", "game": "GAP", "kereta": "kita", "gerak": "gram", "Sifat": "Simpan", "simpak": "simpan", "keuangan": "kewangan", "tetap": "tentang"},
+ "drop": []
+}

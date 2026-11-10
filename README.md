@@ -27,3 +27,14 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - `scripts/recaption.py <id> t0 t1` re-transcribes one window of the edited voice into captions.json
 - config edges written as `"96.70!"` are exact (not snapped to silence)
 - `scripts/prep-vivid.sh <id> raw.mov` – high-saturation, sharper grade (used for v7 final)
+
+## v11–v16 (batch Nov 2026, vivid grade)
+- Source prep: `VIVID=1 scripts/prep-source.sh <id> raw.MOV` (high saturation + sharpen in one pass)
+- v11 `TigaTips` — 3 tips mudah menabung emas (59s raw → 38s)
+- v12 `DuaCara` — keluarkan emas fizikal + auto debit (97s → 75s)
+- v13 `AutoDebit` — alang-alang simpan emas, biar sampai kaya (91s → 52s)
+- v14 `JualHutang` — berbaloi jual emas untuk settle hutang? (122s → 78s)
+- v15 `HargaTurun` — harga emas jatuh: tenang, simpan jangka panjang (127s → 107s)
+- v16 `SatuKilo` — cita-cita 1 kg emas, menabung sedikit demi sedikit (126s → 77s)
+- `npm run preview:v11` … `preview:v16`; config cuts can now use exact edges too (`["61.64!", "62.75!"]`)
+- new kit card: `ChainCard` (cause → effect pills, optional no-arrows / red variant)

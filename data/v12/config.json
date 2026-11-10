@@ -1,0 +1,66 @@
+{
+ "id": "v12",
+ "title": "2 Cara Simpanan Emas Cepat Bertambah",
+ "ranges": [
+  [
+   "hook",
+   0.75,
+   5.5
+  ],
+  [
+   "guru",
+   8.3,
+   16.5
+  ],
+  [
+   "fizikal",
+   19.2,
+   37.6
+  ],
+  [
+   "beza",
+   37.6,
+   41.2
+  ],
+  [
+   "seronok",
+   49.1,
+   53.1
+  ],
+  [
+   "motivasi",
+   57.3,
+   65.9
+  ],
+  [
+   "autodebit",
+   65.9,
+   "75.1!"
+  ],
+  [
+   "gaji",
+   79.2,
+   84.3
+  ],
+  [
+   "cta",
+   84.3,
+   97.5
+  ]
+ ],
+ "cuts": [
+  [
+   "61.64!",
+   "62.75!"
+  ]
+ ],
+ "fix": {
+  "penyimpang": "penyimpan",
+  "kos": "konsisten",
+  "sistem": "",
+  "menabuk": "menabung",
+  "grandmas": "gaji",
+  "Keseronakan": "Keseronokan"
+ },
+ "drop": []
+}

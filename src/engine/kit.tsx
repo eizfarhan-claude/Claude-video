@@ -740,3 +740,39 @@ export const WaveIcon: React.FC<{size?: number}> = ({size = 90}) => {
     </svg>
   );
 };
+
+/* ---------- v11+ additions ---------- */
+/** Cause → effect chain: gold pills joined by arrows, each lighting up when mentioned (the newest one glows). */
+export const ChainCard: React.FC<{dur: number; label: string; steps: {text: string; at: number}[]; arrows?: boolean; bad?: boolean}> = ({dur, label, steps, arrows = true, bad = false}) => {
+  const {v, frame} = useEnvelope(dur);
+  const cur = steps.reduce((k, s, i) => (frame >= s.at ? i : k), -1);
+  return (
+    <TopBand v={v}>
+      <Card style={{width: 900, padding: '16px 22px', boxSizing: 'border-box'}}>
+        <Label size={22} color={GOLD_SOLID}>{label}</Label>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, marginTop: 12}}>
+          {steps.map((s, i) => {
+            const p = interpolate(frame - s.at, [0, 8], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2.2))});
+            const on = frame >= s.at;
+            const now = i === cur;
+            return (
+              <React.Fragment key={i}>
+                {i > 0 && arrows && (
+                  <svg width={30} height={30} viewBox="0 0 30 30" style={{flexShrink: 0, opacity: on ? 1 : 0.25}}>
+                    <path d="M4 15 H22 M15 7 L23 15 L15 23" stroke={GOLD_SOLID} strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                )}
+                <div style={{flex: 1, minWidth: 0, textAlign: 'center', padding: '12px 6px', borderRadius: 18, fontWeight: 900, fontSize: 25, lineHeight: 1.1,
+                  background: now ? (bad ? 'linear-gradient(180deg,#FF9A9D,#E5484D)' : 'linear-gradient(180deg,#FFF1B8,#F2C14E 50%,#B07A1F)') : on ? 'rgba(245,200,76,0.22)' : 'rgba(255,255,255,0.07)',
+                  color: now ? (bad ? 'white' : '#2a1a00') : on ? 'white' : 'rgba(255,255,255,0.3)', border: `2px solid ${on ? GOLD_SOLID : 'rgba(255,255,255,0.15)'}`,
+                  boxShadow: now ? '0 0 26px rgba(247,215,116,0.8)' : 'none', transform: `scale(${on ? 0.9 + 0.1 * p : 0.9})`}}>
+                  {s.text}
+                </div>
+              </React.Fragment>
+            );
+          })}
+        </div>
+      </Card>
+    </TopBand>
+  );
+};

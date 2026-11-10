@@ -1,0 +1,57 @@
+{
+ "id": "v16",
+ "title": "Cita-cita 1 kilogram emas: menabung sedikit demi sedikit",
+ "ranges": [
+  [
+   "hook",
+   1.9,
+   13.95
+  ],
+  [
+   "peluang",
+   22.5,
+   29.95
+  ],
+  [
+   "akaun",
+   30.3,
+   50.3
+  ],
+  [
+   "contoh",
+   51.2,
+   55.4
+  ],
+  [
+   "bajet",
+   60.8,
+   82.9
+  ],
+  [
+   "cta",
+   107.9,
+   125.8
+  ]
+ ],
+ "cuts": [
+  [
+   36.2,
+   41.9
+  ],
+  [
+   "122.86!",
+   "124.18!"
+  ]
+ ],
+ "fix": {
+  "grad": "gram",
+  "dinars": "dinar",
+  "gap": "GAP",
+  "masjid": "emas",
+  "menabur": "menabung",
+  "jeb": "GAP",
+  "damage": "demi",
+  "keluarga": "kilogram"
+ },
+ "drop": []
+}

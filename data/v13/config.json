@@ -1,0 +1,14 @@
+{
+ "id": "v13",
+ "title": "Alang-alang simpan emas, biar sampai kaya (auto debit)",
+ "ranges": [
+  ["hook", 7.0, 11.45],
+  ["kaya", 22.6, 38.9],
+  ["decision", 47.6, 54.8],
+  ["tahu", 57.0, 65.7],
+  ["cta", 76.0, 91.0]
+ ],
+ "cuts": [],
+ "fix": {"goal": "Gold", "Grandmas": "gram emas", "grant": "gram", "melabung": "menabung"},
+ "drop": []
+}

@@ -1,0 +1,674 @@
+{
+ "fps": 30,
+ "durationInFrames": 1145,
+ "clips": [
+  {
+   "section": "hook",
+   "srcFrom": 67,
+   "durationInFrames": 58,
+   "outFrom": 0
+  },
+  {
+   "section": "t1",
+   "srcFrom": 125,
+   "durationInFrames": 191,
+   "outFrom": 58
+  },
+  {
+   "section": "t2",
+   "srcFrom": 378,
+   "durationInFrames": 164,
+   "outFrom": 249
+  },
+  {
+   "section": "t3",
+   "srcFrom": 545,
+   "durationInFrames": 167,
+   "outFrom": 413
+  },
+  {
+   "section": "kahwin",
+   "srcFrom": 712,
+   "durationInFrames": 119,
+   "outFrom": 580
+  },
+  {
+   "section": "haji",
+   "srcFrom": 920,
+   "durationInFrames": 76,
+   "outFrom": 699
+  },
+  {
+   "section": "rumah",
+   "srcFrom": 1114,
+   "durationInFrames": 225,
+   "outFrom": 775
+  },
+  {
+   "section": "outro",
+   "srcFrom": 1636,
+   "durationInFrames": 145,
+   "outFrom": 1000
+  }
+ ],
+ "words": [
+  {
+   "text": "Tiga",
+   "start": 0.0,
+   "end": 0.207,
+   "section": "hook"
+  },
+  {
+   "text": "tips",
+   "start": 0.207,
+   "end": 0.507,
+   "section": "hook"
+  },
+  {
+   "text": "mudah",
+   "start": 0.507,
+   "end": 0.927,
+   "section": "hook"
+  },
+  {
+   "text": "menabung",
+   "start": 0.927,
+   "end": 1.567,
+   "section": "hook"
+  },
+  {
+   "text": "emas",
+   "start": 1.567,
+   "end": 1.907,
+   "section": "hook"
+  },
+  {
+   "text": "Yang",
+   "start": 1.933,
+   "end": 2.107,
+   "section": "t1"
+  },
+  {
+   "text": "pertama,",
+   "start": 2.107,
+   "end": 2.487,
+   "section": "t1"
+  },
+  {
+   "text": "ada",
+   "start": 2.707,
+   "end": 3.087,
+   "section": "t1"
+  },
+  {
+   "text": "duit",
+   "start": 3.087,
+   "end": 3.487,
+   "section": "t1"
+  },
+  {
+   "text": "rasa",
+   "start": 3.487,
+   "end": 3.687,
+   "section": "t1"
+  },
+  {
+   "text": "nak",
+   "start": 3.687,
+   "end": 3.987,
+   "section": "t1"
+  },
+  {
+   "text": "menabung",
+   "start": 3.987,
+   "end": 4.467,
+   "section": "t1"
+  },
+  {
+   "text": "Terus",
+   "start": 4.467,
+   "end": 5.007,
+   "section": "t1"
+  },
+  {
+   "text": "sahaja",
+   "start": 5.007,
+   "end": 5.387,
+   "section": "t1"
+  },
+  {
+   "text": "top",
+   "start": 5.387,
+   "end": 5.527,
+   "section": "t1"
+  },
+  {
+   "text": "up",
+   "start": 5.527,
+   "end": 5.687,
+   "section": "t1"
+  },
+  {
+   "text": "dalam",
+   "start": 5.687,
+   "end": 5.847,
+   "section": "t1"
+  },
+  {
+   "text": "account",
+   "start": 5.847,
+   "end": 6.127,
+   "section": "t1"
+  },
+  {
+   "text": "GAP",
+   "start": 6.127,
+   "end": 6.407,
+   "section": "t1"
+  },
+  {
+   "text": "Ataupun",
+   "start": 6.407,
+   "end": 7.087,
+   "section": "t1"
+  },
+  {
+   "text": "beli",
+   "start": 7.087,
+   "end": 7.807,
+   "section": "t1"
+  },
+  {
+   "text": "emas",
+   "start": 7.807,
+   "end": 8.087,
+   "section": "t1"
+  },
+  {
+   "text": "kedua,",
+   "start": 8.3,
+   "end": 8.88,
+   "section": "t2"
+  },
+  {
+   "text": "tak",
+   "start": 8.88,
+   "end": 9.06,
+   "section": "t2"
+  },
+  {
+   "text": "kisahlah",
+   "start": 9.06,
+   "end": 9.5,
+   "section": "t2"
+  },
+  {
+   "text": "harga",
+   "start": 9.5,
+   "end": 9.72,
+   "section": "t2"
+  },
+  {
+   "text": "tinggi",
+   "start": 9.72,
+   "end": 10.04,
+   "section": "t2"
+  },
+  {
+   "text": "ataupun",
+   "start": 10.04,
+   "end": 10.3,
+   "section": "t2"
+  },
+  {
+   "text": "rendah,",
+   "start": 10.3,
+   "end": 10.76,
+   "section": "t2"
+  },
+  {
+   "text": "pastikan",
+   "start": 10.76,
+   "end": 11.38,
+   "section": "t2"
+  },
+  {
+   "text": "kita",
+   "start": 11.38,
+   "end": 11.7,
+   "section": "t2"
+  },
+  {
+   "text": "konsisten",
+   "start": 11.7,
+   "end": 12.12,
+   "section": "t2"
+  },
+  {
+   "text": "menabung",
+   "start": 12.12,
+   "end": 12.7,
+   "section": "t2"
+  },
+  {
+   "text": "setiap",
+   "start": 12.7,
+   "end": 13.24,
+   "section": "t2"
+  },
+  {
+   "text": "bulan",
+   "start": 13.24,
+   "end": 13.52,
+   "section": "t2"
+  },
+  {
+   "text": "Dan",
+   "start": 13.82,
+   "end": 13.92,
+   "section": "t3"
+  },
+  {
+   "text": "yang",
+   "start": 13.92,
+   "end": 14.02,
+   "section": "t3"
+  },
+  {
+   "text": "ketiga,",
+   "start": 14.02,
+   "end": 14.42,
+   "section": "t3"
+  },
+  {
+   "text": "fokus",
+   "start": 14.54,
+   "end": 15.12,
+   "section": "t3"
+  },
+  {
+   "text": "kepada",
+   "start": 15.12,
+   "end": 15.34,
+   "section": "t3"
+  },
+  {
+   "text": "pertambahan",
+   "start": 15.34,
+   "end": 15.98,
+   "section": "t3"
+  },
+  {
+   "text": "gram",
+   "start": 15.98,
+   "end": 16.18,
+   "section": "t3"
+  },
+  {
+   "text": "emas,",
+   "start": 16.18,
+   "end": 16.52,
+   "section": "t3"
+  },
+  {
+   "text": "matlamat",
+   "start": 16.54,
+   "end": 17.22,
+   "section": "t3"
+  },
+  {
+   "text": "dan",
+   "start": 17.22,
+   "end": 17.32,
+   "section": "t3"
+  },
+  {
+   "text": "juga",
+   "start": 17.32,
+   "end": 17.5,
+   "section": "t3"
+  },
+  {
+   "text": "tujuan",
+   "start": 17.5,
+   "end": 18.02,
+   "section": "t3"
+  },
+  {
+   "text": "kita",
+   "start": 18.02,
+   "end": 18.26,
+   "section": "t3"
+  },
+  {
+   "text": "simpan",
+   "start": 18.26,
+   "end": 18.92,
+   "section": "t3"
+  },
+  {
+   "text": "emas",
+   "start": 18.92,
+   "end": 19.3,
+   "section": "t3"
+  },
+  {
+   "text": "Sebagai",
+   "start": 19.333,
+   "end": 19.78,
+   "section": "kahwin"
+  },
+  {
+   "text": "contoh,",
+   "start": 19.78,
+   "end": 20.26,
+   "section": "kahwin"
+  },
+  {
+   "text": "kita",
+   "start": 20.26,
+   "end": 20.42,
+   "section": "kahwin"
+  },
+  {
+   "text": "simpan",
+   "start": 20.42,
+   "end": 20.76,
+   "section": "kahwin"
+  },
+  {
+   "text": "emas",
+   "start": 20.76,
+   "end": 20.98,
+   "section": "kahwin"
+  },
+  {
+   "text": "untuk",
+   "start": 20.98,
+   "end": 21.12,
+   "section": "kahwin"
+  },
+  {
+   "text": "kahwin,",
+   "start": 21.12,
+   "end": 21.64,
+   "section": "kahwin"
+  },
+  {
+   "text": "kumpul",
+   "start": 21.66,
+   "end": 22.18,
+   "section": "kahwin"
+  },
+  {
+   "text": "50",
+   "start": 22.18,
+   "end": 22.4,
+   "section": "kahwin"
+  },
+  {
+   "text": "gram",
+   "start": 22.4,
+   "end": 22.84,
+   "section": "kahwin"
+  },
+  {
+   "text": "emas",
+   "start": 22.84,
+   "end": 23.12,
+   "section": "kahwin"
+  },
+  {
+   "text": "Simpan",
+   "start": 23.12,
+   "end": 23.3,
+   "section": "kahwin"
+  },
+  {
+   "text": "Simpan",
+   "start": 23.3,
+   "end": 23.613,
+   "section": "haji"
+  },
+  {
+   "text": "emas",
+   "start": 23.613,
+   "end": 23.813,
+   "section": "haji"
+  },
+  {
+   "text": "satu",
+   "start": 23.813,
+   "end": 23.933,
+   "section": "haji"
+  },
+  {
+   "text": "haji",
+   "start": 23.933,
+   "end": 24.293,
+   "section": "haji"
+  },
+  {
+   "text": "Pun",
+   "start": 24.293,
+   "end": 24.633,
+   "section": "haji"
+  },
+  {
+   "text": "50",
+   "start": 24.633,
+   "end": 25.033,
+   "section": "haji"
+  },
+  {
+   "text": "gram",
+   "start": 25.033,
+   "end": 25.253,
+   "section": "haji"
+  },
+  {
+   "text": "emas",
+   "start": 25.253,
+   "end": 25.593,
+   "section": "haji"
+  },
+  {
+   "text": "Simpan",
+   "start": 25.833,
+   "end": 26.16,
+   "section": "rumah"
+  },
+  {
+   "text": "emas",
+   "start": 26.16,
+   "end": 26.34,
+   "section": "rumah"
+  },
+  {
+   "text": "untuk",
+   "start": 26.34,
+   "end": 26.46,
+   "section": "rumah"
+  },
+  {
+   "text": "memiliki",
+   "start": 26.46,
+   "end": 26.84,
+   "section": "rumah"
+  },
+  {
+   "text": "rumah",
+   "start": 26.84,
+   "end": 27.0,
+   "section": "rumah"
+  },
+  {
+   "text": "yang",
+   "start": 27.0,
+   "end": 27.16,
+   "section": "rumah"
+  },
+  {
+   "text": "pertama",
+   "start": 27.16,
+   "end": 27.52,
+   "section": "rumah"
+  },
+  {
+   "text": "100",
+   "start": 27.52,
+   "end": 27.96,
+   "section": "rumah"
+  },
+  {
+   "text": "gram",
+   "start": 27.96,
+   "end": 28.34,
+   "section": "rumah"
+  },
+  {
+   "text": "dan",
+   "start": 28.34,
+   "end": 28.7,
+   "section": "rumah"
+  },
+  {
+   "text": "siapanya",
+   "start": 28.7,
+   "end": 29.16,
+   "section": "rumah"
+  },
+  {
+   "text": "pelan",
+   "start": 29.16,
+   "end": 29.46,
+   "section": "rumah"
+  },
+  {
+   "text": "untuk",
+   "start": 29.46,
+   "end": 29.58,
+   "section": "rumah"
+  },
+  {
+   "text": "dana",
+   "start": 29.58,
+   "end": 29.86,
+   "section": "rumah"
+  },
+  {
+   "text": "persaraan",
+   "start": 29.86,
+   "end": 30.46,
+   "section": "rumah"
+  },
+  {
+   "text": "boleh",
+   "start": 30.46,
+   "end": 30.78,
+   "section": "rumah"
+  },
+  {
+   "text": "target",
+   "start": 30.78,
+   "end": 31.08,
+   "section": "rumah"
+  },
+  {
+   "text": "2",
+   "start": 31.08,
+   "end": 31.48,
+   "section": "rumah"
+  },
+  {
+   "text": "kilogram",
+   "start": 31.48,
+   "end": 31.88,
+   "section": "rumah"
+  },
+  {
+   "text": "emas.",
+   "start": 31.88,
+   "end": 32.4,
+   "section": "rumah"
+  },
+  {
+   "text": "mudahkan",
+   "start": 33.46,
+   "end": 34.1,
+   "section": "outro"
+  },
+  {
+   "text": "simpan",
+   "start": 34.1,
+   "end": 34.46,
+   "section": "outro"
+  },
+  {
+   "text": "emas",
+   "start": 34.46,
+   "end": 34.76,
+   "section": "outro"
+  },
+  {
+   "text": "follow",
+   "start": 34.76,
+   "end": 35.06,
+   "section": "outro"
+  },
+  {
+   "text": "saya",
+   "start": 35.06,
+   "end": 35.32,
+   "section": "outro"
+  },
+  {
+   "text": "untuk",
+   "start": 35.32,
+   "end": 35.58,
+   "section": "outro"
+  },
+  {
+   "text": "lebih",
+   "start": 35.58,
+   "end": 35.8,
+   "section": "outro"
+  },
+  {
+   "text": "ilmu",
+   "start": 35.8,
+   "end": 36.22,
+   "section": "outro"
+  },
+  {
+   "text": "tentang",
+   "start": 36.22,
+   "end": 36.54,
+   "section": "outro"
+  },
+  {
+   "text": "emas",
+   "start": 36.54,
+   "end": 36.86,
+   "section": "outro"
+  },
+  {
+   "text": "dan",
+   "start": 36.86,
+   "end": 37.0,
+   "section": "outro"
+  },
+  {
+   "text": "juga",
+   "start": 37.0,
+   "end": 37.2,
+   "section": "outro"
+  },
+  {
+   "text": "kewangan",
+   "start": 37.2,
+   "end": 37.8,
+   "section": "outro"
+  }
+ ]
+}
