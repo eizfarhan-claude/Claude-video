@@ -13,7 +13,7 @@ const {at, sectionStart: S, sectionEnd: E} = tl;
 const M = {
   hook: 0.05,
   bertambah: at('hook', 'bertambah'),
-  guru: at('guru', 'guru'),
+  guru: at('hook', 'guru'),
   jadi: at('guru', 'jadi'),
   save: at('guru', 'save'),
   fiz: S('fizikal'),
@@ -37,7 +37,7 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: M.hook, to: E('hook') + 0.1, render: (d, r) => (
+  {from: M.hook, to: M.guru - 0.2, render: (d, r) => (
     <TitleCard dur={d} icon={<IconArrowUp size={84} />} label="Nak simpanan emas" title="CEPAT BERTAMBAH?" size={64} sub="ini caranya" subAt={r(M.bertambah)} shine />
   )},
   {from: M.guru - 0.2, to: M.jadi - 0.1, render: (d) => (
@@ -46,7 +46,7 @@ const ITEMS: GItem[] = [
   {from: M.jadi - 0.1, to: E('guru') + 0.1, render: (d, r) => (
     <TitleCard dur={d} icon={<IconPin size={74} />} label="Tengok sampai habis" title="SAVE VIDEO NI" size={62} sub="untuk rujukan akan datang" subAt={r(M.save)} />
   )},
-  {from: M.fiz + 0.05, to: E('fizikal') + 0.1, render: (d, r) => (
+  {from: M.keluarkan - 0.1, to: E('fizikal') + 0.1, render: (d, r) => (
     <StepCard dur={d} n={1} total={2} title="KELUARKAN EMAS FIZIKAL" sub="rasa seronok · konsisten menabung" subAt={r(M.konsisten)} icon={<IconCoin size={76} />} />
   )},
   {from: M.beza + 0.05, to: M.bila - 0.1, render: (d, r) => (
@@ -81,8 +81,8 @@ const SFX: Sfx[] = [
   {t: M.bertambah, f: 'sparkle', v: 0.24},
   {t: M.guru - 0.2, f: 'whoosh_pop', v: 0.36},
   {t: M.jadi - 0.1, f: 'pop_hard', v: 0.3},
-  {t: M.fiz + 0.05, f: 'whoosh_pop', v: 0.4},
-  {t: M.keluarkan, f: 'coins', v: 0.32},
+  {t: M.keluarkan - 0.1, f: 'whoosh_pop', v: 0.4},
+  {t: M.keluarkan + 0.35, f: 'coins', v: 0.32},
   {t: M.konsisten, f: 'click_select', v: 0.3},
   {t: M.beza + 0.05, f: 'whoosh_small', v: 0.28},
   {t: M.nombor, f: 'pop_msg', v: 0.32},
@@ -108,7 +108,7 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 
 export const v12: VideoDef = {
   id: 'v12', tl, Overlays, sfx: SFX,
-  punches: [M.bertambah, M.fiz + 0.1, M.keseronokan, M.motivasi, M.ad + 0.1, M.automatik],
+  punches: [M.bertambah, M.keluarkan, M.keseronokan, M.motivasi, M.ad + 0.1, M.automatik],
   zoom: {hook: [1.12], guru: [1.0], fizikal: [1.0, 1.06], beza: [1.06], seronok: [1.0], motivasi: [1.07], autodebit: [1.0, 1.06], gaji: [1.06], cta: [1.0, 1.06]},
   music: {file: 'bgm.mp3', startAt: 90},
 };
