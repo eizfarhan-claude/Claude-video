@@ -52,7 +52,7 @@ const ITEMS: GItem[] = [
     <TitleCard dur={d} icon={<IconCalendar size={84} />} label="Dana persaraan" title="TARGET 2 KG EMAS" size={60} sub="2,000 gram untuk hari tua" subAt={r(M.kilogram)} shine />
   )},
   {from: M.outro, to: 9999, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconChat size={80} />} label="Mudahkan simpan emas" title="FOLLOW UNTUK ILMU EMAS" gold={false} size={50} sub="emas & kewangan" subAt={r(M.follow)} />
+    <TitleCard dur={d} icon={<IconChat size={80} />} label="Nak lebih ilmu?" title="FOLLOW UNTUK ILMU EMAS" gold={false} size={50} sub="emas & kewangan" subAt={r(M.follow)} />
   )},
 ];
 

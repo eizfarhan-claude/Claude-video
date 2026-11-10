@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 1145,
+ "durationInFrames": 1073,
  "clips": [
   {
    "section": "hook",
@@ -41,14 +41,14 @@
   {
    "section": "rumah",
    "srcFrom": 1114,
-   "durationInFrames": 225,
+   "durationInFrames": 199,
    "outFrom": 775
   },
   {
    "section": "outro",
-   "srcFrom": 1636,
-   "durationInFrames": 145,
-   "outFrom": 1000
+   "srcFrom": 1682,
+   "durationInFrames": 99,
+   "outFrom": 974
   }
  ],
  "words": [
@@ -593,81 +593,63 @@
    "section": "rumah"
   },
   {
-   "text": "mudahkan",
-   "start": 33.46,
-   "end": 34.1,
-   "section": "outro"
-  },
-  {
-   "text": "simpan",
-   "start": 34.1,
-   "end": 34.46,
-   "section": "outro"
-  },
-  {
-   "text": "emas",
-   "start": 34.46,
-   "end": 34.76,
-   "section": "outro"
-  },
-  {
    "text": "follow",
-   "start": 34.76,
-   "end": 35.06,
+   "start": 32.467,
+   "end": 32.66,
    "section": "outro"
   },
   {
    "text": "saya",
-   "start": 35.06,
-   "end": 35.32,
+   "start": 32.66,
+   "end": 32.92,
    "section": "outro"
   },
   {
    "text": "untuk",
-   "start": 35.32,
-   "end": 35.58,
+   "start": 32.92,
+   "end": 33.18,
    "section": "outro"
   },
   {
    "text": "lebih",
-   "start": 35.58,
-   "end": 35.8,
+   "start": 33.18,
+   "end": 33.4,
    "section": "outro"
   },
   {
    "text": "ilmu",
-   "start": 35.8,
-   "end": 36.22,
+   "start": 33.4,
+   "end": 33.82,
    "section": "outro"
   },
   {
    "text": "tentang",
-   "start": 36.22,
-   "end": 36.54,
+   "start": 33.82,
+   "end": 34.14,
    "section": "outro"
   },
   {
    "text": "emas",
-   "start": 36.54,
-   "end": 36.86,
+   "start": 34.14,
+   "end": 34.46,
    "section": "outro"
   },
   {
    "text": "dan",
-   "start": 36.86,
-   "end": 37.0,
+   "start": 34.46,
+   "end": 34.6,
    "section": "outro"
   },
   {
    "text": "juga",
-   "start": 37.0,
-   "end": 37.2,
+   "start": 34.6,
+   "end": 34.8,
    "section": "outro"
   },
   {
    "text": "kewangan",
-   "start": 37.2,
-   "end": 37.8,
+   "start": 34.8,
+   "end": 35.4,
    "section": "outro"
   }
  ]

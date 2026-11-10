@@ -361,7 +361,7 @@
 },
 {
 "text": "simpan",
-"start": 22.78,
+"start": 22.8,
 "end": 23.62,
 "section": "kahwin"
 },
@@ -414,7 +414,7 @@
 "section": "rumah"
 },
 {
-"text": "miliki",
+"text": "memiliki",
 "start": 26.46,
 "end": 26.84,
 "section": "rumah"
@@ -428,30 +428,30 @@
 {
 "text": "yang",
 "start": 27.0,
-"end": 27.18,
+"end": 27.16,
 "section": "rumah"
 },
 {
 "text": "pertama",
-"start": 27.18,
-"end": 27.46,
+"start": 27.16,
+"end": 27.5,
 "section": "rumah"
 },
 {
-"text": "100 gram",
-"start": 27.46,
-"end": 28.16,
+"text": "100 gram.",
+"start": 27.5,
+"end": 28.12,
 "section": "rumah"
 },
 {
-"text": "dan",
-"start": 28.16,
-"end": 28.6,
+"text": "Dan",
+"start": 28.64,
+"end": 28.72,
 "section": "rumah"
 },
 {
 "text": "siapa",
-"start": 28.6,
+"start": 28.72,
 "end": 29.08,
 "section": "rumah"
 },
@@ -482,12 +482,12 @@
 {
 "text": "persaraan",
 "start": 29.88,
-"end": 30.46,
+"end": 30.4,
 "section": "rumah"
 },
 {
 "text": "boleh",
-"start": 30.46,
+"start": 30.4,
 "end": 30.78,
 "section": "rumah"
 },
@@ -498,87 +498,75 @@
 "section": "rumah"
 },
 {
-"text": "2 kilogram.",
+"text": "2kg",
 "start": 31.08,
-"end": 31.42,
+"end": 31.8,
 "section": "rumah"
 },
 {
-"text": "Mudahkan",
-"start": 33.62,
-"end": 34.1,
-"section": "outro"
+"text": "emas.",
+"start": 31.8,
+"end": 32.36,
+"section": "rumah"
 },
 {
-"text": "simpan",
-"start": 34.1,
-"end": 34.46,
-"section": "outro"
-},
-{
-"text": "emas,",
-"start": 34.46,
-"end": 34.7,
-"section": "outro"
-},
-{
-"text": "follow",
-"start": 34.8,
-"end": 35.08,
+"text": "Follow",
+"start": 32.38,
+"end": 32.68,
 "section": "outro"
 },
 {
 "text": "saya",
-"start": 35.08,
-"end": 35.3,
+"start": 32.68,
+"end": 32.9,
 "section": "outro"
 },
 {
 "text": "untuk",
-"start": 35.3,
-"end": 35.6,
+"start": 32.9,
+"end": 33.18,
 "section": "outro"
 },
 {
 "text": "lebih",
-"start": 35.6,
-"end": 35.78,
+"start": 33.18,
+"end": 33.36,
 "section": "outro"
 },
 {
 "text": "ilmu",
-"start": 35.78,
-"end": 36.22,
+"start": 33.36,
+"end": 33.82,
 "section": "outro"
 },
 {
 "text": "tentang",
-"start": 36.22,
-"end": 36.42,
+"start": 33.82,
+"end": 34.02,
 "section": "outro"
 },
 {
 "text": "emas",
-"start": 36.42,
-"end": 36.9,
+"start": 34.02,
+"end": 34.5,
 "section": "outro"
 },
 {
 "text": "dan",
-"start": 36.9,
-"end": 37.0,
+"start": 34.5,
+"end": 34.58,
 "section": "outro"
 },
 {
 "text": "juga",
-"start": 37.0,
-"end": 37.2,
+"start": 34.58,
+"end": 34.8,
 "section": "outro"
 },
 {
 "text": "kewangan.",
-"start": 37.2,
-"end": 37.82,
+"start": 34.8,
+"end": 35.42,
 "section": "outro"
 }
 ]
