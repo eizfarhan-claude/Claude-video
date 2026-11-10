@@ -19,7 +19,13 @@
     "preview:v13": "remotion render AutoDebit out/preview_AutoDebit.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v14": "remotion render JualHutang out/preview_JualHutang.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v15": "remotion render HargaTurun out/preview_HargaTurun.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
-    "preview:v16": "remotion render SatuKilo out/preview_SatuKilo.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
+    "preview:v16": "remotion render SatuKilo out/preview_SatuKilo.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "render:v11": "remotion render TigaTips out/final_TigaTips.mp4 --crf=16 --audio-bitrate=320k --timeout=180000 --concurrency=3",
+    "render:v12": "remotion render DuaCara out/final_DuaCara.mp4 --crf=16 --audio-bitrate=320k --timeout=180000 --concurrency=3",
+    "render:v13": "remotion render AutoDebit out/final_AutoDebit.mp4 --crf=16 --audio-bitrate=320k --timeout=180000 --concurrency=3",
+    "render:v14": "remotion render JualHutang out/final_JualHutang.mp4 --crf=16 --audio-bitrate=320k --timeout=180000 --concurrency=3",
+    "render:v15": "remotion render HargaTurun out/final_HargaTurun.mp4 --crf=16 --audio-bitrate=320k --timeout=180000 --concurrency=3",
+    "render:v16": "remotion render SatuKilo out/final_SatuKilo.mp4 --crf=16 --audio-bitrate=320k --timeout=180000 --concurrency=3"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.3.0",

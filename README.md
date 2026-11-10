@@ -38,3 +38,5 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - v16 `SatuKilo` — cita-cita 1 kg emas, menabung sedikit demi sedikit (126s → 77s)
 - `npm run preview:v11` … `preview:v16`; config cuts can now use exact edges too (`["61.64!", "62.75!"]`)
 - new kit card: `ChainCard` (cause → effect pills, optional no-arrows / red variant)
+- v11 overlays: real gold-bar cutaways on "50 gram" (x2), "100 gram", "2 kilogram" — put graded clips in `public/v11/broll/{g50,g100,kg}.mp4` (same vivid grade, 1080x1920 crop)
+- `npm run render:v11` … `render:v16` → `out/final_<Comp>.mp4` (full res, CRF 16, 320k audio)

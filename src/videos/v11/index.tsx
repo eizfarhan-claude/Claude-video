@@ -4,7 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
-import {GItem, IconCalendar, IconChat, IconHouse, IconRepeat, IconRings, IconSun, Schedule, StepCard, Subtitles, TitleCard, JourneyCard, motionBusy} from '../../engine/kit';
+import {BRollTrack, GItem, IconCalendar, IconChat, IconHouse, IconRepeat, IconRings, IconSun, Schedule, StepCard, Subtitles, TitleCard, JourneyCard, motionBusy} from '../../engine/kit';
 import {IconCoin, IconTarget} from '../../engine/ui';
 
 const tl = makeTimeline(edlJson as Edl, 30);
@@ -71,15 +71,29 @@ const SFX: Sfx[] = [
   {t: M.haji, f: 'pop_msg', v: 0.32},
   {t: M.rumah, f: 'pop_msg', v: 0.32},
   {t: M.dana - 0.1, f: 'whoosh_cine', v: 0.3},
+  {t: M.kilogram - 0.55, f: 'whoosh_small', v: 0.26},
   {t: M.kilogram, f: 'money_bag', v: 0.3},
+  {t: at('kahwin', '50') - 0.2, f: 'whoosh_small', v: 0.24},
+  {t: at('haji', '50') - 0.2, f: 'whoosh_small', v: 0.24},
+  {t: at('rumah', '100') - 0.2, f: 'whoosh_small', v: 0.24},
+  {t: at('rumah', '100'), f: 'gold_price', v: 0.18},
   {t: M.kilogram + 0.2, f: 'sparkle', v: 0.22},
   {t: M.outro, f: 'bell_notif', v: 0.26},
 ];
 
+// Real gold-bar cutaways (voice keeps running): 50g, 100g, 1kg bars on the gram figures
+const BROLL = [
+  {file: 'v11/broll/g50.mp4', from: at('kahwin', '50') - 0.2, to: S('haji') - 0.1, srcStart: 9.5},
+  {file: 'v11/broll/g50.mp4', from: at('haji', '50') - 0.2, to: S('rumah') - 0.15, srcStart: 13},
+  {file: 'v11/broll/g100.mp4', from: at('rumah', '100') - 0.2, to: at('rumah', 'dan') + 0.2, srcStart: 2.5},
+  {file: 'v11/broll/kg.mp4', from: M.kilogram - 0.55, to: M.outro - 0.05, srcStart: 19.5},
+];
+
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <BRollTrack cuts={BROLL} />
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
+    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, BROLL.map((b) => [b.from - 0.2, b.to + 0.2] as [number, number]))} />
   </>
 );
 
