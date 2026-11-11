@@ -34,7 +34,6 @@ const M = {
   dan: at('pattern', 'dan', 1),
   jangan: at('pattern', 'jangan'),
   kec: S('kecemasan'),
-  sebaiknya2: at('kecemasan', 'sebaiknya', 1),
   platform: at('kecemasan', 'emas'),
   cepat: at('kecemasan', 'cepat'),
   kekal: at('kecemasan', 'kekal'),
@@ -93,7 +92,7 @@ const ITEMS: GItem[] = [
     <TitleCard dur={d} icon={<IconWarn size={80} />} label="Tak boleh sabar 2–3 tahun?" title="JANGAN SIMPAN EMAS" gold={false} size={56} />
   )},
   {from: M.kec + 0.05, to: M.platform - 0.1, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconShield size={80} />} label="Sebaiknya" title="DANA KECEMASAN DULU" size={54} sub="atau simpanan lebih mudah" subAt={r(M.sebaiknya2)} />
+    <TitleCard dur={d} icon={<IconShield size={80} />} label="Sebaiknya" title="DANA KECEMASAN DULU" size={54} />
   )},
   {from: M.platform - 0.1, to: E('kecemasan') + 0.1, render: (d, r) => (
     <Choices dur={d} items={[

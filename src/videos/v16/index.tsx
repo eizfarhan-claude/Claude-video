@@ -4,7 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
-import {ChainCard, ChecklistCard, Choices, CtaCard, GItem, GramTimeline, IconRepeat, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
+import {ChainCard, ChecklistCard, Choices, CtaCard, GItem, IconRepeat, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconCoin, IconTarget} from '../../engine/ui';
 
 const tl = makeTimeline(edlJson as Edl, 30);
@@ -25,9 +25,6 @@ const M = {
   inilah: at('akaun', 'inilah'),
   serendah: at('akaun', 'serendah'),
   convert: at('akaun', 'convert'),
-  contoh: S('contoh'),
-  g1: at('contoh', '1'),
-  g2: at('contoh', '2'),
   bajet: S('bajet'),
   bajetW: at('bajet', 'bajet'),
   wajib: at('bajet', 'wajib'),
@@ -70,12 +67,6 @@ const ITEMS: GItem[] = [
     <ChecklistCard dur={d} label="Akaun emas GAP" rows={[
       {text: 'Menabung serendah RM100', at: r(M.serendah)},
       {text: 'Auto convert jadi gram emas', at: r(M.convert)},
-    ]} />
-  )},
-  {from: M.contoh + 0.05, to: E('contoh') + 0.1, render: (d, r) => (
-    <GramTimeline dur={d} label="Contoh" cols={[
-      {top: 'Mula hari ni', grams: 1, at: r(M.g1)},
-      {top: 'Tambah 2g', grams: 3, at: r(M.g2)},
     ]} />
   )},
   {from: M.bajet + 0.05, to: M.ikut - 0.1, render: (d, r) => (
@@ -123,9 +114,6 @@ const SFX: Sfx[] = [
   {t: M.inilah - 0.3, f: 'whoosh_small', v: 0.26},
   {t: M.serendah + 0.15, f: 'click_select', v: 0.34},
   {t: M.convert + 0.15, f: 'click_select', v: 0.34},
-  {t: M.contoh + 0.05, f: 'whoosh_small', v: 0.28},
-  {t: M.g1, f: 'coins', v: 0.28},
-  {t: M.g2, f: 'coins', v: 0.3},
   {t: M.bajet + 0.05, f: 'whoosh_small', v: 0.28},
   {t: M.bajetW + 0.15, f: 'click_select', v: 0.34},
   {t: M.wajib + 0.15, f: 'click_select', v: 0.34},
@@ -154,8 +142,8 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 
 export const v16: VideoDef = {
   id: 'v16', tl, Overlays, sfx: SFX,
-  punches: [M.kg, M.sedikit, M.gap, M.g2, M.konsisten, M.bkg, M.sampai],
-  zoom: {hook: [1.1, 1.0], peluang: [1.06], akaun: [1.0, 1.06], contoh: [1.0], bajet: [1.06, 1.0], cta: [1.0, 1.07]},
+  punches: [M.kg, M.sedikit, M.gap, M.konsisten, M.bkg, M.sampai],
+  zoom: {hook: [1.1, 1.0], peluang: [1.06], akaun: [1.0, 1.06], bajet: [1.06, 1.0], cta: [1.0, 1.07]},
   music: {file: 'bgm.mp3', startAt: 120},
 };
 export const SatuKilo: React.FC<EditProps> = (p) => <Edit def={v16} {...p} />;

@@ -2,20 +2,79 @@
  "id": "v15",
  "title": "Harga emas jatuh: tenang, simpan jangka panjang",
  "ranges": [
-  ["hook", 3.3, 7.65],
-  ["reaksi", 7.65, 21.5],
-  ["faham", 21.5, 26.75],
-  ["sabar", 27.2, 35.6],
-  ["beli", 35.6, 52.0],
-  ["pattern", 53.6, 64.9],
-  ["kecemasan", 64.9, 84.7],
-  ["panjang", 84.9, 91.1],
-  ["pendek", 94.7, 101.2],
-  ["konsep", 103.4, "111.5!"],
-  ["senyum", 115.0, 122.0],
-  ["end", 124.3, 127.3]
+  [
+   "hook",
+   3.3,
+   7.65
+  ],
+  [
+   "reaksi",
+   7.65,
+   21.5
+  ],
+  [
+   "faham",
+   21.5,
+   26.75
+  ],
+  [
+   "sabar",
+   27.2,
+   35.6
+  ],
+  [
+   "beli",
+   35.6,
+   52.0
+  ],
+  [
+   "pattern",
+   53.6,
+   64.9
+  ],
+  [
+   "kecemasan",
+   64.9,
+   84.7
+  ],
+  [
+   "panjang",
+   84.9,
+   "91.14!"
+  ],
+  [
+   "pendek",
+   "95.24!",
+   101.2
+  ],
+  [
+   "konsep",
+   103.4,
+   "111.86!"
+  ],
+  [
+   "senyum",
+   115.0,
+   122.0
+  ],
+  [
+   "end",
+   124.3,
+   127.3
+  ]
  ],
- "cuts": [],
- "fix": {"pay": "panik", "mask": "emas", "mah": "emas", "simpak": "simpan", "sediakan": "sedangkan"},
+ "cuts": [
+  [
+   "67.92!",
+   "72.52!"
+  ]
+ ],
+ "fix": {
+  "pay": "panik",
+  "mask": "emas",
+  "mah": "emas",
+  "simpak": "simpan",
+  "sediakan": "sedangkan"
+ },
  "drop": []
 }
