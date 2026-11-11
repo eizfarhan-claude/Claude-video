@@ -7,7 +7,7 @@ import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChainCard, GItem, GoldProgress, IconChat, IconRepeat, IconWallet, IconX, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconClock, IconCoin} from '../../engine/ui';
 
-const tl = makeTimeline(edlJson as Edl, 30);
+const tl = makeTimeline(edlJson as Edl, 75);
 const {at, sectionStart: S, sectionEnd: E} = tl;
 
 const M = {
