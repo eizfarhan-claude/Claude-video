@@ -402,11 +402,11 @@ const PhoneInner: React.FC<{src: string; aspect: number; highlight?: [number, nu
 };
 
 /* ---------- real comment screenshot card ---------- */
-export const CommentCard: React.FC<{dur: number; src: string; label?: string}> = ({dur, src, label}) => {
+export const CommentCard: React.FC<{dur: number; src: string; label?: string; width?: number}> = ({dur, src, label, width = 820}) => {
   const {v} = useEnvelope(dur);
   return (
     <TopBand v={v}>
-      <div style={{width: 820}}>
+      <div style={{width}}>
         {label && <Label size={24} color={GOLD_SOLID} style={{marginBottom: 8, textShadow: '0 2px 8px rgba(0,0,0,0.8)'}}>{label}</Label>}
         <img src={staticFile(src)} style={{width: '100%', borderRadius: 26, boxShadow: '0 18px 50px rgba(0,0,0,0.5)', border: '3px solid rgba(247,215,116,0.7)'}} />
       </div>

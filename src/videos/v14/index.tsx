@@ -4,7 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
-import {ChecklistCard, Choices, DebtBar, GItem, IconChat, IconRepeat, IconShield, IconWallet, QuoteStack, Schedule, StepCard, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
+import {ChecklistCard, Choices, CommentCard, DebtBar, GItem, IconChat, IconRepeat, IconShield, IconWallet, Schedule, StepCard, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconArrowUp, IconCoin, IconPin} from '../../engine/ui';
 
 const tl = makeTimeline(edlJson as Edl, 30);
@@ -41,11 +41,9 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: M.hook, to: E('q') + 0.1, render: (d, r) => (
-    <QuoteStack dur={d} label="Soalan penyimpan emas" quotes={[
-      {text: 'Hutang AEON Credit, baki 2 tahun', at: r(M.hutang0)},
-      {text: 'Berbaloi jual emas untuk settle?', at: r(M.berbaloi)},
-    ]} />
+  // the real WhatsApp question from the viewer, above the head while it is read out
+  {from: M.hook, to: E('q') + 0.1, render: (d) => (
+    <CommentCard dur={d} src="v14/broll/soalan.jpg" width={660} />
   )},
   {from: M.menarik, to: E('menarik') + 0.1, render: (d) => (
     <TitleCard dur={d} icon={<IconPin size={74} />} label="Situasi sama?" title="TENGOK SAMPAI HABIS" gold={false} size={54} />
@@ -91,8 +89,9 @@ const ITEMS: GItem[] = [
 
 const SFX: Sfx[] = [
   {t: M.hook, f: 'whoosh_cine', v: 0.42},
-  {t: M.hutang0, f: 'pop_msg', v: 0.34},
-  {t: M.berbaloi, f: 'pop_msg', v: 0.34},
+  {t: M.hook + 0.1, f: 'pop_msg', v: 0.36},
+  {t: M.hutang0, f: 'click_select', v: 0.26},
+  {t: M.berbaloi, f: 'click_select', v: 0.26},
   {t: M.menarik, f: 'whoosh_small', v: 0.28},
   {t: M.p1 + 0.05, f: 'whoosh_pop', v: 0.4},
   {t: M.least, f: 'click_select', v: 0.32},
