@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2262,
+ "durationInFrames": 2246,
  "clips": [
   {
    "section": "q",
@@ -59,20 +59,20 @@
   {
    "section": "ending",
    "srcFrom": 3111,
-   "durationInFrames": 164,
+   "durationInFrames": 129,
    "outFrom": 1876
   },
   {
    "section": "ending",
-   "srcFrom": 3324,
-   "durationInFrames": 182,
-   "outFrom": 2040
+   "srcFrom": 3305,
+   "durationInFrames": 201,
+   "outFrom": 2005
   },
   {
    "section": "outro",
    "srcFrom": 3630,
    "durationInFrames": 40,
-   "outFrom": 2222
+   "outFrom": 2206
   }
  ],
  "words": [
@@ -1213,115 +1213,121 @@
   {
    "text": "bertambah",
    "start": 66.773,
-   "end": 67.533,
+   "end": 66.833,
+   "section": "ending"
+  },
+  {
+   "text": "bertambah",
+   "start": 66.833,
+   "end": 67.247,
    "section": "ending"
   },
   {
    "text": "kaya",
-   "start": 67.533,
-   "end": 67.753,
+   "start": 67.247,
+   "end": 67.447,
    "section": "ending"
   },
   {
    "text": "dengan",
-   "start": 68.0,
-   "end": 68.24,
+   "start": 67.447,
+   "end": 67.707,
    "section": "ending"
   },
   {
    "text": "cara",
-   "start": 68.24,
-   "end": 68.54,
+   "start": 67.707,
+   "end": 68.007,
    "section": "ending"
   },
   {
    "text": "tambah",
-   "start": 68.54,
-   "end": 69.32,
+   "start": 68.007,
+   "end": 68.787,
    "section": "ending"
   },
   {
    "text": "simpanan,",
-   "start": 69.32,
-   "end": 69.86,
+   "start": 68.787,
+   "end": 69.327,
    "section": "ending"
   },
   {
    "text": "tambah",
-   "start": 69.88,
-   "end": 70.46,
+   "start": 69.347,
+   "end": 69.927,
    "section": "ending"
   },
   {
    "text": "harta",
-   "start": 70.46,
-   "end": 70.78,
+   "start": 69.927,
+   "end": 70.247,
    "section": "ending"
   },
   {
    "text": "dan",
-   "start": 70.78,
-   "end": 70.98,
+   "start": 70.247,
+   "end": 70.447,
    "section": "ending"
   },
   {
    "text": "pada",
-   "start": 70.98,
-   "end": 71.18,
+   "start": 70.447,
+   "end": 70.647,
    "section": "ending"
   },
   {
    "text": "masa",
-   "start": 71.18,
-   "end": 71.42,
+   "start": 70.647,
+   "end": 70.887,
    "section": "ending"
   },
   {
    "text": "yang",
-   "start": 71.42,
-   "end": 71.5,
+   "start": 70.887,
+   "end": 70.967,
    "section": "ending"
   },
   {
    "text": "sama",
-   "start": 71.5,
-   "end": 71.76,
+   "start": 70.967,
+   "end": 71.227,
    "section": "ending"
   },
   {
    "text": "hutang",
-   "start": 71.76,
-   "end": 72.3,
+   "start": 71.227,
+   "end": 71.767,
    "section": "ending"
   },
   {
    "text": "kita",
-   "start": 72.3,
-   "end": 72.48,
+   "start": 71.767,
+   "end": 71.947,
    "section": "ending"
   },
   {
    "text": "sentiasa",
-   "start": 72.48,
-   "end": 73.32,
+   "start": 71.947,
+   "end": 72.787,
    "section": "ending"
   },
   {
    "text": "berkurang",
-   "start": 73.32,
-   "end": 73.82,
+   "start": 72.787,
+   "end": 73.287,
    "section": "ending"
   },
   {
    "text": "Dapat",
-   "start": 74.067,
-   "end": 74.547,
+   "start": 73.533,
+   "end": 74.013,
    "section": "outro"
   },
   {
    "text": "sesuatu",
-   "start": 74.547,
-   "end": 75.047,
+   "start": 74.013,
+   "end": 74.513,
    "section": "outro"
   }
  ]
