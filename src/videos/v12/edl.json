@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2199,
+ "durationInFrames": 2191,
  "clips": [
   {
    "section": "hook",
@@ -10,57 +10,57 @@
   },
   {
    "section": "guru",
-   "srcFrom": 324,
-   "durationInFrames": 176,
+   "srcFrom": 332,
+   "durationInFrames": 168,
    "outFrom": 203
   },
   {
    "section": "fizikal",
    "srcFrom": 578,
    "durationInFrames": 550,
-   "outFrom": 379
+   "outFrom": 371
   },
   {
    "section": "beza",
    "srcFrom": 1128,
    "durationInFrames": 112,
-   "outFrom": 929
+   "outFrom": 921
   },
   {
    "section": "seronok",
    "srcFrom": 1472,
    "durationInFrames": 125,
-   "outFrom": 1041
+   "outFrom": 1033
   },
   {
    "section": "motivasi",
    "srcFrom": 1744,
    "durationInFrames": 105,
-   "outFrom": 1166
+   "outFrom": 1158
   },
   {
    "section": "motivasi",
    "srcFrom": 1882,
    "durationInFrames": 95,
-   "outFrom": 1271
+   "outFrom": 1263
   },
   {
    "section": "autodebit",
    "srcFrom": 1977,
    "durationInFrames": 276,
-   "outFrom": 1366
+   "outFrom": 1358
   },
   {
    "section": "gaji",
    "srcFrom": 2375,
    "durationInFrames": 154,
-   "outFrom": 1642
+   "outFrom": 1634
   },
   {
    "section": "cta",
    "srcFrom": 2529,
    "durationInFrames": 403,
-   "outFrom": 1796
+   "outFrom": 1788
   }
  ],
  "words": [
@@ -215,1071 +215,1065 @@
    "section": "hook"
   },
   {
-   "text": "saya",
-   "start": 6.767,
-   "end": 6.827,
-   "section": "guru"
-  },
-  {
    "text": "dan",
-   "start": 6.827,
-   "end": 7.047,
+   "start": 6.767,
+   "end": 6.78,
    "section": "guru"
   },
   {
    "text": "nak",
-   "start": 7.047,
-   "end": 7.207,
+   "start": 6.78,
+   "end": 6.94,
    "section": "guru"
   },
   {
    "text": "kongsikan",
-   "start": 7.207,
-   "end": 7.607,
+   "start": 6.94,
+   "end": 7.34,
    "section": "guru"
   },
   {
    "text": "dengan",
-   "start": 7.607,
-   "end": 7.847,
+   "start": 7.34,
+   "end": 7.58,
    "section": "guru"
   },
   {
    "text": "tuan",
-   "start": 7.847,
-   "end": 8.167,
+   "start": 7.58,
+   "end": 7.9,
    "section": "guru"
   },
   {
    "text": "puan.",
-   "start": 8.167,
-   "end": 8.447,
+   "start": 7.9,
+   "end": 8.18,
    "section": "guru"
   },
   {
    "text": "Jadi",
-   "start": 8.447,
-   "end": 8.647,
+   "start": 8.18,
+   "end": 8.38,
    "section": "guru"
   },
   {
    "text": "tengok",
-   "start": 8.647,
-   "end": 8.947,
+   "start": 8.38,
+   "end": 8.68,
    "section": "guru"
   },
   {
    "text": "video",
-   "start": 8.947,
-   "end": 9.087,
+   "start": 8.68,
+   "end": 8.82,
    "section": "guru"
   },
   {
    "text": "ni",
-   "start": 9.087,
-   "end": 9.227,
+   "start": 8.82,
+   "end": 8.96,
    "section": "guru"
   },
   {
    "text": "sampai",
-   "start": 9.227,
-   "end": 9.487,
+   "start": 8.96,
+   "end": 9.22,
    "section": "guru"
   },
   {
    "text": "habis",
-   "start": 9.487,
-   "end": 9.847,
+   "start": 9.22,
+   "end": 9.58,
    "section": "guru"
   },
   {
    "text": "dan",
-   "start": 9.847,
-   "end": 9.947,
+   "start": 9.58,
+   "end": 9.68,
    "section": "guru"
   },
   {
    "text": "jangan",
-   "start": 9.947,
-   "end": 10.147,
+   "start": 9.68,
+   "end": 9.88,
    "section": "guru"
   },
   {
    "text": "lupa",
-   "start": 10.147,
-   "end": 10.387,
+   "start": 9.88,
+   "end": 10.12,
    "section": "guru"
   },
   {
    "text": "save",
-   "start": 10.387,
-   "end": 10.627,
+   "start": 10.12,
+   "end": 10.36,
    "section": "guru"
   },
   {
    "text": "untuk",
-   "start": 10.627,
-   "end": 10.927,
+   "start": 10.36,
+   "end": 10.66,
    "section": "guru"
   },
   {
    "text": "rujukan",
-   "start": 10.927,
-   "end": 11.327,
+   "start": 10.66,
+   "end": 11.06,
    "section": "guru"
   },
   {
    "text": "yang",
-   "start": 11.327,
-   "end": 11.527,
+   "start": 11.06,
+   "end": 11.26,
    "section": "guru"
   },
   {
    "text": "akan",
-   "start": 11.527,
-   "end": 11.947,
+   "start": 11.26,
+   "end": 11.68,
    "section": "guru"
   },
   {
    "text": "datang.",
-   "start": 11.947,
-   "end": 12.427,
+   "start": 11.68,
+   "end": 12.16,
    "section": "guru"
   },
   {
    "text": "Jadi",
-   "start": 12.467,
-   "end": 12.633,
+   "start": 12.2,
+   "end": 12.367,
    "section": "guru"
   },
   {
    "text": "Jadi",
-   "start": 12.633,
-   "end": 12.767,
+   "start": 12.367,
+   "end": 12.5,
    "section": "fizikal"
   },
   {
    "text": "bagi",
-   "start": 12.767,
-   "end": 13.067,
+   "start": 12.5,
+   "end": 12.8,
    "section": "fizikal"
   },
   {
    "text": "siapa",
-   "start": 13.067,
-   "end": 13.427,
+   "start": 12.8,
+   "end": 13.16,
    "section": "fizikal"
   },
   {
    "text": "yang",
-   "start": 13.427,
-   "end": 13.527,
+   "start": 13.16,
+   "end": 13.26,
    "section": "fizikal"
   },
   {
    "text": "nak",
-   "start": 13.527,
-   "end": 13.647,
+   "start": 13.26,
+   "end": 13.38,
    "section": "fizikal"
   },
   {
    "text": "pastikan",
-   "start": 13.647,
-   "end": 14.067,
+   "start": 13.38,
+   "end": 13.8,
    "section": "fizikal"
   },
   {
    "text": "simpanan",
-   "start": 14.067,
-   "end": 14.567,
+   "start": 13.8,
+   "end": 14.3,
    "section": "fizikal"
   },
   {
    "text": "emas",
-   "start": 14.567,
-   "end": 14.867,
+   "start": 14.3,
+   "end": 14.6,
    "section": "fizikal"
   },
   {
    "text": "masing-masing",
-   "start": 14.867,
-   "end": 15.367,
+   "start": 14.6,
+   "end": 15.1,
    "section": "fizikal"
   },
   {
    "text": "cepat",
-   "start": 15.367,
-   "end": 15.707,
+   "start": 15.1,
+   "end": 15.44,
    "section": "fizikal"
   },
   {
    "text": "bertambah,",
-   "start": 15.707,
-   "end": 16.187,
+   "start": 15.44,
+   "end": 15.92,
    "section": "fizikal"
   },
   {
    "text": "caranya",
-   "start": 16.187,
-   "end": 16.787,
+   "start": 15.92,
+   "end": 16.52,
    "section": "fizikal"
   },
   {
    "text": "mudah",
-   "start": 16.787,
-   "end": 17.167,
+   "start": 16.52,
+   "end": 16.9,
    "section": "fizikal"
   },
   {
    "text": "saja",
-   "start": 17.167,
-   "end": 17.347,
+   "start": 16.9,
+   "end": 17.08,
    "section": "fizikal"
   },
   {
    "text": "iaitu",
-   "start": 17.347,
-   "end": 17.967,
+   "start": 17.08,
+   "end": 17.7,
    "section": "fizikal"
   },
   {
    "text": "melalui",
-   "start": 17.967,
-   "end": 18.367,
+   "start": 17.7,
+   "end": 18.1,
    "section": "fizikal"
   },
   {
    "text": "kaedah",
-   "start": 18.367,
-   "end": 18.867,
+   "start": 18.1,
+   "end": 18.6,
    "section": "fizikal"
   },
   {
    "text": "keluarkan",
-   "start": 19.207,
-   "end": 19.707,
+   "start": 18.94,
+   "end": 19.44,
    "section": "fizikal"
   },
   {
    "text": "emas",
-   "start": 19.707,
-   "end": 20.247,
+   "start": 19.44,
+   "end": 19.98,
    "section": "fizikal"
   },
   {
    "text": "fizikal",
-   "start": 20.247,
-   "end": 20.667,
+   "start": 19.98,
+   "end": 20.4,
    "section": "fizikal"
   },
   {
    "text": "rata-rata",
-   "start": 20.667,
-   "end": 21.627,
+   "start": 20.4,
+   "end": 21.36,
    "section": "fizikal"
   },
   {
    "text": "penyimpan",
-   "start": 21.627,
-   "end": 22.047,
+   "start": 21.36,
+   "end": 21.78,
    "section": "fizikal"
   },
   {
    "text": "emas",
-   "start": 22.047,
-   "end": 22.227,
+   "start": 21.78,
+   "end": 21.96,
    "section": "fizikal"
   },
   {
    "text": "saya",
-   "start": 22.227,
-   "end": 22.387,
+   "start": 21.96,
+   "end": 22.12,
    "section": "fizikal"
   },
   {
    "text": "yang",
-   "start": 22.387,
-   "end": 22.607,
+   "start": 22.12,
+   "end": 22.34,
    "section": "fizikal"
   },
   {
    "text": "dah",
-   "start": 22.607,
-   "end": 22.727,
+   "start": 22.34,
+   "end": 22.46,
    "section": "fizikal"
   },
   {
    "text": "keluarkan",
-   "start": 22.727,
-   "end": 23.047,
+   "start": 22.46,
+   "end": 22.78,
    "section": "fizikal"
   },
   {
    "text": "emas",
-   "start": 23.047,
-   "end": 23.427,
+   "start": 22.78,
+   "end": 23.16,
    "section": "fizikal"
   },
   {
    "text": "fizikal,",
-   "start": 23.427,
-   "end": 23.887,
+   "start": 23.16,
+   "end": 23.62,
    "section": "fizikal"
   },
   {
    "text": "memang",
-   "start": 24.007,
-   "end": 24.467,
+   "start": 23.74,
+   "end": 24.2,
    "section": "fizikal"
   },
   {
    "text": "senang",
-   "start": 24.467,
-   "end": 24.947,
+   "start": 24.2,
+   "end": 24.68,
    "section": "fizikal"
   },
   {
    "text": "nak",
-   "start": 24.947,
-   "end": 25.027,
+   "start": 24.68,
+   "end": 24.76,
    "section": "fizikal"
   },
   {
    "text": "tahu",
-   "start": 25.027,
-   "end": 25.187,
+   "start": 24.76,
+   "end": 24.92,
    "section": "fizikal"
   },
   {
    "text": "faham,",
-   "start": 25.187,
-   "end": 25.547,
+   "start": 24.92,
+   "end": 25.28,
    "section": "fizikal"
   },
   {
    "text": "sentiasa",
-   "start": 25.567,
-   "end": 26.307,
+   "start": 25.3,
+   "end": 26.04,
    "section": "fizikal"
   },
   {
    "text": "konsisten",
-   "start": 26.307,
-   "end": 26.427,
+   "start": 26.04,
+   "end": 26.16,
    "section": "fizikal"
   },
   {
    "text": "",
-   "start": 26.427,
-   "end": 26.707,
+   "start": 26.16,
+   "end": 26.44,
    "section": "fizikal"
   },
   {
    "text": "menabung",
-   "start": 26.707,
-   "end": 27.207,
+   "start": 26.44,
+   "end": 26.94,
    "section": "fizikal"
   },
   {
    "text": "setiap",
-   "start": 27.207,
-   "end": 27.487,
+   "start": 26.94,
+   "end": 27.22,
    "section": "fizikal"
   },
   {
    "text": "orang,",
-   "start": 27.487,
-   "end": 27.567,
+   "start": 27.22,
+   "end": 27.3,
    "section": "fizikal"
   },
   {
    "text": "sebab",
-   "start": 27.607,
-   "end": 27.827,
+   "start": 27.34,
+   "end": 27.56,
    "section": "fizikal"
   },
   {
    "text": "apa?",
-   "start": 27.827,
-   "end": 28.027,
+   "start": 27.56,
+   "end": 27.76,
    "section": "fizikal"
   },
   {
    "text": "Dia",
-   "start": 28.467,
-   "end": 28.567,
+   "start": 28.2,
+   "end": 28.3,
    "section": "fizikal"
   },
   {
    "text": "dah",
-   "start": 28.567,
-   "end": 28.687,
+   "start": 28.3,
+   "end": 28.42,
    "section": "fizikal"
   },
   {
    "text": "rasa",
-   "start": 28.687,
-   "end": 28.987,
+   "start": 28.42,
+   "end": 28.72,
    "section": "fizikal"
   },
   {
    "text": "keseronokan",
-   "start": 28.987,
-   "end": 29.767,
+   "start": 28.72,
+   "end": 29.5,
    "section": "fizikal"
   },
   {
    "text": "simpan",
-   "start": 29.767,
-   "end": 30.227,
+   "start": 29.5,
+   "end": 29.96,
    "section": "fizikal"
   },
   {
    "text": "emas",
-   "start": 30.227,
-   "end": 30.547,
+   "start": 29.96,
+   "end": 30.28,
    "section": "fizikal"
   },
   {
    "text": "fizikal",
-   "start": 30.547,
-   "end": 30.927,
+   "start": 30.28,
+   "end": 30.66,
    "section": "fizikal"
   },
   {
    "text": "Ada",
-   "start": 30.967,
-   "end": 31.467,
+   "start": 30.7,
+   "end": 31.2,
    "section": "beza"
   },
   {
    "text": "beza",
-   "start": 31.467,
-   "end": 31.947,
+   "start": 31.2,
+   "end": 31.68,
    "section": "beza"
   },
   {
    "text": "simpan",
-   "start": 31.947,
-   "end": 32.367,
+   "start": 31.68,
+   "end": 32.1,
    "section": "beza"
   },
   {
    "text": "emas",
-   "start": 32.367,
-   "end": 32.627,
+   "start": 32.1,
+   "end": 32.36,
    "section": "beza"
   },
   {
    "text": "fizikal",
-   "start": 32.627,
-   "end": 33.007,
+   "start": 32.36,
+   "end": 32.74,
    "section": "beza"
   },
   {
    "text": "dengan",
-   "start": 33.007,
-   "end": 33.227,
+   "start": 32.74,
+   "end": 32.96,
    "section": "beza"
   },
   {
    "text": "tengok",
-   "start": 33.227,
-   "end": 33.587,
+   "start": 32.96,
+   "end": 33.32,
    "section": "beza"
   },
   {
    "text": "nombor",
-   "start": 33.587,
-   "end": 33.887,
+   "start": 33.32,
+   "end": 33.62,
    "section": "beza"
   },
   {
    "text": "dalam",
-   "start": 33.887,
-   "end": 34.007,
+   "start": 33.62,
+   "end": 33.74,
    "section": "beza"
   },
   {
    "text": "akaun",
-   "start": 34.007,
-   "end": 34.467,
+   "start": 33.74,
+   "end": 34.2,
    "section": "beza"
   },
   {
    "text": "Bila",
-   "start": 34.467,
-   "end": 34.7,
+   "start": 34.2,
+   "end": 34.433,
    "section": "beza"
   },
   {
    "text": "sebenarnya",
-   "start": 34.7,
-   "end": 36.513,
+   "start": 34.433,
+   "end": 36.247,
    "section": "seronok"
   },
   {
    "text": "lebih",
-   "start": 36.513,
-   "end": 36.673,
+   "start": 36.247,
+   "end": 36.407,
    "section": "seronok"
   },
   {
    "text": "senang",
-   "start": 36.673,
-   "end": 37.013,
+   "start": 36.407,
+   "end": 36.747,
    "section": "seronok"
   },
   {
    "text": "nak",
-   "start": 37.013,
-   "end": 37.213,
+   "start": 36.747,
+   "end": 36.947,
    "section": "seronok"
   },
   {
    "text": "menabung,",
-   "start": 37.213,
-   "end": 37.673,
+   "start": 36.947,
+   "end": 37.407,
    "section": "seronok"
   },
   {
    "text": "nak",
-   "start": 37.753,
-   "end": 37.893,
+   "start": 37.487,
+   "end": 37.627,
    "section": "seronok"
   },
   {
    "text": "tambah",
-   "start": 37.893,
-   "end": 38.273,
+   "start": 37.627,
+   "end": 38.007,
    "section": "seronok"
   },
   {
    "text": "simpanan.",
-   "start": 38.273,
-   "end": 38.673,
+   "start": 38.007,
+   "end": 38.407,
    "section": "seronok"
   },
   {
    "text": "motivasi",
-   "start": 38.867,
-   "end": 40.933,
+   "start": 38.6,
+   "end": 40.667,
    "section": "motivasi"
   },
   {
    "text": "kepada",
-   "start": 40.933,
-   "end": 41.133,
+   "start": 40.667,
+   "end": 40.867,
    "section": "motivasi"
   },
   {
    "text": "kita",
-   "start": 41.133,
-   "end": 41.413,
+   "start": 40.867,
+   "end": 41.147,
    "section": "motivasi"
   },
   {
    "text": "untuk",
-   "start": 41.413,
-   "end": 41.773,
+   "start": 41.147,
+   "end": 41.507,
    "section": "motivasi"
   },
   {
    "text": "tambah",
-   "start": 41.773,
-   "end": 42.173,
+   "start": 41.507,
+   "end": 41.907,
    "section": "motivasi"
   },
   {
    "text": "simpanan.",
-   "start": 42.173,
-   "end": 42.367,
+   "start": 41.907,
+   "end": 42.1,
    "section": "motivasi"
   },
   {
    "text": "simpanan",
-   "start": 42.367,
-   "end": 42.593,
+   "start": 42.1,
+   "end": 42.327,
    "section": "motivasi"
   },
   {
    "text": "anda",
-   "start": 42.593,
-   "end": 42.713,
+   "start": 42.327,
+   "end": 42.447,
    "section": "motivasi"
   },
   {
    "text": "pastikan",
-   "start": 42.713,
-   "end": 43.253,
+   "start": 42.447,
+   "end": 42.987,
    "section": "motivasi"
   },
   {
    "text": "simpanan",
-   "start": 43.253,
-   "end": 43.733,
+   "start": 42.987,
+   "end": 43.467,
    "section": "motivasi"
   },
   {
    "text": "kita",
-   "start": 43.733,
-   "end": 43.973,
+   "start": 43.467,
+   "end": 43.707,
    "section": "motivasi"
   },
   {
    "text": "cepat",
-   "start": 43.973,
-   "end": 44.833,
+   "start": 43.707,
+   "end": 44.567,
    "section": "motivasi"
   },
   {
    "text": "bertambah.",
-   "start": 44.833,
-   "end": 45.433,
+   "start": 44.567,
+   "end": 45.167,
    "section": "motivasi"
   },
   {
    "text": "Dan",
-   "start": 45.533,
-   "end": 45.693,
+   "start": 45.267,
+   "end": 45.427,
    "section": "autodebit"
   },
   {
    "text": "caranya",
-   "start": 45.693,
-   "end": 46.113,
+   "start": 45.427,
+   "end": 45.847,
    "section": "autodebit"
   },
   {
    "text": "kedua",
-   "start": 46.113,
-   "end": 46.573,
+   "start": 45.847,
+   "end": 46.307,
    "section": "autodebit"
   },
   {
    "text": "adalah",
-   "start": 46.573,
-   "end": 46.693,
+   "start": 46.307,
+   "end": 46.427,
    "section": "autodebit"
   },
   {
    "text": "kita",
-   "start": 46.693,
-   "end": 47.093,
+   "start": 46.427,
+   "end": 46.827,
    "section": "autodebit"
   },
   {
    "text": "buat",
-   "start": 47.093,
-   "end": 47.333,
+   "start": 46.827,
+   "end": 47.067,
    "section": "autodebit"
   },
   {
    "text": "keadaan",
-   "start": 47.333,
-   "end": 47.673,
+   "start": 47.067,
+   "end": 47.407,
    "section": "autodebit"
   },
   {
    "text": "simpanan",
-   "start": 47.673,
-   "end": 48.093,
+   "start": 47.407,
+   "end": 47.827,
    "section": "autodebit"
   },
   {
    "text": "secara",
-   "start": 48.093,
-   "end": 48.373,
+   "start": 47.827,
+   "end": 48.107,
    "section": "autodebit"
   },
   {
    "text": "auto",
-   "start": 48.373,
-   "end": 48.693,
+   "start": 48.107,
+   "end": 48.427,
    "section": "autodebit"
   },
   {
    "text": "debit.",
-   "start": 48.693,
-   "end": 48.973,
+   "start": 48.427,
+   "end": 48.707,
    "section": "autodebit"
   },
   {
    "text": "Iaitu",
-   "start": 49.513,
-   "end": 49.933,
+   "start": 49.247,
+   "end": 49.667,
    "section": "autodebit"
   },
   {
    "text": "kita",
-   "start": 49.933,
-   "end": 50.313,
+   "start": 49.667,
+   "end": 50.047,
    "section": "autodebit"
   },
   {
    "text": "tak",
-   "start": 50.313,
-   "end": 50.553,
+   "start": 50.047,
+   "end": 50.287,
    "section": "autodebit"
   },
   {
    "text": "perlu",
-   "start": 50.553,
-   "end": 50.693,
+   "start": 50.287,
+   "end": 50.427,
    "section": "autodebit"
   },
   {
    "text": "buat",
-   "start": 50.693,
-   "end": 50.873,
+   "start": 50.427,
+   "end": 50.607,
    "section": "autodebit"
   },
   {
    "text": "decision",
-   "start": 50.873,
-   "end": 51.073,
+   "start": 50.607,
+   "end": 50.807,
    "section": "autodebit"
   },
   {
    "text": "setiap",
-   "start": 51.073,
-   "end": 51.593,
+   "start": 50.807,
+   "end": 51.327,
    "section": "autodebit"
   },
   {
    "text": "bulan",
-   "start": 51.593,
-   "end": 51.933,
+   "start": 51.327,
+   "end": 51.667,
    "section": "autodebit"
   },
   {
    "text": "Kita",
-   "start": 51.933,
-   "end": 52.273,
+   "start": 51.667,
+   "end": 52.007,
    "section": "autodebit"
   },
   {
    "text": "automatkan",
-   "start": 52.273,
-   "end": 53.293,
+   "start": 52.007,
+   "end": 53.027,
    "section": "autodebit"
   },
   {
    "text": "keadaan",
-   "start": 53.293,
-   "end": 53.713,
+   "start": 53.027,
+   "end": 53.447,
    "section": "autodebit"
   },
   {
    "text": "simpanan",
-   "start": 53.713,
-   "end": 54.173,
+   "start": 53.447,
+   "end": 53.907,
    "section": "autodebit"
   },
   {
    "text": "kita",
-   "start": 54.173,
-   "end": 54.393,
+   "start": 53.907,
+   "end": 54.127,
    "section": "autodebit"
   },
   {
    "text": "setiap",
-   "start": 54.393,
-   "end": 54.733,
+   "start": 54.127,
+   "end": 54.467,
    "section": "autodebit"
   },
   {
    "text": "Setiap",
-   "start": 54.767,
-   "end": 55.047,
+   "start": 54.5,
+   "end": 54.78,
    "section": "gaji"
   },
   {
    "text": "bulan",
-   "start": 55.047,
-   "end": 55.307,
+   "start": 54.78,
+   "end": 55.04,
    "section": "gaji"
   },
   {
    "text": "kita",
-   "start": 55.307,
-   "end": 55.447,
+   "start": 55.04,
+   "end": 55.18,
    "section": "gaji"
   },
   {
    "text": "pastikan",
-   "start": 55.447,
-   "end": 55.987,
+   "start": 55.18,
+   "end": 55.72,
    "section": "gaji"
   },
   {
    "text": "gaji",
-   "start": 55.987,
-   "end": 56.507,
+   "start": 55.72,
+   "end": 56.24,
    "section": "gaji"
   },
   {
    "text": "kita",
-   "start": 56.507,
-   "end": 56.707,
+   "start": 56.24,
+   "end": 56.44,
    "section": "gaji"
   },
   {
    "text": "automatik",
-   "start": 56.707,
-   "end": 57.527,
+   "start": 56.44,
+   "end": 57.26,
    "section": "gaji"
   },
   {
    "text": "jadi",
-   "start": 57.527,
-   "end": 57.667,
+   "start": 57.26,
+   "end": 57.4,
    "section": "gaji"
   },
   {
    "text": "emas",
-   "start": 57.667,
-   "end": 58.087,
+   "start": 57.4,
+   "end": 57.82,
    "section": "gaji"
   },
   {
    "text": "dengan",
-   "start": 58.087,
-   "end": 58.247,
+   "start": 57.82,
+   "end": 57.98,
    "section": "gaji"
   },
   {
    "text": "cara",
-   "start": 58.247,
-   "end": 58.547,
+   "start": 57.98,
+   "end": 58.28,
    "section": "gaji"
   },
   {
    "text": "keadaan",
-   "start": 58.547,
-   "end": 59.227,
+   "start": 58.28,
+   "end": 58.96,
    "section": "gaji"
   },
   {
    "text": "auto",
-   "start": 59.227,
-   "end": 59.427,
+   "start": 58.96,
+   "end": 59.16,
    "section": "gaji"
   },
   {
    "text": "debit.",
-   "start": 59.427,
-   "end": 59.807,
+   "start": 59.16,
+   "end": 59.54,
    "section": "gaji"
   },
   {
    "text": "Jadi",
-   "start": 59.927,
-   "end": 60.307,
+   "start": 59.66,
+   "end": 60.04,
    "section": "cta"
   },
   {
    "text": "bagi",
-   "start": 60.307,
-   "end": 60.627,
+   "start": 60.04,
+   "end": 60.36,
    "section": "cta"
   },
   {
    "text": "siapa",
-   "start": 60.627,
-   "end": 60.947,
+   "start": 60.36,
+   "end": 60.68,
    "section": "cta"
   },
   {
    "text": "yang",
-   "start": 60.947,
-   "end": 61.047,
+   "start": 60.68,
+   "end": 60.78,
    "section": "cta"
   },
   {
    "text": "belum",
-   "start": 61.047,
-   "end": 61.167,
+   "start": 60.78,
+   "end": 60.9,
    "section": "cta"
   },
   {
    "text": "cuba",
-   "start": 61.167,
-   "end": 61.667,
+   "start": 60.9,
+   "end": 61.4,
    "section": "cta"
   },
   {
    "text": "dua",
-   "start": 61.667,
-   "end": 61.807,
+   "start": 61.4,
+   "end": 61.54,
    "section": "cta"
   },
   {
    "text": "cara",
-   "start": 61.807,
-   "end": 62.107,
+   "start": 61.54,
+   "end": 61.84,
    "section": "cta"
   },
   {
    "text": "ini",
-   "start": 62.107,
-   "end": 62.387,
+   "start": 61.84,
+   "end": 62.12,
    "section": "cta"
   },
   {
    "text": "iaitu",
-   "start": 62.387,
-   "end": 62.787,
+   "start": 62.12,
+   "end": 62.52,
    "section": "cta"
   },
   {
    "text": "keluarkan",
-   "start": 62.787,
-   "end": 63.207,
+   "start": 62.52,
+   "end": 62.94,
    "section": "cta"
   },
   {
    "text": "emas",
-   "start": 63.207,
-   "end": 63.567,
+   "start": 62.94,
+   "end": 63.3,
    "section": "cta"
   },
   {
    "text": "fizikal",
-   "start": 63.567,
-   "end": 64.007,
+   "start": 63.3,
+   "end": 63.74,
    "section": "cta"
   },
   {
    "text": "dan",
-   "start": 64.007,
-   "end": 64.347,
+   "start": 63.74,
+   "end": 64.08,
    "section": "cta"
   },
   {
    "text": "set",
-   "start": 64.347,
-   "end": 64.647,
+   "start": 64.08,
+   "end": 64.38,
    "section": "cta"
   },
   {
    "text": "up",
-   "start": 64.647,
-   "end": 64.847,
+   "start": 64.38,
+   "end": 64.58,
    "section": "cta"
   },
   {
    "text": "auto",
-   "start": 64.847,
-   "end": 65.067,
+   "start": 64.58,
+   "end": 64.8,
    "section": "cta"
   },
   {
    "text": "debit.",
-   "start": 65.067,
-   "end": 65.407,
+   "start": 64.8,
+   "end": 65.14,
    "section": "cta"
   },
   {
    "text": "anda",
-   "start": 65.767,
-   "end": 65.907,
+   "start": 65.5,
+   "end": 65.64,
    "section": "cta"
   },
   {
    "text": "boleh",
-   "start": 65.907,
-   "end": 66.207,
+   "start": 65.64,
+   "end": 65.94,
    "section": "cta"
   },
   {
    "text": "buat",
-   "start": 66.207,
-   "end": 66.447,
+   "start": 65.94,
+   "end": 66.18,
    "section": "cta"
   },
   {
    "text": "kedua-duanya",
-   "start": 66.447,
-   "end": 67.107,
+   "start": 66.18,
+   "end": 66.84,
    "section": "cta"
   },
   {
    "text": "terus",
-   "start": 67.107,
-   "end": 67.407,
+   "start": 66.84,
+   "end": 67.14,
    "section": "cta"
   },
   {
    "text": "supaya",
-   "start": 67.407,
-   "end": 68.247,
+   "start": 67.14,
+   "end": 67.98,
    "section": "cta"
   },
   {
    "text": "simpanan",
-   "start": 68.247,
-   "end": 68.727,
+   "start": 67.98,
+   "end": 68.46,
    "section": "cta"
   },
   {
    "text": "anda",
-   "start": 68.727,
-   "end": 68.947,
+   "start": 68.46,
+   "end": 68.68,
    "section": "cta"
   },
   {
    "text": "cepat",
-   "start": 68.947,
-   "end": 69.647,
+   "start": 68.68,
+   "end": 69.38,
    "section": "cta"
   },
   {
    "text": "bertambah",
-   "start": 69.647,
-   "end": 70.107,
+   "start": 69.38,
+   "end": 69.84,
    "section": "cta"
   },
   {
    "text": "dan",
-   "start": 70.107,
-   "end": 70.227,
+   "start": 69.84,
+   "end": 69.96,
    "section": "cta"
   },
   {
    "text": "anda",
-   "start": 70.227,
-   "end": 70.547,
+   "start": 69.96,
+   "end": 70.28,
    "section": "cta"
   },
   {
    "text": "lebih",
-   "start": 70.547,
-   "end": 70.927,
+   "start": 70.28,
+   "end": 70.66,
    "section": "cta"
   },
   {
    "text": "seronok",
-   "start": 70.927,
-   "end": 71.487,
+   "start": 70.66,
+   "end": 71.22,
    "section": "cta"
   },
   {
    "text": "dalam",
-   "start": 71.487,
-   "end": 71.867,
+   "start": 71.22,
+   "end": 71.6,
    "section": "cta"
   },
   {
    "text": "menabung",
-   "start": 71.867,
-   "end": 72.727,
+   "start": 71.6,
+   "end": 72.46,
    "section": "cta"
   },
   {
    "text": "emas",
-   "start": 72.727,
-   "end": 72.987,
+   "start": 72.46,
+   "end": 72.72,
    "section": "cta"
   }
  ]
