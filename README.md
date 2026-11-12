@@ -42,3 +42,4 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - `npm run render:v11` … `render:v16` → `out/final_<Comp>.mp4` (full res, CRF 16, 320k audio)
 - v14 question overlay: viewer's WhatsApp screenshot at `public/v14/broll/soalan.jpg` (not committed)
 - v14 re-graded with `NATURAL=1` (VIVID made the face too yellow); old vivid source kept as `video_vivid.mp4`
+- v16 gold-item montage (hard cuts) on "5 dinar … 1 kilogram" and "100 gram, 250 gram, 1 kilogram": `public/v16/broll/{coins,cards,g50,bars,kg}.mp4` (NATURAL grade); `BCut.fadeIn/fadeOut=false` for back-to-back segments

@@ -4,7 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
-import {ChainCard, ChecklistCard, Choices, CtaCard, GItem, IconRepeat, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
+import {BRollTrack, BCut, ChainCard, ChecklistCard, Choices, CtaCard, GItem, IconRepeat, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconCoin, IconTarget} from '../../engine/ui';
 
 const tl = makeTimeline(edlJson as Edl, 30);
@@ -133,10 +133,20 @@ const SFX: Sfx[] = [
   {t: M.sampai + 0.2, f: 'gold_prize', v: 0.22},
 ];
 
+// Real gold-item montage on the big-item lists: dinar coins, dinar cards, 50g, 100g/250g bars, 1kg bar (hard cuts inside a run)
+const run = (segs: [string, number, number][], end: number): BCut[] =>
+  segs.map(([f, from, srcStart], i) => ({file: `v16/broll/${f}.mp4`, from, to: i + 1 < segs.length ? segs[i + 1][1] : end, srcStart,
+    fadeIn: i === 0, fadeOut: i === segs.length - 1}));
+const BROLL: BCut[] = [
+  ...run([['coins', M.d5 - 0.15, 0.3], ['cards', M.d10 - 0.1, 3.6], ['g50', M.g50 - 0.1, 9.5], ['bars', M.g100 - 0.1, 0.3], ['kg', M.kg - 0.35, 19.5]], E('hook') + 0.2),
+  ...run([['bars', M.pegang - 0.1, 4.0], ['kg', M.bkg - 0.35, 21]], M.cta - 0.05),
+];
+
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <BRollTrack cuts={BROLL} />
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, [[M.akaun, M.cta + 2.5]])} />
+    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, [[M.akaun, M.cta + 2.5], [M.d5 - 0.4, E('hook') + 0.4]])} />
   </>
 );
 

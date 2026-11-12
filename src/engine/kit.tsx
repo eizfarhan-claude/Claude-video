@@ -257,10 +257,13 @@ export const Schedule: React.FC<{items: GItem[]; total: number}> = ({items, tota
 );
 
 /** Full-frame B-roll cutaways; voice keeps running underneath. */
-export type BCut = {file: string; from: number; to: number; srcStart: number};
+/** fadeIn/fadeOut false = hard cut (for back-to-back montage segments) */
+export type BCut = {file: string; from: number; to: number; srcStart: number; fadeIn?: boolean; fadeOut?: boolean};
 const BClip: React.FC<{c: BCut; dur: number}> = ({c, dur}) => {
   const f = useCurrentFrame();
-  const opacity = interpolate(f, [0, 5, dur - 5, dur], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const fi = c.fadeIn === false ? 0 : 5, fo = c.fadeOut === false ? 0 : 5;
+  const opacity = Math.min(fi ? interpolate(f, [0, fi], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1,
+    fo ? interpolate(f, [dur - fo, dur], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1);
   const scale = interpolate(f, [0, 6, dur], [1.18, 1.08, 1.0], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
   return (
     <AbsoluteFill style={{opacity}}>
