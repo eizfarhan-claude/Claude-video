@@ -41,3 +41,4 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - v11 overlays: real gold-bar cutaways on "50 gram" (x2), "100 gram", "2 kilogram" — put graded clips in `public/v11/broll/{g50,g100,kg}.mp4` (same vivid grade, 1080x1920 crop)
 - `npm run render:v11` … `render:v16` → `out/final_<Comp>.mp4` (full res, CRF 16, 320k audio)
 - v14 question overlay: viewer's WhatsApp screenshot at `public/v14/broll/soalan.jpg` (not committed)
+- v14 re-graded with `NATURAL=1` (VIVID made the face too yellow); old vivid source kept as `video_vivid.mp4`
