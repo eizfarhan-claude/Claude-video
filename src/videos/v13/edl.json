@@ -1,48 +1,48 @@
 {
  "fps": 30,
- "durationInFrames": 1275,
+ "durationInFrames": 1266,
  "clips": [
   {
    "section": "kereta",
    "srcFrom": 216,
-   "durationInFrames": 161,
+   "durationInFrames": 166,
    "outFrom": 0
   },
   {
    "section": "rumah",
-   "srcFrom": 377,
-   "durationInFrames": 235,
-   "outFrom": 161
+   "srcFrom": 391,
+   "durationInFrames": 221,
+   "outFrom": 166
   },
   {
    "section": "kecemasan",
    "srcFrom": 687,
    "durationInFrames": 161,
-   "outFrom": 396
+   "outFrom": 387
   },
   {
    "section": "simpanan",
    "srcFrom": 1073,
    "durationInFrames": 225,
-   "outFrom": 557
+   "outFrom": 548
   },
   {
    "section": "persaraan",
    "srcFrom": 1298,
    "durationInFrames": 243,
-   "outFrom": 782
+   "outFrom": 773
   },
   {
    "section": "tutup",
    "srcFrom": 1610,
    "durationInFrames": 62,
-   "outFrom": 1025
+   "outFrom": 1016
   },
   {
    "section": "tutup",
    "srcFrom": 1744,
    "durationInFrames": 188,
-   "outFrom": 1087
+   "outFrom": 1078
   }
  ],
  "words": [
@@ -133,553 +133,553 @@
   {
    "text": "beli.",
    "start": 5.02,
-   "end": 5.367,
+   "end": 5.4,
    "section": "kereta"
   },
   {
    "text": "Ambil",
-   "start": 5.4,
+   "start": 5.533,
+   "end": 5.76,
+   "section": "rumah"
+  },
+  {
+   "text": "gaji",
+   "start": 5.76,
    "end": 6.06,
    "section": "rumah"
   },
   {
-   "text": "gaji",
-   "start": 6.06,
-   "end": 6.36,
-   "section": "rumah"
-  },
-  {
    "text": "anda",
-   "start": 6.36,
-   "end": 6.52,
+   "start": 6.06,
+   "end": 6.22,
    "section": "rumah"
   },
   {
    "text": "sebulan.",
-   "start": 6.52,
-   "end": 7.12,
+   "start": 6.22,
+   "end": 6.82,
    "section": "rumah"
   },
   {
    "text": "Darab",
-   "start": 7.36,
-   "end": 7.62,
+   "start": 7.06,
+   "end": 7.32,
    "section": "rumah"
   },
   {
    "text": "dengan",
-   "start": 7.62,
-   "end": 7.76,
+   "start": 7.32,
+   "end": 7.46,
    "section": "rumah"
   },
   {
    "text": "dua",
-   "start": 7.76,
-   "end": 8.0,
+   "start": 7.46,
+   "end": 7.7,
    "section": "rumah"
   },
   {
    "text": "belas",
-   "start": 8.0,
-   "end": 8.28,
+   "start": 7.7,
+   "end": 7.98,
    "section": "rumah"
   },
   {
    "text": "bulan",
-   "start": 8.28,
-   "end": 8.64,
+   "start": 7.98,
+   "end": 8.34,
    "section": "rumah"
   },
   {
    "text": "dan",
-   "start": 8.64,
-   "end": 8.84,
+   "start": 8.34,
+   "end": 8.54,
    "section": "rumah"
   },
   {
    "text": "darab",
-   "start": 8.84,
-   "end": 9.24,
+   "start": 8.54,
+   "end": 8.94,
    "section": "rumah"
   },
   {
    "text": "dengan",
-   "start": 9.24,
-   "end": 9.36,
+   "start": 8.94,
+   "end": 9.06,
    "section": "rumah"
   },
   {
    "text": "lima",
-   "start": 9.36,
-   "end": 9.82,
+   "start": 9.06,
+   "end": 9.52,
    "section": "rumah"
   },
   {
    "text": "tahun,",
-   "start": 9.82,
-   "end": 10.08,
+   "start": 9.52,
+   "end": 9.78,
    "section": "rumah"
   },
   {
    "text": "itulah",
-   "start": 10.22,
-   "end": 10.92,
+   "start": 9.92,
+   "end": 10.62,
    "section": "rumah"
   },
   {
    "text": "nilai",
-   "start": 10.92,
-   "end": 11.36,
+   "start": 10.62,
+   "end": 11.06,
    "section": "rumah"
   },
   {
    "text": "rumah",
-   "start": 11.36,
-   "end": 11.54,
+   "start": 11.06,
+   "end": 11.24,
    "section": "rumah"
   },
   {
    "text": "yang",
-   "start": 11.54,
-   "end": 11.96,
+   "start": 11.24,
+   "end": 11.66,
    "section": "rumah"
   },
   {
    "text": "anda",
-   "start": 11.96,
-   "end": 12.22,
+   "start": 11.66,
+   "end": 11.92,
    "section": "rumah"
   },
   {
    "text": "boleh",
-   "start": 12.22,
-   "end": 12.66,
+   "start": 11.92,
+   "end": 12.36,
    "section": "rumah"
   },
   {
    "text": "beli.",
-   "start": 12.66,
-   "end": 13.02,
+   "start": 12.36,
+   "end": 12.72,
    "section": "rumah"
   },
   {
    "text": "Ambil",
-   "start": 13.2,
-   "end": 13.44,
+   "start": 12.9,
+   "end": 13.14,
    "section": "kecemasan"
   },
   {
    "text": "gaji",
-   "start": 13.44,
-   "end": 13.76,
+   "start": 13.14,
+   "end": 13.46,
    "section": "kecemasan"
   },
   {
    "text": "anda",
-   "start": 13.76,
-   "end": 13.86,
+   "start": 13.46,
+   "end": 13.56,
    "section": "kecemasan"
   },
   {
    "text": "sebulan,",
-   "start": 13.86,
-   "end": 14.4,
+   "start": 13.56,
+   "end": 14.1,
    "section": "kecemasan"
   },
   {
    "text": "darab",
-   "start": 14.44,
-   "end": 14.86,
+   "start": 14.14,
+   "end": 14.56,
    "section": "kecemasan"
   },
   {
    "text": "pula",
-   "start": 14.86,
-   "end": 15.1,
+   "start": 14.56,
+   "end": 14.8,
    "section": "kecemasan"
   },
   {
    "text": "dengan",
-   "start": 15.1,
-   "end": 15.24,
+   "start": 14.8,
+   "end": 14.94,
    "section": "kecemasan"
   },
   {
    "text": "enam.",
-   "start": 15.24,
-   "end": 15.58,
+   "start": 14.94,
+   "end": 15.28,
    "section": "kecemasan"
   },
   {
    "text": "Itulah",
-   "start": 15.94,
-   "end": 16.32,
+   "start": 15.64,
+   "end": 16.02,
    "section": "kecemasan"
   },
   {
    "text": "dana",
-   "start": 16.32,
-   "end": 16.64,
+   "start": 16.02,
+   "end": 16.34,
    "section": "kecemasan"
   },
   {
    "text": "kecemasan",
-   "start": 16.64,
-   "end": 17.1,
+   "start": 16.34,
+   "end": 16.8,
    "section": "kecemasan"
   },
   {
    "text": "yang",
-   "start": 17.1,
+   "start": 16.8,
+   "end": 16.84,
+   "section": "kecemasan"
+  },
+  {
+   "text": "anda",
+   "start": 16.84,
    "end": 17.14,
    "section": "kecemasan"
   },
   {
-   "text": "anda",
-   "start": 17.14,
-   "end": 17.44,
-   "section": "kecemasan"
-  },
-  {
    "text": "kena",
-   "start": 17.44,
-   "end": 17.68,
+   "start": 17.14,
+   "end": 17.38,
    "section": "kecemasan"
   },
   {
    "text": "sediakan",
-   "start": 17.68,
-   "end": 18.16,
+   "start": 17.38,
+   "end": 17.86,
    "section": "kecemasan"
   },
   {
    "text": "Ambil",
-   "start": 18.64,
-   "end": 18.86,
+   "start": 18.34,
+   "end": 18.56,
    "section": "simpanan"
   },
   {
    "text": "gaji",
-   "start": 18.86,
-   "end": 19.18,
+   "start": 18.56,
+   "end": 18.88,
    "section": "simpanan"
   },
   {
    "text": "anda",
-   "start": 19.18,
-   "end": 19.32,
+   "start": 18.88,
+   "end": 19.02,
    "section": "simpanan"
   },
   {
    "text": "sebulan,",
-   "start": 19.32,
-   "end": 19.92,
+   "start": 19.02,
+   "end": 19.62,
    "section": "simpanan"
   },
   {
    "text": "darab",
-   "start": 19.92,
-   "end": 20.44,
+   "start": 19.62,
+   "end": 20.14,
    "section": "simpanan"
   },
   {
    "text": "dengan",
-   "start": 20.44,
-   "end": 20.54,
+   "start": 20.14,
+   "end": 20.24,
    "section": "simpanan"
   },
   {
    "text": "0.2,",
-   "start": 20.54,
-   "end": 21.58,
+   "start": 20.24,
+   "end": 21.28,
    "section": "simpanan"
   },
   {
    "text": "itulah",
-   "start": 21.7,
-   "end": 22.34,
+   "start": 21.4,
+   "end": 22.04,
    "section": "simpanan"
   },
   {
    "text": "dana",
-   "start": 22.34,
-   "end": 22.84,
+   "start": 22.04,
+   "end": 22.54,
    "section": "simpanan"
   },
   {
    "text": "simpanan",
-   "start": 22.84,
-   "end": 23.38,
+   "start": 22.54,
+   "end": 23.08,
    "section": "simpanan"
   },
   {
    "text": "yang",
-   "start": 23.38,
-   "end": 23.7,
+   "start": 23.08,
+   "end": 23.4,
    "section": "simpanan"
   },
   {
    "text": "anda",
-   "start": 23.7,
-   "end": 23.98,
+   "start": 23.4,
+   "end": 23.68,
    "section": "simpanan"
   },
   {
    "text": "perlu",
-   "start": 23.98,
-   "end": 24.52,
+   "start": 23.68,
+   "end": 24.22,
    "section": "simpanan"
   },
   {
    "text": "simpan",
-   "start": 24.52,
-   "end": 25.0,
+   "start": 24.22,
+   "end": 24.7,
    "section": "simpanan"
   },
   {
    "text": "setiap",
-   "start": 25.0,
-   "end": 25.6,
+   "start": 24.7,
+   "end": 25.3,
    "section": "simpanan"
   },
   {
    "text": "bulan.",
-   "start": 25.6,
-   "end": 25.88,
+   "start": 25.3,
+   "end": 25.58,
    "section": "simpanan"
   },
   {
    "text": "dan",
-   "start": 26.12,
-   "end": 26.24,
+   "start": 25.82,
+   "end": 25.94,
    "section": "persaraan"
   },
   {
    "text": "yang",
-   "start": 26.24,
-   "end": 26.34,
+   "start": 25.94,
+   "end": 26.04,
    "section": "persaraan"
   },
   {
    "text": "penting",
-   "start": 26.34,
-   "end": 26.8,
+   "start": 26.04,
+   "end": 26.5,
    "section": "persaraan"
   },
   {
    "text": "ambil",
-   "start": 26.8,
-   "end": 27.28,
+   "start": 26.5,
+   "end": 26.98,
    "section": "persaraan"
   },
   {
    "text": "gaji",
-   "start": 27.28,
-   "end": 27.5,
+   "start": 26.98,
+   "end": 27.2,
    "section": "persaraan"
   },
   {
    "text": "anda",
-   "start": 27.5,
-   "end": 27.62,
+   "start": 27.2,
+   "end": 27.32,
    "section": "persaraan"
   },
   {
    "text": "sebulan",
-   "start": 27.62,
-   "end": 28.12,
+   "start": 27.32,
+   "end": 27.82,
    "section": "persaraan"
   },
   {
    "text": "darab",
-   "start": 28.12,
-   "end": 28.52,
+   "start": 27.82,
+   "end": 28.22,
    "section": "persaraan"
   },
   {
    "text": "dengan",
-   "start": 28.52,
-   "end": 28.66,
+   "start": 28.22,
+   "end": 28.36,
    "section": "persaraan"
   },
   {
    "text": "300",
-   "start": 28.66,
-   "end": 29.32,
+   "start": 28.36,
+   "end": 29.02,
    "section": "persaraan"
   },
   {
    "text": "itulah",
-   "start": 29.32,
-   "end": 30.0,
+   "start": 29.02,
+   "end": 29.7,
    "section": "persaraan"
   },
   {
    "text": "dana",
-   "start": 30.0,
-   "end": 30.32,
+   "start": 29.7,
+   "end": 30.02,
    "section": "persaraan"
   },
   {
    "text": "persaraan",
-   "start": 30.32,
-   "end": 30.92,
+   "start": 30.02,
+   "end": 30.62,
    "section": "persaraan"
   },
   {
    "text": "yang",
-   "start": 30.92,
-   "end": 31.44,
+   "start": 30.62,
+   "end": 31.14,
    "section": "persaraan"
   },
   {
    "text": "anda",
-   "start": 31.44,
-   "end": 31.72,
+   "start": 31.14,
+   "end": 31.42,
    "section": "persaraan"
   },
   {
    "text": "kena",
-   "start": 31.72,
-   "end": 32.28,
+   "start": 31.42,
+   "end": 31.98,
    "section": "persaraan"
   },
   {
    "text": "sediakan",
-   "start": 32.28,
-   "end": 32.74,
+   "start": 31.98,
+   "end": 32.44,
    "section": "persaraan"
   },
   {
    "text": "sebelum",
-   "start": 32.74,
-   "end": 33.52,
+   "start": 32.44,
+   "end": 33.22,
    "section": "persaraan"
   },
   {
    "text": "bersara",
-   "start": 33.52,
-   "end": 33.9,
+   "start": 33.22,
+   "end": 33.6,
    "section": "persaraan"
   },
   {
    "text": "jadi",
-   "start": 33.9,
-   "end": 34.167,
+   "start": 33.6,
+   "end": 33.867,
    "section": "persaraan"
   },
   {
    "text": "Jadi,",
-   "start": 34.167,
-   "end": 34.34,
+   "start": 33.867,
+   "end": 34.04,
    "section": "tutup"
   },
   {
    "text": "gaji",
-   "start": 34.38,
-   "end": 35.1,
+   "start": 34.08,
+   "end": 34.8,
    "section": "tutup"
   },
   {
    "text": "masing-masing",
-   "start": 35.1,
-   "end": 36.233,
+   "start": 34.8,
+   "end": 35.933,
    "section": "tutup"
   },
   {
    "text": "membeli",
-   "start": 36.233,
-   "end": 36.68,
+   "start": 35.933,
+   "end": 36.38,
    "section": "tutup"
   },
   {
    "text": "ikut",
-   "start": 36.68,
-   "end": 36.9,
+   "start": 36.38,
+   "end": 36.6,
    "section": "tutup"
   },
   {
    "text": "kesesuaian,",
-   "start": 36.9,
-   "end": 37.42,
+   "start": 36.6,
+   "end": 37.12,
    "section": "tutup"
   },
   {
    "text": "membeli",
-   "start": 37.52,
-   "end": 38.14,
+   "start": 37.22,
+   "end": 37.84,
    "section": "tutup"
   },
   {
    "text": "ikut",
-   "start": 38.14,
-   "end": 38.44,
+   "start": 37.84,
+   "end": 38.14,
    "section": "tutup"
   },
   {
    "text": "keperluan,",
-   "start": 38.44,
-   "end": 38.96,
+   "start": 38.14,
+   "end": 38.66,
    "section": "tutup"
   },
   {
    "text": "urus",
-   "start": 38.98,
-   "end": 39.48,
+   "start": 38.68,
+   "end": 39.18,
    "section": "tutup"
   },
   {
    "text": "kewangan",
-   "start": 39.48,
-   "end": 39.8,
+   "start": 39.18,
+   "end": 39.5,
    "section": "tutup"
   },
   {
    "text": "dengan",
-   "start": 39.8,
-   "end": 39.98,
+   "start": 39.5,
+   "end": 39.68,
    "section": "tutup"
   },
   {
    "text": "baik",
-   "start": 39.98,
-   "end": 40.3,
+   "start": 39.68,
+   "end": 40.0,
    "section": "tutup"
   },
   {
    "text": "untuk",
-   "start": 40.3,
-   "end": 40.76,
+   "start": 40.0,
+   "end": 40.46,
    "section": "tutup"
   },
   {
    "text": "masa",
-   "start": 40.76,
-   "end": 40.98,
+   "start": 40.46,
+   "end": 40.68,
    "section": "tutup"
   },
   {
    "text": "depan",
-   "start": 40.98,
-   "end": 41.44,
+   "start": 40.68,
+   "end": 41.14,
    "section": "tutup"
   },
   {
    "text": "yang",
-   "start": 41.44,
-   "end": 41.74,
+   "start": 41.14,
+   "end": 41.44,
    "section": "tutup"
   },
   {
    "text": "lebih",
-   "start": 41.74,
-   "end": 41.96,
+   "start": 41.44,
+   "end": 41.66,
    "section": "tutup"
   },
   {
    "text": "cerah.",
-   "start": 41.96,
-   "end": 42.34,
+   "start": 41.66,
+   "end": 42.04,
    "section": "tutup"
   }
  ]

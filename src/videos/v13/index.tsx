@@ -9,20 +9,22 @@ import {FormulaCard, IconCar, IconFormula, IconPiggy, PrincipleCard, RecapCard} 
 
 const tl = makeTimeline(edlJson as Edl, 30);
 const {at, sectionStart: S, sectionEnd: E} = tl;
+/** output second where a section's first clip begins (real audio onset, not Whisper's word guess) */
+const C = (sec: string) => tl.edl.clips.find((c) => c.section === sec)!.outFrom / 30;
 
 const M = {
   k: S('kereta'),
   kDarab: at('kereta', 'darab'),
   k12: at('kereta', '12'),
   kereta: at('kereta', 'kereta'),
-  r: S('rumah'),
+  r: C('rumah') + 0.05,
   r12: at('rumah', 'dua'),
   rLima: at('rumah', 'lima'),
   rumah: at('rumah', 'rumah'),
-  c: S('kecemasan'),
+  c: C('kecemasan') + 0.05,
   c6: at('kecemasan', 'enam'),
   cDana: at('kecemasan', 'kecemasan'),
-  s: S('simpanan'),
+  s: C('simpanan') + 0.05,
   s02: at('simpanan', '0.2'),
   sDana: at('simpanan', 'simpanan'),
   sBulan: at('simpanan', 'bulan'),
@@ -82,16 +84,16 @@ const ITEMS: GItem[] = [
 const SFX: Sfx[] = [
   {t: 0, f: 'whoosh_cine', v: 0.42},
   {t: 0.05, f: 'impact_deep', v: 0.26},
-  {t: M.kDarab - 0.1, f: 'whoosh_pop', v: 0.38},
+  {t: M.kDarab - 0.1, f: 'whoosh_pop', v: 0.3},
   {t: M.k12, f: 'pop_hard', v: 0.32},
   {t: M.kereta, f: 'ding_correct', v: 0.26},
-  {t: M.r + 0.05, f: 'whoosh_pop', v: 0.38},
+  {t: M.r + 0.05, f: 'whoosh_pop', v: 0.3},
   {t: M.rLima, f: 'pop_hard', v: 0.32},
   {t: M.rumah, f: 'ding_correct', v: 0.26},
-  {t: M.c + 0.05, f: 'whoosh_pop', v: 0.38},
+  {t: M.c + 0.05, f: 'whoosh_pop', v: 0.3},
   {t: M.c6, f: 'pop_hard', v: 0.32},
   {t: M.cDana, f: 'bell_notif', v: 0.22},
-  {t: M.s + 0.05, f: 'whoosh_pop', v: 0.38},
+  {t: M.s + 0.05, f: 'whoosh_pop', v: 0.3},
   {t: M.s02, f: 'pop_hard', v: 0.32},
   {t: M.sDana, f: 'coins', v: 0.3},
   {t: M.p + 0.05, f: 'whoosh_cine', v: 0.34},
