@@ -38,10 +38,6 @@ const M = {
   premium: at('gb', 'premium'),
   rendah: at('gb', 'rendah'),
   s6: at('gb', '6'),
-  semak: S('semak'),
-  kalauS: at('semak', 'kalau', 0),
-  cantikS: at('semak', 'cantik'),
-  panjangS: at('semak', 'panjang'),
   cta: S('cta'),
   isi: at('cta', 'isi'),
   anda2: at('cta', 'anda', 1),
@@ -81,12 +77,6 @@ const ITEMS: GItem[] = [
       {name: 'Perhiasan', lo: 25, hi: 40, at: 0, bad: true},
       {name: 'Gold bar & dinar', lo: 6, hi: 9, at: r(M.s6) - 4},
     ]} sub="premium lebih murah ✓" subAt={r(M.premium)} />
-  )},
-  {from: M.semak + 0.05, to: M.kalauS - 0.1, render: (d) => (
-    <TitleCard dur={d} icon={<IconTarget size={80} />} label="Jadi" title="SEMAK BALIK MATLAMAT" size={54} />
-  )},
-  {from: M.kalauS - 0.1, to: E('semak') + 0.15, render: (d, r) => (
-    <VsCard dur={d} label="Pilih ikut matlamat" a={{top: 'Pakai cantik', main: 'PERHIASAN', at: r(M.cantikS)}} b={{top: 'Jangka panjang', main: 'GOLD BAR & DINAR', at: r(M.panjangS)}} winner="b" winAt={r(M.panjangS) + 6} />
   )},
   {from: M.cta + 0.05, to: M.anda2 - 0.1, render: (d, r) => (
     <TitleCard dur={d} icon={<IconCoin size={84} />} label="Nak mula simpan emas?" title="ISI BEG BIRU" size={70} sub="saya bantu step by step" subAt={r(M.isi)} shine />
@@ -128,10 +118,6 @@ const SFX: Sfx[] = [
   {t: M.gb + 0.05, f: 'whoosh_cine', v: 0.32},
   {t: M.premium, f: 'ding_correct', v: 0.26},
   {t: M.s6 - 0.13, f: 'sparkle', v: 0.26},
-  {t: M.semak + 0.05, f: 'whoosh_pop', v: 0.36},
-  {t: M.kalauS - 0.1, f: 'whoosh_small', v: 0.28},
-  {t: M.cantikS, f: 'pop_hard', v: 0.3},
-  {t: M.panjangS + 0.2, f: 'ding_correct', v: 0.28},
   {t: M.cta + 0.05, f: 'whoosh_cine', v: 0.32},
   {t: M.isi, f: 'pop_msg', v: 0.32},
   {t: M.anda2 - 0.1, f: 'whoosh_small', v: 0.28},
@@ -150,8 +136,8 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 
 export const v11: VideoDef = {
   id: 'v11', tl, Overlays, sfx: SFX,
-  punches: [M.goldbar0, M.ramai, M.goldbar1, M.tidak, M.upah, M.s25, M.s6, M.panjangS],
-  zoom: {hook: [1.08, 1.0], basic: [1.0, 1.06], p1: [1.0, 1.06], p2: [1.06, 1.0], spread: [1.08], pakai: [1.0], gb: [1.06], semak: [1.0, 1.06], cta: [1.0, 1.05], outro: [1.08]},
+  punches: [M.goldbar0, M.ramai, M.goldbar1, M.tidak, M.upah, M.s25, M.s6],
+  zoom: {hook: [1.08, 1.0], basic: [1.0, 1.06], p1: [1.0, 1.06], p2: [1.06, 1.0], spread: [1.08], pakai: [1.0], gb: [1.06], cta: [1.0, 1.05], outro: [1.08]},
   music: {file: 'bgm.mp3', startAt: 80},
 };
 export const EmasPerhiasan: React.FC<EditProps> = (p) => <Edit def={v11} {...p} />;
