@@ -42,11 +42,11 @@ const M = {
 const END = tl.total / 30;
 
 const ITEMS: GItem[] = [
-  {from: 0, to: M.kDarab - 0.1, render: (d) => (
-    <TitleCard dur={d} icon={<IconFormula size={84} />} label="Contoh gaji RM3,000" title="5 FORMULA GAJI" size={70} shine />
+  {from: 0, to: M.k12 - 0.2, render: (d) => (
+    <TitleCard dur={d} icon={<IconFormula size={84} />} label="Simpan video ni" title="5 FORMULA GAJI" size={70} shine />
   )},
-  {from: M.kDarab - 0.1, to: E('kereta') + 0.15, render: (d, r) => (
-    <FormulaCard dur={d} n={1} total={5} mult="12" multAt={r(M.k12)} result="KERETA" resultAt={r(M.kereta)} icon={<IconCar size={60} color="#F5C84C" />} ex={{salary: 3000, mult: "12", value: 36000}} exAt={r(M.kereta) + 10} />
+  {from: M.k12 - 0.2, to: E('kereta') + 0.15, render: (d, r) => (
+    <FormulaCard dur={d} n={1} total={5} mult="12" multAt={r(M.k12) + 2} result="KERETA" resultAt={r(M.kereta)} icon={<IconCar size={60} color="#F5C84C" />} ex={{salary: 3000, mult: "12", value: 36000}} exAt={r(M.kereta) + 10} />
   )},
   {from: M.r + 0.05, to: E('rumah') + 0.15, render: (d, r) => (
     <FormulaCard dur={d} n={2} total={5} mult="12 × 5" multAt={r(M.rLima)} result="RUMAH" resultAt={r(M.rumah)} icon={<IconHouse size={60} color="#F5C84C" />} ex={{salary: 3000, mult: "60", value: 180000}} exAt={r(M.rumah) + 10} />
@@ -84,7 +84,7 @@ const ITEMS: GItem[] = [
 const SFX: Sfx[] = [
   {t: 0, f: 'whoosh_cine', v: 0.42},
   {t: 0.05, f: 'impact_deep', v: 0.26},
-  {t: M.kDarab - 0.1, f: 'whoosh_pop', v: 0.3},
+  {t: M.k12 - 0.2, f: 'whoosh_pop', v: 0.3},
   {t: M.k12, f: 'pop_hard', v: 0.32},
   {t: M.kereta, f: 'ding_correct', v: 0.26},
   {t: M.kereta + 0.45, f: 'coins', v: 0.18},
