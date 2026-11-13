@@ -1,0 +1,17 @@
+{
+ "id": "v13",
+ "title": "Formula Gaji",
+ "ranges": [
+  ["kereta", 6.7, 12.58],
+  ["rumah", 12.58, 20.25],
+  ["kecemasan", 22.5, 27.95],
+  ["simpanan", 35.8, 43.15],
+  ["persaraan", 43.2, 51.12],
+  ["tutup", 53.7, 55.5],
+  ["tutup", "58.12!", 64.36]
+ ],
+ "cuts": [],
+ "fix": {"ganja": "gaji", "gajah": "gaji", "darat": "darab", "darut": "darab", "RM300": "300", "keuangan": "kewangan"},
+ "drop": [],
+ "pad_out": 0.18
+}

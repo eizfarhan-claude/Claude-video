@@ -13,7 +13,10 @@
     "preview:v7": "remotion render Checkpoint out/preview_Checkpoint.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v8": "remotion render HargaJatuh out/preview_HargaJatuh.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v9": "remotion render SatuGram out/preview_SatuGram.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
-    "preview:v10": "remotion render TigaRisiko out/preview_TigaRisiko.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
+    "preview:v10": "remotion render TigaRisiko out/preview_TigaRisiko.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v13": "remotion render FormulaGaji out/preview_FormulaGaji.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v11": "remotion render EmasPerhiasan out/preview_EmasPerhiasan.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v12": "remotion render BuybackEmas out/preview_BuybackEmas.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.3.0",

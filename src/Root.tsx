@@ -11,6 +11,9 @@ import {Checkpoint, v7} from './videos/v7';
 import {HargaJatuh, v8} from './videos/v8';
 import {SatuGram, v9} from './videos/v9';
 import {TigaRisiko, v10} from './videos/v10';
+import {EmasPerhiasan, v11} from './videos/v11';
+import {BuybackEmas, v12} from './videos/v12';
+import {FormulaGaji, v13} from './videos/v13';
 
 const defaults: EditProps = {preview: false, showSafeZones: false, hq: false};
 const common = {width: 1080, height: 1920, fps: 30, defaultProps: defaults};
@@ -27,5 +30,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="HargaJatuh" component={HargaJatuh} durationInFrames={v8.tl.total} {...common} />
     <Composition id="SatuGram" component={SatuGram} durationInFrames={v9.tl.total} {...common} />
     <Composition id="TigaRisiko" component={TigaRisiko} durationInFrames={v10.tl.total} {...common} />
+    <Composition id="EmasPerhiasan" component={EmasPerhiasan} durationInFrames={v11.tl.total} {...common} />
+    <Composition id="BuybackEmas" component={BuybackEmas} durationInFrames={v12.tl.total} {...common} />
+    <Composition id="FormulaGaji" component={FormulaGaji} durationInFrames={v13.tl.total} {...common} />
   </>
 );

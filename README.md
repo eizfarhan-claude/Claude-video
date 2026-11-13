@@ -27,3 +27,6 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - `scripts/recaption.py <id> t0 t1` re-transcribes one window of the edited voice into captions.json
 - config edges written as `"96.70!"` are exact (not snapped to silence)
 - `scripts/prep-vivid.sh <id> raw.mov` – high-saturation, sharper grade (used for v7 final)
+- v11 `EmasPerhiasan` (emas perhiasan vs gold bar & dinar, 172s → 90s), v12 `BuybackEmas` (PG terima buyback semua jenis emas, 134s → 78s), v13 `FormulaGaji` (5 formula gaji, 66s → 43.5s)
+- `scripts/prep-voice.sh <id> raw.mov` – voice + silences only (start transcription while `prep-vivid.sh` encodes the video)
+- `src/engine/kit2.tsx` – FormulaCard, RecapCard, PrincipleCard, VsCard, SpreadCard, car/piggy/formula icons

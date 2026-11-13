@@ -1,0 +1,21 @@
+{
+ "id": "v12",
+ "title": "Public Gold Terima Buyback Semua Jenis Emas",
+ "ranges": [
+  ["hook", 9.4, 17.85],
+  ["jawab", 18.1, 25.98],
+  ["jenis", 26.25, 35.2],
+  ["patah", 35.62, 47.05],
+  ["proses", 55.45, 60.25],
+  ["daftar", 64.4, 69.88],
+  ["daftar", 70.25, 72.0],
+  ["walkin", 75.7, 82.15],
+  ["bawa", 92.3, 101.3],
+  ["tunai", 102.95, 109.5],
+  ["tutup", 118.2, 125.05]
+ ],
+ "cuts": [],
+ "fix": {"Pabrigul": "Public Gold", "Pabigol": "Public Gold", "Pablingo": "Public Gold", "malukan": "maklumkan", "tulit,": "tulen,", "subah": "subang", "carangan": "cawangan", "goal": "Gold", "brush": "branch", "Setakat": "dan kad", "kat": "kad"},
+ "drop": [],
+ "pad_out": 0.18
+}

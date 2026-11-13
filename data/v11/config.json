@@ -1,0 +1,79 @@
+{
+ "id": "v11",
+ "title": "Emas Perhiasan vs Gold Bar & Dinar",
+ "ranges": [
+  [
+   "hook",
+   11.9,
+   17.75
+  ],
+  [
+   "hook",
+   17.75,
+   19.5
+  ],
+  [
+   "basic",
+   7.8,
+   "10.96!"
+  ],
+  [
+   "p1",
+   24.4,
+   43.15
+  ],
+  [
+   "p2",
+   80.95,
+   90.2
+  ],
+  [
+   "spread",
+   97.2,
+   103.3
+  ],
+  [
+   "pakai",
+   103.3,
+   110.5
+  ],
+  [
+   "gb",
+   115.9,
+   122.4
+  ],
+  [
+   "semak",
+   129.2,
+   140.36
+  ],
+  [
+   "cta",
+   147.75,
+   167.6
+  ],
+  [
+   "outro",
+   167.9,
+   168.75
+  ]
+ ],
+ "cuts": [
+  [
+   130.45,
+   131.34
+  ]
+ ],
+ "fix": {
+  "golbat": "gold bar",
+  "golba": "gold bar",
+  "dina": "dinar",
+  "dina?": "dinar?",
+  "see": "isi",
+  "bag": "beg",
+  "public": "Public",
+  "gold.": "Gold."
+ },
+ "drop": [],
+ "pad_out": 0.18
+}

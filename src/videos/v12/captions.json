@@ -1,0 +1,1250 @@
+[
+{
+"text": "Satu",
+"start": 0,
+"end": 0.44,
+"section": "hook"
+},
+{
+"text": "soalan",
+"start": 0.44,
+"end": 0.66,
+"section": "hook"
+},
+{
+"text": "menarik",
+"start": 0.66,
+"end": 1.02,
+"section": "hook"
+},
+{
+"text": "daripada",
+"start": 1.02,
+"end": 1.32,
+"section": "hook"
+},
+{
+"text": "seorang",
+"start": 1.32,
+"end": 1.58,
+"section": "hook"
+},
+{
+"text": "penyimpan",
+"start": 1.58,
+"end": 2.0,
+"section": "hook"
+},
+{
+"text": "emas",
+"start": 2.0,
+"end": 2.28,
+"section": "hook"
+},
+{
+"text": "saya,",
+"start": 2.28,
+"end": 2.44,
+"section": "hook"
+},
+{
+"text": "beliau",
+"start": 2.64,
+"end": 3.14,
+"section": "hook"
+},
+{
+"text": "bertanyakan",
+"start": 3.14,
+"end": 3.58,
+"section": "hook"
+},
+{
+"text": "adakah",
+"start": 3.58,
+"end": 4.04,
+"section": "hook"
+},
+{
+"text": "Public",
+"start": 4.04,
+"end": 4.3,
+"section": "hook"
+},
+{
+"text": "Gold",
+"start": 4.3,
+"end": 4.5,
+"section": "hook"
+},
+{
+"text": "terima",
+"start": 4.5,
+"end": 4.94,
+"section": "hook"
+},
+{
+"text": "belian",
+"start": 4.94,
+"end": 5.28,
+"section": "hook"
+},
+{
+"text": "balik",
+"start": 5.28,
+"end": 5.64,
+"section": "hook"
+},
+{
+"text": "walaupun",
+"start": 5.64,
+"end": 6.12,
+"section": "hook"
+},
+{
+"text": "emas",
+"start": 6.12,
+"end": 6.78,
+"section": "hook"
+},
+{
+"text": "bukan",
+"start": 6.78,
+"end": 6.92,
+"section": "hook"
+},
+{
+"text": "Public",
+"start": 6.92,
+"end": 7.38,
+"section": "hook"
+},
+{
+"text": "Gold.",
+"start": 7.38,
+"end": 7.72,
+"section": "hook"
+},
+{
+"text": "Jadi",
+"start": 7.78,
+"end": 8.1,
+"section": "jawab"
+},
+{
+"text": "hari",
+"start": 8.1,
+"end": 8.28,
+"section": "jawab"
+},
+{
+"text": "ni",
+"start": 8.28,
+"end": 8.44,
+"section": "jawab"
+},
+{
+"text": "saya",
+"start": 8.44,
+"end": 8.56,
+"section": "jawab"
+},
+{
+"text": "nak",
+"start": 8.56,
+"end": 8.7,
+"section": "jawab"
+},
+{
+"text": "share",
+"start": 8.7,
+"end": 8.88,
+"section": "jawab"
+},
+{
+"text": "kepada",
+"start": 8.88,
+"end": 9.12,
+"section": "jawab"
+},
+{
+"text": "anda",
+"start": 9.12,
+"end": 9.5,
+"section": "jawab"
+},
+{
+"text": "semua",
+"start": 9.5,
+"end": 9.82,
+"section": "jawab"
+},
+{
+"text": "dekat",
+"start": 9.82,
+"end": 10.14,
+"section": "jawab"
+},
+{
+"text": "luar",
+"start": 10.14,
+"end": 10.42,
+"section": "jawab"
+},
+{
+"text": "sana,",
+"start": 10.42,
+"end": 10.62,
+"section": "jawab"
+},
+{
+"text": "saya",
+"start": 10.78,
+"end": 11.14,
+"section": "jawab"
+},
+{
+"text": "nak",
+"start": 11.14,
+"end": 11.3,
+"section": "jawab"
+},
+{
+"text": "maklumkan",
+"start": 11.3,
+"end": 11.72,
+"section": "jawab"
+},
+{
+"text": "bahawa",
+"start": 11.72,
+"end": 12.12,
+"section": "jawab"
+},
+{
+"text": "Public",
+"start": 12.12,
+"end": 12.4,
+"section": "jawab"
+},
+{
+"text": "Gold",
+"start": 12.4,
+"end": 12.94,
+"section": "jawab"
+},
+{
+"text": "terima",
+"start": 13.1,
+"end": 13.48,
+"section": "jawab"
+},
+{
+"text": "untuk",
+"start": 13.48,
+"end": 13.78,
+"section": "jawab"
+},
+{
+"text": "belian",
+"start": 13.78,
+"end": 14.22,
+"section": "jawab"
+},
+{
+"text": "balik",
+"start": 14.22,
+"end": 14.58,
+"section": "jawab"
+},
+{
+"text": "semua",
+"start": 14.58,
+"end": 14.9,
+"section": "jawab"
+},
+{
+"text": "jenis",
+"start": 14.9,
+"end": 15.42,
+"section": "jawab"
+},
+{
+"text": "emas,",
+"start": 15.42,
+"end": 15.8,
+"section": "jawab"
+},
+{
+"text": "tak",
+"start": 15.82,
+"end": 15.98,
+"section": "jenis"
+},
+{
+"text": "kisahlah",
+"start": 15.98,
+"end": 16.48,
+"section": "jenis"
+},
+{
+"text": "emas",
+"start": 16.48,
+"end": 16.78,
+"section": "jenis"
+},
+{
+"text": "999,",
+"start": 16.78,
+"end": 17.32,
+"section": "jenis"
+},
+{
+"text": "emas",
+"start": 17.68,
+"end": 18.16,
+"section": "jenis"
+},
+{
+"text": "916,",
+"start": 18.16,
+"end": 18.66,
+"section": "jenis"
+},
+{
+"text": "emas",
+"start": 19.04,
+"end": 19.44,
+"section": "jenis"
+},
+{
+"text": "875",
+"start": 19.44,
+"end": 19.96,
+"section": "jenis"
+},
+{
+"text": "dan",
+"start": 19.96,
+"end": 20.4,
+"section": "jenis"
+},
+{
+"text": "sebagainya,",
+"start": 20.4,
+"end": 21.2,
+"section": "jenis"
+},
+{
+"text": "asalkan",
+"start": 21.2,
+"end": 21.9,
+"section": "jenis"
+},
+{
+"text": "emas",
+"start": 21.9,
+"end": 22.16,
+"section": "jenis"
+},
+{
+"text": "tulen.",
+"start": 22.16,
+"end": 22.4,
+"section": "jenis"
+},
+{
+"text": "Public",
+"start": 22.76,
+"end": 22.96,
+"section": "jenis"
+},
+{
+"text": "Gold",
+"start": 22.96,
+"end": 23.16,
+"section": "jenis"
+},
+{
+"text": "terima",
+"start": 23.16,
+"end": 23.56,
+"section": "jenis"
+},
+{
+"text": "dengan",
+"start": 23.56,
+"end": 23.86,
+"section": "jenis"
+},
+{
+"text": "harga",
+"start": 23.86,
+"end": 24.36,
+"section": "jenis"
+},
+{
+"text": "yang",
+"start": 24.36,
+"end": 24.46,
+"section": "jenis"
+},
+{
+"text": "tinggi.",
+"start": 24.46,
+"end": 24.86,
+"section": "jenis"
+},
+{
+"text": "Jadi",
+"start": 24.9,
+"end": 25.26,
+"section": "jenis"
+},
+{
+"text": "bagi",
+"start": 25.26,
+"end": 25.6,
+"section": "patah"
+},
+{
+"text": "anda",
+"start": 25.6,
+"end": 25.7,
+"section": "patah"
+},
+{
+"text": "yang",
+"start": 25.7,
+"end": 25.94,
+"section": "patah"
+},
+{
+"text": "mana",
+"start": 25.94,
+"end": 26.08,
+"section": "patah"
+},
+{
+"text": "contohnya",
+"start": 26.08,
+"end": 26.54,
+"section": "patah"
+},
+{
+"text": "ada",
+"start": 26.54,
+"end": 26.68,
+"section": "patah"
+},
+{
+"text": "gelang",
+"start": 26.68,
+"end": 26.98,
+"section": "patah"
+},
+{
+"text": "tangan",
+"start": 26.98,
+"end": 27.36,
+"section": "patah"
+},
+{
+"text": "macam",
+"start": 27.36,
+"end": 27.52,
+"section": "patah"
+},
+{
+"text": "ni,",
+"start": 27.52,
+"end": 27.8,
+"section": "patah"
+},
+{
+"text": "ada",
+"start": 27.82,
+"end": 28.02,
+"section": "patah"
+},
+{
+"text": "subang",
+"start": 28.02,
+"end": 28.52,
+"section": "patah"
+},
+{
+"text": "ke",
+"start": 28.52,
+"end": 28.64,
+"section": "patah"
+},
+{
+"text": "cincin",
+"start": 28.64,
+"end": 29.3,
+"section": "patah"
+},
+{
+"text": "yang",
+"start": 29.3,
+"end": 29.4,
+"section": "patah"
+},
+{
+"text": "dah",
+"start": 29.4,
+"end": 29.58,
+"section": "patah"
+},
+{
+"text": "patah,",
+"start": 29.58,
+"end": 30.14,
+"section": "patah"
+},
+{
+"text": "dah",
+"start": 30.16,
+"end": 30.32,
+"section": "patah"
+},
+{
+"text": "kemek",
+"start": 30.32,
+"end": 30.72,
+"section": "patah"
+},
+{
+"text": "yang",
+"start": 30.72,
+"end": 30.88,
+"section": "patah"
+},
+{
+"text": "memang",
+"start": 30.88,
+"end": 31.12,
+"section": "patah"
+},
+{
+"text": "tak",
+"start": 31.12,
+"end": 31.3,
+"section": "patah"
+},
+{
+"text": "guna,",
+"start": 31.3,
+"end": 31.82,
+"section": "patah"
+},
+{
+"text": "anda",
+"start": 31.82,
+"end": 32.52,
+"section": "patah"
+},
+{
+"text": "boleh",
+"start": 32.52,
+"end": 32.94,
+"section": "patah"
+},
+{
+"text": "bawa",
+"start": 32.94,
+"end": 33.38,
+"section": "patah"
+},
+{
+"text": "sahaja",
+"start": 33.38,
+"end": 33.84,
+"section": "patah"
+},
+{
+"text": "ke",
+"start": 33.84,
+"end": 34.06,
+"section": "patah"
+},
+{
+"text": "mana-mana",
+"start": 34.06,
+"end": 34.66,
+"section": "patah"
+},
+{
+"text": "cawangan",
+"start": 34.66,
+"end": 35.0,
+"section": "patah"
+},
+{
+"text": "Public",
+"start": 35.0,
+"end": 35.24,
+"section": "patah"
+},
+{
+"text": "Gold",
+"start": 35.24,
+"end": 35.58,
+"section": "patah"
+},
+{
+"text": "untuk",
+"start": 35.58,
+"end": 35.74,
+"section": "patah"
+},
+{
+"text": "jual.",
+"start": 35.74,
+"end": 36.24,
+"section": "patah"
+},
+{
+"text": "Proses",
+"start": 36.6,
+"end": 36.86,
+"section": "proses"
+},
+{
+"text": "jualnya",
+"start": 36.86,
+"end": 37.24,
+"section": "proses"
+},
+{
+"text": "sangat",
+"start": 37.24,
+"end": 37.5,
+"section": "proses"
+},
+{
+"text": "mudah.",
+"start": 37.5,
+"end": 37.96,
+"section": "proses"
+},
+{
+"text": "Yang",
+"start": 37.96,
+"end": 38.12,
+"section": "proses"
+},
+{
+"text": "pertama",
+"start": 38.12,
+"end": 38.44,
+"section": "proses"
+},
+{
+"text": "pastikan",
+"start": 38.44,
+"end": 38.96,
+"section": "proses"
+},
+{
+"text": "anda",
+"start": 38.96,
+"end": 39.24,
+"section": "proses"
+},
+{
+"text": "ada",
+"start": 39.24,
+"end": 39.5,
+"section": "proses"
+},
+{
+"text": "pendaftaran",
+"start": 39.5,
+"end": 40.12,
+"section": "proses"
+},
+{
+"text": "dengan",
+"start": 40.12,
+"end": 40.4,
+"section": "proses"
+},
+{
+"text": "Public",
+"start": 40.4,
+"end": 40.72,
+"section": "proses"
+},
+{
+"text": "Gold.",
+"start": 40.72,
+"end": 41.02,
+"section": "proses"
+},
+{
+"text": "Kalau",
+"start": 41.1,
+"end": 41.44,
+"section": "proses"
+},
+{
+"text": "belum",
+"start": 41.44,
+"end": 41.68,
+"section": "daftar"
+},
+{
+"text": "ada",
+"start": 41.68,
+"end": 41.86,
+"section": "daftar"
+},
+{
+"text": "pendaftaran",
+"start": 41.86,
+"end": 42.36,
+"section": "daftar"
+},
+{
+"text": "lagi,",
+"start": 42.36,
+"end": 42.58,
+"section": "daftar"
+},
+{
+"text": "anda",
+"start": 42.7,
+"end": 42.92,
+"section": "daftar"
+},
+{
+"text": "boleh",
+"start": 42.92,
+"end": 43.16,
+"section": "daftar"
+},
+{
+"text": "rujukkan",
+"start": 43.16,
+"end": 43.56,
+"section": "daftar"
+},
+{
+"text": "video",
+"start": 43.56,
+"end": 43.68,
+"section": "daftar"
+},
+{
+"text": "ataupun",
+"start": 43.68,
+"end": 44.48,
+"section": "daftar"
+},
+{
+"text": "isi",
+"start": 44.48,
+"end": 44.8,
+"section": "daftar"
+},
+{
+"text": "beg",
+"start": 44.8,
+"end": 44.92,
+"section": "daftar"
+},
+{
+"text": "biru",
+"start": 44.92,
+"end": 45.22,
+"section": "daftar"
+},
+{
+"text": "untuk",
+"start": 45.22,
+"end": 45.36,
+"section": "daftar"
+},
+{
+"text": "saya",
+"start": 45.36,
+"end": 45.58,
+"section": "daftar"
+},
+{
+"text": "bantu.",
+"start": 45.58,
+"end": 45.98,
+"section": "daftar"
+},
+{
+"text": "Pendaftaran",
+"start": 46.42,
+"end": 46.98,
+"section": "daftar"
+},
+{
+"text": "secara",
+"start": 46.98,
+"end": 47.22,
+"section": "daftar"
+},
+{
+"text": "percuma",
+"start": 47.22,
+"end": 47.66,
+"section": "daftar"
+},
+{
+"text": "sahaja.",
+"start": 47.66,
+"end": 48.02,
+"section": "daftar"
+},
+{
+"text": "Selepas",
+"start": 48.12,
+"end": 48.46,
+"section": "walkin"
+},
+{
+"text": "pendaftaran,",
+"start": 48.46,
+"end": 49.0,
+"section": "walkin"
+},
+{
+"text": "anda",
+"start": 49.04,
+"end": 49.22,
+"section": "walkin"
+},
+{
+"text": "boleh",
+"start": 49.22,
+"end": 49.5,
+"section": "walkin"
+},
+{
+"text": "walk",
+"start": 49.5,
+"end": 49.74,
+"section": "walkin"
+},
+{
+"text": "in",
+"start": 49.74,
+"end": 49.88,
+"section": "walkin"
+},
+{
+"text": "ke",
+"start": 49.88,
+"end": 50.08,
+"section": "walkin"
+},
+{
+"text": "mana-mana",
+"start": 50.08,
+"end": 50.7,
+"section": "walkin"
+},
+{
+"text": "cawangan",
+"start": 50.7,
+"end": 51.08,
+"section": "walkin"
+},
+{
+"text": "Public",
+"start": 51.08,
+"end": 51.32,
+"section": "walkin"
+},
+{
+"text": "Gold",
+"start": 51.32,
+"end": 51.58,
+"section": "walkin"
+},
+{
+"text": "yang",
+"start": 51.58,
+"end": 51.82,
+"section": "walkin"
+},
+{
+"text": "ada",
+"start": 51.82,
+"end": 52.14,
+"section": "walkin"
+},
+{
+"text": "di",
+"start": 52.14,
+"end": 52.34,
+"section": "walkin"
+},
+{
+"text": "Malaysia",
+"start": 52.34,
+"end": 52.78,
+"section": "walkin"
+},
+{
+"text": "ataupun",
+"start": 52.78,
+"end": 53.64,
+"section": "walkin"
+},
+{
+"text": "yang",
+"start": 53.64,
+"end": 53.88,
+"section": "walkin"
+},
+{
+"text": "berdekatan.",
+"start": 53.88,
+"end": 54.5,
+"section": "walkin"
+},
+{
+"text": "Bawa",
+"start": 54.6,
+"end": 55.1,
+"section": "bawa"
+},
+{
+"text": "sahaja",
+"start": 55.1,
+"end": 55.56,
+"section": "bawa"
+},
+{
+"text": "emas",
+"start": 55.56,
+"end": 56.8,
+"section": "bawa"
+},
+{
+"text": "yang",
+"start": 56.8,
+"end": 56.88,
+"section": "bawa"
+},
+{
+"text": "nak",
+"start": 56.88,
+"end": 57.0,
+"section": "bawa"
+},
+{
+"text": "dijual",
+"start": 57.0,
+"end": 57.4,
+"section": "bawa"
+},
+{
+"text": "dan",
+"start": 57.4,
+"end": 57.68,
+"section": "bawa"
+},
+{
+"text": "kad",
+"start": 57.68,
+"end": 57.96,
+"section": "bawa"
+},
+{
+"text": "pengenalan,",
+"start": 57.96,
+"end": 58.52,
+"section": "bawa"
+},
+{
+"text": "terus",
+"start": 58.92,
+"end": 59.16,
+"section": "bawa"
+},
+{
+"text": "ke",
+"start": 59.16,
+"end": 59.22,
+"section": "bawa"
+},
+{
+"text": "branch",
+"start": 59.22,
+"end": 59.52,
+"section": "bawa"
+},
+{
+"text": "dan",
+"start": 59.52,
+"end": 59.94,
+"section": "bawa"
+},
+{
+"text": "boleh",
+"start": 59.94,
+"end": 60.24,
+"section": "bawa"
+},
+{
+"text": "serahkan",
+"start": 60.24,
+"end": 60.8,
+"section": "bawa"
+},
+{
+"text": "kepada",
+"start": 60.8,
+"end": 61.2,
+"section": "bawa"
+},
+{
+"text": "staff",
+"start": 61.2,
+"end": 61.94,
+"section": "bawa"
+},
+{
+"text": "yang",
+"start": 61.94,
+"end": 62.12,
+"section": "bawa"
+},
+{
+"text": "bertugas",
+"start": 62.12,
+"end": 62.66,
+"section": "bawa"
+},
+{
+"text": "untuk",
+"start": 62.66,
+"end": 62.84,
+"section": "bawa"
+},
+{
+"text": "proses",
+"start": 62.84,
+"end": 63.24,
+"section": "bawa"
+},
+{
+"text": "buyback",
+"start": 63.24,
+"end": 63.64,
+"section": "bawa"
+},
+{
+"text": "dan",
+"start": 63.64,
+"end": 64.06,
+"section": "bawa"
+},
+{
+"text": "anda",
+"start": 64.06,
+"end": 64.36,
+"section": "tunai"
+},
+{
+"text": "akan",
+"start": 64.36,
+"end": 64.64,
+"section": "tunai"
+},
+{
+"text": "dapat",
+"start": 64.64,
+"end": 64.92,
+"section": "tunai"
+},
+{
+"text": "tunai",
+"start": 64.92,
+"end": 65.42,
+"section": "tunai"
+},
+{
+"text": "dalam",
+"start": 65.42,
+"end": 65.62,
+"section": "tunai"
+},
+{
+"text": "tempoh",
+"start": 65.62,
+"end": 66.12,
+"section": "tunai"
+},
+{
+"text": "2",
+"start": 66.12,
+"end": 66.24,
+"section": "tunai"
+},
+{
+"text": "hingga",
+"start": 66.24,
+"end": 66.7,
+"section": "tunai"
+},
+{
+"text": "3",
+"start": 66.7,
+"end": 66.86,
+"section": "tunai"
+},
+{
+"text": "jam",
+"start": 66.86,
+"end": 67.14,
+"section": "tunai"
+},
+{
+"text": "direct",
+"start": 67.14,
+"end": 67.66,
+"section": "tunai"
+},
+{
+"text": "ke",
+"start": 67.66,
+"end": 67.98,
+"section": "tunai"
+},
+{
+"text": "akaun",
+"start": 67.98,
+"end": 68.46,
+"section": "tunai"
+},
+{
+"text": "bank",
+"start": 68.74,
+"end": 69.0,
+"section": "tunai"
+},
+{
+"text": "masing-masing.",
+"start": 69.0,
+"end": 69.88,
+"section": "tunai"
+},
+{
+"text": "Jadi",
+"start": 69.96,
+"end": 70.36,
+"section": "tunai"
+},
+{
+"text": "jangan",
+"start": 70.36,
+"end": 70.8,
+"section": "tutup"
+},
+{
+"text": "lepaskan",
+"start": 70.8,
+"end": 71.36,
+"section": "tutup"
+},
+{
+"text": "peluang,",
+"start": 71.36,
+"end": 71.72,
+"section": "tutup"
+},
+{
+"text": "jual",
+"start": 71.72,
+"end": 72.22,
+"section": "tutup"
+},
+{
+"text": "balik",
+"start": 72.22,
+"end": 72.56,
+"section": "tutup"
+},
+{
+"text": "emas",
+"start": 72.56,
+"end": 72.82,
+"section": "tutup"
+},
+{
+"text": "dengan",
+"start": 72.82,
+"end": 73.0,
+"section": "tutup"
+},
+{
+"text": "harga",
+"start": 73.0,
+"end": 73.54,
+"section": "tutup"
+},
+{
+"text": "yang",
+"start": 73.54,
+"end": 73.66,
+"section": "tutup"
+},
+{
+"text": "tertinggi",
+"start": 73.66,
+"end": 74.3,
+"section": "tutup"
+},
+{
+"text": "di",
+"start": 74.3,
+"end": 74.4,
+"section": "tutup"
+},
+{
+"text": "Malaysia",
+"start": 74.4,
+"end": 74.7,
+"section": "tutup"
+},
+{
+"text": "dan",
+"start": 74.7,
+"end": 75.06,
+"section": "tutup"
+},
+{
+"text": "dapatkan",
+"start": 75.06,
+"end": 75.7,
+"section": "tutup"
+},
+{
+"text": "pulangan",
+"start": 75.7,
+"end": 76.14,
+"section": "tutup"
+},
+{
+"text": "yang",
+"start": 76.14,
+"end": 76.62,
+"section": "tutup"
+},
+{
+"text": "besar.",
+"start": 76.62,
+"end": 76.96,
+"section": "tutup"
+}
+]
