@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2371,
+ "durationInFrames": 2152,
  "clips": [
   {
    "section": "hook",
@@ -65,14 +65,20 @@
   {
    "section": "cta",
    "srcFrom": 4484,
-   "durationInFrames": 549,
+   "durationInFrames": 273,
    "outFrom": 1789
+  },
+  {
+   "section": "cta",
+   "srcFrom": 4976,
+   "durationInFrames": 57,
+   "outFrom": 2062
   },
   {
    "section": "outro",
    "srcFrom": 5036,
    "durationInFrames": 33,
-   "outFrom": 2338
+   "outFrom": 2119
   }
  ],
  "words": [
@@ -1321,133 +1327,43 @@
   {
    "text": "serta",
    "start": 68.587,
-   "end": 69.627,
-   "section": "cta"
-  },
-  {
-   "text": "pada",
-   "start": 69.627,
-   "end": 69.887,
-   "section": "cta"
-  },
-  {
-   "text": "masa",
-   "start": 69.887,
-   "end": 70.247,
-   "section": "cta"
-  },
-  {
-   "text": "yang",
-   "start": 70.247,
-   "end": 70.407,
-   "section": "cta"
-  },
-  {
-   "text": "sama",
-   "start": 70.407,
-   "end": 70.647,
-   "section": "cta"
-  },
-  {
-   "text": "anda",
-   "start": 70.647,
-   "end": 70.947,
-   "section": "cta"
-  },
-  {
-   "text": "boleh",
-   "start": 70.947,
-   "end": 71.187,
-   "section": "cta"
-  },
-  {
-   "text": "miliki",
-   "start": 71.187,
-   "end": 71.647,
-   "section": "cta"
-  },
-  {
-   "text": "emas",
-   "start": 71.647,
-   "end": 72.047,
-   "section": "cta"
-  },
-  {
-   "text": "perhiasan",
-   "start": 72.047,
-   "end": 72.627,
-   "section": "cta"
-  },
-  {
-   "text": "dalam",
-   "start": 72.627,
-   "end": 73.047,
-   "section": "cta"
-  },
-  {
-   "text": "bentuk",
-   "start": 73.047,
-   "end": 73.407,
-   "section": "cta"
-  },
-  {
-   "text": "emas",
-   "start": 73.407,
-   "end": 73.707,
-   "section": "cta"
-  },
-  {
-   "text": "999",
-   "start": 73.707,
-   "end": 74.167,
-   "section": "cta"
-  },
-  {
-   "text": "serta",
-   "start": 74.167,
-   "end": 75.067,
-   "section": "cta"
-  },
-  {
-   "text": "emas",
-   "start": 75.067,
-   "end": 75.487,
+   "end": 68.733,
    "section": "cta"
   },
   {
    "text": "916",
-   "start": 75.487,
-   "end": 76.047,
+   "start": 68.733,
+   "end": 68.747,
    "section": "cta"
   },
   {
    "text": "melalui",
-   "start": 76.047,
-   "end": 77.007,
+   "start": 68.747,
+   "end": 69.707,
    "section": "cta"
   },
   {
    "text": "Public",
-   "start": 77.007,
-   "end": 77.307,
+   "start": 69.707,
+   "end": 70.007,
    "section": "cta"
   },
   {
    "text": "Gold.",
-   "start": 77.307,
-   "end": 77.627,
+   "start": 70.007,
+   "end": 70.327,
    "section": "cta"
   },
   {
    "text": "Dapat",
-   "start": 77.933,
-   "end": 78.147,
+   "start": 70.633,
+   "end": 70.847,
    "section": "outro"
   },
   {
    "text": "sesuatu?",
-   "start": 78.147,
-   "end": 78.547,
+   "start": 70.847,
+   "end": 71.247,
    "section": "outro"
   }
  ]

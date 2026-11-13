@@ -42,8 +42,7 @@ const M = {
   isi: at('cta', 'isi'),
   anda2: at('cta', 'anda', 1),
   g999a: at('cta', '999', 0),
-  g999b: at('cta', '999', 1),
-  g916: at('cta', '916'),
+  melalui: at('cta', 'melalui'),
   outro: S('outro'),
 };
 
@@ -82,10 +81,10 @@ const ITEMS: GItem[] = [
     <TitleCard dur={d} icon={<IconCoin size={84} />} label="Nak mula simpan emas?" title="ISI BEG BIRU" size={70} sub="saya bantu step by step" subAt={r(M.isi)} shine />
   )},
   {from: M.anda2 - 0.1, to: M.outro, render: (d, r) => (
-    <ChecklistCard dur={d} label="Semua ada di Public Gold" rows={[
-      {text: 'Gold bar & dinar 999', at: r(M.g999a)},
-      {text: 'Perhiasan 999', at: r(M.g999b)},
-      {text: 'Perhiasan 916', at: r(M.g916)},
+    <ChecklistCard dur={d} label="Simpanan jangka panjang" rows={[
+      {text: 'Gold bar 999', at: r(M.g999a)},
+      {text: 'Dinar emas 999', at: r(M.g999a) + 8},
+      {text: 'Melalui Public Gold', at: r(M.melalui)},
     ]} />
   )},
   {from: M.outro, to: 9999, render: (d) => (
@@ -122,8 +121,8 @@ const SFX: Sfx[] = [
   {t: M.isi, f: 'pop_msg', v: 0.32},
   {t: M.anda2 - 0.1, f: 'whoosh_small', v: 0.28},
   {t: M.g999a + 0.15, f: 'click_select', v: 0.32},
-  {t: M.g999b + 0.15, f: 'click_select', v: 0.32},
-  {t: M.g916 + 0.15, f: 'click_select', v: 0.32},
+  {t: M.g999a + 0.42, f: 'click_select', v: 0.32},
+  {t: M.melalui + 0.15, f: 'click_select', v: 0.32},
   {t: M.outro, f: 'bell_notif', v: 0.26},
 ];
 
