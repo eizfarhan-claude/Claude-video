@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 1266,
+ "durationInFrames": 1261,
  "clips": [
   {
    "section": "kereta",
@@ -35,14 +35,14 @@
   {
    "section": "tutup",
    "srcFrom": 1610,
-   "durationInFrames": 62,
+   "durationInFrames": 57,
    "outFrom": 1016
   },
   {
    "section": "tutup",
    "srcFrom": 1744,
    "durationInFrames": 188,
-   "outFrom": 1078
+   "outFrom": 1073
   }
  ],
  "words": [
@@ -583,103 +583,103 @@
   {
    "text": "masing-masing",
    "start": 34.8,
-   "end": 35.933,
+   "end": 35.767,
    "section": "tutup"
   },
   {
    "text": "membeli",
-   "start": 35.933,
-   "end": 36.38,
+   "start": 35.767,
+   "end": 36.213,
    "section": "tutup"
   },
   {
    "text": "ikut",
-   "start": 36.38,
-   "end": 36.6,
+   "start": 36.213,
+   "end": 36.433,
    "section": "tutup"
   },
   {
    "text": "kesesuaian,",
-   "start": 36.6,
-   "end": 37.12,
+   "start": 36.433,
+   "end": 36.953,
    "section": "tutup"
   },
   {
    "text": "membeli",
-   "start": 37.22,
-   "end": 37.84,
+   "start": 37.053,
+   "end": 37.673,
    "section": "tutup"
   },
   {
    "text": "ikut",
-   "start": 37.84,
-   "end": 38.14,
+   "start": 37.673,
+   "end": 37.973,
    "section": "tutup"
   },
   {
    "text": "keperluan,",
-   "start": 38.14,
-   "end": 38.66,
+   "start": 37.973,
+   "end": 38.493,
    "section": "tutup"
   },
   {
    "text": "urus",
-   "start": 38.68,
-   "end": 39.18,
+   "start": 38.513,
+   "end": 39.013,
    "section": "tutup"
   },
   {
    "text": "kewangan",
-   "start": 39.18,
-   "end": 39.5,
+   "start": 39.013,
+   "end": 39.333,
    "section": "tutup"
   },
   {
    "text": "dengan",
-   "start": 39.5,
-   "end": 39.68,
+   "start": 39.333,
+   "end": 39.513,
    "section": "tutup"
   },
   {
    "text": "baik",
-   "start": 39.68,
-   "end": 40.0,
+   "start": 39.513,
+   "end": 39.833,
    "section": "tutup"
   },
   {
    "text": "untuk",
-   "start": 40.0,
-   "end": 40.46,
+   "start": 39.833,
+   "end": 40.293,
    "section": "tutup"
   },
   {
    "text": "masa",
-   "start": 40.46,
-   "end": 40.68,
+   "start": 40.293,
+   "end": 40.513,
    "section": "tutup"
   },
   {
    "text": "depan",
-   "start": 40.68,
-   "end": 41.14,
+   "start": 40.513,
+   "end": 40.973,
    "section": "tutup"
   },
   {
    "text": "yang",
-   "start": 41.14,
-   "end": 41.44,
+   "start": 40.973,
+   "end": 41.273,
    "section": "tutup"
   },
   {
    "text": "lebih",
-   "start": 41.44,
-   "end": 41.66,
+   "start": 41.273,
+   "end": 41.493,
    "section": "tutup"
   },
   {
    "text": "cerah.",
-   "start": 41.66,
-   "end": 42.04,
+   "start": 41.493,
+   "end": 41.873,
    "section": "tutup"
   }
  ]
