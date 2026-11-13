@@ -34,9 +34,13 @@ export const IconFormula: React.FC<IP> = ({size = 64, color = GOLD_SOLID}) => (
 export const FormulaCard: React.FC<{
   dur: number; n: number; total: number; mult: string; multAt: number; result: string; resultAt: number;
   icon: React.ReactNode; base?: string; sub?: string; subAt?: number; good?: boolean;
-}> = ({dur, n, total, mult, multAt, result, resultAt, icon, base = 'GAJI', sub, subAt = 99999, good}) => {
+  /** worked example row: "CONTOH  RM3,000 × mult = RMvalue" (value counts up from exAt) */
+  ex?: {salary: number; mult: string; value: number; suffix?: string}; exAt?: number;
+}> = ({dur, n, total, mult, multAt, result, resultAt, icon, base = 'GAJI', sub, subAt = 99999, good, ex, exAt = 99999}) => {
   const {v, frame} = useEnvelope(dur);
-  const pg = usePop(0, 11), pm = usePop(multAt, 9), pr = usePop(resultAt, 9), ps = usePop(subAt);
+  const pg = usePop(0, 11), pm = usePop(multAt, 9), pr = usePop(resultAt, 9), ps = usePop(subAt), pe = usePop(exAt, 10);
+  const exVal = ex ? Math.round(ex.value * interpolate(frame, [exAt + 4, exAt + 26], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)})) : 0;
+  const rm = (x: number) => 'RM' + x.toLocaleString('en-US');
   const sh = interpolate(frame, [resultAt + 4, resultAt + 28], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const chip = (t: string, p: number, gold: boolean) => (
     <div style={{fontWeight: 900, fontSize: 40, padding: '8px 18px', borderRadius: 18, whiteSpace: 'nowrap', background: gold ? 'linear-gradient(180deg,#FFF1B8,#F2C14E 50%,#B07A1F)' : 'rgba(255,255,255,0.14)', color: gold ? '#2a1a00' : 'white', ...popStyle(p)}}>{t}</div>
@@ -65,6 +69,14 @@ export const FormulaCard: React.FC<{
           </div>
         </div>
         {sub && <div style={{fontFamily: FONT2, fontWeight: 700, fontSize: 28, color: 'rgba(255,255,255,0.85)', marginTop: 8, ...popStyle(ps), transformOrigin: 'left center'}}>{sub}</div>}
+        {ex && (
+          <div style={{display: 'flex', alignItems: 'center', gap: 14, marginTop: 12, padding: '8px 16px', borderRadius: 18, background: 'rgba(247,215,116,0.10)', border: '2px solid rgba(247,215,116,0.35)', whiteSpace: 'nowrap', ...popStyle(pe), transformOrigin: 'left center'}}>
+            <Label size={20} color={GOLD_SOLID}>Contoh</Label>
+            <div style={{fontWeight: 800, fontSize: 32, color: 'rgba(255,255,255,0.9)'}}>{rm(ex.salary)} × {ex.mult} =</div>
+            <GoldText size={42}>{rm(exVal)}</GoldText>
+            {ex.suffix && <div style={{fontFamily: FONT2, fontWeight: 700, fontSize: 26, color: 'rgba(255,255,255,0.8)'}}>{ex.suffix}</div>}
+          </div>
+        )}
         <Shine progress={sh} />
       </Card>
     </TopBand>

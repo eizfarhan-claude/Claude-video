@@ -43,33 +43,33 @@ const END = tl.total / 30;
 
 const ITEMS: GItem[] = [
   {from: 0, to: M.kDarab - 0.1, render: (d) => (
-    <TitleCard dur={d} icon={<IconFormula size={84} />} label="Simpan video ni" title="5 FORMULA GAJI" size={70} shine />
+    <TitleCard dur={d} icon={<IconFormula size={84} />} label="Contoh gaji RM3,000" title="5 FORMULA GAJI" size={70} shine />
   )},
   {from: M.kDarab - 0.1, to: E('kereta') + 0.15, render: (d, r) => (
-    <FormulaCard dur={d} n={1} total={5} mult="12" multAt={r(M.k12)} result="KERETA" resultAt={r(M.kereta)} icon={<IconCar size={60} color="#F5C84C" />} sub="nilai maksimum kereta" subAt={r(M.kereta) + 12} />
+    <FormulaCard dur={d} n={1} total={5} mult="12" multAt={r(M.k12)} result="KERETA" resultAt={r(M.kereta)} icon={<IconCar size={60} color="#F5C84C" />} ex={{salary: 3000, mult: "12", value: 36000}} exAt={r(M.kereta) + 10} />
   )},
   {from: M.r + 0.05, to: E('rumah') + 0.15, render: (d, r) => (
-    <FormulaCard dur={d} n={2} total={5} mult="12 × 5" multAt={r(M.rLima)} result="RUMAH" resultAt={r(M.rumah)} icon={<IconHouse size={60} color="#F5C84C" />} sub="= gaji 60 bulan" subAt={r(M.rumah) + 12} />
+    <FormulaCard dur={d} n={2} total={5} mult="12 × 5" multAt={r(M.rLima)} result="RUMAH" resultAt={r(M.rumah)} icon={<IconHouse size={60} color="#F5C84C" />} ex={{salary: 3000, mult: "60", value: 180000}} exAt={r(M.rumah) + 10} />
   )},
   {from: M.c + 0.05, to: E('kecemasan') + 0.15, render: (d, r) => (
-    <FormulaCard dur={d} n={3} total={5} mult="6" multAt={r(M.c6)} result="KECEMASAN" resultAt={r(M.cDana)} icon={<IconShield size={58} />} sub="dana kecemasan wajib ada" subAt={r(M.cDana) + 12} good />
+    <FormulaCard dur={d} n={3} total={5} mult="6" multAt={r(M.c6)} result="KECEMASAN" resultAt={r(M.cDana)} icon={<IconShield size={58} />} ex={{salary: 3000, mult: "6", value: 18000}} exAt={r(M.cDana) + 10} good />
   )},
   {from: M.s + 0.05, to: E('simpanan') + 0.15, render: (d, r) => (
-    <FormulaCard dur={d} n={4} total={5} mult="0.2" multAt={r(M.s02)} result="SIMPANAN" resultAt={r(M.sDana)} icon={<IconPiggy size={60} />} sub="20% gaji · setiap bulan" subAt={r(M.sBulan)} />
+    <FormulaCard dur={d} n={4} total={5} mult="0.2" multAt={r(M.s02)} result="SIMPANAN" resultAt={r(M.sDana)} icon={<IconPiggy size={60} />} ex={{salary: 3000, mult: "0.2", value: 600, suffix: "/ bulan"}} exAt={r(M.sDana) + 10} />
   )},
   {from: M.p + 0.05, to: M.penting + 0.6, render: (d) => (
     <TitleCard dur={d} label="Paling penting" title="FORMULA 5" size={64} gold={false} />
   )},
   {from: M.penting + 0.6, to: E('persaraan') + 0.15, render: (d, r) => (
-    <FormulaCard dur={d} n={5} total={5} mult="300" multAt={r(M.p300)} result="PERSARAAN" resultAt={r(M.pDana)} icon={<IconSun size={58} />} sub="= gaji 25 tahun · sebelum bersara" subAt={r(M.bersara)} />
+    <FormulaCard dur={d} n={5} total={5} mult="300" multAt={r(M.p300)} result="PERSARAAN" resultAt={r(M.pDana)} icon={<IconSun size={58} />} ex={{salary: 3000, mult: "300", value: 900000}} exAt={r(M.pDana) + 10} />
   )},
   {from: M.t + 0.05, to: M.beli1 - 0.1, render: (d) => (
-    <RecapCard dur={d} label="Plan gaji masing-masing" rows={[
-      {l: 'Gaji × 12', r: 'Kereta', at: 2},
-      {l: 'Gaji × 60', r: 'Rumah', at: 6},
-      {l: 'Gaji × 6', r: 'Kecemasan', at: 10},
-      {l: 'Gaji × 0.2', r: 'Simpanan / bulan', at: 14},
-      {l: 'Gaji × 300', r: 'Persaraan', at: 18},
+    <RecapCard dur={d} label="Gaji RM3,000 · plan anda" rows={[
+      {l: 'Kereta', r: 'RM36,000', at: 2},
+      {l: 'Rumah', r: 'RM180,000', at: 6},
+      {l: 'Kecemasan', r: 'RM18,000', at: 10},
+      {l: 'Simpanan', r: 'RM600 / bulan', at: 14},
+      {l: 'Persaraan', r: 'RM900,000', at: 18},
     ]} />
   )},
   {from: M.beli1 - 0.1, to: END, render: (d, r) => (
@@ -87,12 +87,15 @@ const SFX: Sfx[] = [
   {t: M.kDarab - 0.1, f: 'whoosh_pop', v: 0.3},
   {t: M.k12, f: 'pop_hard', v: 0.32},
   {t: M.kereta, f: 'ding_correct', v: 0.26},
+  {t: M.kereta + 0.45, f: 'coins', v: 0.18},
   {t: M.r + 0.05, f: 'whoosh_pop', v: 0.3},
   {t: M.rLima, f: 'pop_hard', v: 0.32},
   {t: M.rumah, f: 'ding_correct', v: 0.26},
+  {t: M.rumah + 0.45, f: 'coins', v: 0.18},
   {t: M.c + 0.05, f: 'whoosh_pop', v: 0.3},
   {t: M.c6, f: 'pop_hard', v: 0.32},
   {t: M.cDana, f: 'bell_notif', v: 0.22},
+  {t: M.cDana + 0.45, f: 'coins', v: 0.18},
   {t: M.s + 0.05, f: 'whoosh_pop', v: 0.3},
   {t: M.s02, f: 'pop_hard', v: 0.32},
   {t: M.sDana, f: 'coins', v: 0.3},
@@ -100,6 +103,7 @@ const SFX: Sfx[] = [
   {t: M.penting + 0.6, f: 'whoosh_small', v: 0.3},
   {t: M.p300, f: 'pop_hard', v: 0.34},
   {t: M.pDana, f: 'gold_prize', v: 0.24},
+  {t: M.pDana + 0.45, f: 'coins', v: 0.18},
   {t: M.t + 0.05, f: 'whoosh_small', v: 0.3},
   {t: M.t + 0.12, f: 'click_select', v: 0.24},
   {t: M.beli1 - 0.1, f: 'whoosh_small', v: 0.28},
