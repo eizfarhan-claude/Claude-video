@@ -42,11 +42,14 @@ export const FormulaCard: React.FC<{
   const exVal = ex ? Math.round(ex.value * interpolate(frame, [exAt + 4, exAt + 26], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)})) : 0;
   const rm = (x: number) => 'RM' + x.toLocaleString('en-US');
   const sh = interpolate(frame, [resultAt + 4, resultAt + 28], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const mfs = mult.length <= 6 ? 40 : mult.length <= 9 ? 34 : 28;
   const chip = (t: string, p: number, gold: boolean) => (
-    <div style={{fontWeight: 900, fontSize: 40, padding: '8px 18px', borderRadius: 18, whiteSpace: 'nowrap', background: gold ? 'linear-gradient(180deg,#FFF1B8,#F2C14E 50%,#B07A1F)' : 'rgba(255,255,255,0.14)', color: gold ? '#2a1a00' : 'white', ...popStyle(p)}}>{t}</div>
+    <div style={{fontWeight: 900, fontSize: gold ? mfs : 40, padding: '8px 18px', borderRadius: 18, whiteSpace: 'nowrap', background: gold ? 'linear-gradient(180deg,#FFF1B8,#F2C14E 50%,#B07A1F)' : 'rgba(255,255,255,0.14)', color: gold ? '#2a1a00' : 'white', ...popStyle(p)}}>{t}</div>
   );
   const op = (t: string, p: number) => <div style={{fontWeight: 800, fontSize: 40, color: 'rgba(255,255,255,0.6)', opacity: Math.min(1, p * 1.5)}}>{t}</div>;
-  const fit = Math.min(52, Math.floor(430 / (0.68 * result.length)));
+  // room left for the result after GAJI chip, ops, gaps, multiplier chip and icon (Montserrat 900 ≈ 0.7em/glyph)
+  const used = 145 + 50 + 56 + (mult.length * mfs * 0.7 + 36) + 70;
+  const fit = Math.min(52, Math.floor((804 - used) / (0.7 * result.length)));
   return (
     <TopBand v={v}>
       <Card style={{width: 860, boxSizing: 'border-box', padding: '16px 28px', position: 'relative', overflow: 'hidden', borderColor: good ? 'rgba(43,213,118,0.8)' : undefined}}>
