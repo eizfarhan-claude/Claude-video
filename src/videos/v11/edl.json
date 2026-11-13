@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2152,
+ "durationInFrames": 2113,
  "clips": [
   {
    "section": "hook",
@@ -58,27 +58,21 @@
   },
   {
    "section": "cta",
-   "srcFrom": 4447,
-   "durationInFrames": 25,
+   "srcFrom": 4484,
+   "durationInFrames": 273,
    "outFrom": 1764
   },
   {
    "section": "cta",
-   "srcFrom": 4484,
-   "durationInFrames": 273,
-   "outFrom": 1789
-  },
-  {
-   "section": "cta",
-   "srcFrom": 4976,
-   "durationInFrames": 57,
-   "outFrom": 2062
+   "srcFrom": 4990,
+   "durationInFrames": 43,
+   "outFrom": 2037
   },
   {
    "section": "outro",
    "srcFrom": 5036,
    "durationInFrames": 33,
-   "outFrom": 2119
+   "outFrom": 2080
   }
  ],
  "words": [
@@ -1145,225 +1139,207 @@
    "section": "gb"
   },
   {
-   "text": "Jadi",
-   "start": 58.8,
-   "end": 58.967,
-   "section": "cta"
-  },
-  {
-   "text": "bagi",
-   "start": 58.967,
-   "end": 59.247,
-   "section": "cta"
-  },
-  {
    "text": "anda",
-   "start": 59.633,
-   "end": 60.167,
+   "start": 58.8,
+   "end": 59.333,
    "section": "cta"
   },
   {
    "text": "yang",
-   "start": 60.167,
-   "end": 60.527,
+   "start": 59.333,
+   "end": 59.693,
    "section": "cta"
   },
   {
    "text": "mana",
-   "start": 60.527,
-   "end": 60.687,
+   "start": 59.693,
+   "end": 59.853,
    "section": "cta"
   },
   {
    "text": "berminat",
-   "start": 60.687,
-   "end": 61.067,
+   "start": 59.853,
+   "end": 60.233,
    "section": "cta"
   },
   {
    "text": "untuk",
-   "start": 61.067,
-   "end": 61.267,
+   "start": 60.233,
+   "end": 60.433,
    "section": "cta"
   },
   {
    "text": "mulakan",
-   "start": 61.267,
-   "end": 61.527,
+   "start": 60.433,
+   "end": 60.693,
    "section": "cta"
   },
   {
    "text": "simpanan",
-   "start": 61.527,
-   "end": 61.967,
+   "start": 60.693,
+   "end": 61.133,
    "section": "cta"
   },
   {
    "text": "emas",
-   "start": 61.967,
-   "end": 62.187,
+   "start": 61.133,
+   "end": 61.353,
    "section": "cta"
   },
   {
    "text": "Boleh",
-   "start": 62.187,
-   "end": 62.507,
+   "start": 61.353,
+   "end": 61.673,
    "section": "cta"
   },
   {
    "text": "isi",
-   "start": 62.507,
-   "end": 62.667,
+   "start": 61.673,
+   "end": 61.833,
    "section": "cta"
   },
   {
    "text": "beg",
-   "start": 62.667,
-   "end": 62.827,
+   "start": 61.833,
+   "end": 61.993,
    "section": "cta"
   },
   {
    "text": "biru",
-   "start": 62.827,
-   "end": 63.187,
+   "start": 61.993,
+   "end": 62.353,
    "section": "cta"
   },
   {
    "text": "untuk",
-   "start": 63.187,
-   "end": 63.587,
+   "start": 62.353,
+   "end": 62.753,
    "section": "cta"
   },
   {
    "text": "saya",
-   "start": 63.587,
-   "end": 63.787,
+   "start": 62.753,
+   "end": 62.953,
    "section": "cta"
   },
   {
    "text": "bantu",
-   "start": 63.787,
-   "end": 64.127,
+   "start": 62.953,
+   "end": 63.293,
    "section": "cta"
   },
   {
    "text": "macam",
-   "start": 64.127,
-   "end": 64.327,
+   "start": 63.293,
+   "end": 63.493,
    "section": "cta"
   },
   {
    "text": "mana",
-   "start": 64.327,
-   "end": 64.587,
+   "start": 63.493,
+   "end": 63.753,
    "section": "cta"
   },
   {
    "text": "Anda",
-   "start": 64.587,
-   "end": 64.987,
+   "start": 63.753,
+   "end": 64.153,
    "section": "cta"
   },
   {
    "text": "nak",
-   "start": 64.987,
-   "end": 65.207,
+   "start": 64.153,
+   "end": 64.373,
    "section": "cta"
   },
   {
    "text": "miliki",
-   "start": 65.207,
-   "end": 65.587,
+   "start": 64.373,
+   "end": 64.753,
    "section": "cta"
   },
   {
    "text": "simpanan",
-   "start": 65.587,
-   "end": 66.167,
+   "start": 64.753,
+   "end": 65.333,
    "section": "cta"
   },
   {
    "text": "gold bar",
-   "start": 66.167,
-   "end": 66.467,
+   "start": 65.333,
+   "end": 65.633,
    "section": "cta"
   },
   {
    "text": "dan",
-   "start": 66.467,
-   "end": 66.627,
+   "start": 65.633,
+   "end": 65.793,
    "section": "cta"
   },
   {
    "text": "dinar",
-   "start": 66.627,
-   "end": 66.847,
+   "start": 65.793,
+   "end": 66.013,
    "section": "cta"
   },
   {
    "text": "dalam",
-   "start": 66.847,
-   "end": 67.107,
+   "start": 66.013,
+   "end": 66.273,
    "section": "cta"
   },
   {
    "text": "bentuk",
-   "start": 67.107,
-   "end": 67.547,
+   "start": 66.273,
+   "end": 66.713,
    "section": "cta"
   },
   {
    "text": "Emas",
-   "start": 67.847,
-   "end": 68.147,
+   "start": 67.013,
+   "end": 67.313,
    "section": "cta"
   },
   {
    "text": "999",
-   "start": 68.147,
-   "end": 68.587,
+   "start": 67.313,
+   "end": 67.753,
    "section": "cta"
   },
   {
    "text": "serta",
-   "start": 68.587,
-   "end": 68.733,
-   "section": "cta"
-  },
-  {
-   "text": "916",
-   "start": 68.733,
-   "end": 68.747,
+   "start": 67.753,
+   "end": 67.9,
    "section": "cta"
   },
   {
    "text": "melalui",
-   "start": 68.747,
-   "end": 69.707,
+   "start": 67.9,
+   "end": 68.407,
    "section": "cta"
   },
   {
    "text": "Public",
-   "start": 69.707,
-   "end": 70.007,
+   "start": 68.407,
+   "end": 68.707,
    "section": "cta"
   },
   {
    "text": "Gold.",
-   "start": 70.007,
-   "end": 70.327,
+   "start": 68.707,
+   "end": 69.027,
    "section": "cta"
   },
   {
    "text": "Dapat",
-   "start": 70.633,
-   "end": 70.847,
+   "start": 69.333,
+   "end": 69.547,
    "section": "outro"
   },
   {
    "text": "sesuatu?",
-   "start": 70.847,
-   "end": 71.247,
+   "start": 69.547,
+   "end": 69.947,
    "section": "outro"
   }
  ]
