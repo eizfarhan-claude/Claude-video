@@ -1,0 +1,89 @@
+{
+ "id": "v17",
+ "title": "Emas Paling Murah Belum Tentu Untung",
+ "ranges": [
+  [
+   "hook",
+   7.95,
+   "11.9!"
+  ],
+  [
+   "kes",
+   25.55,
+   33.0
+  ],
+  [
+   "jual",
+   33.1,
+   40.8
+  ],
+  [
+   "sebab",
+   47.8,
+   56.6
+  ],
+  [
+   "kurang",
+   61.45,
+   65.8
+  ],
+  [
+   "plan",
+   68.0,
+   88.1
+  ],
+  [
+   "awal",
+   91.05,
+   "98.0!"
+  ],
+  [
+   "pilih",
+   "100.52!",
+   114.0
+  ],
+  [
+   "semak",
+   115.25,
+   125.6
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "kas": "kat",
+  "Kas": "Kat",
+  "merokit": "meroket",
+  "Spray": "Spread",
+  "panat": "bandingkan",
+  "kasih": "",
+  "kas.": "simpan.",
+  "itulah": "situlah",
+  "menentu": "menentukan"
+ },
+ "drop": [
+  [
+   40.96,
+   "Sebab"
+  ],
+  [
+   56.72,
+   "Benda"
+  ],
+  [
+   65.88,
+   "sebab"
+  ],
+  [
+   88.18,
+   "Jadi"
+  ],
+  [
+   99.98,
+   "Pilih"
+  ],
+  [
+   100.82,
+   "company"
+  ]
+ ]
+}

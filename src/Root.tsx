@@ -16,6 +16,7 @@ import {AsbThEmas, v12} from './videos/v12';
 import {KesilapanBaru, v13} from './videos/v13';
 import {TigaBank, v14} from './videos/v14';
 import {NilaiRM10k, v15} from './videos/v15';
+import {MurahBelumUntung, v17} from './videos/v17';
 
 const defaults: EditProps = {preview: false, showSafeZones: false, hq: false};
 const common = {width: 1080, height: 1920, fps: 30, defaultProps: defaults};
@@ -37,5 +38,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="KesilapanBaru" component={KesilapanBaru} durationInFrames={v13.tl.total} {...common} />
     <Composition id="TigaBank" component={TigaBank} durationInFrames={v14.tl.total} {...common} />
     <Composition id="NilaiRM10k" component={NilaiRM10k} durationInFrames={v15.tl.total} {...common} />
+    <Composition id="MurahBelumUntung" component={MurahBelumUntung} durationInFrames={v17.tl.total} {...common} />
   </>
 );
