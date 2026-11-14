@@ -18,6 +18,7 @@ import {TigaBank, v14} from './videos/v14';
 import {NilaiRM10k, v15} from './videos/v15';
 import {MurahBelumUntung, v17} from './videos/v17';
 import {MurahTake2, v18} from './videos/v18';
+import {WaktuTerbaik, v19} from './videos/v19';
 
 const defaults: EditProps = {preview: false, showSafeZones: false, hq: false};
 const common = {width: 1080, height: 1920, fps: 30, defaultProps: defaults};
@@ -41,5 +42,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="NilaiRM10k" component={NilaiRM10k} durationInFrames={v15.tl.total} {...common} />
     <Composition id="MurahBelumUntung" component={MurahBelumUntung} durationInFrames={v17.tl.total} {...common} />
     <Composition id="MurahTake2" component={MurahTake2} durationInFrames={v18.tl.total} {...common} />
+    <Composition id="WaktuTerbaik" component={WaktuTerbaik} durationInFrames={v19.tl.total} {...common} />
   </>
 );

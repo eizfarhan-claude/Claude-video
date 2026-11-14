@@ -20,7 +20,8 @@
     "preview:v14": "remotion render TigaBank out/preview_TigaBank.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v15": "remotion render NilaiRM10k out/preview_NilaiRM10k.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v17": "remotion render MurahBelumUntung out/preview_MurahBelumUntung.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
-    "preview:v18": "remotion render MurahTake2 out/preview_MurahTake2.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
+    "preview:v18": "remotion render MurahTake2 out/preview_MurahTake2.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v19": "remotion render WaktuTerbaik out/preview_WaktuTerbaik.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.3.0",

@@ -1,0 +1,68 @@
+{
+ "id": "v19",
+ "title": "Bilakah Waktu Terbaik Menabung Emas",
+ "ranges": [
+  [
+   "hook",
+   9.95,
+   24.95
+  ],
+  [
+   "syarat",
+   25.3,
+   37.6
+  ],
+  [
+   "ilmu",
+   37.7,
+   43.1
+  ],
+  [
+   "monitor",
+   "45.12!",
+   56.4
+  ],
+  [
+   "teka",
+   67.25,
+   "72.7!"
+  ],
+  [
+   "konsisten",
+   79.4,
+   88.1
+  ],
+  [
+   "fokus",
+   "101.04!",
+   "117.4!"
+  ],
+  [
+   "cta",
+   "117.56!",
+   136.3
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "menabur": "menabung",
+  "menabuk": "menabung",
+  "mas": "emas",
+  "gradmas": "gram emas",
+  "gerak": "gram",
+  "Dia": "yang",
+  "gap,": "GAP,",
+  "bab": "beg",
+  "Confirm": "Confirm"
+ },
+ "drop": [
+  [
+   43.14,
+   "Tak"
+  ],
+  [
+   88.56,
+   "fokus"
+  ]
+ ]
+}
