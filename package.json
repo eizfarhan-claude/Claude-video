@@ -17,7 +17,8 @@
     "preview:v11": "remotion render ZakatEmas out/preview_ZakatEmas.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v12": "remotion render AsbThEmas out/preview_AsbThEmas.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v13": "remotion render KesilapanBaru out/preview_KesilapanBaru.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
-    "preview:v14": "remotion render TigaBank out/preview_TigaBank.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
+    "preview:v14": "remotion render TigaBank out/preview_TigaBank.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v15": "remotion render NilaiRM10k out/preview_NilaiRM10k.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.3.0",
