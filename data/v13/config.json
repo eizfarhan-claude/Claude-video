@@ -1,0 +1,59 @@
+{
+ "id": "v13",
+ "title": "Kesilapan Terbesar Penyimpan Emas Baru",
+ "ranges": [
+  [
+   "hook",
+   1.0,
+   "11.3!"
+  ],
+  [
+   "prinsip",
+   13.62,
+   "21.9!"
+  ],
+  [
+   "panjang",
+   22.0,
+   34.9
+  ],
+  [
+   "pendek",
+   42.3,
+   52.6
+  ],
+  [
+   "spread",
+   53.05,
+   "67.9!"
+  ],
+  [
+   "masa",
+   75.5,
+   "88.46!"
+  ],
+  [
+   "cta",
+   92.0,
+   "109.8!"
+  ],
+  [
+   "cta",
+   110.0,
+   115.2
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "tabuh": "Tabung",
+  "pas": "emas",
+  "menabur.": "menabung,",
+  "9%.": "9%."
+ },
+ "drop": [
+  [
+   88.3,
+   "Jadi"
+  ]
+ ]
+}

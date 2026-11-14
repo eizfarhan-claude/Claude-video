@@ -1,0 +1,72 @@
+{
+ "id": "v12",
+ "title": "ASB vs Tabung Haji vs Emas",
+ "ranges": [
+  [
+   "hook",
+   1.0,
+   "15.5!"
+  ],
+  [
+   "faktor",
+   15.65,
+   22.4
+  ],
+  [
+   "asb",
+   22.5,
+   "37.22!"
+  ],
+  [
+   "pendek",
+   40.7,
+   49.6
+  ],
+  [
+   "pendek",
+   52.65,
+   57.1
+  ],
+  [
+   "panjang",
+   57.6,
+   62.7
+  ],
+  [
+   "emas",
+   70.55,
+   77.4
+  ],
+  [
+   "emas",
+   "83.78!",
+   87.6
+  ],
+  [
+   "kunci",
+   100.0,
+   "111.64!"
+  ],
+  [
+   "outro",
+   114.75,
+   "117.6!"
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "tabah": "Tabung",
+  "Tabu": "Tabung",
+  "tabuh": "Tabung",
+  "jaga": "jangan",
+  "tepatlah": "tepat",
+  "Kucinya": "Kuncinya",
+  "dividend": "dividen"
+ },
+ "drop": [
+  [
+   49.8,
+   "tempat"
+  ]
+ ]
+}

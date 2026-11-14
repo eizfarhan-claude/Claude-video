@@ -1,0 +1,83 @@
+{
+ "id": "v11",
+ "title": "Zakat Emas Perhiasan (Kadar Uruf)",
+ "ranges": [
+  [
+   "hook",
+   1.0,
+   17.95
+  ],
+  [
+   "bd",
+   18.2,
+   34.1
+  ],
+  [
+   "hias",
+   35.0,
+   45.8
+  ],
+  [
+   "semak",
+   46.05,
+   "49.62!"
+  ],
+  [
+   "uruf",
+   57.85,
+   64.8
+  ],
+  [
+   "lebih",
+   68.4,
+   "76.86!"
+  ],
+  [
+   "contoh",
+   83.2,
+   "89.62!"
+  ],
+  [
+   "puanA",
+   100.7,
+   129.0
+  ],
+  [
+   "tutup",
+   129.6,
+   "140.32!"
+  ],
+  [
+   "outro",
+   167.3,
+   172.5
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "golongan": "Gold Bar",
+  "badan": "dan",
+  "dina": "Dinar",
+  "dinas": "Dinar",
+  "gol": "Gold Bar",
+  "inek,": "Dinar,",
+  "getuk.": "peratus.",
+  "tersimpat": "tersimpan",
+  "urus": "uruf",
+  "Kada": "Kadar",
+  "karat": "kadar",
+  "urusnya": "urufnya",
+  "kerat": "gram",
+  "gelar,": "gelang,",
+  "subah": "subang",
+  "mas": "emas",
+  "uruh": "uruf",
+  "RM800": "800 gram",
+  "RM100": "100 gram",
+  "RM900": "900 gram",
+  "bahaya": "bayar",
+  "periasan": "perhiasan",
+  "Pake": "Pakai"
+ },
+ "drop": []
+}
