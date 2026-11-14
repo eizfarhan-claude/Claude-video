@@ -1,0 +1,63 @@
+{
+ "id": "v14",
+ "title": "Kaedah 3 Bank",
+ "ranges": [
+  [
+   "hook",
+   0.6,
+   10.35
+  ],
+  [
+   "a",
+   "12.82!",
+   27.3
+  ],
+  [
+   "b",
+   27.75,
+   40.45
+  ],
+  [
+   "b",
+   42.5,
+   46.95
+  ],
+  [
+   "c",
+   47.1,
+   "64.32!"
+  ],
+  [
+   "gaji",
+   64.45,
+   67.95
+  ],
+  [
+   "gaji",
+   73.05,
+   85.4
+  ],
+  [
+   "cta",
+   93.7,
+   "109.42!"
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "USB": "ASB",
+  "ESB": "ASB",
+  "pang": "bank",
+  "kependek": "jangka pendek",
+  "pengen": "",
+  "amas": "emas",
+  "keadaan": "kaedah",
+  "biru.": "biru."
+ },
+ "drop": [
+  [
+   81.88,
+   "pengen"
+  ]
+ ]
+}
