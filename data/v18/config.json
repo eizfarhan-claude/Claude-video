@@ -1,0 +1,70 @@
+{
+ "id": "v18",
+ "title": "Harga Paling Murah Belum Tentu Untung (take 2 + CTA)",
+ "ranges": [
+  [
+   "hook",
+   1.2,
+   "5.66!"
+  ],
+  [
+   "kes",
+   9.8,
+   18.45
+  ],
+  [
+   "kunci",
+   19.8,
+   "27.18!"
+  ],
+  [
+   "company",
+   "27.36!",
+   33.3
+  ],
+  [
+   "company",
+   34.9,
+   36.55
+  ],
+  [
+   "sebelum",
+   "40.76!",
+   53.6
+  ],
+  [
+   "pastikan",
+   57.9,
+   67.6
+  ],
+  [
+   "cta",
+   85.3,
+   106.95
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "menguturkan.": "menguntungkan.",
+  "Pak": "Public",
+  "Bigul,": "Gold,",
+  "kasih": "simpan",
+  "panah": "",
+  "berpahlawan": "berpatutan",
+  "sekarang": "sekadar",
+  "Saya": "tapi",
+  "kata": "kata,",
+  "terdapat": "dapat",
+  "ke": "jangka"
+ },
+ "drop": [
+  [
+   5.56,
+   "Banyak"
+  ],
+  [
+   36.6,
+   "kat"
+  ]
+ ]
+}
