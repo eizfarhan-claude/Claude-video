@@ -6,7 +6,7 @@
 
 Sebelum rakam:
 
-- Semak caj dan syarat terkini di laman web atau aplikasi Public Gold. Caj pengaktifan, gold premium dan had minimum boleh berubah.
+- Semak caj dan syarat terkini di laman web atau aplikasi Public Gold. Caj gold premium dan had minimum boleh berubah.
 - Elak sebut "pasti untung". Harga GAP ikut harga emas dunia dan boleh naik turun.
 - CTA seragam untuk semua video: "Berminat nak simpan emas? Klik link di BIO."
 
@@ -53,13 +53,13 @@ Sebelum rakam:
 ### 6. Tiada Tarikh Luput
 
 - **HOOK:** "Simpanan emas anda dalam GAP — ada tarikh luput atau tidak?"
-- **BODY:** Akaun GAP tiada tarikh luput. Ia ialah simpanan emas sepanjang hayat. Selagi anda mengekalkan baki minimum 1 gram, akaun kekal aktif dan emas anda terus tersimpan, tanpa tempoh matang dan tanpa perlu diperbaharui.
+- **BODY:** Akaun GAP tiada tarikh luput. Ia ialah simpanan emas sepanjang hayat. Emas anda terus tersimpan tanpa tempoh matang dan tanpa perlu diperbaharui, selama mana anda mahu menyimpannya.
 - **CTA:** "Berminat nak simpan emas? Klik link di BIO."
 
-### 7. Kenapa Perlu Tinggalkan 1 Gram?
+### 7. Beli Ikut Ringgit, Bukan Ikut Kepingan
 
-- **HOOK:** "Satu perkara kecil yang ramai pemilik Akaun GAP terlepas pandang."
-- **BODY:** Untuk memastikan akaun kekal aktif, tinggalkan baki minimum 1 gram. Jika semua emas dijual dan baki menjadi kosong, akaun akan ditutup secara automatik. Untuk membukanya semula, caj pengaktifan dikenakan. Simpan 1 gram sebagai 'kunci' akaun anda.
+- **HOOK:** "Tak cukup duit untuk beli sekeping emas penuh? Dengan GAP, itu bukan masalah."
+- **BODY:** Dalam GAP, anda membeli emas mengikut nilai ringgit, bukan mengikut kepingan. RM100 akan ditukar kepada gram emas mengikut harga semasa, walaupun dalam pecahan gram. Gram terkumpul sedikit demi sedikit, dan apabila mencapai 0.5 gram, ia boleh dikeluarkan sebagai emas fizikal.
 - **CTA:** "Berminat nak simpan emas? Klik link di BIO."
 
 ### 8. Tiada Buku Simpanan — Semua Online
@@ -139,7 +139,7 @@ Sebelum rakam:
 ### 20. Koleksi Emas 1 Gram Pada Harga Lebih Rendah
 
 - **HOOK:** "Suka mengumpul kepingan emas 1 gram Public Gold? Ada cara yang lebih jimat."
-- **BODY:** Membeli kepingan 1 gram secara runcit lebih mahal. Melalui GAP, anda mengumpul gram pada harga GAP, kemudian mengeluarkannya sebagai kepingan emas. Hasilnya, koleksi 1 gram anda dimiliki pada kos yang jauh lebih rendah berbanding pembelian runcit.
+- **BODY:** Membeli kepingan kecil secara runcit lebih mahal. Melalui GAP, anda mengumpul gram pada harga GAP, kemudian mengeluarkannya sebagai kepingan emas serendah 0.5 gram. Hasilnya, koleksi anda dimiliki pada kos yang jauh lebih rendah berbanding pembelian runcit.
 - **CTA:** "Berminat nak simpan emas? Klik link di BIO."
 
 ## C. Keselamatan, Syariah & Insurans
@@ -215,19 +215,19 @@ Sebelum rakam:
 ### 32. Jual Emas Tanpa Perlu Keluarkan
 
 - **HOOK:** "Perlukan tunai? Anda boleh jual emas GAP tanpa memegangnya langsung."
-- **BODY:** Emas dalam GAP boleh dijual terus secara online tanpa perlu dikeluarkan dalam bentuk fizikal. Log masuk, pilih jual, dan masukkan jumlah gram. Mudah, cepat, dan tidak perlu ke cawangan. Ingat untuk tinggalkan baki 1 gram supaya akaun kekal aktif.
+- **BODY:** Emas dalam GAP boleh dijual terus secara online tanpa perlu dikeluarkan dalam bentuk fizikal. Log masuk, pilih jual, dan masukkan jumlah gram. Mudah, cepat, dan tidak perlu ke cawangan. Anda boleh menjual sebahagian atau semua emas mengikut keperluan.
 - **CTA:** "Berminat nak simpan emas? Klik link di BIO."
 
 ### 33. Bolehkah Jual Semua Emas?
 
 - **HOOK:** "Bolehkah semua emas dalam Akaun GAP dijual sekaligus?"
-- **BODY:** Boleh. Namun akaun GAP akan ditutup apabila tiada baki. Untuk membukanya semula, caj pengaktifan dikenakan. Pendekatan yang lebih bijak ialah mengekalkan sekurang-kurangnya 1 gram supaya akaun kekal aktif untuk kegunaan masa hadapan.
+- **BODY:** Boleh. Anda bebas menjual sebahagian atau keseluruhan emas dalam Akaun GAP secara online pada bila-bila masa. Namun sebagai penyimpan jangka panjang, pertimbangkan untuk menjual hanya apa yang diperlukan, dan biarkan selebihnya terus berkembang untuk masa hadapan.
 - **CTA:** "Berminat nak simpan emas? Klik link di BIO."
 
 ### 34. Keluarkan Emas Fizikal Dari GAP
 
 - **HOOK:** "Dah kumpul gram dalam GAP. Bagaimana nak pegang emasnya?"
-- **BODY:** Anda boleh mengeluarkan emas fizikal pada bila-bila masa, dengan berat serendah 1 gram. Pilih sama ada penghantaran melalui Gold In Transit atau ambil di mana-mana cawangan Public Gold di seluruh Malaysia. Caj gold premium dikenakan ketika pengeluaran.
+- **BODY:** Anda boleh mengeluarkan emas fizikal pada bila-bila masa, dengan berat serendah 0.5 gram. Pilih sama ada penghantaran melalui Gold In Transit atau ambil di mana-mana cawangan Public Gold di seluruh Malaysia. Caj gold premium dikenakan ketika pengeluaran.
 - **CTA:** "Berminat nak simpan emas? Klik link di BIO."
 
 ### 35. Apa Itu Gold In Transit (GIT)?
@@ -257,7 +257,7 @@ Sebelum rakam:
 ### 39. Pindah Emas ke C-Wallet & PGMall
 
 - **HOOK:** "Tahukah anda emas GAP boleh digunakan untuk berbelanja di PGMall?"
-- **BODY:** Gram emas GAP boleh dipindahkan ke C-Wallet dan digunakan di PGMall. Caj pemprosesan sebanyak 5% dikenakan. Ini memberi fleksibiliti tambahan, walaupun bagi simpanan jangka panjang, menyimpan emas dalam GAP tetap pilihan utama.
+- **BODY:** Gram emas GAP boleh dipindahkan ke C-Wallet dan digunakan di PGMall. Ini memberi fleksibiliti tambahan untuk berbelanja, walaupun bagi simpanan jangka panjang, menyimpan emas dalam GAP tetap pilihan utama.
 - **CTA:** "Berminat nak simpan emas? Klik link di BIO."
 
 ### 40. Empat Pilihan Selepas Emas Masuk GAP
