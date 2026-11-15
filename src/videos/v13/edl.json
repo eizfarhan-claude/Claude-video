@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2373,
+ "durationInFrames": 2289,
  "clips": [
   {
    "section": "hook",
@@ -53,14 +53,14 @@
   {
    "section": "cta",
    "srcFrom": 2760,
-   "durationInFrames": 430,
+   "durationInFrames": 345,
    "outFrom": 1861
   },
   {
    "section": "cta",
-   "srcFrom": 3212,
-   "durationInFrames": 82,
-   "outFrom": 2291
+   "srcFrom": 3213,
+   "durationInFrames": 83,
+   "outFrom": 2206
   }
  ],
  "words": [
@@ -1135,49 +1135,19 @@
   {
    "text": "untuk",
    "start": 73.333,
-   "end": 73.773,
-   "section": "cta"
-  },
-  {
-   "text": "saya",
-   "start": 73.773,
-   "end": 74.253,
-   "section": "cta"
-  },
-  {
-   "text": "bantu",
-   "start": 74.253,
-   "end": 74.833,
-   "section": "cta"
-  },
-  {
-   "text": "langkah",
-   "start": 74.833,
-   "end": 75.473,
-   "section": "cta"
-  },
-  {
-   "text": "simpanan",
-   "start": 75.473,
-   "end": 76.013,
-   "section": "cta"
-  },
-  {
-   "text": "yang",
-   "start": 76.013,
-   "end": 76.233,
+   "end": 73.533,
    "section": "cta"
   },
   {
    "text": "paling",
-   "start": 76.367,
-   "end": 78.34,
+   "start": 73.533,
+   "end": 75.473,
    "section": "cta"
   },
   {
    "text": "mudah.",
-   "start": 78.34,
-   "end": 78.92,
+   "start": 75.473,
+   "end": 76.053,
    "section": "cta"
   }
  ]

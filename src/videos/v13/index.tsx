@@ -7,7 +7,7 @@ import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {Choices, CtaCard, GItem, IconShield, IconWarn, IconX, Schedule, Subtitles, TitleCard, WaveIcon, motionBusy} from '../../engine/kit';
 import {IconArrowUp, IconClock, IconTarget} from '../../engine/ui';
 
-const tl = makeTimeline(edlJson as Edl, 15);
+const tl = makeTimeline(edlJson as Edl, 45);
 const {at, sectionStart: S, sectionEnd: E} = tl;
 
 const M = {
@@ -37,8 +37,8 @@ const M = {
   nak: at('cta', 'nak'),
   boleh: at('cta', 'boleh'),
   pin: at('cta', 'pin'),
-  bantu: at('cta', 'bantu'),
-  paling: at('cta', 'mudah') + 0.3,
+  bantu: at('cta', 'biru') + 1.2,
+  paling: at('cta', 'biru') + 2.8,
 };
 
 const ITEMS: GItem[] = [
