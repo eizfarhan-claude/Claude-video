@@ -29,9 +29,8 @@ const M = {
   mengikut: at('hias', 'mengikut'),
   semak: S('semak'),
   kadar: at('semak', 'kadar'),
-  uruf: S('uruf'),
-  melebihi: at('uruf', 'melebihi'),
-  barulah: at('uruf', 'barulah'),
+  melebihi: at('lebih', 'melebihi'),
+  kenaL: at('lebih', 'kena'),
   lebih: S('lebih'),
   bukan2: at('lebih', 'bukan'),
   hanya: at('lebih', 'hanya'),
@@ -55,7 +54,7 @@ const M = {
 };
 
 /* infographic over the frame at 60% opacity (face stays visible through it) */
-const IMG_FROM = M.kadar - 0.25, IMG_TO = M.melebihi - 0.1;
+const IMG_FROM = M.kadar - 0.25, IMG_TO = M.kenaL - 0.1;
 const InfoInner: React.FC<{dur: number}> = ({dur}) => {
   const f = useCurrentFrame();
   const fade = interpolate(f, [0, 8, dur - 8, dur], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
@@ -125,7 +124,7 @@ const ITEMS: GItem[] = [
       {top: 'Tetapi ikut', main: 'KADAR URUF', sub: 'negeri masing-masing', at: r(M.mengikut), good: true},
     ]} />
   )},
-  {from: M.melebihi - 0.1, to: E('uruf') + 0.2, render: (d, r) => (
+  {from: M.kenaL - 0.1, to: M.hanya - 0.1, render: (d, r) => (
     <TitleCard dur={d} icon={<IconWarn size={80} />} label="Pakai melebihi kadar uruf" title="BARU KENA ZAKAT" size={60} />
   )},
   {from: M.hanya - 0.1, to: E('lebih') + 0.15, render: (d) => (
@@ -165,7 +164,7 @@ const SFX: Sfx[] = [
   {t: M.mengikut, f: 'ding_correct', v: 0.28},
   {t: IMG_FROM, f: 'whoosh_cine', v: 0.36},
   {t: IMG_FROM + 0.25, f: 'sparkle', v: 0.22},
-  {t: M.melebihi - 0.1, f: 'whoosh_small', v: 0.3},
+  {t: M.kenaL - 0.1, f: 'whoosh_small', v: 0.3},
   {t: M.hanya - 0.1, f: 'pop_hard', v: 0.32},
   {t: M.contoh + 0.05, f: 'whoosh_pop', v: 0.38},
   {t: M.n800, f: 'click_select', v: 0.34},
@@ -193,7 +192,7 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 export const v11: VideoDef = {
   id: 'v11', tl, Overlays, sfx: SFX,
   punches: [M.kena2, M.wajib, M.bukan, M.hanya, M.lebih100, M.pct, M.perhiasan3],
-  zoom: {hook: [1.1], bd: [1.0], hias: [1.06], semak: [1.0], uruf: [1.0], lebih: [1.07], contoh: [1.0], puanA: [1.04, 1.0], tutup: [1.08], outro: [1.0]},
+  zoom: {hook: [1.1], bd: [1.0], hias: [1.06], semak: [1.0], lebih: [1.07], contoh: [1.0], puanA: [1.04, 1.0], tutup: [1.08], outro: [1.0]},
   music: {file: 'bgm.mp3', startAt: 30},
 };
 export const ZakatEmas: React.FC<EditProps> = (p) => <Edit def={v11} {...p} />;
