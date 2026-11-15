@@ -43,9 +43,9 @@ const ClipVideo: React.FC<{def: VideoDef; clip: Clip; idx: number; hq: boolean}>
 const edgeFade = (f: number, d: number) =>
   d < 6 ? 1 : interpolate(f, [0, 2, d - 2, d], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
 
-// Music ducking: low under speech (≈ -24 dB below voice), lifts in gaps, fast duck / slow release.
-const MUSIC_UNDER = 0.075;
-const MUSIC_GAP = 0.15;
+// Music ducking: low under speech (≈ -28 dB below voice), lifts in gaps, fast duck / slow release.
+const MUSIC_UNDER = 0.045;
+const MUSIC_GAP = 0.09;
 const useDuckCurve = (tl: Timeline) =>
   useMemo(() => {
     const total = tl.total;
