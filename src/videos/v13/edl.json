@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2289,
+ "durationInFrames": 2454,
  "clips": [
   {
    "section": "hook",
@@ -61,6 +61,12 @@
    "srcFrom": 3213,
    "durationInFrames": 83,
    "outFrom": 2206
+  },
+  {
+   "section": "cta",
+   "srcFrom": 3300,
+   "durationInFrames": 165,
+   "outFrom": 2289
   }
  ],
  "words": [
@@ -1148,6 +1154,84 @@
    "text": "mudah.",
    "start": 75.473,
    "end": 76.053,
+   "section": "cta"
+  },
+  {
+   "text": "Paling",
+   "start": 76.32,
+   "end": 76.6,
+   "section": "cta"
+  },
+  {
+   "text": "murah",
+   "start": 76.6,
+   "end": 77.04,
+   "section": "cta"
+  },
+  {
+   "text": "sebagai",
+   "start": 77.04,
+   "end": 77.44,
+   "section": "cta"
+  },
+  {
+   "text": "simpanan",
+   "start": 77.44,
+   "end": 78.12,
+   "section": "cta"
+  },
+  {
+   "text": "jangka",
+   "start": 78.12,
+   "end": 78.38,
+   "section": "cta"
+  },
+  {
+   "text": "masa",
+   "start": 78.38,
+   "end": 78.68,
+   "section": "cta"
+  },
+  {
+   "text": "yang",
+   "start": 78.68,
+   "end": 78.82,
+   "section": "cta"
+  },
+  {
+   "text": "panjang",
+   "start": 78.82,
+   "end": 79.26,
+   "section": "cta"
+  },
+  {
+   "text": "dalam",
+   "start": 79.26,
+   "end": 79.56,
+   "section": "cta"
+  },
+  {
+   "text": "bentuk",
+   "start": 79.56,
+   "end": 79.96,
+   "section": "cta"
+  },
+  {
+   "text": "simpanan",
+   "start": 79.96,
+   "end": 80.56,
+   "section": "cta"
+  },
+  {
+   "text": "emas",
+   "start": 80.56,
+   "end": 81.06,
+   "section": "cta"
+  },
+  {
+   "text": "fizikal.",
+   "start": 81.06,
+   "end": 81.52,
    "section": "cta"
   }
  ]

@@ -38,7 +38,7 @@ const M = {
   boleh: at('cta', 'boleh'),
   pin: at('cta', 'pin'),
   bantu: at('cta', 'biru') + 1.2,
-  paling: at('cta', 'biru') + 2.8,
+  paling: at('cta', 'murah') - 0.3,
 };
 
 const ITEMS: GItem[] = [
@@ -76,7 +76,7 @@ const ITEMS: GItem[] = [
     <TitleCard dur={d} icon={<IconTarget size={80} />} label="Plan simpanan 2–3 tahun +" title="TUKAR KE EMAS" size={66} />
   )},
   {from: M.boleh - 0.1, to: 9999, render: (d, r) => (
-    <CtaCard dur={d} head="Nak mula?" pin={r(M.pin)} guide={r(M.bantu)} guideText="Saya bantu" final={r(M.paling)} finalLabel="Langkah paling mudah" finalTitle="SIMPANAN EMAS" />
+    <CtaCard dur={d} head="Nak mula?" pin={r(M.pin)} guide={r(M.bantu)} guideText="Saya bantu" final={r(M.paling)} finalLabel="Paling mudah & murah" finalTitle="EMAS FIZIKAL" />
   )},
 ];
 
