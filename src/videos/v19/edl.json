@@ -34,15 +34,9 @@
   },
   {
    "section": "monitor",
-   "srcFrom": 1354,
-   "durationInFrames": 10,
-   "outFrom": 945
-  },
-  {
-   "section": "monitor",
    "srcFrom": 1377,
-   "durationInFrames": 238,
-   "outFrom": 955
+   "durationInFrames": 248,
+   "outFrom": 945
   },
   {
    "section": "teka",
@@ -575,164 +569,164 @@
    "section": "ilmu"
   },
   {
-   "text": "Tak",
-   "start": 31.5,
-   "end": 31.567,
-   "section": "monitor"
-  },
-  {
    "text": "perlu",
-   "start": 31.833,
-   "end": 32.113,
+   "start": 31.5,
+   "end": 31.78,
    "section": "monitor"
   },
   {
    "text": "nak",
-   "start": 32.113,
-   "end": 32.293,
+   "start": 31.78,
+   "end": 31.96,
    "section": "monitor"
   },
   {
    "text": "monitor",
-   "start": 32.293,
-   "end": 32.553,
+   "start": 31.96,
+   "end": 32.22,
    "section": "monitor"
   },
   {
    "text": "harga",
-   "start": 32.553,
-   "end": 33.013,
+   "start": 32.22,
+   "end": 32.68,
    "section": "monitor"
   },
   {
    "text": "emas",
-   "start": 33.013,
-   "end": 33.293,
+   "start": 32.68,
+   "end": 32.96,
    "section": "monitor"
   },
   {
    "text": "setiap",
-   "start": 33.293,
-   "end": 33.613,
+   "start": 32.96,
+   "end": 33.28,
    "section": "monitor"
   },
   {
    "text": "hari",
-   "start": 33.613,
-   "end": 33.793,
+   "start": 33.28,
+   "end": 33.46,
    "section": "monitor"
   },
   {
    "text": "Tak",
-   "start": 33.793,
-   "end": 34.033,
+   "start": 33.46,
+   "end": 33.7,
    "section": "monitor"
   },
   {
    "text": "perlu",
-   "start": 34.033,
-   "end": 34.293,
+   "start": 33.7,
+   "end": 33.96,
    "section": "monitor"
   },
   {
    "text": "tunggu",
-   "start": 34.293,
-   "end": 34.733,
+   "start": 33.96,
+   "end": 34.4,
    "section": "monitor"
   },
   {
    "text": "Harga",
-   "start": 35.093,
-   "end": 35.353,
+   "start": 34.76,
+   "end": 35.02,
    "section": "monitor"
   },
   {
    "text": "emas",
-   "start": 35.353,
-   "end": 35.573,
+   "start": 35.02,
+   "end": 35.24,
    "section": "monitor"
   },
   {
    "text": "paling",
-   "start": 35.573,
-   "end": 35.793,
+   "start": 35.24,
+   "end": 35.46,
    "section": "monitor"
   },
   {
    "text": "rendah",
-   "start": 35.793,
-   "end": 36.193,
+   "start": 35.46,
+   "end": 35.86,
    "section": "monitor"
   },
   {
    "text": "untuk",
-   "start": 36.193,
-   "end": 36.413,
+   "start": 35.86,
+   "end": 36.08,
    "section": "monitor"
   },
   {
    "text": "permulaan",
-   "start": 36.413,
-   "end": 36.973,
+   "start": 36.08,
+   "end": 36.64,
    "section": "monitor"
   },
   {
    "text": "sebab",
-   "start": 36.973,
-   "end": 37.253,
+   "start": 36.64,
+   "end": 36.92,
    "section": "monitor"
   },
   {
    "text": "kita",
-   "start": 37.253,
-   "end": 37.373,
+   "start": 36.92,
+   "end": 37.04,
    "section": "monitor"
   },
   {
    "text": "tak",
-   "start": 37.373,
-   "end": 37.633,
+   "start": 37.04,
+   "end": 37.3,
    "section": "monitor"
   },
   {
    "text": "tahu",
-   "start": 37.633,
-   "end": 37.893,
+   "start": 37.3,
+   "end": 37.56,
    "section": "monitor"
   },
   {
    "text": "how",
-   "start": 37.893,
-   "end": 38.513,
+   "start": 37.56,
+   "end": 38.18,
    "section": "monitor"
   },
   {
    "text": "low",
-   "start": 38.513,
-   "end": 38.813,
+   "start": 38.18,
+   "end": 38.48,
    "section": "monitor"
   },
   {
    "text": "is",
-   "start": 38.813,
-   "end": 39.013,
+   "start": 38.48,
+   "end": 38.68,
    "section": "monitor"
   },
   {
    "text": "low",
-   "start": 39.013,
-   "end": 39.213,
+   "start": 38.68,
+   "end": 38.88,
    "section": "monitor"
   },
   {
    "text": "harga",
-   "start": 39.213,
-   "end": 39.573,
+   "start": 38.88,
+   "end": 39.24,
    "section": "monitor"
   },
   {
    "text": "emas",
-   "start": 39.573,
+   "start": 39.24,
+   "end": 39.68,
+   "section": "monitor"
+  },
+  {
+   "text": "dan",
+   "start": 39.68,
    "end": 39.767,
    "section": "monitor"
   },

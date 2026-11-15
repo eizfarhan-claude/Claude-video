@@ -36,7 +36,7 @@ const M = {
   boleh: at('cta', 'boleh'),
   video: at('cta', 'video'),
   bantu: at('cta', 'bantu'),
-  miliki: at('cta', 'spread'),
+  miliki: at('cta', 'miliki'),
 };
 
 const ITEMS: GItem[] = [
@@ -73,7 +73,7 @@ const ITEMS: GItem[] = [
     <TitleCard dur={d} icon={<IconCoin size={84} />} label="Pastikan pilih" title="COMPANY YANG BETUL" size={58} sub="platform untung jangka panjang" subAt={r(M.platform)} shine />
   )},
   {from: M.cta + 0.05, to: 9999, render: (d, r) => (
-    <CtaCard dur={d} head="Mula bersama Public Gold" pin={r(M.video)} guide={r(M.bantu)} guideText="Step by step" final={r(M.miliki)} finalLabel="Spread rendah · harga berpatutan" finalTitle="SIMPANAN EMAS" />
+    <CtaCard dur={d} head="Mula bersama Public Gold" pin={r(M.video)} guide={r(M.bantu)} guideText="Step by step" final={r(M.miliki)} finalLabel="Spread rendah · harga berpatutan" finalTitle="EMAS FIZIKAL" />
   )},
 ];
 

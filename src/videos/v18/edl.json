@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2036,
+ "durationInFrames": 2064,
  "clips": [
   {
    "section": "hook",
@@ -47,20 +47,14 @@
   {
    "section": "cta",
    "srcFrom": 2562,
-   "durationInFrames": 312,
+   "durationInFrames": 367,
    "outFrom": 1515
   },
   {
    "section": "cta",
-   "srcFrom": 2961,
-   "durationInFrames": 14,
-   "outFrom": 1827
-  },
-  {
-   "section": "cta",
-   "srcFrom": 3023,
-   "durationInFrames": 195,
-   "outFrom": 1841
+   "srcFrom": 3036,
+   "durationInFrames": 182,
+   "outFrom": 1882
   }
  ],
  "words": [
@@ -1141,109 +1135,121 @@
   {
    "text": "miliki",
    "start": 60.76,
-   "end": 60.9,
+   "end": 61.32,
    "section": "cta"
   },
   {
-   "text": "harga",
-   "start": 60.9,
-   "end": 61.02,
+   "text": "emas",
+   "start": 61.32,
+   "end": 61.56,
    "section": "cta"
   },
   {
-   "text": "dengan",
-   "start": 61.02,
-   "end": 61.367,
-   "section": "cta"
-  },
-  {
-   "text": "spread",
-   "start": 61.367,
-   "end": 61.9,
-   "section": "cta"
-  },
-  {
-   "text": "yang",
-   "start": 61.9,
-   "end": 62.1,
-   "section": "cta"
-  },
-  {
-   "text": "rendah",
-   "start": 62.1,
-   "end": 62.54,
-   "section": "cta"
-  },
-  {
-   "text": "serta",
-   "start": 62.54,
-   "end": 63.1,
-   "section": "cta"
-  },
-  {
-   "text": "harga",
-   "start": 63.1,
-   "end": 63.6,
-   "section": "cta"
-  },
-  {
-   "text": "yang",
-   "start": 63.6,
-   "end": 63.74,
-   "section": "cta"
-  },
-  {
-   "text": "berpatutan",
-   "start": 63.74,
-   "end": 64.28,
-   "section": "cta"
-  },
-  {
-   "text": "untuk",
-   "start": 64.28,
-   "end": 64.56,
-   "section": "cta"
-  },
-  {
-   "text": "dapat",
-   "start": 64.56,
-   "end": 65.06,
-   "section": "cta"
-  },
-  {
-   "text": "keuntungan",
-   "start": 65.06,
-   "end": 65.76,
+   "text": "fizikal",
+   "start": 61.56,
+   "end": 62.04,
    "section": "cta"
   },
   {
    "text": "dan",
-   "start": 66.08,
-   "end": 66.26,
+   "start": 62.04,
+   "end": 62.54,
    "section": "cta"
   },
   {
-   "text": "jangka",
-   "start": 66.26,
-   "end": 66.38,
+   "text": "jual",
+   "start": 62.54,
+   "end": 62.733,
    "section": "cta"
   },
   {
-   "text": "masa",
-   "start": 66.38,
-   "end": 66.72,
+   "text": "spread",
+   "start": 62.733,
+   "end": 62.833,
    "section": "cta"
   },
   {
    "text": "yang",
-   "start": 66.72,
-   "end": 67.12,
+   "start": 62.833,
+   "end": 63.033,
+   "section": "cta"
+  },
+  {
+   "text": "rendah",
+   "start": 63.033,
+   "end": 63.473,
+   "section": "cta"
+  },
+  {
+   "text": "serta",
+   "start": 63.473,
+   "end": 64.033,
+   "section": "cta"
+  },
+  {
+   "text": "harga",
+   "start": 64.033,
+   "end": 64.533,
+   "section": "cta"
+  },
+  {
+   "text": "yang",
+   "start": 64.533,
+   "end": 64.673,
+   "section": "cta"
+  },
+  {
+   "text": "berpatutan",
+   "start": 64.673,
+   "end": 65.213,
+   "section": "cta"
+  },
+  {
+   "text": "untuk",
+   "start": 65.213,
+   "end": 65.493,
+   "section": "cta"
+  },
+  {
+   "text": "dapat",
+   "start": 65.493,
+   "end": 65.993,
+   "section": "cta"
+  },
+  {
+   "text": "keuntungan",
+   "start": 65.993,
+   "end": 66.693,
+   "section": "cta"
+  },
+  {
+   "text": "dan",
+   "start": 67.013,
+   "end": 67.193,
+   "section": "cta"
+  },
+  {
+   "text": "jangka",
+   "start": 67.193,
+   "end": 67.313,
+   "section": "cta"
+  },
+  {
+   "text": "masa",
+   "start": 67.313,
+   "end": 67.653,
+   "section": "cta"
+  },
+  {
+   "text": "yang",
+   "start": 67.653,
+   "end": 68.053,
    "section": "cta"
   },
   {
    "text": "panjang",
-   "start": 67.12,
-   "end": 67.68,
+   "start": 68.053,
+   "end": 68.613,
    "section": "cta"
   }
  ]

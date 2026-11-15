@@ -1056,105 +1056,123 @@
 "section": "cta"
 },
 {
-"text": "menabung",
+"text": "menabung,",
 "start": 60.2,
-"end": 60.76,
+"end": 60.550000000000004,
 "section": "cta"
 },
 {
-"text": "dengan",
-"start": 61.02,
-"end": 61.367,
+"text": "miliki",
+"start": 61.1,
+"end": 61.45,
+"section": "cta"
+},
+{
+"text": "emas",
+"start": 61.650000000000006,
+"end": 62.00000000000001,
+"section": "cta"
+},
+{
+"text": "fizikal",
+"start": 61.900000000000006,
+"end": 62.25000000000001,
+"section": "cta"
+},
+{
+"text": "dan",
+"start": 62.45,
+"end": 62.800000000000004,
 "section": "cta"
 },
 {
 "text": "spread",
-"start": 61.367,
-"end": 61.9,
+"start": 62.733,
+"end": 62.833,
 "section": "cta"
 },
 {
 "text": "yang",
-"start": 61.9,
-"end": 62.1,
+"start": 62.833,
+"end": 63.033,
 "section": "cta"
 },
 {
 "text": "rendah",
-"start": 62.1,
-"end": 62.54,
+"start": 63.033,
+"end": 63.473,
 "section": "cta"
 },
 {
 "text": "serta",
-"start": 62.54,
-"end": 63.1,
+"start": 63.473,
+"end": 64.033,
 "section": "cta"
 },
 {
 "text": "harga",
-"start": 63.1,
-"end": 63.6,
+"start": 64.033,
+"end": 64.533,
 "section": "cta"
 },
 {
 "text": "yang",
-"start": 63.6,
-"end": 63.74,
+"start": 64.533,
+"end": 64.673,
 "section": "cta"
 },
 {
 "text": "berpatutan",
-"start": 63.74,
-"end": 64.28,
+"start": 64.673,
+"end": 65.213,
 "section": "cta"
 },
 {
 "text": "untuk",
-"start": 64.28,
-"end": 64.56,
+"start": 65.213,
+"end": 65.493,
 "section": "cta"
 },
 {
 "text": "dapat",
-"start": 64.56,
-"end": 65.06,
+"start": 65.493,
+"end": 65.993,
 "section": "cta"
 },
 {
 "text": "keuntungan",
-"start": 65.06,
-"end": 65.76,
+"start": 65.993,
+"end": 66.693,
 "section": "cta"
 },
 {
 "text": "dalam",
-"start": 66.08,
-"end": 66.26,
+"start": 67.013,
+"end": 67.193,
 "section": "cta"
 },
 {
 "text": "jangka",
-"start": 66.26,
-"end": 66.38,
+"start": 67.193,
+"end": 67.313,
 "section": "cta"
 },
 {
 "text": "masa",
-"start": 66.38,
-"end": 66.72,
+"start": 67.313,
+"end": 67.653,
 "section": "cta"
 },
 {
 "text": "yang",
-"start": 66.72,
-"end": 67.12,
+"start": 67.653,
+"end": 68.053,
 "section": "cta"
 },
 {
 "text": "panjang",
-"start": 67.12,
-"end": 67.68,
+"start": 68.053,
+"end": 68.613,
 "section": "cta"
 }
 ]
