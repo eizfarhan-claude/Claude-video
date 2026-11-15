@@ -9,5 +9,8 @@ for vid in sys.argv[1:]:
         if bare in fix: w['text'] = fix[bare] + tail
         if w['text'] == '%': w['text'] = 'peratus'
     words = [w for w in words if w['text']]
+    # straddling retake words: same word twice within 0.5s -> keep the later one
+    norm = lambda t: re.sub(r'[.,?!%]+$', '', t).lower()
+    words = [w for i, w in enumerate(words) if not (i + 1 < len(words) and norm(w['text']) == norm(words[i + 1]['text']) and words[i + 1]['start'] - w['start'] < 0.5)]
     json.dump(words, open(f'src/videos/{vid}/captions.json', 'w'), ensure_ascii=False, indent=0)
     print(vid, ' '.join(w['text'] for w in words))

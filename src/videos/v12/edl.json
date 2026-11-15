@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2371,
+ "durationInFrames": 2341,
  "clips": [
   {
    "section": "hook",
@@ -53,32 +53,20 @@
   {
    "section": "emas",
    "srcFrom": 2513,
-   "durationInFrames": 121,
+   "durationInFrames": 118,
    "outFrom": 1858
   },
   {
    "section": "kunci",
-   "srcFrom": 2997,
-   "durationInFrames": 8,
-   "outFrom": 1979
-  },
-  {
-   "section": "kunci",
-   "srcFrom": 3011,
-   "durationInFrames": 338,
-   "outFrom": 1987
+   "srcFrom": 3013,
+   "durationInFrames": 336,
+   "outFrom": 1976
   },
   {
    "section": "outro",
-   "srcFrom": 3451,
-   "durationInFrames": 16,
-   "outFrom": 2325
-  },
-  {
-   "section": "outro",
-   "srcFrom": 3498,
-   "durationInFrames": 30,
-   "outFrom": 2341
+   "srcFrom": 3499,
+   "durationInFrames": 29,
+   "outFrom": 2312
   }
  ],
  "words": [
@@ -1116,170 +1104,158 @@
   },
   {
    "text": "Kuncinya",
-   "start": 66.233,
-   "end": 66.607,
+   "start": 65.867,
+   "end": 66.173,
    "section": "kunci"
   },
   {
    "text": "adalah",
-   "start": 66.607,
-   "end": 66.867,
+   "start": 66.173,
+   "end": 66.433,
    "section": "kunci"
   },
   {
    "text": "bukan",
-   "start": 66.867,
-   "end": 67.207,
+   "start": 66.433,
+   "end": 66.773,
    "section": "kunci"
   },
   {
    "text": "memilih",
-   "start": 67.207,
-   "end": 67.767,
+   "start": 66.773,
+   "end": 67.333,
    "section": "kunci"
   },
   {
    "text": "salah",
-   "start": 67.767,
-   "end": 67.987,
+   "start": 67.333,
+   "end": 67.553,
    "section": "kunci"
   },
   {
    "text": "satu",
-   "start": 67.987,
-   "end": 68.387,
+   "start": 67.553,
+   "end": 67.953,
    "section": "kunci"
   },
   {
    "text": "tapi",
-   "start": 68.767,
-   "end": 69.067,
+   "start": 68.333,
+   "end": 68.633,
    "section": "kunci"
   },
   {
    "text": "tengok",
-   "start": 69.067,
-   "end": 69.687,
+   "start": 68.633,
+   "end": 69.253,
    "section": "kunci"
   },
   {
    "text": "matlamat",
-   "start": 69.687,
-   "end": 70.167,
+   "start": 69.253,
+   "end": 69.733,
    "section": "kunci"
   },
   {
    "text": "simpanan",
-   "start": 70.167,
-   "end": 70.827,
+   "start": 69.733,
+   "end": 70.393,
    "section": "kunci"
   },
   {
    "text": "masing-masing",
-   "start": 70.827,
-   "end": 71.587,
+   "start": 70.393,
+   "end": 71.153,
    "section": "kunci"
   },
   {
    "text": "jangka",
-   "start": 71.587,
-   "end": 71.967,
+   "start": 71.153,
+   "end": 71.533,
    "section": "kunci"
   },
   {
    "text": "masa",
-   "start": 71.967,
-   "end": 72.227,
+   "start": 71.533,
+   "end": 71.793,
    "section": "kunci"
   },
   {
    "text": "pendek",
-   "start": 72.227,
-   "end": 72.707,
+   "start": 71.793,
+   "end": 72.273,
    "section": "kunci"
   },
   {
    "text": "ASB,",
-   "start": 72.707,
-   "end": 73.427,
+   "start": 72.273,
+   "end": 72.993,
    "section": "kunci"
   },
   {
    "text": "Tabung",
-   "start": 73.467,
-   "end": 73.847,
+   "start": 73.033,
+   "end": 73.413,
    "section": "kunci"
   },
   {
    "text": "haji",
-   "start": 73.847,
-   "end": 74.127,
+   "start": 73.413,
+   "end": 73.693,
    "section": "kunci"
   },
   {
    "text": "jangka",
-   "start": 74.127,
-   "end": 74.647,
+   "start": 73.693,
+   "end": 74.213,
    "section": "kunci"
   },
   {
    "text": "masa",
-   "start": 74.647,
-   "end": 74.867,
+   "start": 74.213,
+   "end": 74.433,
    "section": "kunci"
   },
   {
    "text": "panjang",
-   "start": 74.867,
-   "end": 75.367,
+   "start": 74.433,
+   "end": 74.933,
    "section": "kunci"
   },
   {
    "text": "simpan",
-   "start": 75.367,
-   "end": 75.907,
+   "start": 74.933,
+   "end": 75.473,
    "section": "kunci"
   },
   {
    "text": "dalam",
-   "start": 75.907,
-   "end": 76.067,
+   "start": 75.473,
+   "end": 75.633,
    "section": "kunci"
   },
   {
    "text": "bentuk",
-   "start": 76.067,
-   "end": 76.447,
+   "start": 75.633,
+   "end": 76.013,
    "section": "kunci"
   },
   {
    "text": "simpanan",
-   "start": 76.447,
-   "end": 76.987,
+   "start": 76.013,
+   "end": 76.553,
    "section": "kunci"
   },
   {
    "text": "emas",
-   "start": 76.987,
-   "end": 77.327,
+   "start": 76.553,
+   "end": 76.893,
    "section": "kunci"
-  },
-  {
-   "text": "dan",
-   "start": 77.327,
-   "end": 77.5,
-   "section": "kunci"
-  },
-  {
-   "text": "Dapat",
-   "start": 77.5,
-   "end": 77.807,
-   "section": "outro"
   },
   {
    "text": "sesuatu?",
-   "start": 78.033,
-   "end": 78.753,
+   "start": 77.067,
+   "end": 77.753,
    "section": "outro"
   }
  ]

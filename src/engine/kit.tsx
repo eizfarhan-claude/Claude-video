@@ -95,7 +95,7 @@ export const TitleCard: React.FC<{
   const sh = interpolate(frame, [4, 30], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   // auto-fit title to one line (Montserrat 900 ≈ 0.68em per glyph)
   const room = icon ? 690 : 800;
-  const fit = Math.min(size, Math.floor(room / (0.68 * title.length)));
+  const fit = Math.min(size, Math.floor(room / ((gold ? 0.68 : 0.76) * title.length)));
   return (
     <TopBand v={v}>
       <Card style={{display: 'flex', alignItems: 'center', gap: 22, padding: '20px 34px', position: 'relative', overflow: 'hidden', maxWidth: 900}}>

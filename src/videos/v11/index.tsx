@@ -54,7 +54,7 @@ const M = {
   follow: at('outro', 'follow'),
 };
 
-/* infographic over the frame at 50% opacity (face stays visible through it) */
+/* infographic over the frame at 60% opacity (face stays visible through it) */
 const IMG_FROM = M.kadar - 0.25, IMG_TO = M.melebihi - 0.1;
 const InfoInner: React.FC<{dur: number}> = ({dur}) => {
   const f = useCurrentFrame();
@@ -62,7 +62,7 @@ const InfoInner: React.FC<{dur: number}> = ({dur}) => {
   const pop = interpolate(f, [0, 12], [0.88, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.back(1.5))});
   const push = interpolate(f, [0, dur], [1, 1.05]);
   return (
-    <AbsoluteFill style={{opacity: 0.5 * fade, alignItems: 'center', justifyContent: 'center'}}>
+    <AbsoluteFill style={{opacity: 0.6 * fade, alignItems: 'center', justifyContent: 'center'}}>
       <Img src={staticFile('shared/zakat_uruf.png')} style={{width: 1080, transform: `translateY(-40px) scale(${pop * push})`}} />
     </AbsoluteFill>
   );
