@@ -27,3 +27,10 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - `scripts/recaption.py <id> t0 t1` re-transcribes one window of the edited voice into captions.json
 - config edges written as `"96.70!"` are exact (not snapped to silence)
 - `scripts/prep-vivid.sh <id> raw.mov` – high-saturation, sharper grade (used for v7 final)
+
+## v11–v19 (Nov 2026) + house workflow
+- Full step-by-step workflow and the user's standing preferences: `.claude/skills/edit-video/SKILL.md`
+- Default grade is now **neutral** (no yellow skin, sharpness kept); BGM ducking lowered (0.045 under speech / 0.09 gaps)
+- Listening/verification tools: `scripts/at.py` (preview time → source), `scripts/hear.py` (transcribe edited voice),
+  `scripts/fine.py` (20 ms dB), `scripts/check-anchors.py`, `scripts/edl-captions.py`
+- Finals: `npm run render:v11` … `render:v19` (v16 aborted take, v17 superseded by v18)

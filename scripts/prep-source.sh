@@ -6,8 +6,9 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 ID="$1"; IN="$2"; OUT="public/$ID/source"; mkdir -p "$OUT" "data/$ID"
-GRADE="eq=contrast=1.07:saturation=1.14:brightness=0.012:gamma=0.98,colorbalance=rm=0.02:gm=0.005:bm=-0.025:rh=0.015:bh=-0.02,unsharp=5:5:0.7:5:5:0.0"
-ffmpeg -y -v error -i "$IN" -an -vf "scale=1080:1920:flags=lanczos,fps=30,$GRADE" -c:v libx264 -preset medium -crf 17 -g 15 -pix_fmt yuv420p "$OUT/video.mp4"
+# Neutral grade (default): natural skin — NO warm/yellow shift — light contrast, sharpness kept.
+GRADE="eq=contrast=1.05:saturation=1.04:brightness=0.005,colorbalance=rm=-0.01:bm=0.012:rh=-0.01:bh=0.01,unsharp=5:5:0.8:5:5:0.0"
+ffmpeg -y -v error -i "$IN" -an -vf "scale=1080:1920:flags=lanczos,fps=30,$GRADE" -c:v libx264 -preset medium -crf 16 -g 15 -pix_fmt yuv420p "$OUT/video.mp4"
 ffmpeg -y -v error -i "$IN" -vn -ac 1 -ar 48000 \
   -af "highpass=f=80,lowpass=f=14000,afftdn=nr=10:nf=-40,equalizer=f=200:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=2.5,acompressor=threshold=-20dB:ratio=3:attack=5:release=80:makeup=2,loudnorm=I=-15:TP=-1.5:LRA=7" \
   "$OUT/voice.wav"
