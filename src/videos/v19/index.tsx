@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, CtaCard, GItem, IconChartDown, IconShield, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
-import {BigStat, KineticHook, PillRow} from '../../engine/kit2';
+import {BigStat, KineticHook, PillRow, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconCoin, IconPin, IconTarget} from '../../engine/ui';
 
 const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
@@ -41,15 +41,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: 0.05, to: M.hook2 - 0.05, render: (d, r) => (
-    <BigStat dur={d} label="Kalau anda ada · tahun 2006" value={1} prefix="RM" suffix=" JUTA" countTo={r(M.juta) + 6} icon={<IconCoin size={84} />} />
-  )},
-  {from: M.hook2 - 0.05, to: E('hook2') + 0.15, render: (d, r) => (
-    <KineticHook dur={d} label="Adakah anda" size={64} words={[
-      {text: 'MASIH', at: r(M.masih)},
-      {text: 'JUTAWAN', at: r(M.jutawan), gold: true},
-      {text: 'PADA 2026?', at: r(M.y26)},
-    ]} />
+  {from: 0.0, to: E('hook2') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="RM1 juta pada tahun 2006" line1="MASIH JUTAWAN" line2="PADA 2026?" l2At={14} />
   )},
   {from: M.hook3 + 0.05, to: E('hook3') + 0.1, render: (d, r) => (
     <TitleCard dur={d} icon={<IconPin size={74} color="#F5C84C" />} label="Tonton sampai habis" title="SAVE VIDEO INI" size={64} gold={false} sub="untuk rujukan akan datang" subAt={r(M.save)} />
@@ -88,11 +81,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.4},
-  {t: M.juta, f: 'money_bag', v: 0.3},
-  {t: M.hook2 - 0.05, f: 'swoosh_fast', v: 0.3},
-  {t: M.jutawan, f: 'pop_hard', v: 0.28},
-  {t: M.y26, f: 'zoom_impact', v: 0.3},
+  {t: 0.0, f: 'whoosh_impact', v: 0.45},
+  {t: 0.1, f: 'tech_slide', v: 0.22},
+  {t: 0.2, f: 'zoom_impact', v: 0.32},
+  {t: 0.47, f: 'impact_deep', v: 0.26},
+  {t: 0.7, f: 'sparkle', v: 0.22},
   {t: M.hook3 + 0.05, f: 'pop_msg', v: 0.3},
   {t: M.save, f: 'shutter', v: 0.3},
   {t: M.y2006 + 0.05, f: 'news_intro', v: 0.2},
@@ -118,6 +111,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -128,5 +122,6 @@ export const v19: VideoDef = {
   punches: [M.juta, M.y26, M.kg145 + 0.5, M.kg154 + 0.5, M.menyusut, M.kekal],
   zoom: {hook: [1.1], hook2: [1.0], hook3: [1.06], y2006: [1.0], kini: [1.06, 1.0], inflasi: [1.0], nasihat: [1.06, 1.0], nasihat2: [1.0], cta: [1.06], cta2: [1.06], outro: [1.08]},
   music: {file: 'lofi04.mp3', startAt: 60},
+  focus: {to: E('hook2') + 0.15},
 };
 export const Jutawan: React.FC<EditProps> = (p) => <Edit def={v19} {...p} />;

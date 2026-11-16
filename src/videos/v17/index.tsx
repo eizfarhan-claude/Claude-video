@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {CtaCard, GItem, GoldProgress, GramTimeline, IconCalendar, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
-import {BigStat, VsCard} from '../../engine/kit2';
+import {BigStat, VsCard, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconCheck, IconCoin} from '../../engine/ui';
 
 const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
@@ -37,8 +37,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: 0.05, to: E('hook') + 0.15, render: (d, r) => (
-    <VsCard dur={d} a={{top: 'Kos haji · ringgit', main: 'MAHAL', at: r(M.mahal) - 4}} b={{top: 'Kos haji · emas', main: 'MURAH', at: r(M.murah) - 4}} winner="b" winAt={r(M.emas)} />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Kos haji" line1="MAHAL DALAM RINGGIT" line2="MURAH DALAM EMAS" l2At={14} />
   )},
   {from: M.y1998 + 0.05, to: E('y1998') + 0.15, render: (d, r) => (
     <BigStat dur={d} label="Kos haji · tahun 1998" value={8000} prefix="RM" countTo={r(M.rm8) + 10} sub="≈ 267 gram emas" subAt={r(M.g267)} icon={<IconCalendar size={80} />} />
@@ -67,10 +67,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.4},
-  {t: M.mahal - 0.13, f: 'bubble_pop', v: 0.3},
-  {t: M.murah - 0.13, f: 'bubble_pop', v: 0.3},
-  {t: M.emas, f: 'ding_correct', v: 0.26},
+  {t: 0.0, f: 'whoosh_impact', v: 0.45},
+  {t: 0.1, f: 'tech_slide', v: 0.22},
+  {t: 0.2, f: 'zoom_impact', v: 0.32},
+  {t: 0.47, f: 'impact_deep', v: 0.26},
+  {t: 0.7, f: 'sparkle', v: 0.22},
   {t: M.y1998 + 0.05, f: 'tech_slide', v: 0.32},
   {t: M.rm8, f: 'typing', v: 0.2},
   {t: M.g267, f: 'coin_notif', v: 0.26},
@@ -94,6 +95,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -104,5 +106,6 @@ export const v17: VideoDef = {
   punches: [M.murah, M.rm8, M.rm30, M.g50, M.bersedia, M.layak],
   zoom: {hook: [1.1], y1998: [1.0], kini: [1.06, 1.0], sedia: [1.07], plan: [1.0, 1.06], cta: [1.06]},
   music: {file: 'curiosity.mp3', startAt: 20},
+  focus: {to: E('hook') + 0.15},
 };
 export const KosHaji: React.FC<EditProps> = (p) => <Edit def={v17} {...p} />;

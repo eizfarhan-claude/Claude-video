@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, CtaCard, GItem, Schedule, StepCard, Subtitles, motionBusy} from '../../engine/kit';
-import {KineticHook, PillRow} from '../../engine/kit2';
+import {KineticHook, PillRow, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconClock, IconCoin} from '../../engine/ui';
 
 const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
@@ -32,11 +32,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: 0.05, to: E('hook') + 0.2, render: (d, r) => (
-    <KineticHook dur={d} label="Konsep akaun emas GAP" size={78} words={[
-      {text: 'DALAM', at: 4},
-      {text: '30 SAAT', at: r(M.n30), gold: true},
-    ]} />
+  {from: 0.0, to: E('hook') + 0.2, render: (d) => (
+    <TitleIntro dur={d} tag="Akaun Emas GAP" line1="KONSEP AKAUN GAP" line2="DALAM 30 SAAT" l2At={14} />
   )},
   {from: M.p1 + 0.05, to: E('p1') + 0.1, render: (d, r) => (
     <StepCard dur={d} n={1} total={3} title="MULA DENGAN RM100" sub="setiap tabungan → gram emas" subAt={r(M.gram) - 6} icon={<IconCoin size={80} />} />
@@ -61,9 +58,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.4},
-  {t: M.n30 - 0.2, f: 'pop_hard', v: 0.3},
-  {t: M.n30, f: 'zoom_impact', v: 0.32},
+  {t: 0.0, f: 'whoosh_impact', v: 0.45},
+  {t: 0.1, f: 'tech_slide', v: 0.22},
+  {t: 0.2, f: 'zoom_impact', v: 0.32},
+  {t: 0.47, f: 'impact_deep', v: 0.26},
+  {t: 0.7, f: 'sparkle', v: 0.22},
   {t: M.p1 + 0.05, f: 'tech_slide', v: 0.34},
   {t: M.rm100, f: 'coin_win', v: 0.3},
   {t: M.gram - 0.2, f: 'coins', v: 0.26},
@@ -82,6 +81,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -92,5 +92,6 @@ export const v12: VideoDef = {
   punches: [M.n30, M.rm100, M.withdraw, M.expiry],
   zoom: {hook: [1.1], p1: [1.0], p2: [1.06, 1.0], p3: [1.0, 1.06], cta: [1.07]},
   music: {file: 'curiosity.mp3', startAt: 2},
+  focus: {to: E('hook') + 0.2},
 };
 export const KonsepGap: React.FC<EditProps> = (p) => <Edit def={v12} {...p} />;

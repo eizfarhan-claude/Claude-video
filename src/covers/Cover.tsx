@@ -37,4 +37,12 @@ const CoverInner: React.FC<CoverProps> = ({id, frame, tag, line1, line2, sub}) =
 
 export const COVERS: Record<string, CoverProps> = {
   v11: {id: 'v11', frame: 192, tag: 'Akaun Emas GAP', line1: 'WAJIB MENABUNG', line2: 'SETIAP BULAN?', sub: 'Kalau ter-miss macam mana?'},
+  v12: {id: 'v12', frame: 71, tag: 'Akaun Emas GAP', line1: 'KONSEP AKAUN GAP', line2: 'DALAM 30 SAAT', sub: 'Faham semua dalam satu video'},
+  v13: {id: 'v13', frame: 234, tag: 'Penyimpan emas berilmu', line1: '3 SITUASI', line2: 'BOLEH JUAL EMAS', sub: 'Bukan sebab spekulasi harga'},
+  v14: {id: 'v14', frame: 226, tag: 'Harga emas paras terendah', line1: 'WAKTU TERBAIK', line2: 'BELI EMAS?', sub: 'Jawapannya bukan apa yang anda sangka'},
+  v15: {id: 'v15', frame: 197, tag: 'Nak daftar akaun emas?', line1: 'PATUT TUNGGU', line2: 'HARGA TERENDAH?', sub: 'Ramai yang tunggu, akhirnya tiada simpanan'},
+  v16: {id: 'v16', frame: 72, tag: 'Gaji dah masuk', line1: 'SIAPA ANDA', line2: 'BAYAR DULU?', sub: 'Rahsia orang berjaya kewangan'},
+  v17: {id: 'v17', frame: 472, tag: 'Kos haji', line1: 'MAHAL DALAM RINGGIT', line2: 'MURAH DALAM EMAS', sub: '1998 vs hari ini'},
+  v18: {id: 'v18', frame: 260, tag: '10 tahun lalu tak terfikir', line1: 'SIMPANAN 5 ANGKA', line2: 'DI USIA 20-AN', sub: 'Kisah sebenar penyimpan emas'},
+  v19: {id: 'v19', frame: 227, tag: 'RM1 juta pada tahun 2006', line1: 'MASIH JUTAWAN', line2: 'PADA 2026?', sub: 'Tonton sampai habis'},
 };

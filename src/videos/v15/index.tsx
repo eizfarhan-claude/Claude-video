@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, CtaCard, GItem, IconWarn, IconX, Schedule, Subtitles, TitleCard, WaveIcon, motionBusy} from '../../engine/kit';
-import {KineticHook, MythFact, VsCard} from '../../engine/kit2';
+import {KineticHook, MythFact, VsCard, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconArrowUp, IconCoin} from '../../engine/ui';
 
 const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
@@ -44,11 +44,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: 0.05, to: E('hook') + 0.15, render: (d, r) => (
-    <KineticHook dur={d} label="Patut tak tunggu" size={66} words={[
-      {text: 'HARGA', at: 4},
-      {text: 'TERENDAH?', at: r(M.terendah), gold: true},
-    ]} />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Nak daftar akaun emas?" line1="PATUT TUNGGU" line2="HARGA TERENDAH?" l2At={14} />
   )},
   {from: M.jawapan + 0.05, to: E('jawapan') + 0.15, render: (d, r) => (
     <TitleCard dur={d} icon={<IconX size={78} />} label="Jawapannya" title="TAK PERLU TUNGGU" size={60} gold={false} sub="yang tunggu → tak ada simpanan" subAt={r(M.ending)} />
@@ -87,8 +84,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.4},
-  {t: M.terendah, f: 'zoom_impact', v: 0.3},
+  {t: 0.0, f: 'whoosh_impact', v: 0.45},
+  {t: 0.1, f: 'tech_slide', v: 0.22},
+  {t: 0.2, f: 'zoom_impact', v: 0.32},
+  {t: 0.47, f: 'impact_deep', v: 0.26},
+  {t: 0.7, f: 'sparkle', v: 0.22},
   {t: M.jawapan + 0.05, f: 'whoosh_pop', v: 0.34},
   {t: M.tak, f: 'buzzer', v: 0.13},
   {t: M.ending, f: 'pop_msg', v: 0.28},
@@ -118,6 +118,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -128,5 +129,6 @@ export const v15: VideoDef = {
   punches: [M.terendah, M.tak, M.paralyzed, M.kg1, M.tetapi, M.miliki],
   zoom: {hook: [1.1], jawapan: [1.0], sebab: [1.07], sebab2: [1.0], '1kg': [1.06], fokus: [1.0], kaya: [1.0, 1.07], konsep: [1.0, 1.06], cta: [1.06, 1.0]},
   music: {file: 'mornings.mp3', startAt: 2},
+  focus: {to: E('hook') + 0.15},
 };
 export const TungguHarga: React.FC<EditProps> = (p) => <Edit def={v15} {...p} />;

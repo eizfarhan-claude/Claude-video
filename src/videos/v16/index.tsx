@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {Choices, GItem, IconChat, IconRepeat, IconShield, IconWallet, JourneyCard, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
-import {KineticHook, PillRow, VsCard} from '../../engine/kit2';
+import {KineticHook, PillRow, VsCard, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconCoin} from '../../engine/ui';
 
 const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
@@ -43,12 +43,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: 0.05, to: E('hook') + 0.15, render: (d, r) => (
-    <KineticHook dur={d} label="Gaji dah masuk" size={64} words={[
-      {text: 'SIAPA', at: r(M.siapa)},
-      {text: 'ANDA BAYAR', at: r(M.bayar)},
-      {text: 'DULU?', at: r(M.dulu), gold: true},
-    ]} />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Gaji dah masuk" line1="SIAPA ANDA" line2="BAYAR DULU?" l2At={14} />
   )},
   {from: M.p1 + 0.05, to: M.alihkan - 0.15, render: (d, r) => (
     <TitleCard dur={d} icon={<IconWallet size={84} />} label="Orang yang berjaya kewangan" title="BAYAR DIRI SENDIRI" size={58} sub="dulu — melalui simpanan" subAt={r(M.diri) + 6} shine />
@@ -90,9 +86,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.4},
-  {t: M.siapa, f: 'pop_hard', v: 0.26},
-  {t: M.dulu, f: 'zoom_impact', v: 0.3},
+  {t: 0.0, f: 'whoosh_impact', v: 0.45},
+  {t: 0.1, f: 'tech_slide', v: 0.22},
+  {t: 0.2, f: 'zoom_impact', v: 0.32},
+  {t: 0.47, f: 'impact_deep', v: 0.26},
+  {t: 0.7, f: 'sparkle', v: 0.22},
   {t: M.p1 + 0.05, f: 'tech_slide', v: 0.32},
   {t: M.diri + 0.2, f: 'sparkle', v: 0.22},
   {t: M.alihkan - 0.15, f: 'swoosh_fast', v: 0.28},
@@ -119,6 +117,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -129,5 +128,6 @@ export const v16: VideoDef = {
   punches: [M.dulu, M.berjaya, M.lain, M.automatik, M.whatever, M.diri2],
   zoom: {hook: [1.1], p1: [1.0, 1.06], p2: [1.07], auto: [1.0, 1.06], paksa: [1.08], lebih: [1.0], utama: [1.06], outro: [1.08]},
   music: {file: 'bgm.mp3', startAt: 150},
+  focus: {to: E('hook') + 0.15},
 };
 export const BayarDiri: React.FC<EditProps> = (p) => <Edit def={v16} {...p} />;

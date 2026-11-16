@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, CtaCard, GItem, IconHouse, IconWarn, Schedule, StepCard, Subtitles, TitleCard, motionBusy, IconGrad} from '../../engine/kit';
-import {MythFact, PillRow} from '../../engine/kit2';
+import {MythFact, PillRow, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconCoin, IconTarget} from '../../engine/ui';
 
 const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
@@ -42,8 +42,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: 0.05, to: E('hook2') + 0.2, render: (d, r) => (
-    <MythFact dur={d} mythLabel="Penyimpan emas berilmu TAK simpan untuk" myth="SPEKULASI HARGA" strikeAt={r(M.spek)} factLabel="Dia jual emas hanya bila" fact="3 SITUASI INI" factAt={r(M.tiga) - 4} />
+  {from: 0.0, to: E('hook2') + 0.2, render: (d) => (
+    <TitleIntro dur={d} tag="Penyimpan emas berilmu" line1="3 SITUASI" line2="BOLEH JUAL EMAS" l2At={14} />
   )},
   {from: M.s1 + 0.05, to: E('s1') + 0.1, render: (d, r) => (
     <StepCard dur={d} n={1} total={3} title="UPGRADE INVESTMENT" sub="hartanah · bisnes → passive income" subAt={r(M.hartanah)} icon={<IconHouse size={78} />} />
@@ -80,10 +80,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.4},
-  {t: M.spek, f: 'swoosh_accent', v: 0.34},
-  {t: M.spek + 0.1, f: 'buzzer', v: 0.14},
-  {t: M.tiga - 0.13, f: 'zoom_impact', v: 0.32},
+  {t: 0.0, f: 'whoosh_impact', v: 0.45},
+  {t: 0.1, f: 'tech_slide', v: 0.22},
+  {t: 0.2, f: 'zoom_impact', v: 0.32},
+  {t: 0.47, f: 'impact_deep', v: 0.26},
+  {t: 0.7, f: 'sparkle', v: 0.22},
   {t: M.s1 + 0.05, f: 'tech_slide', v: 0.34},
   {t: M.hartanah, f: 'pop_msg', v: 0.3},
   {t: M.s2 + 0.05, f: 'tech_slide', v: 0.34},
@@ -108,6 +109,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -118,5 +120,6 @@ export const v13: VideoDef = {
   punches: [M.tiga, M.upgrade, M.matlamat, M.jual, M.kecemasan, M.medium],
   zoom: {hook: [1.1], hook2: [1.0], s1: [1.0, 1.06], s2: [1.06, 1.0], s3: [1.0], recap: [1.07], recap2: [1.0], cta: [1.06]},
   music: {file: 'bgm.mp3', startAt: 95},
+  focus: {to: E('hook2') + 0.2},
 };
 export const TigaSituasi: React.FC<EditProps> = (p) => <Edit def={v13} {...p} />;

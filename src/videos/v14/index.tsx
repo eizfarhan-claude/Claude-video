@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {CtaCard, GItem, IconChartDown, IconGift, IconWallet, IconX, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
-import {KineticHook, MythFact, VsCard} from '../../engine/kit2';
+import {KineticHook, MythFact, VsCard, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconClock, IconCoin} from '../../engine/ui';
 
 const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
@@ -44,8 +44,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: 0.05, to: E('hook') + 0.15, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconChartDown size={88} />} label="Beberapa hari ini" title="HARGA EMAS TERENDAH" size={60} gold={false} />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Harga emas paras terendah" line1="WAKTU TERBAIK" line2="BELI EMAS?" l2At={14} />
   )},
   {from: M.masalah + 0.05, to: M.adakah - 0.15, render: (d, r) => (
     <TitleCard dur={d} icon={<IconWallet size={84} />} label="Tapi ramai tak dapat grab" title="TENGAH BULAN" size={62} gold={false} sub="hujung gaji" subAt={r(M.hujung)} />
@@ -80,8 +80,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.4},
-  {t: M.terendah, f: 'impact_deep', v: 0.24},
+  {t: 0.0, f: 'whoosh_impact', v: 0.45},
+  {t: 0.1, f: 'tech_slide', v: 0.22},
+  {t: 0.2, f: 'zoom_impact', v: 0.32},
+  {t: 0.47, f: 'impact_deep', v: 0.26},
+  {t: 0.7, f: 'sparkle', v: 0.22},
   {t: M.masalah + 0.05, f: 'tech_slide', v: 0.3},
   {t: M.hujung, f: 'pop_msg', v: 0.3},
   {t: M.adakah - 0.15, f: 'swoosh_fast', v: 0.3},
@@ -109,6 +112,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -119,5 +123,6 @@ export const v14: VideoDef = {
   punches: [M.terendah, M.terbaik, M.bonus, M.gram, M.tetapi, M.bila],
   zoom: {hook: [1.1], masalah: [1.0, 1.06], jawapan: [1.06], strategi: [1.0], dca: [1.06], waktu: [1.0, 1.06], waktu2: [1.07], cta: [1.0]},
   music: {file: 'lofi04.mp3', startAt: 4},
+  focus: {to: E('hook') + 0.15},
 };
 export const WaktuTerbaik: React.FC<EditProps> = (p) => <Edit def={v14} {...p} />;
