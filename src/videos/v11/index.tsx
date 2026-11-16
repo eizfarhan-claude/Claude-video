@@ -132,5 +132,6 @@ export const v11: VideoDef = {
   punches: [0.47, M.wajib, M.miss, M.takw, M.min, M.paksa],
   zoom: {hook: [1.1], intro: [1.0], tak_wajib: [1.07], termiss: [1.0, 1.06], platform: [1.07], fleksibel: [1.0, 1.06], kerap: [1.06, 1.0], konsisten: [1.0, 1.07], cta: [1.06]},
   music: {file: 'bgm.mp3', startAt: 40},
+  focus: {to: E('hook') + 0.1},
 };
 export const WajibMenabung: React.FC<EditProps> = (p) => <Edit def={v11} {...p} />;

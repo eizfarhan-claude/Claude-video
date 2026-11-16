@@ -45,4 +45,5 @@ mus() { [ -s "public/music/$1.mp3" ] || curl -sfL "https://assets.mixkit.co/musi
 mus curiosity 480        # "Curiosity"
 mus mornings 33          # "Motivating Mornings"
 mus lofi04 766           # "Lo-Fi 04"
+mkdir -p raw; [ -s raw/selfie_multiclass.tflite ] || curl -sfL -o raw/selfie_multiclass.tflite https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/latest/selfie_multiclass_256x256.tflite  # person segmentation for intro focus
 echo "assets ok"
