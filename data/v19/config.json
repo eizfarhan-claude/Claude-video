@@ -1,0 +1,83 @@
+{
+ "id": "v19",
+ "title": "Jutawan 2006 vs 2026",
+ "ranges": [
+  [
+   "hook",
+   1.14,
+   3.95
+  ],
+  [
+   "hook2",
+   6.42,
+   9.75
+  ],
+  [
+   "hook3",
+   10.9,
+   "16.8!"
+  ],
+  [
+   "y2006",
+   42.14,
+   "54.1!"
+  ],
+  [
+   "kini",
+   59.12,
+   71.3
+  ],
+  [
+   "inflasi",
+   87.6,
+   96.3
+  ],
+  [
+   "nasihat",
+   116.16,
+   "131.88!"
+  ],
+  [
+   "nasihat2",
+   132.22,
+   140.85
+  ],
+  [
+   "cta",
+   141.05,
+   "147.0!"
+  ],
+  [
+   "cta2",
+   150.86,
+   155.95
+  ],
+  [
+   "outro",
+   "163.3!",
+   167.6
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "menabur": "menabung",
+  "menapus": "menabung",
+  "napus": "menabung",
+  "menabuh": "menabung",
+  "menampuk": "menabung",
+  "gap": "GAP",
+  "Gap": "GAP",
+  "jeb": "GAP",
+  "muscap": "GAP",
+  "penyimpat": "penyimpan",
+  "penipu": "penyimpan",
+  "penyipat": "penyimpan",
+  "beg": "bag",
+  "film": "pin",
+  "sendah": "serendah",
+  "gerai": "gram",
+  "bocu": "bocor"
+ },
+ "drop": [],
+ "pad_out": 0.2
+}

@@ -13,7 +13,16 @@
     "preview:v7": "remotion render Checkpoint out/preview_Checkpoint.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v8": "remotion render HargaJatuh out/preview_HargaJatuh.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v9": "remotion render SatuGram out/preview_SatuGram.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
-    "preview:v10": "remotion render TigaRisiko out/preview_TigaRisiko.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
+    "preview:v10": "remotion render TigaRisiko out/preview_TigaRisiko.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v11": "remotion render WajibMenabung out/preview_WajibMenabung.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v12": "remotion render KonsepGap out/preview_KonsepGap.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v13": "remotion render TigaSituasi out/preview_TigaSituasi.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v14": "remotion render WaktuTerbaik out/preview_WaktuTerbaik.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v15": "remotion render TungguHarga out/preview_TungguHarga.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v16": "remotion render BayarDiri out/preview_BayarDiri.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v17": "remotion render KosHaji out/preview_KosHaji.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v18": "remotion render LimaAngka out/preview_LimaAngka.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v19": "remotion render Jutawan out/preview_Jutawan.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.3.0",

@@ -1,0 +1,81 @@
+{
+ "id": "v11",
+ "title": "Wajib Menabung Setiap Bulan?",
+ "ranges": [
+  [
+   "hook",
+   0.84,
+   7.68
+  ],
+  [
+   "intro",
+   19.92,
+   27.44
+  ],
+  [
+   "tak_wajib",
+   27.44,
+   30.4
+  ],
+  [
+   "termiss",
+   "38.85!",
+   44.75
+  ],
+  [
+   "platform",
+   44.96,
+   48.15
+  ],
+  [
+   "fleksibel",
+   "50.12!",
+   57.25
+  ],
+  [
+   "kerap",
+   60.16,
+   67.25
+  ],
+  [
+   "konsisten",
+   71.94,
+   80.55
+  ],
+  [
+   "cta",
+   "83.85!",
+   89.95
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "menabur": "menabung",
+  "menapus": "menabung",
+  "napus": "menabung",
+  "menabuh": "menabung",
+  "menampuk": "menabung",
+  "gap": "GAP",
+  "Gap": "GAP",
+  "jeb": "GAP",
+  "muscap": "GAP",
+  "penyimpat": "penyimpan",
+  "penipu": "penyimpan",
+  "penyipat": "penyimpan",
+  "beg": "bag",
+  "film": "pin",
+  "sendah": "serendah",
+  "gerai": "gram",
+  "bocu": "bocor",
+  "termis": "ter-miss",
+  "termis,": "ter-miss,",
+  "kemimpin": "komitmen",
+  "membulanan": "bulanan",
+  "kau": "mula",
+  "sistem": "",
+  "aku": "komitmen",
+  "ambil": ""
+ },
+ "drop": [],
+ "pad_out": 0.2
+}

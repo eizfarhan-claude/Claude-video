@@ -1,0 +1,33 @@
+[
+ {
+  "find": [
+   "komitmen",
+   "ambil",
+   "bulanan."
+  ],
+  "replace": [
+   "komitmen",
+   "bulanan."
+  ]
+ },
+ {
+  "find": [
+   "inilah"
+  ],
+  "replace": [
+   "ini"
+  ]
+ },
+ {
+  "find": [
+   "so",
+   "anda",
+   "kata"
+  ],
+  "replace": [
+   "so",
+   "andai",
+   "kata"
+  ]
+ }
+]

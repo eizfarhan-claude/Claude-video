@@ -1,0 +1,82 @@
+{
+ "id": "v18",
+ "title": "Simpanan 5 Angka Usia 20-an",
+ "ranges": [
+  [
+   "hook",
+   5.2,
+   10.4
+  ],
+  [
+   "dulu",
+   11.12,
+   16.6
+  ],
+  [
+   "kisah",
+   17.46,
+   32.9
+  ],
+  [
+   "sharing",
+   46.54,
+   58.05
+  ],
+  [
+   "semua",
+   68.08,
+   79.6
+  ],
+  [
+   "mudah",
+   79.94,
+   86.9
+  ],
+  [
+   "bocor",
+   92.06,
+   112.9
+  ],
+  [
+   "berita",
+   118.1,
+   125.5
+  ],
+  [
+   "cta",
+   128.42,
+   "136.62!"
+  ]
+ ],
+ "cuts": [
+  [
+   110.1,
+   110.88
+  ]
+ ],
+ "fix": {
+  "menabur": "menabung",
+  "menapus": "menabung",
+  "napus": "menabung",
+  "menabuh": "menabung",
+  "menampuk": "menabung",
+  "gap": "GAP",
+  "Gap": "GAP",
+  "jeb": "GAP",
+  "muscap": "GAP",
+  "penyimpat": "penyimpan",
+  "penipu": "penyimpan",
+  "penyipat": "penyimpan",
+  "beg": "bag",
+  "film": "pin",
+  "sendah": "serendah",
+  "gerai": "gram",
+  "bocu": "bocor",
+  "liperin": "terfikir",
+  "PTBTN,": "PTPTN,",
+  "pencik": "pencen",
+  "ke": "ada"
+ },
+ "drop": [],
+ "pad_out": 0.2
+}

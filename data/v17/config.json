@@ -1,0 +1,59 @@
+{
+ "id": "v17",
+ "title": "Kos Haji Dalam Emas",
+ "ranges": [
+  [
+   "hook",
+   "12.9!",
+   19.5
+  ],
+  [
+   "y1998",
+   48.52,
+   "58.5!"
+  ],
+  [
+   "kini",
+   59.04,
+   77.6
+  ],
+  [
+   "sedia",
+   "81.85!",
+   87.95
+  ],
+  [
+   "plan",
+   "103.4!",
+   119.4
+  ],
+  [
+   "cta",
+   120.04,
+   129.95
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "menabur": "menabung",
+  "menapus": "menabung",
+  "napus": "menabung",
+  "menabuh": "menabung",
+  "menampuk": "menabung",
+  "gap": "GAP",
+  "Gap": "GAP",
+  "jeb": "GAP",
+  "muscap": "GAP",
+  "penyimpat": "penyimpan",
+  "penipu": "penyimpan",
+  "penyipat": "penyimpan",
+  "beg": "bag",
+  "film": "pin",
+  "sendah": "serendah",
+  "gerai": "gram",
+  "bocu": "bocor",
+  "danah": "dana"
+ },
+ "drop": [],
+ "pad_out": 0.2
+}

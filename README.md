@@ -27,3 +27,11 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - `scripts/recaption.py <id> t0 t1` re-transcribes one window of the edited voice into captions.json
 - config edges written as `"96.70!"` are exact (not snapped to silence)
 - `scripts/prep-vivid.sh <id> raw.mov` – high-saturation, sharper grade (used for v7 final)
+
+## v11 – v19 (batch 3)
+- `VIVID=1 scripts/prep-source.sh <id> raw.mov` – one-pass vivid grade (same look as v7 final)
+- `scripts/fetch-assets.sh` now also pulls a premium SFX layer (cinematic whoosh-impact, zoom impact, tech slide, UI clicks, coin win, glitch, shutter, heartbeat…) and 3 alternate music beds (`curiosity`, `mornings`, `lofi04`)
+- `src/engine/kit2.tsx` – new cards: `BigStat` (counting number), `MythFact` (strike-through → fact), `VsCard`, `KineticHook`, `PillRow`
+- anchors (`at()`) now come from `captions.json` (re-transcribed edited voice), so graphics land exactly on what is heard
+- `scripts/postfix-captions.py <id>` – exact word-sequence fixes from `data/<id>/caption_post.json` (run after build-captions)
+- v11 `WajibMenabung` · v12 `KonsepGap` · v13 `TigaSituasi` · v14 `WaktuTerbaik` · v15 `TungguHarga` · v16 `BayarDiri` · v17 `KosHaji` · v18 `LimaAngka` · v19 `Jutawan` — `npm run preview:v11` … `preview:v19`
