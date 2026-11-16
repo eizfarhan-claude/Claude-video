@@ -139,3 +139,42 @@ export const PillRow: React.FC<{dur: number; label: string; pills: {text: string
     </TopBand>
   );
 };
+
+/* ---------- title intro: cinematic hook title for the first seconds (top band, never over the face) ---------- */
+/** Flash + gold line sweep, tag drops in, line 1 slams in (blur→sharp), line 2 (gold) slams in, shine, gentle float. */
+export const TitleIntro: React.FC<{dur: number; tag: string; line1: string; line2: string; l2At?: number}> = ({dur, tag, line1, line2, l2At = 14}) => {
+  const {v, frame} = useEnvelope(dur, 10);
+  const ease = (a: number, b: number) => interpolate(frame, [a, b], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+  const line = ease(0, 10);
+  const tagP = usePop(3, 10);
+  const slam = (at: number) => {
+    const k = interpolate(frame - at, [0, 7], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(1.8))});
+    return {opacity: Math.min(1, k * 2), transform: `scale(${1.7 - 0.7 * k})`, filter: `blur(${(1 - Math.min(1, k)) * 14}px)`};
+  };
+  const fit = (t: string, max: number) => Math.min(max, Math.floor(860 / (0.7 * t.length)));
+  const sh = interpolate(frame, [l2At + 6, l2At + 32], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const float = Math.sin(frame / 14) * 3;
+  const glow = interpolate(frame, [l2At, l2At + 10, l2At + 30], [0, 1, 0.35], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return (
+    <TopBand v={v}>
+      <div style={{position: 'relative', width: 920, transform: `translateY(${float}px)`}}>
+        {/* gold line sweeping out from the centre */}
+        <div style={{position: 'absolute', left: '50%', top: -10, height: 6, borderRadius: 3, width: 900 * line, transform: 'translateX(-50%)', background: 'linear-gradient(90deg,transparent,#F7D774,#FFF1B8,#F7D774,transparent)', boxShadow: '0 0 24px rgba(247,215,116,0.9)'}} />
+        <Card style={{padding: "14px 26px 16px", textAlign: 'center', position: 'relative', overflow: 'hidden', boxShadow: `0 18px 50px rgba(0,0,0,0.45), 0 0 ${60 * glow}px rgba(247,215,116,${0.55 * glow})`}}>
+          <div style={{display: 'inline-block', background: GOLD_SOLID, color: '#2a1a00', borderRadius: 14, padding: '4px 16px', fontFamily: FONT2, fontWeight: 700, fontSize: 24, letterSpacing: 2, textTransform: 'uppercase', ...popStyle(tagP)}}>{tag}</div>
+          <div style={{fontFamily: FONT, fontWeight: 900, fontSize: fit(line1, 80), lineHeight: 1.05, color: 'white', marginTop: 8, whiteSpace: 'nowrap', ...slam(6)}}>{line1}</div>
+          <div style={{marginTop: 2, ...slam(l2At)}}><GoldText size={fit(line2, 96)} style={{whiteSpace: 'nowrap'}}>{line2}</GoldText></div>
+          <Shine progress={sh} />
+        </Card>
+      </div>
+    </TopBand>
+  );
+};
+
+/** quick full-frame light flash at the very start (transient, 8 frames) */
+export const IntroFlash: React.FC = () => {
+  const f = useCurrentFrame();
+  const o = interpolate(f, [0, 2, 9], [0, 0.55, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  if (f > 10) return null;
+  return <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 22%, rgba(255,241,184,1) 0%, rgba(247,215,116,0.6) 35%, rgba(0,0,0,0) 70%)', opacity: o, pointerEvents: 'none'}} />;
+};

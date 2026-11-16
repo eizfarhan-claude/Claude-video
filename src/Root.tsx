@@ -1,5 +1,6 @@
 import React from 'react';
-import {Composition} from 'remotion';
+import {Composition, Still} from 'remotion';
+import {Cover, COVERS} from './covers/Cover';
 import {EditProps} from './engine/Edit';
 import {GoldDinar, v1} from './videos/v1';
 import {Umrah, v2} from './videos/v2';
@@ -45,5 +46,11 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="KosHaji" component={KosHaji} durationInFrames={v17.tl.total} {...common} />
     <Composition id="LimaAngka" component={LimaAngka} durationInFrames={v18.tl.total} {...common} />
     <Composition id="Jutawan" component={Jutawan} durationInFrames={v19.tl.total} {...common} />
+    {Object.entries(COVERS).map(([id, c]) => (
+      <React.Fragment key={id}>
+        <Still id={`cover-tt-${id}`} component={Cover} width={1080} height={1920} defaultProps={c} />
+        <Still id={`cover-ig-${id}`} component={Cover} width={1080} height={1350} defaultProps={c} />
+      </React.Fragment>
+    ))}
   </>
 );

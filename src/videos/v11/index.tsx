@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, Choices, CtaCard, GItem, IconCalendar, IconWarn, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
-import {KineticHook, MythFact, PillRow} from '../../engine/kit2';
+import {IntroFlash, MythFact, PillRow, TitleIntro} from '../../engine/kit2';
 import {IconBank, IconCoin, IconTarget} from '../../engine/ui';
 
 // anchors come from the captions (re-transcribed EDITED voice) so they match exactly what is heard
@@ -43,12 +43,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: 0.05, to: M.kalau - 0.1, render: (d, r) => (
-    <KineticHook dur={d} label="Ramai tanya · akaun emas GAP" size={60} words={[
-      {text: 'WAJIB', at: 4, gold: true},
-      {text: 'MENABUNG', at: r(M.wajib)},
-      {text: 'SETIAP BULAN?', at: r(M.setiap)},
-    ]} />
+  {from: 0.0, to: M.kalau - 0.1, render: (d) => (
+    <TitleIntro dur={d} tag="Akaun Emas GAP" line1="WAJIB MENABUNG" line2="SETIAP BULAN?" l2At={14} />
   )},
   {from: M.kalau - 0.1, to: E('hook') + 0.15, render: (d, r) => (
     <TitleCard dur={d} icon={<IconWarn size={84} />} label="Kalau" title="TER-MISS?" gold={false} size={76} sub="macam mana?" subAt={r(M.miss) + 8} />
@@ -92,9 +88,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.42},
-  {t: M.wajib, f: 'zoom_impact', v: 0.3},
-  {t: M.setiap, f: 'pop_hard', v: 0.3},
+  {t: 0.0, f: 'whoosh_impact', v: 0.45},
+  {t: 0.1, f: 'tech_slide', v: 0.22},
+  {t: 0.2, f: 'zoom_impact', v: 0.32},
+  {t: 0.47, f: 'impact_deep', v: 0.26},
+  {t: 0.7, f: 'sparkle', v: 0.22},
   {t: M.kalau - 0.1, f: 'swoosh_fast', v: 0.3},
   {t: M.miss, f: 'glitch_text', v: 0.16},
   {t: M.intro + 0.05, f: 'tech_slide', v: 0.34},
@@ -123,6 +121,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -130,7 +129,7 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 
 export const v11: VideoDef = {
   id: 'v11', tl, Overlays, sfx: SFX,
-  punches: [M.wajib, M.miss, M.takw, M.min, M.paksa],
+  punches: [0.47, M.wajib, M.miss, M.takw, M.min, M.paksa],
   zoom: {hook: [1.1], intro: [1.0], tak_wajib: [1.07], termiss: [1.0, 1.06], platform: [1.07], fleksibel: [1.0, 1.06], kerap: [1.06, 1.0], konsisten: [1.0, 1.07], cta: [1.06]},
   music: {file: 'bgm.mp3', startAt: 40},
 };
