@@ -131,7 +131,7 @@ export const v18: VideoDef = {
   id: 'v18', tl, Overlays, sfx: SFX,
   punches: [M.dicapai, M.angka, M.n30, M.g30, M.bocorW, M.rm100],
   zoom: {hook: [1.1], dulu: [1.0], kisah: [1.06, 1.0], sharing: [1.0], semua: [1.06], mudah: [1.0], bocor: [1.07, 1.0], berita: [1.0], cta: [1.06]},
-  music: {file: 'bgm.mp3', startAt: 60},
+  music: {file: 'curiosity.mp3', startAt: 0},
   focus: {to: E('hook') + 0.1},
 };
 export const LimaAngka: React.FC<EditProps> = (p) => <Edit def={v18} {...p} />;
