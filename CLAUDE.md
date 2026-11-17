@@ -2,7 +2,8 @@
 
 The owner sends raw talking-head clips (Google Drive links, Malay; speaker stutters a lot). Every new video
 follows this brief without being asked again. **Reply to the owner in Malay.**
-Full step-by-step procedure, tools and lessons learned: **`.claude/skills/edit-video/SKILL.md`** — load it before
+Full step-by-step procedure, tools and lessons learned: **`.claude/skills/edit-video/SKILL.md`**; the opening and the
+covers have their own skills: **`.claude/skills/title-intro/SKILL.md`** and **`.claude/skills/cover/SKILL.md`**. Load them before
 editing anything.
 
 ## Workflow (always in this order)

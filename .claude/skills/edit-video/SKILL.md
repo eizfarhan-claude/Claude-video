@@ -75,6 +75,7 @@ KineticHook, PillRow, GramTimeline, GoldProgress, JourneyCard, CtaCard (pin + "I
 Full-frame: `ShotCut` (screenshot, blurred backdrop, label, pulsing highlight box — appear exactly when the thing
 is said, e.g. on "30 gram"), `BrollCut` (muted clip; cards stay on top).
 Then `python3 scripts/cutout-focus.py v20` (person cut-outs for the blurred-background intro).
+Details: `title-intro` skill (opening) and `cover` skill (TT/IG covers).
 
 ## 5. Preview → review → final
 ```bash
