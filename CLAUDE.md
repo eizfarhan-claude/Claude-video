@@ -16,7 +16,7 @@ without being asked again. Reply to the owner in Malay.
 
 ## Every video must have
 - **Animated hook title intro** at the very start: `TitleIntro` (tag + line 1 white + line 2 gold, slam-in,
-  gold line sweep, shine) + `IntroFlash`, with whoosh-impact / zoom-impact / deep-impact / sparkle SFX.
+  gold line sweep, shine) + `IntroFlash`, with whoosh-impact / zoom-impact / deep-impact / sparkle SFX kept subtle (≈0.26/0.18/0.13/0.12 — owner asked for softer intro SFX).
   Title = the video's hook question/promise. It replaces any other card during the hook.
 - **Intro focus**: background blurs and the speaker is pushed forward during the hook
   (`focus: {to: E('hook') + 0.1}` in the VideoDef, then `python3 scripts/cutout-focus.py <id>` — generates the

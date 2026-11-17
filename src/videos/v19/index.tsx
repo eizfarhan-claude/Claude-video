@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, CtaCard, GItem, IconChartDown, IconShield, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
-import {BigStat, KineticHook, PillRow, IntroFlash, TitleIntro} from '../../engine/kit2';
+import {BigStat, BrollCut, KineticHook, PillRow, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconCoin, IconPin, IconTarget} from '../../engine/ui';
 
 const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
@@ -29,7 +29,7 @@ const M = {
   nasihat: S('nasihat'),
   kekal: at('nasihat', 'kekal'),
   tukarkan: at('nasihat', 'tukarkan'),
-  terjamin: at('nasihat', 'terjamin'),
+  terjamin: at('nasihat', 'selamat'),
   inflasiW: at('nasihat', 'inflasi'),
   nasihat2: S('nasihat2'),
   ekonomi: at('nasihat2', 'ekonomi'),
@@ -61,7 +61,7 @@ const ITEMS: GItem[] = [
   )},
   {from: M.tukarkan - 0.1, to: E('nasihat') + 0.15, render: (d, r) => (
     <ChecklistCard dur={d} label="Tukar ke simpanan emas" rows={[
-      {text: 'Simpanan lebih terjamin', at: r(M.terjamin)},
+      {text: 'Simpanan lebih selamat', at: r(M.terjamin)},
       {text: 'Selamat daripada inflasi', at: r(M.inflasiW)},
     ]} />
   )},
@@ -81,11 +81,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.45},
-  {t: 0.1, f: 'tech_slide', v: 0.22},
-  {t: 0.2, f: 'zoom_impact', v: 0.32},
-  {t: 0.47, f: 'impact_deep', v: 0.26},
-  {t: 0.7, f: 'sparkle', v: 0.22},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
   {t: M.hook3 + 0.05, f: 'pop_msg', v: 0.3},
   {t: M.save, f: 'shutter', v: 0.3},
   {t: M.y2006 + 0.05, f: 'news_intro', v: 0.2},
@@ -112,6 +112,7 @@ const SFX: Sfx[] = [
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
     <IntroFlash />
+    <BrollCut src="v19/broll/gold1kg.mp4" from={M.kg154 - 0.1} to={E('kini') + 0.1} srcStart={1.5} />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>

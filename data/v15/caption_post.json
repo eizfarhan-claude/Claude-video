@@ -1,0 +1,12 @@
+[
+ {
+  "find": [
+   "sipat",
+   "emas"
+  ],
+  "replace": [
+   "simpanan",
+   "emas"
+  ]
+ }
+]

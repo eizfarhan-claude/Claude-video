@@ -58,11 +58,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.45},
-  {t: 0.1, f: 'tech_slide', v: 0.22},
-  {t: 0.2, f: 'zoom_impact', v: 0.32},
-  {t: 0.47, f: 'impact_deep', v: 0.26},
-  {t: 0.7, f: 'sparkle', v: 0.22},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
   {t: M.p1 + 0.05, f: 'tech_slide', v: 0.34},
   {t: M.rm100, f: 'coin_win', v: 0.3},
   {t: M.gram - 0.2, f: 'coins', v: 0.26},

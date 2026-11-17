@@ -8,7 +8,7 @@ import {ChecklistCard, CtaCard, GItem, IconHouse, IconWarn, Schedule, StepCard, 
 import {MythFact, PillRow, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconCoin, IconTarget} from '../../engine/ui';
 
-const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
+const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 6);
 const {at, sectionStart: S, sectionEnd: E} = tl;
 
 const M = {
@@ -31,7 +31,7 @@ const M = {
   kecemasan: at('s3', 'kecemasan'),
   habis: at('s3', 'kehabisan'),
   recap: S('recap'),
-  medium: at('recap', 'medium'),
+  medium: at('recap', 'kelebihan'),
   recap2: S('recap2'),
   pendapatan: at('recap2', 'pendapatan'),
   capai: at('recap2', 'capai'),
@@ -80,11 +80,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.45},
-  {t: 0.1, f: 'tech_slide', v: 0.22},
-  {t: 0.2, f: 'zoom_impact', v: 0.32},
-  {t: 0.47, f: 'impact_deep', v: 0.26},
-  {t: 0.7, f: 'sparkle', v: 0.22},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
   {t: M.s1 + 0.05, f: 'tech_slide', v: 0.34},
   {t: M.hartanah, f: 'pop_msg', v: 0.3},
   {t: M.s2 + 0.05, f: 'tech_slide', v: 0.34},

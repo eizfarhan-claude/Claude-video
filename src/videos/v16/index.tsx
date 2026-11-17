@@ -28,8 +28,8 @@ const M = {
   automatik: at('auto', 'automatik'),
   dapat: at('auto', 'dapat'),
   autoW: at('auto', 'auto'),
-  simpanan: at('auto', 'simpanan'),
-  konsisten: at('auto', 'konsisten'),
+  simpanan: at('auto', 'simpanan', 0),
+  konsisten: at('auto', 'ditukarkan'),
   paksa: S('paksa'),
   paksaW: at('paksa', 'paksa'),
   whatever: at('paksa', 'whatever'),
@@ -86,11 +86,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.45},
-  {t: 0.1, f: 'tech_slide', v: 0.22},
-  {t: 0.2, f: 'zoom_impact', v: 0.32},
-  {t: 0.47, f: 'impact_deep', v: 0.26},
-  {t: 0.7, f: 'sparkle', v: 0.22},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
   {t: M.p1 + 0.05, f: 'tech_slide', v: 0.32},
   {t: M.diri + 0.2, f: 'sparkle', v: 0.22},
   {t: M.alihkan - 0.15, f: 'swoosh_fast', v: 0.28},

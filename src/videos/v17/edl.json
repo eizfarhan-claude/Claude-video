@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2059,
+ "durationInFrames": 2049,
  "clips": [
   {
    "section": "hook",
@@ -29,20 +29,20 @@
   {
    "section": "plan",
    "srcFrom": 3102,
-   "durationInFrames": 163,
+   "durationInFrames": 145,
    "outFrom": 1266
   },
   {
    "section": "plan",
-   "srcFrom": 3271,
-   "durationInFrames": 315,
-   "outFrom": 1429
+   "srcFrom": 3272,
+   "durationInFrames": 323,
+   "outFrom": 1411
   },
   {
    "section": "cta",
    "srcFrom": 3598,
    "durationInFrames": 315,
-   "outFrom": 1744
+   "outFrom": 1734
   }
  ],
  "words": [
@@ -564,332 +564,332 @@
   },
   {
    "text": "saranan",
-   "start": 47.633,
-   "end": 48.04,
+   "start": 47.033,
+   "end": 47.407,
    "section": "plan"
   },
   {
    "text": "saya",
-   "start": 48.04,
-   "end": 48.26,
+   "start": 47.407,
+   "end": 47.627,
    "section": "plan"
   },
   {
    "text": "tukar",
-   "start": 48.26,
-   "end": 48.96,
+   "start": 47.627,
+   "end": 48.327,
    "section": "plan"
   },
   {
    "text": "dalam",
-   "start": 48.96,
-   "end": 49.1,
+   "start": 48.327,
+   "end": 48.467,
    "section": "plan"
   },
   {
    "text": "bentuk",
-   "start": 49.1,
-   "end": 49.4,
+   "start": 48.467,
+   "end": 48.767,
    "section": "plan"
   },
   {
    "text": "simpanan",
-   "start": 49.4,
-   "end": 49.82,
+   "start": 48.767,
+   "end": 49.187,
    "section": "plan"
   },
   {
    "text": "emas",
-   "start": 49.82,
-   "end": 50.12,
+   "start": 49.187,
+   "end": 49.487,
    "section": "plan"
   },
   {
    "text": "terus",
-   "start": 50.12,
-   "end": 50.54,
+   "start": 49.487,
+   "end": 49.907,
    "section": "plan"
   },
   {
    "text": "target",
-   "start": 50.54,
-   "end": 50.9,
+   "start": 49.907,
+   "end": 50.267,
    "section": "plan"
   },
   {
    "text": "50",
-   "start": 50.9,
-   "end": 51.34,
+   "start": 50.267,
+   "end": 50.707,
    "section": "plan"
   },
   {
    "text": "gram",
-   "start": 51.34,
-   "end": 51.86,
+   "start": 50.707,
+   "end": 51.227,
    "section": "plan"
   },
   {
    "text": "emas",
-   "start": 51.86,
-   "end": 52.16,
+   "start": 51.227,
+   "end": 51.527,
    "section": "plan"
   },
   {
    "text": "anda",
-   "start": 52.16,
-   "end": 52.64,
+   "start": 51.527,
+   "end": 52.007,
    "section": "plan"
   },
   {
    "text": "akan",
-   "start": 52.64,
-   "end": 52.88,
+   "start": 52.007,
+   "end": 52.247,
    "section": "plan"
   },
   {
    "text": "layak",
-   "start": 52.88,
-   "end": 53.32,
+   "start": 52.247,
+   "end": 52.687,
    "section": "plan"
   },
   {
    "text": "untuk",
-   "start": 53.32,
-   "end": 53.4,
+   "start": 52.687,
+   "end": 52.767,
    "section": "plan"
   },
   {
    "text": "pergi",
-   "start": 53.4,
-   "end": 53.72,
+   "start": 52.767,
+   "end": 53.087,
    "section": "plan"
   },
   {
    "text": "haji",
-   "start": 53.72,
-   "end": 54.08,
+   "start": 53.087,
+   "end": 53.447,
    "section": "plan"
   },
   {
    "text": "hari",
-   "start": 54.08,
-   "end": 54.24,
+   "start": 53.447,
+   "end": 53.607,
    "section": "plan"
   },
   {
    "text": "ni",
-   "start": 54.24,
-   "end": 54.5,
+   "start": 53.607,
+   "end": 53.867,
    "section": "plan"
   },
   {
    "text": "5",
-   "start": 54.5,
-   "end": 55.04,
+   "start": 53.867,
+   "end": 54.407,
    "section": "plan"
   },
   {
    "text": "tahun",
-   "start": 55.04,
-   "end": 55.3,
+   "start": 54.407,
+   "end": 54.667,
    "section": "plan"
   },
   {
    "text": "akan",
-   "start": 55.3,
-   "end": 55.48,
+   "start": 54.667,
+   "end": 54.847,
    "section": "plan"
   },
   {
    "text": "datang",
-   "start": 55.48,
-   "end": 55.9,
+   "start": 54.847,
+   "end": 55.267,
    "section": "plan"
   },
   {
    "text": "ataupun",
-   "start": 55.9,
-   "end": 56.42,
+   "start": 55.267,
+   "end": 55.787,
    "section": "plan"
   },
   {
    "text": "10",
-   "start": 56.42,
-   "end": 56.78,
+   "start": 55.787,
+   "end": 56.147,
    "section": "plan"
   },
   {
    "text": "tahun",
-   "start": 56.78,
-   "end": 57.2,
+   "start": 56.147,
+   "end": 56.567,
    "section": "plan"
   },
   {
    "text": "yang",
-   "start": 57.2,
-   "end": 57.36,
+   "start": 56.567,
+   "end": 56.727,
    "section": "plan"
   },
   {
    "text": "akan",
-   "start": 57.36,
-   "end": 57.76,
+   "start": 56.727,
+   "end": 57.127,
    "section": "plan"
   },
   {
    "text": "datang",
-   "start": 57.76,
-   "end": 58.133,
+   "start": 57.127,
+   "end": 57.667,
    "section": "plan"
   },
   {
    "text": "Nak",
-   "start": 58.24,
-   "end": 58.34,
+   "start": 57.907,
+   "end": 58.007,
    "section": "cta"
   },
   {
    "text": "bermula,",
-   "start": 58.34,
-   "end": 58.92,
+   "start": 58.007,
+   "end": 58.587,
    "section": "cta"
   },
   {
    "text": "boleh",
-   "start": 58.94,
-   "end": 59.36,
+   "start": 58.607,
+   "end": 59.027,
    "section": "cta"
   },
   {
    "text": "tengok",
-   "start": 59.36,
-   "end": 59.66,
+   "start": 59.027,
+   "end": 59.327,
    "section": "cta"
   },
   {
    "text": "pin",
-   "start": 59.66,
-   "end": 59.84,
+   "start": 59.327,
+   "end": 59.507,
    "section": "cta"
   },
   {
    "text": "video",
-   "start": 59.84,
-   "end": 60.14,
+   "start": 59.507,
+   "end": 59.807,
    "section": "cta"
   },
   {
    "text": "ataupun",
-   "start": 60.14,
-   "end": 60.52,
+   "start": 59.807,
+   "end": 60.187,
    "section": "cta"
   },
   {
    "text": "isi",
-   "start": 60.52,
-   "end": 60.86,
+   "start": 60.187,
+   "end": 60.527,
    "section": "cta"
   },
   {
    "text": "bag",
-   "start": 60.86,
-   "end": 60.98,
+   "start": 60.527,
+   "end": 60.647,
    "section": "cta"
   },
   {
    "text": "biru",
-   "start": 60.98,
-   "end": 61.36,
+   "start": 60.647,
+   "end": 61.027,
    "section": "cta"
   },
   {
    "text": "untuk",
-   "start": 61.36,
-   "end": 61.8,
+   "start": 61.027,
+   "end": 61.467,
    "section": "cta"
   },
   {
    "text": "saya",
-   "start": 61.8,
-   "end": 62.12,
+   "start": 61.467,
+   "end": 61.787,
    "section": "cta"
   },
   {
    "text": "bantu",
-   "start": 62.12,
-   "end": 62.62,
+   "start": 61.787,
+   "end": 62.287,
    "section": "cta"
   },
   {
    "text": "bina",
-   "start": 62.62,
-   "end": 63.4,
+   "start": 62.287,
+   "end": 63.067,
    "section": "cta"
   },
   {
    "text": "dana",
-   "start": 63.4,
-   "end": 64.0,
+   "start": 63.067,
+   "end": 63.667,
    "section": "cta"
   },
   {
    "text": "haji",
-   "start": 64.0,
-   "end": 64.34,
+   "start": 63.667,
+   "end": 64.007,
    "section": "cta"
   },
   {
    "text": "secepat",
-   "start": 64.34,
-   "end": 64.78,
+   "start": 64.007,
+   "end": 64.447,
    "section": "cta"
   },
   {
    "text": "mungkin",
-   "start": 64.78,
-   "end": 65.08,
+   "start": 64.447,
+   "end": 64.747,
    "section": "cta"
   },
   {
    "text": "untuk",
-   "start": 65.08,
-   "end": 65.42,
+   "start": 64.747,
+   "end": 65.087,
    "section": "cta"
   },
   {
    "text": "kita",
-   "start": 65.42,
-   "end": 65.64,
+   "start": 65.087,
+   "end": 65.307,
    "section": "cta"
   },
   {
    "text": "lengkapkan",
-   "start": 65.64,
-   "end": 66.28,
+   "start": 65.307,
+   "end": 65.947,
    "section": "cta"
   },
   {
    "text": "Rukun",
-   "start": 66.28,
-   "end": 66.94,
+   "start": 65.947,
+   "end": 66.607,
    "section": "cta"
   },
   {
    "text": "Islam",
-   "start": 66.94,
-   "end": 67.16,
+   "start": 66.607,
+   "end": 66.827,
    "section": "cta"
   },
   {
    "text": "yang",
-   "start": 67.16,
-   "end": 67.8,
+   "start": 66.827,
+   "end": 67.467,
    "section": "cta"
   },
   {
    "text": "kelima.",
-   "start": 67.8,
-   "end": 68.32,
+   "start": 67.467,
+   "end": 67.987,
    "section": "cta"
   }
  ]

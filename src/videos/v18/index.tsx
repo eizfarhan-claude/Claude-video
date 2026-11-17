@@ -5,7 +5,7 @@ import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {CtaCard, GItem, IconCalendar, IconChat, IconLeak, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
-import {BigStat, KineticHook, PillRow, IntroFlash, TitleIntro} from '../../engine/kit2';
+import {BigStat, KineticHook, PillRow, ShotCut, IntroFlash, TitleIntro} from '../../engine/kit2';
 import {IconArrowUp, IconCoin} from '../../engine/ui';
 
 const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
@@ -18,6 +18,7 @@ const M = {
   angka: at('dulu', 'angka'),
   kisah: S('kisah'),
   n21: at('kisah', '21'),
+  update: at('kisah', 'update'),
   n30: at('kisah', '30'),
   muda: at('kisah', 'sangat'),
   sharing: S('sharing'),
@@ -25,7 +26,7 @@ const M = {
   part: at('sharing', 'part-time'),
   ptptn: at('sharing', 'ptptn'),
   raya: at('sharing', 'raya'),
-  g30: at('sharing', '30 gram emas'),
+  g30: at('sharing', '30'),
   semua: S('semua'),
   anak: at('semua', 'anak'),
   bekerja: at('semua', 'bekerja'),
@@ -53,19 +54,8 @@ const ITEMS: GItem[] = [
   {from: M.dulu + 0.05, to: E('dulu') + 0.15, render: (d, r) => (
     <TitleCard dur={d} icon={<IconCalendar size={80} />} label="Usia 20-an · tak pernah terbayang" title="SIMPANAN 5 ANGKA" size={62} sub="RM10,000+" subAt={r(M.angka)} shine />
   )},
-  {from: M.kisah + 0.05, to: M.n30 - 0.15, render: (d, r) => (
+  {from: M.kisah + 0.05, to: M.update - 0.15, render: (d) => (
     <TitleCard dur={d} icon={<IconChat size={78} />} label="Update penyimpan emas saya" title="UMUR 21 TAHUN" size={66} gold={false} />
-  )},
-  {from: M.n30 - 0.15, to: E('kisah') + 0.15, render: (d, r) => (
-    <BigStat dur={d} label="Simpanan dalam akaun" value={30} suffix=" GRAM" sub="pada usia yang sangat muda" subAt={r(M.muda)} icon={<IconCoin size={84} />} />
-  )},
-  {from: M.sharing + 0.05, to: E('sharing') + 0.15, render: (d, r) => (
-    <PillRow dur={d} label="Hasil menabung zaman diploma" pills={[
-      {text: 'PART-TIME', at: r(M.part)},
-      {text: 'PTPTN', at: r(M.ptptn)},
-      {text: 'DUIT RAYA', at: r(M.raya)},
-      {text: '= 30 GRAM EMAS', at: r(M.g30), good: true},
-    ]} />
   )},
   {from: M.semua + 0.05, to: E('semua') + 0.15, render: (d, r) => (
     <PillRow dur={d} label="Tak kiralah siapa pun" pills={[
@@ -93,17 +83,17 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.45},
-  {t: 0.1, f: 'tech_slide', v: 0.22},
-  {t: 0.2, f: 'zoom_impact', v: 0.32},
-  {t: 0.47, f: 'impact_deep', v: 0.26},
-  {t: 0.7, f: 'sparkle', v: 0.22},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
   {t: M.dulu + 0.05, f: 'tech_slide', v: 0.3},
   {t: M.angka, f: 'coin_notif', v: 0.26},
   {t: M.kisah + 0.05, f: 'pop_msg', v: 0.32},
-  {t: M.n30 - 0.15, f: 'whoosh_cine', v: 0.28},
+  {t: M.update - 0.15, f: 'shutter', v: 0.3},
   {t: M.n30, f: 'coins', v: 0.28},
-  {t: M.sharing + 0.05, f: 'swoosh_fast', v: 0.28},
+  {t: M.sharing + 0.05, f: 'shutter', v: 0.3},
   {t: M.part, f: 'bubble_pop', v: 0.3},
   {t: M.ptptn, f: 'bubble_pop', v: 0.3},
   {t: M.raya, f: 'bubble_pop', v: 0.3},
@@ -126,11 +116,14 @@ const SFX: Sfx[] = [
   {t: M.biru, f: 'bell_notif', v: 0.22},
 ];
 
+const SHOTS: [number, number][] = [[M.update - 0.15, E('kisah') + 0.1], [M.sharing + 0.05, E('sharing') + 0.1]];
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
     <IntroFlash />
+    <ShotCut src="v18/img/gap_app.jpg" aspect={1280 / 948} from={SHOTS[0][0]} to={SHOTS[0][1]} label="Akaun GAP · penyimpan umur 21" hl={[0.3, 0.21, 0.75, 0.36]} hlAt={M.n30} />
+    <ShotCut src="v18/img/feedback.jpg" aspect={1044 / 1278} from={SHOTS[1][0]} to={SHOTS[1][1]} label="Feedback penyimpan emas" hl={[0.12, 0.6, 0.83, 0.76]} hlAt={M.diploma} />
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
+    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, SHOTS)} />
   </>
 );
 

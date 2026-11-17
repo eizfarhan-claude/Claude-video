@@ -16,7 +16,7 @@ const M = {
   masalah: S('masalah'),
   grab: at('masalah', 'grab'),
   tengah: at('masalah', 'tengah'),
-  hujung: at('masalah', 'hujung'),
+  hujung: at('masalah', 'belum'),
   adakah: at('masalah', 'adakah'),
   terbaik: at('masalah', 'terbaik'),
   jawapan: S('jawapan'),
@@ -48,7 +48,7 @@ const ITEMS: GItem[] = [
     <TitleIntro dur={d} tag="Harga emas paras terendah" line1="WAKTU TERBAIK" line2="BELI EMAS?" l2At={14} />
   )},
   {from: M.masalah + 0.05, to: M.adakah - 0.15, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconWallet size={84} />} label="Tapi ramai tak dapat grab" title="TENGAH BULAN" size={62} gold={false} sub="hujung gaji" subAt={r(M.hujung)} />
+    <TitleCard dur={d} icon={<IconWallet size={84} />} label="Tapi ramai tak dapat grab" title="TENGAH BULAN" size={62} gold={false} sub="belum gaji" subAt={r(M.hujung)} />
   )},
   {from: M.adakah - 0.15, to: E('masalah') + 0.2, render: (d, r) => (
     <KineticHook dur={d} label="Harga rendah ini" size={66} words={[
@@ -80,11 +80,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: 0.0, f: 'whoosh_impact', v: 0.45},
-  {t: 0.1, f: 'tech_slide', v: 0.22},
-  {t: 0.2, f: 'zoom_impact', v: 0.32},
-  {t: 0.47, f: 'impact_deep', v: 0.26},
-  {t: 0.7, f: 'sparkle', v: 0.22},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
   {t: M.masalah + 0.05, f: 'tech_slide', v: 0.3},
   {t: M.hujung, f: 'pop_msg', v: 0.3},
   {t: M.adakah - 0.15, f: 'swoosh_fast', v: 0.3},

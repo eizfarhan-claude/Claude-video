@@ -1,6 +1,7 @@
 /* v11+ additions: more motion-graphic cards. Same rules as kit.tsx: top band (above head) or bottom band (chest), never the face. */
 import React from 'react';
-import {Easing, interpolate, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Easing, Img, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame} from 'remotion';
+import {sec} from './timeline';
 import {FONT, FONT2, GOLD_SOLID, GREEN} from './theme';
 import {Card, GoldText, Label, Shine, TopBand, useEnvelope, usePop} from './ui';
 import {popStyle} from './kit';
@@ -177,4 +178,71 @@ export const IntroFlash: React.FC = () => {
   const o = interpolate(f, [0, 2, 9], [0, 0.55, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   if (f > 10) return null;
   return <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 22%, rgba(255,241,184,1) 0%, rgba(247,215,116,0.6) 35%, rgba(0,0,0,0) 70%)', opacity: o, pointerEvents: 'none'}} />;
+};
+
+/* ---------- proof screenshot cutaway (app balance, chat feedback…) ---------- */
+/** Full-frame cutaway: blurred copy of the image as backdrop, framed image fitted inside the safe zone, slow push-in,
+ *  optional label above and a pulsing highlight box (normalised x0,y0,x1,y1 of the image) from `hlAt` (output s). */
+export const ShotCut: React.FC<{src: string; from: number; to: number; aspect: number; label?: string; hl?: [number, number, number, number]; hlAt?: number}> = (p) => {
+  const f0 = sec(p.from); const dur = sec(p.to) - f0;
+  if (dur <= 0) return null;
+  return (
+    <Sequence from={f0} durationInFrames={dur} layout="none">
+      <ShotInner {...p} dur={dur} hlF={p.hlAt !== undefined ? sec(p.hlAt) - f0 : 10} />
+    </Sequence>
+  );
+};
+const ShotInner: React.FC<{src: string; aspect: number; label?: string; hl?: [number, number, number, number]; dur: number; hlF: number}> = ({src, aspect, label, hl, dur, hlF}) => {
+  const f = useCurrentFrame();
+  const o = interpolate(f, [0, 6, dur - 6, dur], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const pop = interpolate(f, [0, 12], [0.86, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.back(1.5))});
+  const push = interpolate(f, [0, dur], [1, 1.05]);
+  // fit inside x 70..1010 (940 wide) and y 330..1430 (1100 high): inside TikTok/IG safe zones
+  const W = Math.min(940, 1100 * aspect); const H = W / aspect;
+  const top = 330 + (1100 - H) / 2 + (label ? 30 : 0);
+  const k = interpolate(f, [hlF, hlF + 8], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const pulse = 1 + 0.025 * Math.sin((f - hlF) / 4) * k;
+  const lp = interpolate(f, [2, 12], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+  return (
+    <AbsoluteFill style={{opacity: o}}>
+      <AbsoluteFill style={{background: '#0b0904'}} />
+      <AbsoluteFill style={{backgroundImage: `url(${staticFile(src)})`, backgroundSize: 'cover', backgroundPosition: 'center', filter: 'blur(40px) brightness(0.4)', transform: 'scale(1.25)'}} />
+      {label && (
+        <div style={{position: 'absolute', left: 0, right: 0, top: top - 80, textAlign: 'center', opacity: lp, transform: `translateY(${(1 - lp) * -20}px)`}}>
+          <span style={{display: 'inline-block', background: GOLD_SOLID, color: '#2a1a00', borderRadius: 16, padding: '8px 24px', fontFamily: FONT2, fontWeight: 700, fontSize: 30, letterSpacing: 2, textTransform: 'uppercase', boxShadow: '0 8px 24px rgba(0,0,0,0.5)'}}>{label}</span>
+        </div>
+      )}
+      <div style={{position: 'absolute', left: 540 - W / 2, top, width: W, height: H, transform: `scale(${pop * push})`, transformOrigin: '50% 40%'}}>
+        <Img src={staticFile(src)} style={{width: '100%', height: '100%', borderRadius: 26, boxShadow: '0 30px 80px rgba(0,0,0,0.65)', border: '4px solid rgba(247,215,116,0.85)'}} />
+        {hl && (
+          <div style={{position: 'absolute', left: hl[0] * W - 8, top: hl[1] * H - 8, width: (hl[2] - hl[0]) * W + 16, height: (hl[3] - hl[1]) * H + 16, borderRadius: 18,
+            border: `6px solid ${GOLD_SOLID}`, boxShadow: '0 0 34px rgba(245,200,76,0.95)', opacity: k, transform: `scale(${pulse})`}} />
+        )}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+/** Full-frame B-roll clip (muted) with a soft punch-in; cards scheduled after it still render on top. */
+export const BrollCut: React.FC<{src: string; from: number; to: number; srcStart?: number}> = ({src, from, to, srcStart = 0}) => {
+  const f0 = sec(from); const dur = sec(to) - f0;
+  if (dur <= 0) return null;
+  return (
+    <Sequence from={f0} durationInFrames={dur} layout="none">
+      <BrollInner src={src} dur={dur} srcStart={srcStart} />
+    </Sequence>
+  );
+};
+const BrollInner: React.FC<{src: string; dur: number; srcStart: number}> = ({src, dur, srcStart}) => {
+  const f = useCurrentFrame();
+  const o = interpolate(f, [0, 5, dur - 5, dur], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const sc = interpolate(f, [0, 8, dur], [1.14, 1.06, 1.0], {extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic)});
+  return (
+    <AbsoluteFill style={{opacity: o}}>
+      <AbsoluteFill style={{transform: `scale(${sc})`}}>
+        <OffthreadVideo src={staticFile(src)} startFrom={sec(srcStart)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+      </AbsoluteFill>
+      <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.5) 100%)'}} />
+    </AbsoluteFill>
+  );
 };
