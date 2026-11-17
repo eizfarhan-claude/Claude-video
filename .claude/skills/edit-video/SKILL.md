@@ -68,3 +68,10 @@ Running prep+transcribe for several clips is slow (~5 min prep, ~10 min transcri
 Map time with `at.py`, listen with `hear.py`, transcribe isolated source snippets if unsure, find the exact
 dip with `fine.py`, split/trim ranges with exact edges, rebuild EDL + captions, re-check anchors (removed
 words break `at()`), re-listen, re-render preview. Report each fix back per timestamp in Malay.
+
+## Covers (after finals)
+`src/covers.tsx`: per video add `COVERS.vNN` (face time `t`, kicker, 2 title lines with one gold keyword, red hook sub).
+Pick an eyes-open frame: grid of face crops every 0.25 s around a candidate, then extract the exact frame with
+ffmpeg → `public/covers/vNN.png` (don't use OffthreadVideo startFrom — it can land on a different frame).
+Render: `npx remotion still Cover-vNN-TT` (1080x1920) and `Cover-vNN-IG` (1080x1440, 3:4 grid) → jpg → send.
+All text stays in the centre 3:4 area so the TikTok cover also survives profile-grid crops.
