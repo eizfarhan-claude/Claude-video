@@ -26,5 +26,29 @@
    "bag",
    "biru."
   ]
+ },
+ {
+  "find": [
+   "mula",
+   "kasihan",
+   "emas"
+  ],
+  "replace": [
+   "mulakan",
+   "simpanan",
+   "emas"
+  ]
+ },
+ {
+  "find": [
+   "dengan",
+   "rendah",
+   "RM100"
+  ],
+  "replace": [
+   "dengan",
+   "serendah",
+   "RM100"
+  ]
  }
 ]

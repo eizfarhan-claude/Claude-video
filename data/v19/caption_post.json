@@ -23,5 +23,18 @@
    "mata",
    "wang"
   ]
+ },
+ {
+  "find": [
+   "nilai",
+   "mata",
+   "hari"
+  ],
+  "replace": [
+   "nilai",
+   "mata",
+   "wang",
+   "hari"
+  ]
  }
 ]
