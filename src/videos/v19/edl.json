@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 2395,
+ "durationInFrames": 2370,
  "clips": [
   {
    "section": "hook",
@@ -47,44 +47,44 @@
   {
    "section": "nasihat",
    "srcFrom": 3532,
-   "durationInFrames": 12,
+   "durationInFrames": 6,
    "outFrom": 1344
   },
   {
    "section": "nasihat",
-   "srcFrom": 3548,
-   "durationInFrames": 240,
-   "outFrom": 1356
+   "srcFrom": 3550,
+   "durationInFrames": 238,
+   "outFrom": 1350
   },
   {
    "section": "nasihat",
    "srcFrom": 3881,
    "durationInFrames": 75,
-   "outFrom": 1596
+   "outFrom": 1588
   },
   {
    "section": "nasihat2",
    "srcFrom": 3966,
    "durationInFrames": 264,
-   "outFrom": 1671
+   "outFrom": 1663
   },
   {
    "section": "cta",
    "srcFrom": 4231,
    "durationInFrames": 172,
-   "outFrom": 1935
+   "outFrom": 1927
   },
   {
    "section": "cta2",
-   "srcFrom": 4527,
-   "durationInFrames": 159,
-   "outFrom": 2107
+   "srcFrom": 4544,
+   "durationInFrames": 142,
+   "outFrom": 2099
   },
   {
    "section": "outro",
    "srcFrom": 4899,
    "durationInFrames": 129,
-   "outFrom": 2266
+   "outFrom": 2241
   }
  ],
  "words": [
@@ -750,512 +750,512 @@
   },
   {
    "text": "ni",
-   "start": 45.2,
-   "end": 45.813,
+   "start": 45.0,
+   "end": 45.547,
    "section": "nasihat"
   },
   {
    "text": "anda",
-   "start": 45.813,
-   "end": 46.153,
+   "start": 45.547,
+   "end": 45.887,
    "section": "nasihat"
   },
   {
    "text": "adalah",
-   "start": 46.153,
-   "end": 46.373,
+   "start": 45.887,
+   "end": 46.107,
    "section": "nasihat"
   },
   {
    "text": "seorang",
-   "start": 46.373,
-   "end": 46.893,
+   "start": 46.107,
+   "end": 46.627,
    "section": "nasihat"
   },
   {
    "text": "jutawan",
-   "start": 46.893,
-   "end": 47.353,
+   "start": 46.627,
+   "end": 47.087,
    "section": "nasihat"
   },
   {
    "text": "Dan",
-   "start": 47.353,
-   "end": 47.853,
+   "start": 47.087,
+   "end": 47.587,
    "section": "nasihat"
   },
   {
    "text": "nak",
-   "start": 47.853,
-   "end": 48.253,
+   "start": 47.587,
+   "end": 47.987,
    "section": "nasihat"
   },
   {
    "text": "kekal",
-   "start": 48.253,
-   "end": 48.693,
+   "start": 47.987,
+   "end": 48.427,
    "section": "nasihat"
   },
   {
    "text": "jutawan",
-   "start": 48.693,
-   "end": 49.133,
+   "start": 48.427,
+   "end": 48.867,
    "section": "nasihat"
   },
   {
    "text": "lagi",
-   "start": 49.133,
-   "end": 49.453,
+   "start": 48.867,
+   "end": 49.187,
    "section": "nasihat"
   },
   {
    "text": "20",
-   "start": 49.453,
-   "end": 49.813,
+   "start": 49.187,
+   "end": 49.547,
    "section": "nasihat"
   },
   {
    "text": "tahun",
-   "start": 49.813,
-   "end": 50.193,
+   "start": 49.547,
+   "end": 49.927,
    "section": "nasihat"
   },
   {
    "text": "yang",
-   "start": 50.193,
-   "end": 50.353,
+   "start": 49.927,
+   "end": 50.087,
    "section": "nasihat"
   },
   {
    "text": "akan",
-   "start": 50.353,
-   "end": 50.533,
+   "start": 50.087,
+   "end": 50.267,
    "section": "nasihat"
   },
   {
    "text": "datang",
-   "start": 50.533,
-   "end": 51.013,
+   "start": 50.267,
+   "end": 50.747,
    "section": "nasihat"
   },
   {
    "text": "Tukarkan",
-   "start": 51.273,
-   "end": 51.693,
+   "start": 51.007,
+   "end": 51.427,
    "section": "nasihat"
   },
   {
    "text": "dalam",
-   "start": 51.693,
-   "end": 51.993,
+   "start": 51.427,
+   "end": 51.727,
    "section": "nasihat"
   },
   {
    "text": "bentuk",
-   "start": 51.993,
-   "end": 52.353,
+   "start": 51.727,
+   "end": 52.087,
    "section": "nasihat"
   },
   {
    "text": "simpanan",
-   "start": 52.353,
-   "end": 52.793,
+   "start": 52.087,
+   "end": 52.527,
    "section": "nasihat"
   },
   {
    "text": "emas",
-   "start": 52.793,
-   "end": 53.153,
+   "start": 52.527,
+   "end": 52.887,
    "section": "nasihat"
   },
   {
    "text": "supaya",
-   "start": 53.153,
-   "end": 53.2,
+   "start": 52.887,
+   "end": 52.933,
    "section": "nasihat"
   },
   {
    "text": "supaya",
-   "start": 53.2,
-   "end": 53.653,
+   "start": 52.933,
+   "end": 53.387,
    "section": "nasihat"
   },
   {
    "text": "simpanan",
-   "start": 53.653,
-   "end": 54.193,
+   "start": 53.387,
+   "end": 53.927,
    "section": "nasihat"
   },
   {
    "text": "lebih",
-   "start": 54.193,
-   "end": 54.353,
+   "start": 53.927,
+   "end": 54.087,
    "section": "nasihat"
   },
   {
    "text": "selamat",
-   "start": 54.353,
-   "end": 54.793,
+   "start": 54.087,
+   "end": 54.527,
    "section": "nasihat"
   },
   {
    "text": "daripada",
-   "start": 54.793,
-   "end": 55.073,
+   "start": 54.527,
+   "end": 54.807,
    "section": "nasihat"
   },
   {
    "text": "inflasi.",
-   "start": 55.073,
-   "end": 55.673,
+   "start": 54.807,
+   "end": 55.407,
    "section": "nasihat"
   },
   {
    "text": "Kejatuhan",
-   "start": 55.72,
-   "end": 56.12,
+   "start": 55.453,
+   "end": 55.853,
    "section": "nasihat2"
   },
   {
    "text": "nilai",
-   "start": 56.12,
-   "end": 56.5,
+   "start": 55.853,
+   "end": 56.233,
    "section": "nasihat2"
   },
   {
    "text": "mata",
-   "start": 56.5,
-   "end": 56.66,
+   "start": 56.233,
+   "end": 56.393,
    "section": "nasihat2"
   },
   {
    "text": "wang",
-   "start": 56.66,
-   "end": 57.0,
+   "start": 56.393,
+   "end": 56.733,
    "section": "nasihat2"
   },
   {
    "text": "dan",
-   "start": 57.0,
-   "end": 57.4,
+   "start": 56.733,
+   "end": 57.133,
    "section": "nasihat2"
   },
   {
    "text": "apa",
-   "start": 57.4,
-   "end": 57.8,
+   "start": 57.133,
+   "end": 57.533,
    "section": "nasihat2"
   },
   {
    "text": "juga",
-   "start": 57.8,
-   "end": 58.22,
+   "start": 57.533,
+   "end": 57.953,
    "section": "nasihat2"
   },
   {
    "text": "keadaan",
-   "start": 58.22,
-   "end": 59.04,
+   "start": 57.953,
+   "end": 58.773,
    "section": "nasihat2"
   },
   {
    "text": "ekonomi",
-   "start": 59.04,
-   "end": 59.7,
+   "start": 58.773,
+   "end": 59.433,
    "section": "nasihat2"
   },
   {
    "text": "politik",
-   "start": 59.7,
-   "end": 60.48,
+   "start": 59.433,
+   "end": 60.213,
    "section": "nasihat2"
   },
   {
    "text": "yang",
-   "start": 60.48,
-   "end": 60.64,
+   "start": 60.213,
+   "end": 60.373,
    "section": "nasihat2"
   },
   {
    "text": "akan",
-   "start": 60.64,
-   "end": 60.9,
+   "start": 60.373,
+   "end": 60.633,
    "section": "nasihat2"
   },
   {
    "text": "mengurangkan",
-   "start": 60.9,
-   "end": 61.6,
+   "start": 60.633,
+   "end": 61.333,
    "section": "nasihat2"
   },
   {
    "text": "nilai",
-   "start": 61.6,
-   "end": 62.4,
+   "start": 61.333,
+   "end": 62.133,
    "section": "nasihat2"
   },
   {
    "text": "mata",
-   "start": 62.7,
-   "end": 62.9,
+   "start": 62.433,
+   "end": 62.633,
    "section": "nasihat2"
   },
   {
    "text": "wang",
-   "start": 62.9,
-   "end": 63.2,
+   "start": 62.633,
+   "end": 62.933,
    "section": "nasihat2"
   },
   {
    "text": "setiap",
-   "start": 63.2,
-   "end": 63.98,
+   "start": 62.933,
+   "end": 63.713,
    "section": "nasihat2"
   },
   {
    "text": "tahun",
-   "start": 63.98,
-   "end": 64.16,
+   "start": 63.713,
+   "end": 63.893,
    "section": "nasihat2"
   },
   {
    "text": "jadi",
-   "start": 64.16,
-   "end": 64.5,
+   "start": 63.893,
+   "end": 64.233,
    "section": "nasihat2"
   },
   {
    "text": "bagi",
-   "start": 64.627,
-   "end": 65.027,
+   "start": 64.36,
+   "end": 64.76,
    "section": "cta"
   },
   {
    "text": "anda",
-   "start": 65.027,
-   "end": 65.167,
+   "start": 64.76,
+   "end": 64.9,
    "section": "cta"
   },
   {
    "text": "yang",
-   "start": 65.167,
-   "end": 65.607,
+   "start": 64.9,
+   "end": 65.34,
    "section": "cta"
   },
   {
    "text": "mana",
-   "start": 65.607,
-   "end": 65.827,
+   "start": 65.34,
+   "end": 65.56,
    "section": "cta"
   },
   {
    "text": "nak",
-   "start": 65.827,
-   "end": 66.027,
+   "start": 65.56,
+   "end": 65.76,
    "section": "cta"
   },
   {
    "text": "tukarkan",
-   "start": 66.027,
-   "end": 66.507,
+   "start": 65.76,
+   "end": 66.24,
    "section": "cta"
   },
   {
    "text": "simpanan",
-   "start": 66.507,
-   "end": 67.267,
+   "start": 66.24,
+   "end": 67.0,
    "section": "cta"
   },
   {
    "text": "kekayaan",
-   "start": 67.267,
-   "end": 67.847,
+   "start": 67.0,
+   "end": 67.58,
    "section": "cta"
   },
   {
    "text": "masing-masing",
-   "start": 67.847,
-   "end": 68.527,
+   "start": 67.58,
+   "end": 68.26,
    "section": "cta"
   },
   {
    "text": "dalam",
-   "start": 68.527,
-   "end": 69.067,
+   "start": 68.26,
+   "end": 68.8,
    "section": "cta"
   },
   {
    "text": "bentuk",
-   "start": 69.067,
-   "end": 69.447,
+   "start": 68.8,
+   "end": 69.18,
    "section": "cta"
   },
   {
    "text": "yang",
-   "start": 69.447,
-   "end": 69.527,
+   "start": 69.18,
+   "end": 69.26,
    "section": "cta"
   },
   {
    "text": "lebih",
-   "start": 69.527,
-   "end": 69.727,
+   "start": 69.26,
+   "end": 69.46,
    "section": "cta"
   },
   {
    "text": "selamat",
-   "start": 69.727,
-   "end": 70.233,
+   "start": 69.46,
+   "end": 69.967,
    "section": "cta"
   },
   {
    "text": "Boleh",
-   "start": 70.233,
-   "end": 70.913,
+   "start": 69.967,
+   "end": 70.08,
    "section": "cta2"
   },
   {
    "text": "tengok",
-   "start": 70.913,
-   "end": 71.173,
+   "start": 70.08,
+   "end": 70.34,
    "section": "cta2"
   },
   {
    "text": "video",
-   "start": 71.173,
-   "end": 71.373,
+   "start": 70.34,
+   "end": 70.54,
    "section": "cta2"
   },
   {
    "text": "ataupun",
-   "start": 71.373,
-   "end": 72.093,
+   "start": 70.54,
+   "end": 71.26,
    "section": "cta2"
   },
   {
    "text": "isi",
-   "start": 72.093,
-   "end": 72.433,
+   "start": 71.26,
+   "end": 71.6,
    "section": "cta2"
   },
   {
    "text": "bag",
-   "start": 72.433,
-   "end": 72.553,
+   "start": 71.6,
+   "end": 71.72,
    "section": "cta2"
   },
   {
    "text": "biru",
-   "start": 72.553,
-   "end": 72.933,
+   "start": 71.72,
+   "end": 72.1,
    "section": "cta2"
   },
   {
    "text": "untuk",
-   "start": 72.933,
-   "end": 73.293,
+   "start": 72.1,
+   "end": 72.46,
    "section": "cta2"
   },
   {
    "text": "saya",
-   "start": 73.293,
-   "end": 73.693,
+   "start": 72.46,
+   "end": 72.86,
    "section": "cta2"
   },
   {
    "text": "bantu",
-   "start": 73.693,
-   "end": 74.153,
+   "start": 72.86,
+   "end": 73.32,
    "section": "cta2"
   },
   {
    "text": "dan",
-   "start": 74.153,
-   "end": 74.373,
+   "start": 73.32,
+   "end": 73.54,
    "section": "cta2"
   },
   {
    "text": "guide",
-   "start": 74.373,
-   "end": 74.693,
+   "start": 73.54,
+   "end": 73.86,
    "section": "cta2"
   },
   {
    "text": "step",
-   "start": 74.693,
-   "end": 74.973,
+   "start": 73.86,
+   "end": 74.14,
    "section": "cta2"
   },
   {
    "text": "by",
-   "start": 74.973,
-   "end": 75.193,
+   "start": 74.14,
+   "end": 74.36,
    "section": "cta2"
   },
   {
    "text": "step",
-   "start": 75.193,
-   "end": 75.393,
+   "start": 74.36,
+   "end": 74.56,
    "section": "cta2"
   },
   {
    "text": "Macam",
-   "start": 75.393,
-   "end": 75.533,
+   "start": 74.56,
+   "end": 74.7,
    "section": "cta2"
   },
   {
    "text": "nilai",
-   "start": 75.533,
-   "end": 77.093,
+   "start": 74.7,
+   "end": 76.26,
    "section": "outro"
   },
   {
    "text": "mata",
-   "start": 77.093,
-   "end": 77.293,
+   "start": 76.26,
+   "end": 76.46,
    "section": "outro"
   },
   {
    "text": "hari",
-   "start": 77.293,
-   "end": 77.553,
+   "start": 76.46,
+   "end": 76.72,
    "section": "outro"
   },
   {
    "text": "ini",
-   "start": 77.553,
-   "end": 77.933,
+   "start": 76.72,
+   "end": 77.1,
    "section": "outro"
   },
   {
    "text": "kepada",
-   "start": 77.933,
-   "end": 78.413,
+   "start": 77.1,
+   "end": 77.58,
    "section": "outro"
   },
   {
    "text": "nilai",
-   "start": 78.413,
-   "end": 78.853,
+   "start": 77.58,
+   "end": 78.02,
    "section": "outro"
   },
   {
    "text": "yang",
-   "start": 78.853,
-   "end": 79.013,
+   "start": 78.02,
+   "end": 78.18,
    "section": "outro"
   },
   {
    "text": "lebih",
-   "start": 79.013,
-   "end": 79.493,
+   "start": 78.18,
+   "end": 78.66,
    "section": "outro"
   },
   {
    "text": "kukuh.",
-   "start": 79.493,
-   "end": 79.833,
+   "start": 78.66,
+   "end": 79.0,
    "section": "outro"
   }
  ]
