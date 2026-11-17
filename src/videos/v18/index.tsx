@@ -54,7 +54,7 @@ const ITEMS: GItem[] = [
   {from: M.dulu + 0.05, to: E('dulu') + 0.15, render: (d, r) => (
     <TitleCard dur={d} icon={<IconCalendar size={80} />} label="Usia 20-an · tak pernah terbayang" title="SIMPANAN 5 ANGKA" size={62} sub="RM10,000+" subAt={r(M.angka)} shine />
   )},
-  {from: M.kisah + 0.05, to: M.update - 0.15, render: (d) => (
+  {from: M.kisah + 0.05, to: M.n30 - 0.1, render: (d) => (
     <TitleCard dur={d} icon={<IconChat size={78} />} label="Update penyimpan emas saya" title="UMUR 21 TAHUN" size={66} gold={false} />
   )},
   {from: M.semua + 0.05, to: E('semua') + 0.15, render: (d, r) => (
@@ -91,7 +91,7 @@ const SFX: Sfx[] = [
   {t: M.dulu + 0.05, f: 'tech_slide', v: 0.3},
   {t: M.angka, f: 'coin_notif', v: 0.26},
   {t: M.kisah + 0.05, f: 'pop_msg', v: 0.32},
-  {t: M.update - 0.15, f: 'shutter', v: 0.3},
+  {t: M.n30 - 0.1, f: 'shutter', v: 0.3},
   {t: M.n30, f: 'coins', v: 0.28},
   {t: M.sharing + 0.05, f: 'shutter', v: 0.3},
   {t: M.part, f: 'bubble_pop', v: 0.3},
@@ -116,11 +116,11 @@ const SFX: Sfx[] = [
   {t: M.biru, f: 'bell_notif', v: 0.22},
 ];
 
-const SHOTS: [number, number][] = [[M.update - 0.15, E('kisah') + 0.1], [M.sharing + 0.05, E('sharing') + 0.1]];
+const SHOTS: [number, number][] = [[M.n30 - 0.1, E('kisah') + 0.1], [M.sharing + 0.05, E('sharing') + 0.1]];
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
     <IntroFlash />
-    <ShotCut src="v18/img/gap_app.jpg" aspect={1280 / 948} from={SHOTS[0][0]} to={SHOTS[0][1]} label="Akaun GAP · penyimpan umur 21" hl={[0.3, 0.21, 0.75, 0.36]} hlAt={M.n30} />
+    <ShotCut src="v18/img/gap_app.jpg" aspect={1280 / 948} from={SHOTS[0][0]} to={SHOTS[0][1]} label="Akaun GAP · penyimpan umur 21" hl={[0.3, 0.21, 0.75, 0.36]} hlAt={M.n30 + 0.3} />
     <ShotCut src="v18/img/feedback.jpg" aspect={1044 / 1278} from={SHOTS[1][0]} to={SHOTS[1][1]} label="Feedback penyimpan emas" hl={[0.12, 0.6, 0.83, 0.76]} hlAt={M.diploma} />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, SHOTS)} />

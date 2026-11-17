@@ -20,8 +20,6 @@ const M = {
   sebab: S('sebab'),
   analyze: at('sebab', 'analyze'),
   paralyzed: at('sebab', 'paralyzed'),
-  sebab2: S('sebab2'),
-  turun: at('sebab2', 'turun'),
   kg: S('1kg'),
   kg1: at('1kg', '1kg'),
   masih: at('1kg', 'masih'),
@@ -52,9 +50,6 @@ const ITEMS: GItem[] = [
   )},
   {from: M.sebab + 0.05, to: E('sebab') + 0.1, render: (d, r) => (
     <TitleCard dur={d} icon={<IconWarn size={80} />} label="Terlalu banyak analyze" title="ANALYSIS PARALYSIS" size={56} gold={false} sub="akhirnya tak ada simpanan" subAt={r(M.paralyzed) + 14} />
-  )},
-  {from: M.sebab2 + 0.05, to: E('sebab2') + 0.1, render: (d) => (
-    <TitleCard dur={d} icon={<WaveIcon size={84} />} label="Dia cuma tengok" title="HARGA NAIK TURUN" size={60} gold={false} />
   )},
   {from: M.kg + 0.05, to: E('1kg') + 0.1, render: (d, r) => (
     <VsCard dur={d} a={{top: 'Orang lain', main: 'DAH ADA 1KG', at: r(M.kg1)}} b={{top: 'Dia', main: 'MASIH TUNGGU', at: r(M.masih)}} winner="a" winAt={r(M.masih) + 12} />
@@ -94,7 +89,6 @@ const SFX: Sfx[] = [
   {t: M.ending, f: 'pop_msg', v: 0.28},
   {t: M.sebab + 0.05, f: 'glitch_text', v: 0.16},
   {t: M.paralyzed, f: 'glitch_break', v: 0.2},
-  {t: M.sebab2 + 0.05, f: 'whoosh_small', v: 0.26},
   {t: M.kg + 0.05, f: 'swoosh_fast', v: 0.3},
   {t: M.kg1, f: 'money_bag', v: 0.3},
   {t: M.masih, f: 'bubble_pop', v: 0.3},
@@ -127,7 +121,7 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 export const v15: VideoDef = {
   id: 'v15', tl, Overlays, sfx: SFX,
   punches: [M.terendah, M.tak, M.paralyzed, M.kg1, M.tetapi, M.miliki],
-  zoom: {hook: [1.1], jawapan: [1.0], sebab: [1.07], sebab2: [1.0], '1kg': [1.06], fokus: [1.0], kaya: [1.0, 1.07], konsep: [1.0, 1.06], cta: [1.06, 1.0]},
+  zoom: {hook: [1.1], jawapan: [1.0], sebab: [1.07], '1kg': [1.06], fokus: [1.0], kaya: [1.0, 1.07], konsep: [1.0, 1.06], cta: [1.06, 1.0]},
   music: {file: 'mornings.mp3', startAt: 2},
   focus: {to: E('hook') + 0.15},
 };
