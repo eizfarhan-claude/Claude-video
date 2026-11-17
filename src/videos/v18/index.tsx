@@ -26,7 +26,7 @@ const M = {
   part: at('sharing', 'part-time'),
   ptptn: at('sharing', 'ptptn'),
   raya: at('sharing', 'raya'),
-  g30: at('sharing', '30'),
+  g30: at('sharing', '30 gram emas'),
   semua: S('semua'),
   anak: at('semua', 'anak'),
   bekerja: at('semua', 'bekerja'),

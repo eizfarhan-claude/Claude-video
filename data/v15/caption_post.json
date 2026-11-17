@@ -8,5 +8,23 @@
    "simpanan",
    "emas"
   ]
+ },
+ {
+  "find": [
+   "simpannya,"
+  ],
+  "replace": [
+   "simpanan,"
+  ]
+ },
+ {
+  "find": [
+   "bab",
+   "biru."
+  ],
+  "replace": [
+   "bag",
+   "biru."
+  ]
  }
 ]

@@ -22,5 +22,13 @@
    "dalam",
    "bentuk"
   ]
+ },
+ {
+  "find": [
+   "pencin."
+  ],
+  "replace": [
+   "pencen."
+  ]
  }
 ]
