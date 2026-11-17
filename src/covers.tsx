@@ -25,7 +25,6 @@ const Title: React.FC<{text: string; gold?: boolean; size: number}> = ({text, go
 );
 
 export const Cover: React.FC<CoverProps> = ({id, t, kicker, lines, sub, shiftY = 0, ig, img}) => {
-  const H = ig ? 1440 : 1920;
   // fit the longest line into ~940px (Montserrat 900 ≈ 0.7em/glyph)
   const longest = Math.max(...lines.map((l) => l.text.length));
   const size = Math.min(ig ? 150 : 160, Math.floor(980 / (0.66 * longest)));
@@ -46,9 +45,6 @@ export const Cover: React.FC<CoverProps> = ({id, t, kicker, lines, sub, shiftY =
       <div style={{position: 'absolute', left: 20, right: 20, top: titleTop, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6}}>
         {lines.map((l, i) => <Title key={i} text={l.text} gold={l.gold} size={size} />)}
         <div style={{marginTop: 22, fontFamily: FONT2, fontWeight: 700, fontSize: 44, color: 'white', background: 'rgba(214,52,40,0.95)', borderRadius: 18, padding: '10px 28px', textAlign: 'center', boxShadow: '0 10px 30px rgba(0,0,0,0.5)'}}>{sub}</div>
-      </div>
-      <div style={{position: 'absolute', left: 0, right: 0, top: H - (ig ? 80 : 330), textAlign: 'center', fontFamily: FONT2, fontWeight: 700, fontSize: 30, color: GOLD_SOLID, letterSpacing: 1}}>
-        @cikgu_al_public_gold
       </div>
     </AbsoluteFill>
   );
