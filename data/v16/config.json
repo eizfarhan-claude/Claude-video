@@ -1,0 +1,71 @@
+{
+ "id": "v16",
+ "title": "Bayar Diri Sendiri Dulu",
+ "ranges": [
+  [
+   "hook",
+   1.48,
+   4.95
+  ],
+  [
+   "p1",
+   5.06,
+   24.5
+  ],
+  [
+   "p2",
+   "28.16!",
+   35.0
+  ],
+  [
+   "auto",
+   36.72,
+   "48.88!"
+  ],
+  [
+   "paksa",
+   53.86,
+   "57.98!"
+  ],
+  [
+   "lebih",
+   87.5,
+   "95.5!"
+  ],
+  [
+   "utama",
+   "100.96!",
+   107.2
+  ],
+  [
+   "outro",
+   107.38,
+   108.3
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "menabur": "menabung",
+  "menapus": "menabung",
+  "napus": "menabung",
+  "menabuh": "menabung",
+  "menampuk": "menabung",
+  "gap": "GAP",
+  "Gap": "GAP",
+  "jeb": "GAP",
+  "muscap": "GAP",
+  "penyimpat": "penyimpan",
+  "penipu": "penyimpan",
+  "penyipat": "penyimpan",
+  "beg": "bag",
+  "film": "pin",
+  "sendah": "serendah",
+  "gerai": "gram",
+  "bocu": "bocor",
+  "keedah.": "kaedah.",
+  "didak": "debit",
+  "setel": "settle"
+ },
+ "drop": [],
+ "pad_out": 0.2
+}

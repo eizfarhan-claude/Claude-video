@@ -330,7 +330,7 @@ const makePages = (words: Word[]): Page[] => {
   pages.forEach((p, i) => { const nx = pages[i + 1]; p.end = nx ? Math.min(nx.start, p.end + 0.5) : p.end + 0.5; });
   return pages;
 };
-const EMPH = /^(rm[\d,.]+|[\d.]+|emas|gram|dinar|gap|umrah|kahwin|hutang|percuma|simpanan|minimum|peluang|diskaun|grab|target)$/i;
+const EMPH = /^(rm[\d,.]+|[\d.]+|emas|gram|dinar|gap|umrah|kahwin|hutang|percuma|simpanan|minimum|peluang|diskaun|grab|target|haji|jutawan|inflasi|konsisten|kekayaan|kg|kilogram|penalty|charge|bocor|auto|debit|kaya)$/i;
 const clean = (t: string) => t.replace(/[.,?!]+$/, '').toUpperCase();
 
 export const Subtitles: React.FC<{words: Word[]; busy: [number, number][]}> = ({words, busy}) => {

@@ -1,9 +1,33 @@
 [
- [["menyimpat"], ["menyimpan"]],
- [["Uni", "KLMITEC"], ["UniKL", "MITEC"]],
- [["Muhammad", "Zulkifli", "Syafi", "'i,"], ["Mohd", "Zulkifli", "Shafie,"]],
- [["prinsip", "Untuk"], ["prinsip", "untuk"]],
- [["belajar", "direct", "daripada"], ["belajar", "daripada"]],
- [["juta.", "Penyimpan"], ["juta", "penyimpan"]],
- [["betul"], ["betul,"]]
+ {
+  "find": [
+   "komitmen",
+   "ambil",
+   "bulanan."
+  ],
+  "replace": [
+   "komitmen",
+   "bulanan."
+  ]
+ },
+ {
+  "find": [
+   "inilah"
+  ],
+  "replace": [
+   "ini"
+  ]
+ },
+ {
+  "find": [
+   "so",
+   "anda",
+   "kata"
+  ],
+  "replace": [
+   "so",
+   "andai",
+   "kata"
+  ]
+ }
 ]

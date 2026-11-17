@@ -6,3 +6,7 @@ public/*/source/
 public/*/broll/
 
 raw/
+public/covers/
+public/*/fg/
+public/*/img/
+__pycache__/

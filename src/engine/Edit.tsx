@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react';
-import {AbsoluteFill, Audio, interpolate, OffthreadVideo, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Img, interpolate, OffthreadVideo, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig, Easing} from 'remotion';
 import {Clip, sec, Timeline} from './timeline';
 import {SAFE, TOP_BAND} from './theme';
 
@@ -14,6 +14,8 @@ export type VideoDef = {
   punches: number[];                  // output seconds of quick zoom punch-ins
   zoom: Record<string, number[]>;     // per-section base zoom pattern, alternates per cut
   music: {file: string; startAt: number};
+  /** intro "focus": background blurs, speaker (cut-out from public/<id>/fg/<srcFrame>.webp) pushes forward. Output seconds. */
+  focus?: {to: number};
 };
 
 export type EditProps = {preview: boolean; showSafeZones: boolean; hq?: boolean};
@@ -33,9 +35,21 @@ const ClipVideo: React.FC<{def: VideoDef; clip: Clip; idx: number; hq: boolean}>
     const s = spring({frame: g - p, fps, config: {damping: 9, stiffness: 160, mass: 0.6}});
     return acc + 0.06 * s * interpolate(g - p, [18, 40], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   }, 0);
+  const focusEnd = def.focus ? sec(def.focus.to) : -1;
+  const focusK = g < focusEnd
+    ? interpolate(g, [0, 8, focusEnd - 10, focusEnd], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)})
+    : 0;
   return (
     <AbsoluteFill style={{transform: `scale(${Math.min(1.16, base + drift + punch)})`, transformOrigin: '50% 36%'}}>
       <OffthreadVideo src={staticFile(`${def.id}/source/${hq ? 'video_4k' : 'video'}.mp4`)} startFrom={clip.srcFrom} muted style={{width: '100%', height: '100%'}} />
+      {focusK > 0.001 && (
+        <>
+          <AbsoluteFill style={{opacity: focusK}}>
+            <OffthreadVideo src={staticFile(`${def.id}/source/video.mp4`)} startFrom={clip.srcFrom} muted style={{width: '100%', height: '100%', filter: 'blur(18px) brightness(0.62) saturate(1.15)', transform: 'scale(1.06)'}} />
+          </AbsoluteFill>
+          <Img src={staticFile(`${def.id}/fg/${clip.srcFrom + frame}.webp`)} style={{position: 'absolute', inset: 0, width: '100%', height: '100%', transform: `scale(${1 + 0.07 * focusK})`, transformOrigin: '50% 40%', filter: `drop-shadow(0 20px 40px rgba(0,0,0,${0.55 * focusK}))`}} />
+        </>
+      )}
     </AbsoluteFill>
   );
 };

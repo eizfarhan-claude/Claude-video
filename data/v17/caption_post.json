@@ -1,0 +1,18 @@
+[
+ {
+  "find": [
+   "Grand",
+   "Emas."
+  ],
+  "replace": []
+ },
+ {
+  "find": [
+   "RM50,000"
+  ],
+  "replace": [
+   "50",
+   "gram"
+  ]
+ }
+]

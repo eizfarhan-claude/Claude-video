@@ -1,0 +1,53 @@
+[
+ {
+  "find": [
+   "kejatuhan"
+  ],
+  "replace": [
+   "harga",
+   "rendah"
+  ],
+  "nth": 1
+ },
+ {
+  "find": [
+   "kejatuhan"
+  ],
+  "replace": [
+   "harga",
+   "rendah"
+  ],
+  "nth": 1
+ },
+ {
+  "find": [
+   "kejatuhan"
+  ],
+  "replace": [
+   "harga",
+   "emas",
+   "rendah"
+  ],
+  "nth": 1
+ },
+ {
+  "find": [
+   "hujung",
+   "gaji."
+  ],
+  "replace": [
+   "belum",
+   "gaji."
+  ]
+ },
+ {
+  "find": [
+   "hujung",
+   "gaji"
+  ],
+  "replace": [
+   "belum",
+   "gaji"
+  ]
+ }
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "find": [
+   "RM30"
+  ],
+  "replace": [
+   "30",
+   "gram",
+   "emas"
+  ]
+ },
+ {
+  "find": [
+   "capai",
+   "tabungan",
+   "emas",
+   "dalam",
+   "bentuk"
+  ],
+  "replace": [
+   "capai",
+   "dalam",
+   "bentuk"
+  ]
+ },
+ {
+  "find": [
+   "pencin."
+  ],
+  "replace": [
+   "pencen."
+  ]
+ }
+]

@@ -1,0 +1,72 @@
+[
+ {
+  "find": [
+   "menyimpat"
+  ],
+  "replace": [
+   "menyimpan"
+  ]
+ },
+ {
+  "find": [
+   "Uni",
+   "KLMITEC"
+  ],
+  "replace": [
+   "UniKL",
+   "MITEC"
+  ]
+ },
+ {
+  "find": [
+   "Muhammad",
+   "Zulkifli",
+   "Syafi",
+   "'i,"
+  ],
+  "replace": [
+   "Mohd",
+   "Zulkifli",
+   "Shafie,"
+  ]
+ },
+ {
+  "find": [
+   "prinsip",
+   "Untuk"
+  ],
+  "replace": [
+   "prinsip",
+   "untuk"
+  ]
+ },
+ {
+  "find": [
+   "belajar",
+   "direct",
+   "daripada"
+  ],
+  "replace": [
+   "belajar",
+   "daripada"
+  ]
+ },
+ {
+  "find": [
+   "juta.",
+   "Penyimpan"
+  ],
+  "replace": [
+   "juta",
+   "penyimpan"
+  ]
+ },
+ {
+  "find": [
+   "betul"
+  ],
+  "replace": [
+   "betul,"
+  ]
+ }
+]

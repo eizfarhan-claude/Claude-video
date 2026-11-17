@@ -1,164 +1,137 @@
-/* v11 — Membina Satu Juta Pertama: jemputan event warga Johor (21 Nov 2026, UniKL MITEC) */
+/* v11 — Akaun GAP: wajib menabung setiap bulan? */
 import React from 'react';
-import {interpolate, useCurrentFrame} from 'remotion';
 import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
-import {ChecklistCard, EventCard, GItem, IconCalendar, IconChat, IconGrad, IconShield, IconX, ImageCut, JourneyCard, Schedule, Subtitles, TitleCard, VCut, VideoCutTrack, motionBusy} from '../../engine/kit';
-import {IconCoin, IconPin, IconTarget} from '../../engine/ui';
+import {ChecklistCard, Choices, CtaCard, GItem, IconCalendar, IconWarn, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
+import {IntroFlash, MythFact, PillRow, TitleIntro} from '../../engine/kit2';
+import {IconBank, IconCoin, IconTarget} from '../../engine/ui';
 
-const tl = makeTimeline(edlJson as Edl, 30);
-const CAP = captionsJson as Word[];
-/** output-second start of the n-th caption word `text` (case/punctuation-insensitive) */
-const c = (text: string, nth = 0) => {
-  const hits = CAP.filter((w) => w.text.toLowerCase().replace(/[.,?!]+$/, '') === text.toLowerCase());
-  if (!hits[nth]) throw new Error(`caption word not found: ${text}/${nth}`);
-  return hits[nth].start;
-};
-const END = tl.total / 30;
+// anchors come from the captions (re-transcribed EDITED voice) so they match exactly what is heard
+const tl = makeTimeline({...(edlJson as Edl), words: captionsJson as Word[]}, 30);
+const {at, sectionStart: S, sectionEnd: E} = tl;
 
 const M = {
-  hook: 0.05,
-  simpanan: c('simpanan', 0),
-  khas: c('khas'),
-  event: c('event', 0),
-  yangmana: c('mana'),
-  d21: c('21'),
-  di: c('di', 0),
-  dewan: c('dewan'),
-  johorB: c('johor', 1),
-  dalam: c('dalam'),
-  perkongsian: c('perkongsian'),
-  guru: c('guru', 0),
-  tuan: c('tuan'),
-  penulis: c('penulis'),
-  dan2: c('dan', 1),
-  prinsip: c('prinsip'),
-  tabungan: c('tabungan'),
-  hapuskan: c('hapuskan'),
-  bersih: c('bersih'),
-  rm1b: c('rm1', 1),
-  jadi: c('jadi', 0),
-  belajar: c('belajar', 0),
-  percuma: c('percuma'),
-  dapatkan: c('dapatkan'),
-  cara: c('cara'),
-  ilmu2: c('ilmu', 1),
-  belajar2: c('belajar', 1),
-  telah: c('telah'),
-  n11: c('1.1'),
-  penyimpan: c('penyimpan'),
-  jadi2: c('jadi', 1),
-  jumpa: c('jumpa'),
+  wajib: at('hook', 'wajib'),
+  setiap: at('hook', 'setiap'),
+  kalau: at('hook', 'kalau'),
+  miss: at('hook', 'ter-miss'),
+  intro: S('intro'),
+  bajet: at('intro', 'bajet'),
+  tak: S('tak_wajib'),
+  takw: at('tak_wajib', 'tak'),
+  termiss: S('termiss'),
+  charge: at('termiss', 'charge'),
+  penalty: at('termiss', 'penalty'),
+  platform: S('platform'),
+  flex: S('fleksibel'),
+  masa: at('fleksibel', 'masa'),
+  bajet2: at('fleksibel', 'bajet'),
+  min: at('fleksibel', 'minimum'),
+  situasi: at('fleksibel', 'situasi'),
+  kerap: S('kerap'),
+  hari: at('kerap', 'hari'),
+  sebulan: at('kerap', 'sebulan'),
+  tiga: at('kerap', 'tiga'),
+  kons: S('konsisten'),
+  paksa: at('konsisten', 'paksa'),
+  kekayaan: at('konsisten', 'kekayaan'),
+  cta: S('cta'),
+  video: at('cta', 'video'),
+  biru: at('cta', 'biru'),
 };
 
-/** "1.1 JUTA" counting up from 0.0 */
-const CountUp: React.FC<{dur: number; at: number; subAt: number}> = ({dur, at, subAt}) => {
-  const f = useCurrentFrame();
-  const n = interpolate(f, [at, at + 22], [0, 1.1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  return <TitleCard dur={dur} icon={<IconGrad size={84} />} label="Telah membimbing lebih" title={`${n.toFixed(1)} JUTA`} size={84} sub="penyimpan emas" subAt={subAt} shine />;
-};
-
-const VENUE = 'DEWAN UTAMA UniKL MITEC';
 const ITEMS: GItem[] = [
-  {from: M.hook, to: M.simpanan - 0.1, render: (d) => (
-    <TitleCard dur={d} icon={<IconCoin size={84} />} label="Bayangkan dengan hanya" title="SIMPAN EMAS" size={80} />
+  {from: 0.0, to: M.kalau - 0.1, render: (d) => (
+    <TitleIntro dur={d} tag="Akaun Emas GAP" line1="WAJIB MENABUNG" line2="SETIAP BULAN?" l2At={14} />
   )},
-  {from: M.simpanan - 0.1, to: M.khas - 0.05, render: (d) => (
-    <TitleCard dur={d} label="Simpanan bersih" title="RM1 JUTA PERTAMA" size={72} shine />
+  {from: M.kalau - 0.1, to: E('hook') + 0.15, render: (d, r) => (
+    <TitleCard dur={d} icon={<IconWarn size={84} />} label="Kalau" title="TER-MISS?" gold={false} size={76} sub="macam mana?" subAt={r(M.miss) + 8} />
   )},
-  {from: M.khas, to: M.yangmana - 0.1, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconPin size={80} />} label="Khas untuk" title="WARGA JOHOR" size={78} sub="Event yang sangat besar!" subAt={r(M.event)} />
+  {from: M.intro + 0.05, to: E('intro') + 0.15, render: (d, r) => (
+    <TitleCard dur={d} icon={<IconCoin size={88} />} label="Paling mudah untuk mula" title="AKAUN EMAS GAP" size={64} sub="bajet kecil · tiada komitmen bulanan" subAt={r(M.bajet)} shine />
   )},
-  {from: M.yangmana - 0.1, to: M.dalam - 0.05, render: (d, r) => (
-    <EventCard dur={d} label="Membina Satu Juta Pertama" rows={[
-      {icon: <IconCalendar size={50} />, text: '21 NOVEMBER 2026', sub: 'Sabtu', at: r(M.d21), subAt: r(M.d21) + 20},
-      {icon: <IconPin size={50} />, text: VENUE, sub: 'Johor Bahru', at: r(M.dewan), subAt: r(M.johorB)},
+  {from: M.tak + 0.05, to: E('tak_wajib') + 0.15, render: (d, r) => (
+    <MythFact dur={d} myth="WAJIB SETIAP BULAN" strikeAt={r(M.takw)} factAt={r(M.takw) + 14} fact="TAK WAJIB!" />
+  )},
+  {from: M.termiss + 0.05, to: E('termiss') + 0.15, render: (d, r) => (
+    <ChecklistCard dur={d} label="Ter-miss satu bulan?" rows={[
+      {text: 'Tiada caj', at: r(M.charge)},
+      {text: 'Tiada penalti', at: r(M.penalty)},
     ]} />
   )},
-  {from: M.guru - 0.1, to: M.dan2 - 0.05, render: (d, r) => (
-    <TitleCard dur={d} label="Guru emas saya · Tuan Haji" title="MOHD ZULKIFLI SHAFIE" size={56} sub="Penulis buku Emas & Misi Bebas Hutang" subAt={r(M.penulis)} shine />
+  {from: M.platform + 0.05, to: E('platform') + 0.1, render: (d) => (
+    <TitleCard dur={d} icon={<IconBank size={80} />} label="Public Gold sediakan" title="PLATFORM TABUNGAN" size={58} />
   )},
-  {from: M.dan2 - 0.05, to: M.hapuskan - 0.1, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconTarget size={80} />} label="Prinsip" title="MEMBINA TABUNGAN" size={62} sub="melalui simpanan emas" subAt={r(M.tabungan)} />
-  )},
-  {from: M.hapuskan - 0.1, to: M.jadi - 0.05, render: (d, r) => (
-    <JourneyCard dur={d} label="Langkah demi langkah" nodes={[
-      {text: 'HAPUS HUTANG', icon: <IconX size={50} />, at: r(M.hapuskan)},
-      {text: 'SIMPANAN BERSIH', icon: <IconShield size={50} />, at: r(M.bersih) - 12},
-      {text: 'RM1 JUTA', icon: <IconCoin size={50} />, at: r(M.rm1b)},
+  {from: M.flex + 0.05, to: E('fleksibel') + 0.15, render: (d, r) => (
+    <PillRow dur={d} label="Isi tabungan ikut" pills={[
+      {text: 'MASA KITA', at: r(M.masa)},
+      {text: 'BAJET KITA', at: r(M.bajet2)},
+      {text: 'MIN RM100', at: r(M.min), good: true},
+      {text: 'SITUASI KITA', at: r(M.situasi)},
     ]} />
   )},
-  {from: M.jadi - 0.05, to: M.dapatkan - 0.1, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconChat size={80} />} label="Jemput semua" title="HADIR & BELAJAR" size={64} sub="Masuk PERCUMA" subAt={r(M.percuma)} />
-  )},
-  {from: M.dapatkan - 0.1, to: M.belajar2 - 0.05, render: (d, r) => (
-    <ChecklistCard dur={d} label="Ilmu membina kekayaan" rows={[
-      {text: 'Cara yang betul', at: r(M.cara)},
-      {text: 'Ilmu yang betul', at: r(M.ilmu2)},
+  {from: M.kerap + 0.05, to: E('kerap') + 0.15, render: (d, r) => (
+    <Choices dur={d} items={[
+      {top: 'Setiap hari', main: 'BOLEH', at: r(M.hari), good: true},
+      {top: 'Sebulan sekali', main: 'BOLEH', at: r(M.sebulan), good: true},
+      {top: '2–3 bulan sekali', main: 'BOLEH', at: r(M.tiga), good: true},
     ]} />
   )},
-  {from: M.telah - 0.1, to: M.jadi2 - 0.05, render: (d, r) => <CountUp dur={d} at={r(M.n11)} subAt={r(M.penyimpan)} />},
-  {from: M.jadi2 - 0.05, to: END, render: (d, r) => (
-    <EventCard dur={d} label="Warga Johor · jumpa di sana!" badge="PERCUMA" badgeAt={r(M.jumpa)} rows={[
-      {icon: <IconCalendar size={50} />, text: 'SABTU · 21 NOV 2026', at: 4},
-      {icon: <IconPin size={50} />, text: VENUE, sub: 'Johor Bahru', at: 9},
-    ]} />
+  {from: M.kons + 0.05, to: E('konsisten') + 0.15, render: (d, r) => (
+    <TitleCard dur={d} icon={<IconTarget size={84} />} label="Paling baik" title="KONSISTEN SETIAP BULAN" size={52} sub="tambah simpanan → bina kekayaan" subAt={r(M.kekayaan) - 8} shine />
+  )},
+  {from: M.cta, to: 9999, render: (d, r) => (
+    <CtaCard dur={d} head="Belum ada akaun GAP?" pin={r(M.video)} guide={r(M.biru)} guideText="Isi BAG BIRU" />
   )},
 ];
-
-/* B-roll from the earlier Leaders Road Tour event (phone footage, framed so the low resolution doesn't show) */
-const EV = 'v11/broll/event.mp4';
-const VCUTS: VCut[] = [
-  {file: EV, from: M.event - 0.15, to: M.yangmana - 0.15, srcStart: 17.0, tag: 'Leaders Road Tour 2026'},
-  {file: EV, from: M.perkongsian - 0.1, to: M.tuan - 0.05, srcStart: 1.7},
-  {file: EV, from: M.belajar - 0.1, to: M.dapatkan - 0.15, srcStart: 6.6},
-  {file: EV, from: M.belajar2 - 0.1, to: M.telah - 0.1, srcStart: 14.0},
-];
-const IMG: [number, number] = [M.tuan - 0.05, M.penulis - 0.1]; // stage photo while the name is said; book in hand shows at "penulis"
 
 const SFX: Sfx[] = [
-  {t: M.hook, f: 'whoosh_cine', v: 0.45},
-  {t: M.hook + 0.05, f: 'impact_deep', v: 0.28},
-  {t: M.simpanan - 0.1, f: 'coins', v: 0.34},
-  {t: M.khas, f: 'whoosh_pop', v: 0.4},
-  {t: M.event - 0.15, f: 'whoosh_small', v: 0.3},
-  {t: M.yangmana - 0.1, f: 'whoosh_pop', v: 0.38},
-  {t: M.d21, f: 'pop_hard', v: 0.34},
-  {t: M.dewan, f: 'pop_msg', v: 0.34},
-  {t: M.perkongsian - 0.1, f: 'whoosh_small', v: 0.3},
-  {t: M.guru - 0.1, f: 'sparkle', v: 0.26},
-  {t: M.tuan - 0.05, f: 'whoosh_small', v: 0.26},
-  {t: M.penulis, f: 'pop_msg', v: 0.32},
-  {t: M.dan2 - 0.05, f: 'whoosh_pop', v: 0.36},
-  {t: M.hapuskan - 0.1, f: 'whoosh_small', v: 0.3},
-  {t: M.bersih - 0.4, f: 'click_select', v: 0.34},
-  {t: M.rm1b, f: 'gold_prize', v: 0.3},
-  {t: M.jadi - 0.05, f: 'whoosh_pop', v: 0.36},
-  {t: M.percuma, f: 'ding_correct', v: 0.3},
-  {t: M.dapatkan - 0.1, f: 'whoosh_small', v: 0.28},
-  {t: M.cara + 0.15, f: 'click_select', v: 0.36},
-  {t: M.ilmu2 + 0.15, f: 'click_select', v: 0.36},
-  {t: M.belajar2 - 0.1, f: 'whoosh_small', v: 0.28},
-  {t: M.n11, f: 'gold_price', v: 0.3},
-  {t: M.jadi2 - 0.05, f: 'whoosh_cine', v: 0.32},
-  {t: M.jumpa, f: 'bell_notif', v: 0.28},
+  {t: 0.0, f: 'whoosh_impact', v: 0.45},
+  {t: 0.1, f: 'tech_slide', v: 0.22},
+  {t: 0.2, f: 'zoom_impact', v: 0.32},
+  {t: 0.47, f: 'impact_deep', v: 0.26},
+  {t: 0.7, f: 'sparkle', v: 0.22},
+  {t: M.kalau - 0.1, f: 'swoosh_fast', v: 0.3},
+  {t: M.miss, f: 'glitch_text', v: 0.16},
+  {t: M.intro + 0.05, f: 'tech_slide', v: 0.34},
+  {t: M.bajet, f: 'coin_notif', v: 0.22},
+  {t: M.tak + 0.05, f: 'whoosh_pop', v: 0.36},
+  {t: M.takw, f: 'swoosh_accent', v: 0.34},
+  {t: M.takw + 0.47, f: 'ding_correct', v: 0.26},
+  {t: M.termiss + 0.05, f: 'tech_slide', v: 0.3},
+  {t: M.charge + 0.15, f: 'ui_click', v: 0.36},
+  {t: M.penalty + 0.15, f: 'ui_click', v: 0.36},
+  {t: M.platform + 0.05, f: 'whoosh_small', v: 0.28},
+  {t: M.flex + 0.05, f: 'swoosh_fast', v: 0.3},
+  {t: M.masa, f: 'bubble_pop', v: 0.3},
+  {t: M.bajet2, f: 'bubble_pop', v: 0.3},
+  {t: M.min, f: 'coin_win', v: 0.3},
+  {t: M.situasi, f: 'bubble_pop', v: 0.3},
+  {t: M.hari, f: 'tech_select', v: 0.3},
+  {t: M.sebulan, f: 'tech_select', v: 0.3},
+  {t: M.tiga, f: 'tech_select', v: 0.3},
+  {t: M.kons + 0.05, f: 'whoosh_cine', v: 0.3},
+  {t: M.kekayaan - 0.25, f: 'sparkle', v: 0.24},
+  {t: M.cta, f: 'whoosh_pop', v: 0.34},
+  {t: M.video, f: 'pop_msg', v: 0.3},
+  {t: M.biru, f: 'bell_notif', v: 0.22},
 ];
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
-    <VideoCutTrack cuts={VCUTS} />
-    <ImageCut src="v11/broll/stage.jpg" from={IMG[0]} to={IMG[1]} source="Leaders Road Tour 2026" />
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={CAP} busy={motionBusy(ITEMS, SFX, [...VCUTS.map((v) => [v.from, v.to] as [number, number]), IMG])} />
+    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
 );
 
 export const v11: VideoDef = {
   id: 'v11', tl, Overlays, sfx: SFX,
-  punches: [M.simpanan, M.khas + 0.1, M.d21, M.prinsip, M.hapuskan, M.percuma, M.jumpa],
-  zoom: {hook: [1.1], johor: [1.0], tarikh: [1.06], lokasi: [1.0], guru: [1.06, 1.0], prinsip: [1.0], hapus: [1.07], jemput: [1.0, 1.06], bimbing: [1.06, 1.0], outro: [1.08]},
-  music: {file: 'bgm.mp3', startAt: 200},
+  punches: [0.47, M.wajib, M.miss, M.takw, M.min, M.paksa],
+  zoom: {hook: [1.1], intro: [1.0], tak_wajib: [1.07], termiss: [1.0, 1.06], platform: [1.07], fleksibel: [1.0, 1.06], kerap: [1.06, 1.0], konsisten: [1.0, 1.07], cta: [1.06]},
+  music: {file: 'bgm.mp3', startAt: 40},
+  focus: {to: E('hook') + 0.1},
 };
-export const SatuJuta: React.FC<EditProps> = (p) => <Edit def={v11} {...p} />;
+export const WajibMenabung: React.FC<EditProps> = (p) => <Edit def={v11} {...p} />;

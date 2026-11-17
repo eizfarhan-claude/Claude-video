@@ -1,20 +1,81 @@
 {
  "id": "v11",
- "title": "Membina Satu Juta Pertama — event Johor",
+ "title": "Wajib Menabung Setiap Bulan?",
  "ranges": [
-  ["hook", 9.15, 15.25],
-  ["johor", 15.25, 20.45],
-  ["tarikh", 20.45, "25.45!"],
-  ["lokasi", 30.6, 34.05],
-  ["guru", 40.85, 49.4],
-  ["prinsip", 61.1, 66.4],
-  ["hapus", 70.35, 75.25],
-  ["jemput", 75.25, "85.32!"],
-  ["bimbing", 89.9, 97.45],
-  ["outro", 99.8, 102.85]
+  [
+   "hook",
+   "2.72!",
+   7.68
+  ],
+  [
+   "intro",
+   19.92,
+   27.44
+  ],
+  [
+   "tak_wajib",
+   27.44,
+   30.4
+  ],
+  [
+   "termiss",
+   "38.85!",
+   44.75
+  ],
+  [
+   "platform",
+   44.96,
+   48.15
+  ],
+  [
+   "fleksibel",
+   "50.12!",
+   57.25
+  ],
+  [
+   "kerap",
+   60.16,
+   "67.74!"
+  ],
+  [
+   "konsisten",
+   71.94,
+   80.55
+  ],
+  [
+   "cta",
+   "83.85!",
+   89.95
+  ]
  ],
- "pad_out": 0.16,
  "cuts": [],
- "fix": {"menipu": "menyimpan", "Mitek": "MITEC", "Mitek,": "MITEC,", "memilih": "membina", "mempunyai": "miliki"},
- "drop": []
+ "fix": {
+  "menabur": "menabung",
+  "menapus": "menabung",
+  "napus": "menabung",
+  "menabuh": "menabung",
+  "menampuk": "menabung",
+  "gap": "GAP",
+  "Gap": "GAP",
+  "jeb": "GAP",
+  "muscap": "GAP",
+  "penyimpat": "penyimpan",
+  "penipu": "penyimpan",
+  "penyipat": "penyimpan",
+  "beg": "bag",
+  "film": "pin",
+  "sendah": "serendah",
+  "gerai": "gram",
+  "bocu": "bocor",
+  "termis": "ter-miss",
+  "termis,": "ter-miss,",
+  "kemimpin": "komitmen",
+  "membulanan": "bulanan",
+  "kau": "mula",
+  "sistem": "",
+  "aku": "komitmen",
+  "ambil": ""
+ },
+ "drop": [],
+ "pad_out": 0.2
 }

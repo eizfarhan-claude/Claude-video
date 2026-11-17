@@ -1,0 +1,87 @@
+{
+ "id": "v15",
+ "title": "Tunggu Harga Terendah?",
+ "ranges": [
+  [
+   "hook",
+   2.7,
+   8.2
+  ],
+  [
+   "jawapan",
+   8.28,
+   16.3
+  ],
+  [
+   "sebab",
+   17.98,
+   "21.72!"
+  ],
+  [
+   "1kg",
+   "30.2!",
+   "35.42!"
+  ],
+  [
+   "fokus",
+   "37.9!",
+   46.2
+  ],
+  [
+   "kaya",
+   46.26,
+   58.0
+  ],
+  [
+   "konsep",
+   58.1,
+   "68.94!"
+  ],
+  [
+   "konsep",
+   "69.86!",
+   "80.27!"
+  ],
+  [
+   "cta",
+   "89.64!",
+   "103.44!"
+  ]
+ ],
+ "cuts": [
+  [
+   41.5,
+   43.42
+  ],
+  [
+   74.43,
+   75.02
+  ]
+ ],
+ "fix": {
+  "menabur": "menabung",
+  "menapus": "menabung",
+  "napus": "menabung",
+  "menabuh": "menabung",
+  "menampuk": "menabung",
+  "gap": "GAP",
+  "Gap": "GAP",
+  "jeb": "GAP",
+  "muscap": "GAP",
+  "penyimpat": "penyimpan",
+  "penipu": "penyimpan",
+  "penyipat": "penyimpan",
+  "beg": "bag",
+  "film": "pin",
+  "sendah": "serendah",
+  "gerai": "gram",
+  "bocu": "bocor",
+  "endingnya": "ending-nya",
+  "pemerataan": "purata",
+  "melekat": "melakukan",
+  "sifat": "simpanan",
+  "ambas": "emas"
+ },
+ "drop": [],
+ "pad_out": 0.2
+}

@@ -1,0 +1,40 @@
+[
+ {
+  "find": [
+   "2020,"
+  ],
+  "replace": [
+   "2006,"
+  ]
+ },
+ {
+  "find": [
+   "2020?"
+  ],
+  "replace": [
+   "2026?"
+  ]
+ },
+ {
+  "find": [
+   "matur"
+  ],
+  "replace": [
+   "mata",
+   "wang"
+  ]
+ },
+ {
+  "find": [
+   "nilai",
+   "mata",
+   "hari"
+  ],
+  "replace": [
+   "nilai",
+   "mata",
+   "wang",
+   "hari"
+  ]
+ }
+]

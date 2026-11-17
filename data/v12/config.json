@@ -1,0 +1,53 @@
+{
+ "id": "v12",
+ "title": "Konsep Akaun GAP 30 Saat",
+ "ranges": [
+  [
+   "hook",
+   2.24,
+   5.6
+  ],
+  [
+   "p1",
+   5.72,
+   12.5
+  ],
+  [
+   "p2",
+   12.62,
+   22.6
+  ],
+  [
+   "p3",
+   27.14,
+   32.7
+  ],
+  [
+   "cta",
+   48.08,
+   57.1
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "menabur": "menabung",
+  "menapus": "menabung",
+  "napus": "menabung",
+  "menabuh": "menabung",
+  "menampuk": "menabung",
+  "gap": "GAP",
+  "Gap": "GAP",
+  "jeb": "GAP",
+  "muscap": "GAP",
+  "penyimpat": "penyimpan",
+  "penipu": "penyimpan",
+  "penyipat": "penyimpan",
+  "beg": "bag",
+  "film": "pin",
+  "sendah": "serendah",
+  "gerai": "gram",
+  "bocu": "bocor"
+ },
+ "drop": [],
+ "pad_out": 0.2
+}

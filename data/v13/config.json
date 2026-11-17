@@ -1,0 +1,69 @@
+{
+ "id": "v13",
+ "title": "3 Situasi Jual Emas",
+ "ranges": [
+  [
+   "hook",
+   3.06,
+   8.95
+  ],
+  [
+   "hook2",
+   11.26,
+   13.9
+  ],
+  [
+   "s1",
+   14.12,
+   "29.56!"
+  ],
+  [
+   "s2",
+   33.96,
+   49.5
+  ],
+  [
+   "s3",
+   49.58,
+   "56.0!"
+  ],
+  [
+   "recap",
+   60.04,
+   "65.45!"
+  ],
+  [
+   "recap2",
+   "72.9!",
+   82.5
+  ],
+  [
+   "cta",
+   82.82,
+   88.95
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "menabur": "menabung",
+  "menapus": "menabung",
+  "napus": "menabung",
+  "menabuh": "menabung",
+  "menampuk": "menabung",
+  "gap": "GAP",
+  "Gap": "GAP",
+  "jeb": "GAP",
+  "muscap": "GAP",
+  "penyimpat": "penyimpan",
+  "penipu": "penyimpan",
+  "penyipat": "penyimpan",
+  "beg": "bag",
+  "film": "pin",
+  "sendah": "serendah",
+  "gerai": "gram",
+  "bocu": "bocor",
+  "Dah": "Dah"
+ },
+ "drop": [],
+ "pad_out": 0.2
+}
