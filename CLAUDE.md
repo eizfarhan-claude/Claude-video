@@ -19,8 +19,8 @@ without being asked again. Reply to the owner in Malay.
   gold line sweep, shine) + `IntroFlash`, with whoosh-impact / zoom-impact / deep-impact / sparkle SFX.
   Title = the video's hook question/promise. It replaces any other card during the hook.
 - **Intro focus**: background blurs and the speaker is pushed forward during the hook
-  (`focus: {to: E('hook') + 0.1}` in the VideoDef + cut-outs: `python3 scripts/cutout.py <id> <srcFrom> <srcTo>`
-  over the hook clip's source frames → `public/<id>/fg/`).
+  (`focus: {to: E('hook') + 0.1}` in the VideoDef, then `python3 scripts/cutout-focus.py <id>` — generates the
+  speaker cut-outs for every clip inside the focus window → `public/<id>/fg/`; a missing frame fails the render).
 - Motion graphics + premium SFX layer (kit / kit2 cards) where the speech calls for them.
 - **Never cover the face**: cards only in the top band (above the head) or bottom band (chest);
   subtitles on the chest only when nothing animates.
