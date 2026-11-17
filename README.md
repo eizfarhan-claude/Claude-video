@@ -27,3 +27,5 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - `scripts/recaption.py <id> t0 t1` re-transcribes one window of the edited voice into captions.json
 - config edges written as `"96.70!"` are exact (not snapped to silence)
 - `scripts/prep-vivid.sh <id> raw.mov` – high-saturation, sharper grade (used for v7 final)
+- v11 `SatuJuta` — jemputan event "Membina Satu Juta Pertama" (Johor, 21 Nov 2026). Framed event B-roll (`VideoCutTrack`), stage photo, `EventCard`; `npm run preview:v11`
+- `scripts/fix-captions.py <id>` applies word-sequence fixes from `data/<id>/caption_post.json`

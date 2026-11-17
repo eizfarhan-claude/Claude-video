@@ -740,3 +740,67 @@ export const WaveIcon: React.FC<{size?: number}> = ({size = 90}) => {
     </svg>
   );
 };
+
+/* ---------- framed video cutaway (for low-res phone B-roll): blurred copy behind, framed clip, slow push-in ---------- */
+export type VCut = {file: string; from: number; to: number; srcStart: number; tag?: string};
+const VideoCutInner: React.FC<{c: VCut; dur: number}> = ({c, dur}) => {
+  const f = useCurrentFrame();
+  const opacity = interpolate(f, [0, 5, dur - 5, dur], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const pop = interpolate(f, [0, 10], [0.9, 1], {extrapolateRight: 'clamp', easing: Easing.out(Easing.back(1.6))});
+  const push = interpolate(f, [0, dur], [1, 1.05]);
+  const src = staticFile(c.file);
+  return (
+    <AbsoluteFill style={{opacity}}>
+      <AbsoluteFill style={{filter: 'blur(40px) brightness(0.4)', transform: 'scale(1.25)'}}>
+        <OffthreadVideo src={src} startFrom={sec(c.srcStart)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+      </AbsoluteFill>
+      <div style={{position: 'absolute', left: 165, width: 750, top: 520, height: 1333, transform: `scale(${pop * push})`, transformOrigin: '50% 30%', borderRadius: 28, overflow: 'hidden', boxShadow: '0 30px 80px rgba(0,0,0,0.6)', border: '4px solid rgba(247,215,116,0.85)'}}>
+        <OffthreadVideo src={src} startFrom={sec(c.srcStart)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+        {c.tag && (
+          <div style={{position: 'absolute', left: 22, bottom: 470, padding: '8px 18px', borderRadius: 14, background: 'rgba(14,14,18,0.8)', fontFamily: FONT2, fontWeight: 700, fontSize: 26, color: GOLD_SOLID, letterSpacing: 1}}>{c.tag}</div>
+        )}
+      </div>
+    </AbsoluteFill>
+  );
+};
+export const VideoCutTrack: React.FC<{cuts: VCut[]}> = ({cuts}) => (
+  <AbsoluteFill>
+    {cuts.map((c, i) => {
+      const from = sec(c.from); const dur = sec(c.to) - from;
+      return (
+        <Sequence key={i} from={from} durationInFrames={dur} layout="none">
+          <VideoCutInner c={c} dur={dur} />
+        </Sequence>
+      );
+    })}
+  </AbsoluteFill>
+);
+
+/* ---------- event info card: title + rows (date / venue / free) popping in one by one ---------- */
+export const EventCard: React.FC<{dur: number; label: string; rows: {icon: React.ReactNode; text: string; sub?: string; at: number; subAt?: number}[]; badge?: string; badgeAt?: number}> = ({dur, label, rows, badge, badgeAt = 0}) => {
+  const {v, frame} = useEnvelope(dur);
+  const b = usePop(badgeAt, 9);
+  return (
+    <TopBand v={v}>
+      <Card style={{width: 860, padding: '14px 30px 16px', boxSizing: 'border-box', position: 'relative'}}>
+        <Label size={22} color={GOLD_SOLID}>{label}</Label>
+        {rows.map((r, i) => {
+          const p = interpolate(frame - r.at, [0, 9], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.back(2))});
+          const s = interpolate(frame - (r.subAt ?? r.at), [0, 8], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+          return (
+            <div key={i} style={{display: 'flex', alignItems: 'center', gap: 16, marginTop: 8, opacity: Math.min(1, p * 1.5), transform: `translateX(${(1 - p) * -40}px)`}}>
+              <div style={{width: 58, display: 'flex', justifyContent: 'center', transform: `scale(${0.5 + 0.5 * p})`}}>{r.icon}</div>
+              <div style={{minWidth: 0}}>
+                <div style={{fontWeight: 900, fontSize: r.text.length > 20 ? 38 : 44, lineHeight: 1.05, whiteSpace: 'nowrap'}}>{r.text}</div>
+                {r.sub && <div style={{fontFamily: FONT2, fontWeight: 700, fontSize: 24, color: 'rgba(255,255,255,0.8)', opacity: s, height: s > 0.01 ? undefined : 0}}>{r.sub}</div>}
+              </div>
+            </div>
+          );
+        })}
+        {badge && (
+          <div style={{position: 'absolute', right: 26, top: 14, padding: '6px 18px', borderRadius: 14, background: 'linear-gradient(180deg,#3ff08f,#1fae5c)', color: '#05210f', fontWeight: 900, fontSize: 30, ...popStyle(b), transform: `rotate(-6deg) scale(${0.6 + 0.4 * b})`}}>{badge}</div>
+        )}
+      </Card>
+    </TopBand>
+  );
+};

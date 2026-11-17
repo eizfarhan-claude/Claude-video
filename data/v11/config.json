@@ -1,0 +1,20 @@
+{
+ "id": "v11",
+ "title": "Membina Satu Juta Pertama — event Johor",
+ "ranges": [
+  ["hook", 9.15, 15.25],
+  ["johor", 15.25, 20.45],
+  ["tarikh", 20.45, "25.45!"],
+  ["lokasi", 30.6, 34.05],
+  ["guru", 40.85, 49.4],
+  ["prinsip", 61.1, 66.4],
+  ["hapus", 70.35, 75.25],
+  ["jemput", 75.25, "85.32!"],
+  ["bimbing", 89.9, 97.45],
+  ["outro", 99.8, 102.85]
+ ],
+ "pad_out": 0.16,
+ "cuts": [],
+ "fix": {"menipu": "menyimpan", "Mitek": "MITEC", "Mitek,": "MITEC,", "memilih": "membina", "mempunyai": "miliki"},
+ "drop": []
+}
