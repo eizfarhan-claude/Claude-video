@@ -5,7 +5,7 @@ import {FONT2, GOLD_SOLID, GREEN} from './theme';
 import {BandCtx, BandPos, Card, GoldText, IconCheck, IconCoin, IconPin, Label, Shine, TopBand, useEnvelope, usePop} from './ui';
 import {Word} from './timeline';
 import {useVideoConfig, spring} from 'remotion';
-import {BOTTOM_BAND, FONT, SAFE} from './theme';
+import {BAND_X, BOTTOM_BAND, FONT} from './theme';
 import {sec} from './timeline';
 
 export const popStyle = (p: number): React.CSSProperties => ({transform: `scale(${0.6 + 0.4 * p})`, opacity: Math.min(1, p * 1.5)});
@@ -345,7 +345,7 @@ export const Subtitles: React.FC<{words: Word[]; busy: [number, number][]}> = ({
   const pf = Math.round((page.start - 0.05) * fps);
   const enter = spring({frame: frame - pf, fps, config: {damping: 15, stiffness: 220, mass: 0.5}});
   return (
-    <div style={{position: 'absolute', left: SAFE.left + 10, width: SAFE.right - SAFE.left - 20, top: BOTTOM_BAND.y, height: BOTTOM_BAND.h, display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', opacity: enter, transform: `translateY(${(1 - enter) * 20}px) scale(${0.92 + 0.08 * enter})`}}>
+    <div style={{position: 'absolute', left: BAND_X.left + 60, width: BAND_X.width - 120, top: BOTTOM_BAND.y, height: BOTTOM_BAND.h, display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', opacity: enter, transform: `translateY(${(1 - enter) * 20}px) scale(${0.92 + 0.08 * enter})`}}>
       {page.words.map((w, i) => {
         const active = t >= w.start - 0.03 && t < (page.words[i + 1]?.start ?? page.end);
         const said = t >= w.start - 0.03;

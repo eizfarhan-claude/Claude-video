@@ -1,6 +1,6 @@
 import React, {createContext, useContext} from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig, Easing} from 'remotion';
-import {BOTTOM_BAND, FONT, FONT2, GOLD, INK, SAFE, TOP_BAND} from './theme';
+import {BAND_X, BOTTOM_BAND, FONT, FONT2, GOLD, INK, TOP_BAND} from './theme';
 
 /** Enter/exit envelope for an overlay living inside a <Sequence>. */
 export const useEnvelope = (duration: number, exitFrames = 8) => {
@@ -36,8 +36,8 @@ export const TopBand: React.FC<{children: React.ReactNode; v: number; y?: number
     <div
       style={{
         position: 'absolute',
-        left: SAFE.left,
-        width: SAFE.right - SAFE.left,
+        left: BAND_X.left,
+        width: BAND_X.width,
         top: band.y + y,
         height: band.h,
         display: 'flex',

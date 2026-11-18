@@ -10,7 +10,12 @@ export const H = 1920;
 // IG Reels: top ~220, bottom ~380. We use the stricter of both.
 export const SAFE = {top: 230, bottom: 1920 - 440, left: 70, right: 1080 - 150};
 // Face sits roughly y 500–1120 (head top to chin, incl. zoom) – graphics never go there.
-export const TOP_BAND = {y: 232, h: 250}; // graphics zone above the head
+// Every overlay is centred on the video's vertical centre line (x = 540) for TikTok.
+// The band is symmetric (90px each side); the right-hand action rail only starts
+// below the top band, and bottom cards stay narrower than 2 × (540 - 150).
+export const CENTER_X = W / 2;
+export const BAND_X = {left: 90, width: W - 180};
+export const TOP_BAND = {y: 250, h: 250}; // graphics zone above the head (clear of TikTok's search bar)
 export const CAPTION_Y = 1250;              // caption zone on the chest, above bottom UI
 // lower graphics zone: on the chest, below the chin (even at max zoom) and above TikTok/IG bottom UI
 export const BOTTOM_BAND = {y: 1195, h: 270};

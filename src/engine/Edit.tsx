@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import {AbsoluteFill, Audio, interpolate, OffthreadVideo, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Clip, sec, Timeline} from './timeline';
-import {SAFE, TOP_BAND} from './theme';
+import {BAND_X, CENTER_X, SAFE, TOP_BAND} from './theme';
 
 export type Sfx = {t: number; f: string; v: number};
 
@@ -69,7 +69,8 @@ const SafeZones: React.FC = () => (
     <div style={{position: 'absolute', left: 0, right: 0, top: SAFE.bottom, bottom: 0, background: 'rgba(255,0,0,0.28)'}} />
     <div style={{position: 'absolute', left: SAFE.right, width: 1080 - SAFE.right, top: SAFE.top, bottom: 1920 - SAFE.bottom, background: 'rgba(255,0,0,0.2)'}} />
     <div style={{position: 'absolute', left: 0, width: SAFE.left, top: SAFE.top, bottom: 1920 - SAFE.bottom, background: 'rgba(255,0,0,0.2)'}} />
-    <div style={{position: 'absolute', left: SAFE.left, width: SAFE.right - SAFE.left, top: TOP_BAND.y, height: TOP_BAND.h, border: '4px dashed #00e5ff'}} />
+    <div style={{position: 'absolute', left: BAND_X.left, width: BAND_X.width, top: TOP_BAND.y, height: TOP_BAND.h, border: '4px dashed #00e5ff'}} />
+    <div style={{position: 'absolute', left: CENTER_X - 1, width: 2, top: 0, bottom: 0, background: '#00e5ff'}} />
   </AbsoluteFill>
 );
 
