@@ -45,5 +45,5 @@ export const COVERS: Record<string, CoverProps> = {
   v17: {id: 'v17', frame: 3600, tag: 'Kos haji', line1: 'MAHAL DALAM RINGGIT', line2: 'MURAH DALAM EMAS', sub: '1998 vs hari ini'},
   v18: {id: 'v18', frame: 260, tag: '10 tahun lalu tak terfikir', line1: 'SIMPANAN 5 ANGKA', line2: 'DI USIA 20-AN', sub: 'Kisah sebenar penyimpan emas'},
   v19: {id: 'v19', frame: 227, tag: 'RM1 juta pada tahun 2006', line1: 'MASIH JUTAWAN', line2: 'PADA 2026?', sub: 'Tonton sampai habis'},
-  v20: {id: 'v20', frame: 450, tag: 'Bayangkan hanya simpan emas', line1: 'MILIKI SIMPANAN', line2: 'RM1 JUTA PERTAMA', sub: 'Event PERCUMA · Johor · 21 Nov 2026'},
+  v20: {id: 'v20', frame: 0, tag: 'Bayangkan hanya simpan emas', line1: 'MILIKI SIMPANAN', line2: 'RM1 JUTA PERTAMA', sub: 'Event PERCUMA · Johor · 21 Nov 2026'},
 };
