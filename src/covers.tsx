@@ -60,11 +60,39 @@ export const COVERS: Record<string, CoverProps> = {
   v19: {id: 'v19', t: 3.75, kicker: 'Simpan emas', lines: [{text: 'BILA WAKTU'}, {text: 'TERBAIK?', gold: true}], sub: 'Bukan waktu harga turun!'},
 };
 
+
+/* Style B (user reference IMG_9059): big centred face, solid yellow kicker pill, white line + bigger gold line,
+   plain white sub-line, dark fade only behind the text block. TikTok 1080x1920. */
+export type CoverBProps = {id: string; kicker: string; white: string; gold: string; sub: string; zoom?: number; shiftY?: number};
+export const CoverB: React.FC<CoverBProps> = ({id, kicker, white, gold, sub, zoom = 1.18, shiftY = 40}) => {
+  const fit = (txt: string, max: number, k: number) => Math.min(max, Math.floor(980 / (k * txt.length)));
+  return (
+    <AbsoluteFill style={{background: '#0b0d12', overflow: 'hidden'}}>
+      <AbsoluteFill style={{transform: `translateY(${shiftY}px) scale(${zoom})`, transformOrigin: '50% 38%'}}>
+        <Img src={staticFile(`covers/${id}.png`)} style={{width: 1080, height: 1920}} />
+      </AbsoluteFill>
+      <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 55%, rgba(5,6,10,0.78) 66%, rgba(5,6,10,0.93) 80%, rgba(5,6,10,0.97) 100%)'}} />
+      <div style={{position: 'absolute', left: 30, right: 30, top: 1245, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <div style={{fontFamily: FONT, fontWeight: 800, fontSize: 40, letterSpacing: 3, color: '#1d1300', background: '#F5C84C', borderRadius: 16, padding: '10px 28px', textTransform: 'uppercase'}}>{kicker}</div>
+        <div style={{marginTop: 26, fontFamily: FONT, fontWeight: 900, fontSize: fit(white, 118, 0.62), lineHeight: 1.0, letterSpacing: -1, whiteSpace: 'nowrap', color: 'white', textAlign: 'center', textShadow: '0 6px 18px rgba(0,0,0,0.6)'}}>{white}</div>
+        <div style={{marginTop: 8, fontFamily: FONT, fontWeight: 900, fontSize: fit(gold, 140, 0.7), lineHeight: 1.0, letterSpacing: -1, whiteSpace: 'nowrap', textAlign: 'center',
+          backgroundImage: GOLD, WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent',
+          filter: 'drop-shadow(0 5px 0 rgba(90,55,0,0.9)) drop-shadow(0 12px 22px rgba(0,0,0,0.6))'}}>{gold}</div>
+        <div style={{marginTop: 26, fontFamily: FONT2, fontWeight: 700, fontSize: 42, color: 'white', textAlign: 'center', textShadow: '0 4px 14px rgba(0,0,0,0.7)'}}>{sub}</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+export const COVERS_B: Record<string, CoverBProps> = {
+  v12: {id: 'v12', kicker: 'Mana lebih baik?', white: 'ASB & TABUNG HAJI', gold: 'ATAU EMAS?', sub: 'Jawapannya ikut 1 faktor ini'},
+};
+
 export const CoverStills: React.FC = () => (
   <>
     {Object.entries(COVERS).flatMap(([k, p]) => [
       <Still key={`${k}tt`} id={`Cover-${k}-TT`} component={Cover} width={1080} height={1920} defaultProps={p} />,
       <Still key={`${k}ig`} id={`Cover-${k}-IG`} component={Cover} width={1080} height={1440} defaultProps={{...p, ig: true}} />,
     ])}
+    {Object.entries(COVERS_B).map(([k, p]) => <Still key={`${k}b`} id={`CoverB-${k}-TT`} component={CoverB} width={1080} height={1920} defaultProps={p} />)}
   </>
 );
