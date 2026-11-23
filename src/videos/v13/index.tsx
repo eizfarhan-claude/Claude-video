@@ -4,6 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
+import {IntroFlash, TitleIntro} from '../../engine/kit2';
 import {ChecklistCard, CtaCard, GItem, GoldProgress, GramTimeline, IconRings, IconWallet, Schedule, StepCard, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconClock, IconTarget} from '../../engine/ui';
 
@@ -12,8 +13,8 @@ const {at, sectionStart: S, sectionEnd: E} = tl;
 
 const M = {
   hook: 0.05,
-  bina: at('hook', 'bina'),
-  dana: at('hook', 'dana'),
+  bina: S('hook2'),
+  dana: at('hook2', 'dana'),
   cara: S('cara'),
   sepuluh: at('cara', '10'),
   s1: S('s1'),
@@ -42,10 +43,10 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: M.hook, to: M.bina - 0.1, render: (d) => (
-    <TitleCard dur={d} icon={<IconRings size={88} />} label="Anak muda · plan kahwin lagi 5 tahun?" title="NAK BUAT APA?" gold={false} size={70} />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Anak muda · plan kahwin" line1="LAGI 5 TAHUN," line2="NAK BUAT APA?" l2At={14} />
   )},
-  {from: M.bina - 0.1, to: E('hook') + 0.15, render: (d, r) => (
+  {from: E('hook') + 0.15, to: E('hook2') + 0.15, render: (d, r) => (
     <TitleCard dur={d} icon={<IconRings size={88} />} label="Bina simpanan" title="50 GRAM EMAS" size={78} sub="sebagai dana perkahwinan" subAt={r(M.dana)} shine />
   )},
   {from: M.cara + 0.05, to: E('cara') + 0.15, render: (d, r) => (
@@ -91,9 +92,12 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: M.hook, f: 'whoosh_cine', v: 0.45},
-  {t: M.hook + 0.05, f: 'impact_deep', v: 0.26},
-  {t: M.bina - 0.1, f: 'whoosh_pop', v: 0.36},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
+  {t: E('hook') + 0.15, f: 'whoosh_pop', v: 0.34},
   {t: M.bina + 0.4, f: 'gold_prize', v: 0.26},
   {t: M.cara + 0.05, f: 'whoosh_small', v: 0.3},
   {t: M.sepuluh, f: 'pop_msg', v: 0.32},
@@ -120,6 +124,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -128,7 +133,8 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 export const v13: VideoDef = {
   id: 'v13', tl, Overlays, sfx: SFX,
   punches: [M.bina, M.sepuluh, M.s1 + 0.1, M.s2 + 0.1, M.s3 + 0.1, M.cukup, M.fokus + 0.1],
-  zoom: {hook: [1.1, 1.04], cara: [1.0], s1: [1.06], s2: [1.0, 1.07], s3: [1.06, 1.0], hasil: [1.0], pesan: [1.07], fokus: [1.0, 1.06], cta: [1.0, 1.08]},
+  zoom: {hook: [1.06], hook2: [1.1], cara: [1.0], s1: [1.06], s2: [1.0, 1.07], s3: [1.06, 1.0], hasil: [1.0], pesan: [1.07], fokus: [1.0, 1.06], cta: [1.0, 1.08]},
   music: {file: 'bgm.mp3', startAt: 180},
+  focus: {to: E('hook') + 0.15},
 };
 export const DanaKahwin: React.FC<EditProps> = (p) => <Edit def={v13} {...p} />;

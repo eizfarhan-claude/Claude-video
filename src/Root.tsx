@@ -15,6 +15,7 @@ import {VolumeEmas, v11} from './videos/v11';
 import {TigaStrategi, v12} from './videos/v12';
 import {DanaKahwin, v13} from './videos/v13';
 import {DanaHaji, v14} from './videos/v14';
+import {CoverStills} from './covers';
 
 const defaults: EditProps = {preview: false, showSafeZones: false, hq: false};
 const common = {width: 1080, height: 1920, fps: 30, defaultProps: defaults};
@@ -35,5 +36,6 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="TigaStrategi" component={TigaStrategi} durationInFrames={v12.tl.total} {...common} />
     <Composition id="DanaKahwin" component={DanaKahwin} durationInFrames={v13.tl.total} {...common} />
     <Composition id="DanaHaji" component={DanaHaji} durationInFrames={v14.tl.total} {...common} />
+    <CoverStills />
   </>
 );

@@ -4,6 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
+import {IntroFlash, TitleIntro} from '../../engine/kit2';
 import {ChecklistCard, Choices, CtaCard, GItem, GoldProgress, IconWallet, Schedule, StepCard, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconCheck, IconClock, IconCoin, IconTarget} from '../../engine/ui';
 
@@ -12,10 +13,9 @@ const {at, sectionStart: S, sectionEnd: E} = tl;
 
 const M = {
   hook: 0.05,
-  target: at('hook', 'target'),
-  pasangan: at('hook', 'kalau'),
-  seratus: at('hook', '100'),
-  caranya: at('hook', 'caranya'),
+  target: S('hook2'),
+  seratus: at('hook2', '100'),
+  caranya: at('hook2', 'caranya'),
   kenapa: S('kenapa'),
   cukup: at('kenapa', 'cukup'),
   kos: at('kenapa', 'kos'),
@@ -40,16 +40,16 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: M.hook, to: M.target - 0.1, render: (d) => (
-    <TitleCard dur={d} icon={<IconClock size={86} />} label="Plan dana haji lagi 5 tahun?" title="APA NAK BUAT?" gold={false} size={72} />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Siapa dah plan?" line1="DANA HAJI 5 TAHUN" line2="APA NAK BUAT?" l2At={14} />
   )},
-  {from: M.target - 0.1, to: M.caranya - 0.1, render: (d, r) => (
+  {from: E('hook') + 0.15, to: M.caranya - 0.1, render: (d, r) => (
     <Choices dur={d} items={[
       {top: 'Seorang', main: '50 GRAM', sub: 'emas', at: 8},
       {top: 'Bersama pasangan', main: '100 GRAM', sub: 'emas', at: r(M.seratus) - 4},
     ]} />
   )},
-  {from: M.caranya - 0.1, to: E('hook') + 0.15, render: (d) => (
+  {from: M.caranya - 0.1, to: E('hook2') + 0.15, render: (d) => (
     <TitleCard dur={d} icon={<IconCheck size={80} />} label="Target dana haji" title="CARANYA MUDAH" size={70} />
   )},
   {from: M.kenapa + 0.05, to: M.dah - 0.1, render: (d, r) => (
@@ -83,9 +83,12 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: M.hook, f: 'whoosh_cine', v: 0.45},
-  {t: M.hook + 0.05, f: 'impact_deep', v: 0.26},
-  {t: M.target - 0.1, f: 'whoosh_pop', v: 0.36},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
+  {t: E('hook') + 0.15, f: 'whoosh_pop', v: 0.34},
   {t: M.target + 0.2, f: 'coins', v: 0.28},
   {t: M.seratus - 0.1, f: 'gold_prize', v: 0.26},
   {t: M.caranya - 0.1, f: 'pop_hard', v: 0.32},
@@ -110,6 +113,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -118,7 +122,8 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 export const v14: VideoDef = {
   id: 'v14', tl, Overlays, sfx: SFX,
   punches: [M.target, M.seratus, M.cukup, M.s1 + 0.1, M.s2 + 0.1, M.s3 + 0.1, M.giliran, M.cepat],
-  zoom: {hook: [1.1, 1.03], kenapa: [1.0, 1.06], s1: [1.06], s2: [1.0], s3: [1.07], hasil: [1.0], mudah: [1.06, 1.0], cta: [1.0, 1.08]},
+  zoom: {hook: [1.06], hook2: [1.1, 1.03], kenapa: [1.0, 1.06], s1: [1.06], s2: [1.0], s3: [1.07], hasil: [1.0], mudah: [1.06, 1.0], cta: [1.0, 1.08]},
   music: {file: 'bgm.mp3', startAt: 205},
+  focus: {to: E('hook') + 0.15},
 };
 export const DanaHaji: React.FC<EditProps> = (p) => <Edit def={v14} {...p} />;

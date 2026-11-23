@@ -5,8 +5,14 @@
   {
    "section": "hook",
    "srcFrom": 124,
-   "durationInFrames": 240,
+   "durationInFrames": 118,
    "outFrom": 0
+  },
+  {
+   "section": "hook2",
+   "srcFrom": 242,
+   "durationInFrames": 122,
+   "outFrom": 118
   },
   {
    "section": "cara",
@@ -164,49 +170,49 @@
    "text": "Bina",
    "start": 3.967,
    "end": 4.427,
-   "section": "hook"
+   "section": "hook2"
   },
   {
    "text": "simpanan",
    "start": 4.427,
    "end": 5.047,
-   "section": "hook"
+   "section": "hook2"
   },
   {
    "text": "50",
    "start": 5.047,
    "end": 5.487,
-   "section": "hook"
+   "section": "hook2"
   },
   {
    "text": "gram",
    "start": 5.487,
    "end": 6.167,
-   "section": "hook"
+   "section": "hook2"
   },
   {
    "text": "emas",
    "start": 6.167,
    "end": 6.547,
-   "section": "hook"
+   "section": "hook2"
   },
   {
    "text": "sebagai",
    "start": 6.547,
    "end": 6.807,
-   "section": "hook"
+   "section": "hook2"
   },
   {
    "text": "dana",
    "start": 6.807,
    "end": 7.347,
-   "section": "hook"
+   "section": "hook2"
   },
   {
    "text": "perkahwinan.",
    "start": 7.347,
    "end": 7.987,
-   "section": "hook"
+   "section": "hook2"
   },
   {
    "text": "Caranya",

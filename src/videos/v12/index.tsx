@@ -4,6 +4,7 @@ import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
+import {IntroFlash, TitleIntro} from '../../engine/kit2';
 import {ChecklistCard, Choices, GItem, IconCalendar, IconChat, IconX, Schedule, StepCard, Subtitles, TitleCard, WaveIcon, motionBusy} from '../../engine/kit';
 import {IconCheck, IconCoin, IconTarget} from '../../engine/ui';
 
@@ -36,11 +37,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: M.hook, to: E('hook') + 0.1, render: (d, r) => (
-    <Choices dur={d} items={[
-      {top: 'Harga naik', main: 'TUKAR SEMUA', sub: 'duit jadi emas', at: 2},
-      {top: 'Harga jatuh pun', main: 'TUKAR SEMUA', sub: 'duit jadi emas', at: r(M.jatuh)},
-    ]} />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Harga emas naik atau jatuh" line1="TUKAR SEMUA DUIT" line2="JADI EMAS?" l2At={14} />
   )},
   {from: M.salah + 0.05, to: M.betul - 0.1, render: (d) => (
     <TitleCard dur={d} icon={<IconX size={80} />} label="Strategi ini" title="KURANG TEPAT" gold={false} size={72} />
@@ -85,9 +83,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: M.hook, f: 'whoosh_cine', v: 0.45},
-  {t: M.hook + 0.05, f: 'impact_deep', v: 0.26},
-  {t: M.jatuh, f: 'pop_hard', v: 0.34},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
   {t: M.salah + 0.05, f: 'pop_hard', v: 0.36},
   {t: M.betul - 0.1, f: 'whoosh_pop', v: 0.36},
   {t: M.betul + 0.3, f: 'sparkle', v: 0.24},
@@ -114,6 +114,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -121,8 +122,9 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 
 export const v12: VideoDef = {
   id: 'v12', tl, Overlays, sfx: SFX,
-  punches: [M.jatuh, M.kurang, M.s1 + 0.1, M.s2 + 0.1, M.cara, M.s3 + 0.1, M.tenang],
+  punches: [M.kurang, M.s1 + 0.1, M.s2 + 0.1, M.cara, M.s3 + 0.1, M.tenang],
   zoom: {hook: [1.1, 1.04], salah: [1.0, 1.07], s1: [1.06], s2: [1.0, 1.07, 1.0], s3: [1.06], ringkas: [1.0], cta: [1.07, 1.0], outro: [1.08]},
   music: {file: 'bgm.mp3', startAt: 120},
+  focus: {to: E('hook') + 0.15},
 };
 export const TigaStrategi: React.FC<EditProps> = (p) => <Edit def={v12} {...p} />;
