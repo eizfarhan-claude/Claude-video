@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "durationInFrames": 1917,
+ "durationInFrames": 1900,
  "clips": [
   {
    "section": "hook",
@@ -52,21 +52,15 @@
   },
   {
    "section": "cta",
-   "srcFrom": 2129,
-   "durationInFrames": 15,
+   "srcFrom": 2158,
+   "durationInFrames": 117,
    "outFrom": 1752
-  },
-  {
-   "section": "cta",
-   "srcFrom": 2156,
-   "durationInFrames": 119,
-   "outFrom": 1767
   },
   {
    "section": "outro",
    "srcFrom": 2282,
    "durationInFrames": 31,
-   "outFrom": 1886
+   "outFrom": 1869
   }
  ],
  "words": [
@@ -1031,81 +1025,75 @@
    "section": "cta"
   },
   {
-   "text": "Dan",
-   "start": 58.4,
-   "end": 58.813,
-   "section": "cta"
-  },
-  {
    "text": "yang",
-   "start": 58.9,
-   "end": 59.133,
+   "start": 58.4,
+   "end": 58.567,
    "section": "cta"
   },
   {
    "text": "paling",
-   "start": 59.133,
-   "end": 59.253,
+   "start": 58.567,
+   "end": 58.687,
    "section": "cta"
   },
   {
    "text": "penting",
-   "start": 59.253,
-   "end": 59.613,
+   "start": 58.687,
+   "end": 59.047,
    "section": "cta"
   },
   {
    "text": "kita",
-   "start": 59.613,
-   "end": 59.833,
+   "start": 59.047,
+   "end": 59.267,
    "section": "cta"
   },
   {
    "text": "lebih",
-   "start": 59.833,
-   "end": 60.273,
+   "start": 59.267,
+   "end": 59.707,
    "section": "cta"
   },
   {
    "text": "tenang",
-   "start": 60.273,
-   "end": 60.733,
+   "start": 59.707,
+   "end": 60.167,
    "section": "cta"
   },
   {
    "text": "dalam",
-   "start": 60.733,
-   "end": 61.173,
+   "start": 60.167,
+   "end": 60.607,
    "section": "cta"
   },
   {
    "text": "membina",
-   "start": 61.173,
-   "end": 61.753,
+   "start": 60.607,
+   "end": 61.187,
    "section": "cta"
   },
   {
    "text": "simpanan",
-   "start": 61.753,
-   "end": 62.473,
+   "start": 61.187,
+   "end": 61.907,
    "section": "cta"
   },
   {
    "text": "emas",
-   "start": 62.473,
-   "end": 62.793,
+   "start": 61.907,
+   "end": 62.227,
    "section": "cta"
   },
   {
    "text": "Dapat",
-   "start": 62.867,
-   "end": 63.04,
+   "start": 62.3,
+   "end": 62.473,
    "section": "outro"
   },
   {
    "text": "sesuatu?",
-   "start": 63.04,
-   "end": 63.5,
+   "start": 62.473,
+   "end": 62.933,
    "section": "outro"
   }
  ]

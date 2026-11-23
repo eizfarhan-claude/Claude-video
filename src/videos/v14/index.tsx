@@ -15,7 +15,6 @@ const M = {
   hook: 0.05,
   target: S('hook2'),
   seratus: at('hook2', '100'),
-  caranya: at('hook2', 'caranya'),
   kenapa: S('kenapa'),
   cukup: at('kenapa', 'cukup'),
   kos: at('kenapa', 'kos'),
@@ -43,17 +42,14 @@ const ITEMS: GItem[] = [
   {from: 0.0, to: E('hook') + 0.15, render: (d) => (
     <TitleIntro dur={d} tag="Siapa dah plan?" line1="DANA HAJI 5 TAHUN" line2="APA NAK BUAT?" l2At={14} />
   )},
-  {from: E('hook') + 0.15, to: M.caranya - 0.1, render: (d, r) => (
+  {from: E('hook') + 0.15, to: E('hook2') + 0.15, render: (d, r) => (
     <Choices dur={d} items={[
       {top: 'Seorang', main: '50 GRAM', sub: 'emas', at: 8},
       {top: 'Bersama pasangan', main: '100 GRAM', sub: 'emas', at: r(M.seratus) - 4},
     ]} />
   )},
-  {from: M.caranya - 0.1, to: E('hook2') + 0.15, render: (d) => (
-    <TitleCard dur={d} icon={<IconCheck size={80} />} label="Target dana haji" title="CARANYA MUDAH" size={70} />
-  )},
   {from: M.kenapa + 0.05, to: M.dah - 0.1, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconTarget size={84} />} label="Kenapa 50 gram?" title="CUKUP TUNAI HAJI" size={62} sub="dengan kos asas" subAt={r(M.kos)} shine />
+    <TitleCard dur={d} icon={<IconTarget size={84} />} label="Kenapa 50 gram?" title="CUKUP TUNAI HAJI" size={62} sub="dengan kos Muassasah" subAt={r(M.kos)} shine />
   )},
   {from: M.dah - 0.1, to: E('kenapa') + 0.15, render: (d) => (
     <TitleCard dur={d} icon={<IconClock size={80} />} label="Untuk haji" title="5 ATAU 10 TAHUN LAGI" size={56} />
@@ -91,7 +87,6 @@ const SFX: Sfx[] = [
   {t: E('hook') + 0.15, f: 'whoosh_pop', v: 0.34},
   {t: M.target + 0.2, f: 'coins', v: 0.28},
   {t: M.seratus - 0.1, f: 'gold_prize', v: 0.26},
-  {t: M.caranya - 0.1, f: 'pop_hard', v: 0.32},
   {t: M.kenapa + 0.05, f: 'whoosh_small', v: 0.3},
   {t: M.cukup, f: 'ding_correct', v: 0.28},
   {t: M.dah - 0.1, f: 'pop_msg', v: 0.3},
