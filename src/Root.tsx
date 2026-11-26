@@ -11,6 +11,9 @@ import {Checkpoint, v7} from './videos/v7';
 import {HargaJatuh, v8} from './videos/v8';
 import {SatuGram, v9} from './videos/v9';
 import {TigaRisiko, v10} from './videos/v10';
+import {MenabungKaya, v11} from './videos/v11';
+import {KayaSimpanan, v12} from './videos/v12';
+import {AutoDebitCabutan, v13} from './videos/v13';
 
 const defaults: EditProps = {preview: false, showSafeZones: false, hq: false};
 const common = {width: 1080, height: 1920, fps: 30, defaultProps: defaults};
@@ -27,5 +30,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="HargaJatuh" component={HargaJatuh} durationInFrames={v8.tl.total} {...common} />
     <Composition id="SatuGram" component={SatuGram} durationInFrames={v9.tl.total} {...common} />
     <Composition id="TigaRisiko" component={TigaRisiko} durationInFrames={v10.tl.total} {...common} />
+    <Composition id="MenabungKaya" component={MenabungKaya} durationInFrames={v11.tl.total} {...common} />
+    <Composition id="KayaSimpanan" component={KayaSimpanan} durationInFrames={v12.tl.total} {...common} />
+    <Composition id="AutoDebitCabutan" component={AutoDebitCabutan} durationInFrames={v13.tl.total} {...common} />
   </>
 );

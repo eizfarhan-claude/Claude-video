@@ -1,0 +1,72 @@
+{
+ "id": "v12",
+ "title": "Kaya = Berapa Banyak Simpanan",
+ "ranges": [
+  [
+   "hook",
+   "5.80!",
+   12.66
+  ],
+  [
+   "ingat",
+   19.44,
+   25.74
+  ],
+  [
+   "kecil",
+   27.96,
+   29.74
+  ],
+  [
+   "besar",
+   29.74,
+   39.7
+  ],
+  [
+   "mula",
+   39.7,
+   51.14
+  ],
+  [
+   "cara",
+   51.4,
+   58.3
+  ],
+  [
+   "emas",
+   58.3,
+   65.42
+  ],
+  [
+   "plan",
+   67.2,
+   75.16
+  ],
+  [
+   "stabil",
+   "79.63!",
+   "84.94!"
+  ],
+  [
+   "gap",
+   90.06,
+   100.86
+  ],
+  [
+   "cta",
+   105.56,
+   "111.70!"
+  ]
+ ],
+ "cuts": [],
+ "fix": {
+  "terpesan": "sebahagian",
+  "maskep": "GAP",
+  "mask,": "emas,",
+  "gift": "GAP",
+  "web": "beg",
+  "account": "akaun"
+ },
+ "drop": [],
+ "pad_out": 0.2
+}
