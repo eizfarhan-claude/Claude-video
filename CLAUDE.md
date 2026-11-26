@@ -20,3 +20,33 @@
   `scripts/recaption.py` only on the windows around changed joins.
 - Section splits inside continuous speech are no longer faded (Edit.tsx `joined()`), but a clip END must still sit
   after the last word has decayed (check `scripts/energy20.py`) — v11 "kaya" was clipped at 34.30 when the word ended at 34.44.
+
+# Lessons from owner reviews (v11–v14) — check these on every new video before sending
+Owner's timestamps ("0.58", "1.01") are m.ss on the delivered video = output seconds; map to source with the EDL clip list.
+
+## Cuts
+- **Drop "filler" set-up lines** that add nothing, e.g. "Caranya mudah saja." (v14) — go straight to the next point.
+- **Start of every clip**: listen to the first ~0.5 s (`scripts/energy20.py`). Remove
+  - leftover false starts before the real take: "jadi nak… Jadi, cara nak…" (v14), "andai kata… andai kata anda" (v12 —
+    the duplicate sat *inside* the kept range, right after a pause), a stray "paling" before "Paling mudah…" (v14);
+  - murmured / drawn-out connectors at -25…-40 dB ("Dan…" before a retake, v12 0.58 = "bunyi pelik") — start at the
+    next clear word instead ("Yang paling penting…");
+  - the tail of the previous take's last word (v11: second "gram" before "dah harga naik").
+- **End of every clip** must sit after the last word has fully decayed (< -50 dB). v11 "kaya" ended 34.44 but the
+  clip ended 34.30 → clipped + faded = "bunyi pelik".
+- When the speaker says a line twice, use the take the owner prefers; default to the **more complete** sentence
+  (v12: "kita lebih tenang dalam **membina simpanan emas**", not "…dalam menabung").
+- Audition joins with `scripts/join-test.py`. Whisper sometimes *invents* a connector ("dan") across a join — if
+  the clip transcribed alone doesn't contain it, the join is clean.
+
+## Captions / on-screen text (Whisper mishearings)
+- "kosmu asas" / "kos asas" → **"kos Muassasah"** (Tabung Haji cost term) — captions AND graphics.
+- "RM50 / RM100 / RM1" when he says grams → "50 gram", "100 gram", "1 gram".
+- "web biru / web miru" → "beg biru"; "baju yang besar" → "bajet yang besar"; "pemurahan / pengurataan harga" → "purata harga";
+  "penyimpak / penyipat" → "penyimpan"; "menabur / menampung" → "menabung"; "gap" → "GAP"; "bocok" → "bocor".
+- After re-cutting, words that straddle a new join are dropped by `remap-captions.py` — re-insert them
+  ("Yang", "Kenapa", "dah", "dapat") and read the full caption text before rendering.
+
+## Rendering
+- Montserrat has no "±" glyph (renders like "2") — write "sekitar" or drop it.
+- Intro-focus renders need `--timeout=180000` (two video decoders); stills `--timeout=120000`.
