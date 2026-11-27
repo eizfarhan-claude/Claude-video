@@ -1,0 +1,19 @@
+{
+ "id": "v12",
+ "title": "3 Strategi Simpan Emas",
+ "ranges": [
+  ["hook", 3.2, 9.74],
+  ["salah", 9.74, 15.72],
+  ["s1", 15.72, 19.9],
+  ["s2", 19.9, "24.56!"],
+  ["s2", "27.04!", 39.6],
+  ["s3", 40.3, "44.80!"],
+  ["ringkas", "46.28!", "55.62!"],
+  ["cta", "57.74!", "68.16!"],
+  ["cta", "71.94!", "75.84!"],
+  ["outro", "76.08!", 77.0]
+ ],
+ "cuts": [],
+ "fix": {"pemurahan": "purata", "pengurataan": "purata", "penyimpak": "penyimpan", "menabur": "menabung", "siapan": "simpanan"},
+ "drop": []
+}

@@ -11,6 +11,11 @@ import {Checkpoint, v7} from './videos/v7';
 import {HargaJatuh, v8} from './videos/v8';
 import {SatuGram, v9} from './videos/v9';
 import {TigaRisiko, v10} from './videos/v10';
+import {VolumeEmas, v11} from './videos/v11';
+import {TigaStrategi, v12} from './videos/v12';
+import {DanaKahwin, v13} from './videos/v13';
+import {DanaHaji, v14} from './videos/v14';
+import {CoverStills} from './covers';
 import {MenabungKaya, v21} from './videos/v21';
 import {KayaSimpanan, v22} from './videos/v22';
 import {AutoDebitCabutan, v23} from './videos/v23';
@@ -30,8 +35,13 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="HargaJatuh" component={HargaJatuh} durationInFrames={v8.tl.total} {...common} />
     <Composition id="SatuGram" component={SatuGram} durationInFrames={v9.tl.total} {...common} />
     <Composition id="TigaRisiko" component={TigaRisiko} durationInFrames={v10.tl.total} {...common} />
+    <Composition id="VolumeEmas" component={VolumeEmas} durationInFrames={v11.tl.total} {...common} />
+    <Composition id="TigaStrategi" component={TigaStrategi} durationInFrames={v12.tl.total} {...common} />
+    <Composition id="DanaKahwin" component={DanaKahwin} durationInFrames={v13.tl.total} {...common} />
+    <Composition id="DanaHaji" component={DanaHaji} durationInFrames={v14.tl.total} {...common} />
     <Composition id="MenabungKaya" component={MenabungKaya} durationInFrames={v21.tl.total} {...common} />
     <Composition id="KayaSimpanan" component={KayaSimpanan} durationInFrames={v22.tl.total} {...common} />
     <Composition id="AutoDebitCabutan" component={AutoDebitCabutan} durationInFrames={v23.tl.total} {...common} />
+    <CoverStills />
   </>
 );

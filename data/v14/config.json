@@ -1,0 +1,19 @@
+{
+ "id": "v14",
+ "title": "Dana Haji 50 Gram Emas",
+ "ranges": [
+  ["hook", 1.5, "5.46!"],
+  ["hook2", "5.46!", "12.62!"],
+  ["kenapa", "20.06!", "30.16!"],
+  ["s1", "31.30!", 38.42],
+  ["s2", 38.42, 42.82],
+  ["s3", 51.73, "57.42!"],
+  ["hasil", 68.87, "77.30!"],
+  ["mudah", 88.56, "92.74!"],
+  ["mudah", "93.78!", 99.24],
+  ["cta", 99.54, 106.85]
+ ],
+ "cuts": [],
+ "fix": {"Meliki": "Miliki", "kosmu": "kos", "gap.": "GAP.", "gap": "GAP", "menampung": "menabung", "tunakan": "tunaikan", "web": "beg", "bocok.": "bocor."},
+ "drop": []
+}

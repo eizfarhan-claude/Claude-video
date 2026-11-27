@@ -27,4 +27,7 @@ npm run render                            # FINAL (full res) -> out/final.mp4
 - `scripts/recaption.py <id> t0 t1` re-transcribes one window of the edited voice into captions.json
 - config edges written as `"96.70!"` are exact (not snapped to silence)
 - `scripts/prep-vivid.sh <id> raw.mov` – high-saturation, sharper grade (used for v7 final)
+- v11 `VolumeEmas` (volume emas = kaya, 58s → 53.6s), v12 `TigaStrategi` (3 strategi simpan emas, 78s → 63s),
+  v13 `DanaKahwin` (50g dana kahwin dalam 5 tahun, 101s → 80s), v14 `DanaHaji` (50g dana haji, 107s → 68s)
+- `scripts/apply-caption-fix.py <id>` re-applies caption_fix.json to captions.json without re-transcribing
 - v21 `MenabungKaya` (menabung = bina kekayaan), v22 `KayaSimpanan` (kaya = berapa banyak simpanan), v23 `AutoDebitCabutan` (auto debit GAP: cabutan 10 gram emas)
