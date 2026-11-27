@@ -7,8 +7,11 @@ for v in sys.argv[1:]:
     m = re.search(r"focus: \{to: E\('([^']+)'\) \+ ([\d.]+)\}", src)
     if not m: print(v, 'no focus'); continue
     ws = json.load(open(f'src/videos/{v}/captions.json'))
-    fe = round((max(w['end'] for w in ws if w['section'] == m.group(1)) + float(m.group(2))) * 30)
-    for c in json.load(open(f'src/videos/{v}/edl.json'))['clips']:
+    edl = json.load(open(f'src/videos/{v}/edl.json'))
+    # the engine's E() reads the EDL words, captions may end earlier -> take the later of the two (+3 frames margin)
+    end = max(max(w['end'] for w in ws if w['section'] == m.group(1)), max(w['end'] for w in edl['words'] if w['section'] == m.group(1)))
+    fe = round((end + float(m.group(2))) * 30) + 3
+    for c in edl['clips']:
         if c['outFrom'] >= fe: continue
         a = c['srcFrom']; b = a + min(c['durationInFrames'], fe - c['outFrom']) + 2
         miss = [f for f in range(a, b) if not os.path.exists(f'public/{v}/fg/{f}.webp')]
