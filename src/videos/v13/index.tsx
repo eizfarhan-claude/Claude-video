@@ -6,6 +6,8 @@ import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, CtaCard, GItem, IconCalendar, IconGift, IconRepeat, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconCheck, IconTarget} from '../../engine/ui';
+import {PosterCut} from '../../engine/poster';
+import {WINNERS} from './winners';
 
 const tl = makeTimeline(edlJson as Edl, 15);
 const {at, sectionStart: S, sectionEnd: E} = tl;
@@ -14,7 +16,6 @@ const M = {
   hook: 0.05,
   layak: at('hook', 'layak'),
   percuma: at('hook', 'percuma'),
-  pemenang: S('pemenang'),
   kempen: S('kempen'),
   auto: at('kempen', 'auto'),
   rm200: at('kempen', 'rm200'),
@@ -22,6 +23,7 @@ const M = {
   senarai: S('senarai'),
   bulan10: at('senarai', '10'),
   tahniah: S('tahniah'),
+  semoga: at('tahniah', 'semoga'),
   inspirasi: at('tahniah', 'inspirasi'),
   manfaatkan: at('tahniah', 'manfaatkan'),
   fokus: S('fokus'),
@@ -39,20 +41,20 @@ const M = {
   isi: at('cta', 'isi'),
 };
 
+// full-frame lucky-winner poster: from 'Dan ini adalah senarai penerima…' through 'Tahniah buat semua pemenang'
+const POSTER: [number, number] = [M.senarai - 0.15, M.semoga - 0.05];
+
 const ITEMS: GItem[] = [
   {from: M.hook, to: E('hook') + 0.1, render: (d, r) => (
     <TitleCard dur={d} icon={<IconGift size={86} />} label="Menabung konsisten dalam akaun GAP" title="10 GRAM EMAS" size={72} sub="layak dapat secara percuma" subAt={r(M.percuma)} shine />
   )},
-  {from: M.pemenang - 0.05, to: E('pemenang') + 0.15, render: (d) => (
-    <TitleCard dur={d} icon={<IconCheck size={80} />} label="Lucky draw GAP" title="SENARAI PEMENANG" size={60} />
-  )},
   {from: M.kempen + 0.05, to: E('kempen') + 0.1, render: (d, r) => (
     <TitleCard dur={d} icon={<IconCalendar size={80} />} label="Kempen Public Gold" title="SET UP AUTO DEBIT" size={60} sub="minimum RM200 sebulan" subAt={r(M.rm200)} />
   )},
-  {from: M.cabutan, to: E('senarai') + 0.15, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconGift size={84} />} label="Layak setiap bulan" title="CABUTAN BERTUAH" size={62} sub="senarai penerima · bulan 10" subAt={r(M.senarai)} shine />
+  {from: M.cabutan, to: POSTER[0] + 0.1, render: (d) => (
+    <TitleCard dur={d} icon={<IconGift size={84} />} label="Layak setiap bulan" title="CABUTAN BERTUAH" size={62} shine />
   )},
-  {from: M.tahniah + 0.05, to: M.manfaatkan - 0.1, render: (d, r) => (
+  {from: POSTER[1] - 0.1, to: M.manfaatkan - 0.1, render: (d, r) => (
     <TitleCard dur={d} icon={<IconCheck size={80} />} label="Tahniah semua pemenang!" title="JADIKAN INSPIRASI" size={58} sub="untuk konsisten menabung" subAt={r(M.inspirasi)} />
   )},
   {from: M.manfaatkan - 0.1, to: E('tahniah') + 0.15, render: (d) => (
@@ -84,14 +86,15 @@ const SFX: Sfx[] = [
   {t: M.hook + 0.05, f: 'impact_deep', v: 0.26},
   {t: M.layak, f: 'gold_prize', v: 0.28},
   {t: M.percuma, f: 'sparkle', v: 0.26},
-  {t: M.pemenang - 0.05, f: 'whoosh_pop', v: 0.38},
   {t: M.kempen + 0.05, f: 'whoosh_small', v: 0.3},
   {t: M.auto, f: 'click_select', v: 0.34},
   {t: M.rm200, f: 'pop_msg', v: 0.34},
   {t: M.cabutan, f: 'whoosh_small', v: 0.28},
   {t: M.cabutan + 0.1, f: 'gold_price', v: 0.24},
-  {t: M.bulan10, f: 'pop_hard', v: 0.32},
+  {t: POSTER[0], f: 'whoosh_cine', v: 0.32},
+  {t: POSTER[0] + 0.15, f: 'gold_prize', v: 0.28},
   {t: M.tahniah + 0.05, f: 'ding_correct', v: 0.3},
+  {t: POSTER[1] - 0.1, f: 'whoosh_small', v: 0.28},
   {t: M.inspirasi, f: 'sparkle', v: 0.24},
   {t: M.manfaatkan - 0.1, f: 'whoosh_small', v: 0.28},
   {t: M.fokus + 0.05, f: 'whoosh_cine', v: 0.28},
@@ -111,14 +114,15 @@ const SFX: Sfx[] = [
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
     <Schedule items={ITEMS} total={tl.total} />
-    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
+    <PosterCut from={POSTER[0]} to={POSTER[1]} month="OCT 2026" rows={WINNERS} />
+    <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, [POSTER])} />
   </>
 );
 
 export const v13: VideoDef = {
   id: 'v13', tl, Overlays, sfx: SFX,
-  punches: [M.layak, M.rm200, M.bulan10, M.kaya, M.automatik, M.dapatW],
-  zoom: {hook: [1.12], pemenang: [1.0], kempen: [1.06, 1.0], cabutan: [1.07], senarai: [1.07], tahniah: [1.0, 1.06], fokus: [1.08], kaya: [1.08], auto: [1.0], dapat: [1.06], cta: [1.0]},
+  punches: [M.layak, M.rm200, M.kaya, M.automatik, M.dapatW],
+  zoom: {hook: [1.12], kempen: [1.06, 1.0], cabutan: [1.07], senarai: [1.07], tahniah: [1.0, 1.06], fokus: [1.08], kaya: [1.08], auto: [1.0], dapat: [1.06], cta: [1.0]},
   music: {file: 'bgm.mp3', startAt: 60},
 };
 export const AutoDebitCabutan: React.FC<EditProps> = (p) => <Edit def={v13} {...p} />;

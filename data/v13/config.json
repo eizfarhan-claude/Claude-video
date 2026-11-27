@@ -2,20 +2,74 @@
  "id": "v13",
  "title": "Auto Debit = Cabutan 10 Gram Emas",
  "ranges": [
-  ["hook", 4.93, 10.58],
-  ["pemenang", 12.48, 15.86],
-  ["kempen", 18.24, 26.11],
-  ["cabutan", 31.52, 34.02],
-  ["senarai", 34.02, "38.04!"],
-  ["tahniah", 38.18, "47.68!"],
-  ["fokus", 47.98, 49.60],
-  ["kaya", 72.24, 77.48],
-  ["auto", 78.78, 83.92],
-  ["dapat", 85.36, 91.08],
-  ["cta", 91.08, 96.94]
+  [
+   "hook",
+   4.93,
+   10.58
+  ],
+  [
+   "kempen",
+   18.24,
+   26.11
+  ],
+  [
+   "cabutan",
+   31.52,
+   34.02
+  ],
+  [
+   "senarai",
+   34.02,
+   "38.04!"
+  ],
+  [
+   "tahniah",
+   38.18,
+   "47.68!"
+  ],
+  [
+   "fokus",
+   47.98,
+   49.6
+  ],
+  [
+   "kaya",
+   72.24,
+   77.48
+  ],
+  [
+   "auto",
+   78.78,
+   83.92
+  ],
+  [
+   "dapat",
+   85.36,
+   91.08
+  ],
+  [
+   "cta",
+   91.08,
+   96.94
+  ]
  ],
  "cuts": [],
- "fix": {"account": "akaun", "gap": "GAP", "memilih": "membina", "keadaan": "kemudahan", "silipanan": "simpanan", "draw": "draw", "Mudah": "Boleh", "tangan": "tengok", "pen": "pin"},
- "drop": [[80.02, "cap"]],
+ "fix": {
+  "account": "akaun",
+  "gap": "GAP",
+  "memilih": "membina",
+  "keadaan": "kemudahan",
+  "silipanan": "simpanan",
+  "draw": "draw",
+  "Mudah": "Boleh",
+  "tangan": "tengok",
+  "pen": "pin"
+ },
+ "drop": [
+  [
+   80.02,
+   "cap"
+  ]
+ ],
  "pad_out": 0.2
 }

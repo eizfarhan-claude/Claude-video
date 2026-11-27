@@ -19,6 +19,7 @@
     "preview:v13": "remotion render AutoDebitCabutan out/preview_AutoDebitCabutan.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
   },
   "dependencies": {
+    "@fontsource/cinzel": "^5.3.0",
     "@fontsource/montserrat": "^5.3.0",
     "@fontsource/poppins": "^5.3.0",
     "@remotion/cli": "^4.0.540",
