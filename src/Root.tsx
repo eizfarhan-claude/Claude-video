@@ -1,6 +1,7 @@
 import React from 'react';
 import {Composition} from 'remotion';
 import {EditProps} from './engine/Edit';
+import {Cover, CoverProps} from './engine/Cover';
 import {GoldDinar, v1} from './videos/v1';
 import {Umrah, v2} from './videos/v2';
 import {Kahwin, v3} from './videos/v3';
@@ -33,5 +34,11 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="MenabungKaya" component={MenabungKaya} durationInFrames={v11.tl.total} {...common} />
     <Composition id="KayaSimpanan" component={KayaSimpanan} durationInFrames={v12.tl.total} {...common} />
     <Composition id="AutoDebitCabutan" component={AutoDebitCabutan} durationInFrames={v13.tl.total} {...common} />
+    <Composition id="Cover-v11" component={Cover} durationInFrames={1} width={1080} height={1920} fps={30}
+      defaultProps={{id: 'v11', frame: 78, kicker: 'BILA DAPAT GAJI…', title: ['PAKSA', 'SIMPAN!'], pill: 'Menabung = bina kekayaan'} as CoverProps} />
+    <Composition id="Cover-v12" component={Cover} durationInFrames={1} width={1080} height={1920} fps={30}
+      defaultProps={{id: 'v12', frame: 78, kicker: 'KAYA BUKAN SEBAB', title: ['GAJI BESAR'], pill: 'tapi berapa banyak SIMPANAN', titleSize: 124} as CoverProps} />
+    <Composition id="Cover-v13" component={Cover} durationInFrames={1} width={1080} height={1920} fps={30}
+      defaultProps={{id: 'v13', frame: 1980, kicker: 'AUTO DEBIT GAP', title: ['10 GRAM', 'EMAS PERCUMA'], pill: 'Senarai pemenang Okt 2026', titleSize: 104} as CoverProps} />
   </>
 );
