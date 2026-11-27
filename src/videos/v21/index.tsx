@@ -1,4 +1,4 @@
-/* v11 — Menabung = bina kekayaan */
+/* v21 — Menabung = bina kekayaan */
 import React from 'react';
 import edlJson from './edl.json';
 import captionsJson from './captions.json';
@@ -108,10 +108,10 @@ const Overlays: React.FC<{hq: boolean}> = () => (
   </>
 );
 
-export const v11: VideoDef = {
-  id: 'v11', tl, Overlays, sfx: SFX,
+export const v21: VideoDef = {
+  id: 'v21', tl, Overlays, sfx: SFX,
   punches: [M.lawan, M.membina, M.paksa1, M.kekayaan, M.bonus, M.cepat],
   zoom: {hook: [1.12, 1.0], belanja: [1.06], kaya: [1.0], paksa: [1.07], why: [1.0], gaji: [1.06], peluang: [1.0], positif: [1.08], cta: [1.0]},
   music: {file: 'bgm.mp3', startAt: 40},
 };
-export const MenabungKaya: React.FC<EditProps> = (p) => <Edit def={v11} {...p} />;
+export const MenabungKaya: React.FC<EditProps> = (p) => <Edit def={v21} {...p} />;

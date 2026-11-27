@@ -1,4 +1,4 @@
-/* v13 — Auto debit GAP: cabutan bertuah 10 gram emas + senarai pemenang */
+/* v23 — Auto debit GAP: cabutan bertuah 10 gram emas + senarai pemenang */
 import React from 'react';
 import edlJson from './edl.json';
 import captionsJson from './captions.json';
@@ -119,10 +119,10 @@ const Overlays: React.FC<{hq: boolean}> = () => (
   </>
 );
 
-export const v13: VideoDef = {
-  id: 'v13', tl, Overlays, sfx: SFX,
+export const v23: VideoDef = {
+  id: 'v23', tl, Overlays, sfx: SFX,
   punches: [M.layak, M.rm200, M.kaya, M.automatik, M.dapatW],
   zoom: {hook: [1.12], kempen: [1.06, 1.0], cabutan: [1.07], senarai: [1.07], tahniah: [1.0, 1.06], fokus: [1.08], kaya: [1.08], auto: [1.0], dapat: [1.06], cta: [1.0]},
   music: {file: 'bgm.mp3', startAt: 60},
 };
-export const AutoDebitCabutan: React.FC<EditProps> = (p) => <Edit def={v13} {...p} />;
+export const AutoDebitCabutan: React.FC<EditProps> = (p) => <Edit def={v23} {...p} />;

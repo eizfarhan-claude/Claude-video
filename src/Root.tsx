@@ -1,7 +1,6 @@
 import React from 'react';
 import {Composition} from 'remotion';
 import {EditProps} from './engine/Edit';
-import {Cover, CoverProps} from './engine/Cover';
 import {GoldDinar, v1} from './videos/v1';
 import {Umrah, v2} from './videos/v2';
 import {Kahwin, v3} from './videos/v3';
@@ -12,9 +11,9 @@ import {Checkpoint, v7} from './videos/v7';
 import {HargaJatuh, v8} from './videos/v8';
 import {SatuGram, v9} from './videos/v9';
 import {TigaRisiko, v10} from './videos/v10';
-import {MenabungKaya, v11} from './videos/v11';
-import {KayaSimpanan, v12} from './videos/v12';
-import {AutoDebitCabutan, v13} from './videos/v13';
+import {MenabungKaya, v21} from './videos/v21';
+import {KayaSimpanan, v22} from './videos/v22';
+import {AutoDebitCabutan, v23} from './videos/v23';
 
 const defaults: EditProps = {preview: false, showSafeZones: false, hq: false};
 const common = {width: 1080, height: 1920, fps: 30, defaultProps: defaults};
@@ -31,14 +30,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="HargaJatuh" component={HargaJatuh} durationInFrames={v8.tl.total} {...common} />
     <Composition id="SatuGram" component={SatuGram} durationInFrames={v9.tl.total} {...common} />
     <Composition id="TigaRisiko" component={TigaRisiko} durationInFrames={v10.tl.total} {...common} />
-    <Composition id="MenabungKaya" component={MenabungKaya} durationInFrames={v11.tl.total} {...common} />
-    <Composition id="KayaSimpanan" component={KayaSimpanan} durationInFrames={v12.tl.total} {...common} />
-    <Composition id="AutoDebitCabutan" component={AutoDebitCabutan} durationInFrames={v13.tl.total} {...common} />
-    <Composition id="Cover-v11" component={Cover} durationInFrames={1} width={1080} height={1920} fps={30}
-      defaultProps={{id: 'v11', frame: 78, kicker: 'BILA DAPAT GAJI…', title: ['PAKSA', 'SIMPAN!'], pill: 'Menabung = bina kekayaan'} as CoverProps} />
-    <Composition id="Cover-v12" component={Cover} durationInFrames={1} width={1080} height={1920} fps={30}
-      defaultProps={{id: 'v12', frame: 78, kicker: 'KAYA BUKAN SEBAB', title: ['GAJI BESAR'], pill: 'tapi berapa banyak SIMPANAN', titleSize: 124} as CoverProps} />
-    <Composition id="Cover-v13" component={Cover} durationInFrames={1} width={1080} height={1920} fps={30}
-      defaultProps={{id: 'v13', frame: 1980, kicker: 'AUTO DEBIT GAP', title: ['10 GRAM', 'EMAS PERCUMA'], pill: 'Senarai pemenang Okt 2026', titleSize: 104} as CoverProps} />
+    <Composition id="MenabungKaya" component={MenabungKaya} durationInFrames={v21.tl.total} {...common} />
+    <Composition id="KayaSimpanan" component={KayaSimpanan} durationInFrames={v22.tl.total} {...common} />
+    <Composition id="AutoDebitCabutan" component={AutoDebitCabutan} durationInFrames={v23.tl.total} {...common} />
   </>
 );

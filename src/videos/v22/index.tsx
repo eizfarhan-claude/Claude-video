@@ -1,4 +1,4 @@
-/* v12 — Kaya bukan gaji besar, tapi berapa banyak simpanan */
+/* v22 — Kaya bukan gaji besar, tapi berapa banyak simpanan */
 import React from 'react';
 import edlJson from './edl.json';
 import captionsJson from './captions.json';
@@ -137,10 +137,10 @@ const Overlays: React.FC<{hq: boolean}> = () => (
   </>
 );
 
-export const v12: VideoDef = {
-  id: 'v12', tl, Overlays, sfx: SFX,
+export const v22: VideoDef = {
+  id: 'v22', tl, Overlays, sfx: SFX,
   punches: [M.membina, M.tetapi, M.s2, M.bermula, M.tukarkan, M.rm100],
   zoom: {hook: [1.12], ingat: [1.0, 1.06], kecil: [1.07], besar: [1.0, 1.06], mula: [1.08], cara: [1.0], emas: [1.06], plan: [1.0], stabil: [1.07], gap: [1.0, 1.06], cta: [1.0]},
   music: {file: 'bgm.mp3', startAt: 120},
 };
-export const KayaSimpanan: React.FC<EditProps> = (p) => <Edit def={v12} {...p} />;
+export const KayaSimpanan: React.FC<EditProps> = (p) => <Edit def={v22} {...p} />;

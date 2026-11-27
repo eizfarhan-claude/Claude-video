@@ -14,9 +14,9 @@
     "preview:v8": "remotion render HargaJatuh out/preview_HargaJatuh.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v9": "remotion render SatuGram out/preview_SatuGram.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
     "preview:v10": "remotion render TigaRisiko out/preview_TigaRisiko.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
-    "preview:v11": "remotion render MenabungKaya out/preview_MenabungKaya.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
-    "preview:v12": "remotion render KayaSimpanan out/preview_KayaSimpanan.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
-    "preview:v13": "remotion render AutoDebitCabutan out/preview_AutoDebitCabutan.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
+    "preview:v21": "remotion render MenabungKaya out/preview_MenabungKaya.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v22": "remotion render KayaSimpanan out/preview_KayaSimpanan.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'",
+    "preview:v23": "remotion render AutoDebitCabutan out/preview_AutoDebitCabutan.mp4 --scale=0.5 --crf=24 --timeout=120000 --props='{\"preview\":true}'"
   },
   "dependencies": {
     "@fontsource/cinzel": "^5.3.0",
