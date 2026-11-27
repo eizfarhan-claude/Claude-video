@@ -3,6 +3,7 @@ import React from 'react';
 import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
+import {IntroFlash, TitleIntro} from '../../engine/kit2';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, CtaCard, GItem, IconCalendar, IconGift, IconRepeat, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconCheck, IconTarget} from '../../engine/ui';
@@ -45,8 +46,8 @@ const M = {
 const POSTER: [number, number] = [M.senarai - 0.15, M.semoga - 0.05];
 
 const ITEMS: GItem[] = [
-  {from: M.hook, to: E('hook') + 0.1, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconGift size={86} />} label="Menabung konsisten dalam akaun GAP" title="10 GRAM EMAS" size={72} sub="layak dapat secara percuma" subAt={r(M.percuma)} shine />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Akaun Emas GAP" line1="KONSISTEN MENABUNG" line2="10 GRAM PERCUMA" l2At={14} />
   )},
   {from: M.kempen + 0.05, to: E('kempen') + 0.1, render: (d, r) => (
     <TitleCard dur={d} icon={<IconCalendar size={80} />} label="Kempen Public Gold" title="SET UP AUTO DEBIT" size={60} sub="minimum RM200 sebulan" subAt={r(M.rm200)} />
@@ -82,10 +83,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: M.hook, f: 'whoosh_cine', v: 0.45},
-  {t: M.hook + 0.05, f: 'impact_deep', v: 0.26},
-  {t: M.layak, f: 'gold_prize', v: 0.28},
-  {t: M.percuma, f: 'sparkle', v: 0.26},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
   {t: M.kempen + 0.05, f: 'whoosh_small', v: 0.3},
   {t: M.auto, f: 'click_select', v: 0.34},
   {t: M.rm200, f: 'pop_msg', v: 0.34},
@@ -113,6 +115,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <PosterCut from={POSTER[0]} to={POSTER[1]} month="OCT 2026" rows={WINNERS} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX, [POSTER])} />
@@ -121,8 +124,9 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 
 export const v23: VideoDef = {
   id: 'v23', tl, Overlays, sfx: SFX,
-  punches: [M.layak, M.rm200, M.kaya, M.automatik, M.dapatW],
-  zoom: {hook: [1.12], kempen: [1.06, 1.0], cabutan: [1.07], senarai: [1.07], tahniah: [1.0, 1.06], fokus: [1.08], kaya: [1.08], auto: [1.0], dapat: [1.06], cta: [1.0]},
+  punches: [M.rm200, M.kaya, M.automatik, M.dapatW],
+  zoom: {hook: [1.0], kempen: [1.06, 1.0], cabutan: [1.07], senarai: [1.07], tahniah: [1.0, 1.06], fokus: [1.08], kaya: [1.08], auto: [1.0], dapat: [1.06], cta: [1.0]},
+  focus: {to: E('hook') + 0.15},
   music: {file: 'bgm.mp3', startAt: 60},
 };
 export const AutoDebitCabutan: React.FC<EditProps> = (p) => <Edit def={v23} {...p} />;

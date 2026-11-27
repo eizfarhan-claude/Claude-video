@@ -5,8 +5,14 @@
   {
    "section": "hook",
    "srcFrom": 35,
-   "durationInFrames": 235,
+   "durationInFrames": 84,
    "outFrom": 0
+  },
+  {
+   "section": "lawan",
+   "srcFrom": 119,
+   "durationInFrames": 151,
+   "outFrom": 84
   },
   {
    "section": "belanja",
@@ -109,74 +115,74 @@
   {
    "text": "suka",
    "start": 2.593,
-   "end": 2.813,
+   "end": 2.8,
    "section": "hook"
   },
   {
    "text": "Sebab",
    "start": 2.813,
    "end": 3.393,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "kita",
    "start": 3.393,
    "end": 3.553,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "lebih",
    "start": 3.553,
    "end": 3.873,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "suka",
    "start": 3.873,
    "end": 4.153,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "kepada",
    "start": 4.153,
    "end": 4.533,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "berbelanja",
    "start": 4.533,
    "end": 5.193,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "Menabung",
    "start": 5.193,
    "end": 6.053,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "ini",
    "start": 6.053,
    "end": 6.213,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "lawan",
    "start": 6.213,
    "end": 6.633,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "kepada",
    "start": 6.633,
    "end": 6.853,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "berbelanja",
    "start": 6.853,
    "end": 7.533,
-   "section": "hook"
+   "section": "lawan"
   },
   {
    "text": "jadi",

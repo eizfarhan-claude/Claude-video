@@ -35,6 +35,9 @@ export const COVERS: Record<string, CoverBProps> = {
   v12: {id: 'v12', frame: 2208, kicker: 'Penyimpan emas', white: 'TUKAR SEMUA DUIT', gold: 'JADI EMAS?', sub: '3 strategi yang lebih tepat'},
   v13: {id: 'v13', frame: 552, kicker: 'Anak muda · plan kahwin', white: 'DANA KAHWIN', gold: '50 GRAM EMAS', sub: 'Siap dalam 5 tahun'},
   v14: {id: 'v14', frame: 612, kicker: 'Plan dana haji', white: 'DANA HAJI', gold: '50 GRAM EMAS', sub: 'Cara paling mudah dalam 5 tahun'},
+  v21: {id: 'v21', frame: 540, kicker: 'Bila sebut tentang menabung', white: 'TAK SEMUA ORANG', gold: 'SUKA MENABUNG', sub: 'Tapi inilah cara bina kekayaan'},
+  v22: {id: 'v22', frame: 300, kicker: 'Gaji besar atau kecil', white: 'NAK JADI KAYA?', gold: 'BINA SIMPANAN', sub: 'Kaya bukan sebab gaji besar'},
+  v23: {id: 'v23', frame: 1260, kicker: 'Akaun Emas GAP', white: 'KONSISTEN MENABUNG', gold: '10 GRAM PERCUMA', sub: 'Senarai pemenang Okt 2026'},
 };
 
 export const CoverStills: React.FC = () => (

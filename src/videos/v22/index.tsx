@@ -3,6 +3,7 @@ import React from 'react';
 import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
+import {IntroFlash, TitleIntro} from '../../engine/kit2';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, Choices, CtaCard, EscalateCard, GItem, IconRepeat, IconX, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconCoin, IconTarget} from '../../engine/ui';
@@ -42,8 +43,8 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: M.hook, to: E('hook') + 0.1, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconTarget size={86} />} label="Nak jadi kaya? Kena buat 1 benda" title="BINA SIMPANAN" size={70} sub="yang kita tak pernah buat sebelum ini" subAt={r(M.membina)} shine />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Gaji besar atau kecil" line1="NAK JADI KAYA?" line2="BINA SIMPANAN" l2At={14} />
   )},
   {from: M.ingat + 0.05, to: M.kecil - 0.1, render: (d, r) => (
     <Choices dur={d} items={[
@@ -99,9 +100,11 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: M.hook, f: 'whoosh_cine', v: 0.45},
-  {t: M.hook + 0.05, f: 'impact_deep', v: 0.26},
-  {t: M.membina, f: 'sparkle', v: 0.26},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
   {t: M.ingat + 0.05, f: 'whoosh_small', v: 0.3},
   {t: M.tetapi, f: 'ding_correct', v: 0.3},
   {t: M.kecil - 0.1, f: 'whoosh_small', v: 0.28},
@@ -132,6 +135,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -139,8 +143,9 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 
 export const v22: VideoDef = {
   id: 'v22', tl, Overlays, sfx: SFX,
-  punches: [M.membina, M.tetapi, M.s2, M.bermula, M.tukarkan, M.rm100],
-  zoom: {hook: [1.12], ingat: [1.0, 1.06], kecil: [1.07], besar: [1.0, 1.06], mula: [1.08], cara: [1.0], emas: [1.06], plan: [1.0], stabil: [1.07], gap: [1.0, 1.06], cta: [1.0]},
+  punches: [M.tetapi, M.s2, M.bermula, M.tukarkan, M.rm100],
+  zoom: {hook: [1.0], ingat: [1.0, 1.06], kecil: [1.07], besar: [1.0, 1.06], mula: [1.08], cara: [1.0], emas: [1.06], plan: [1.0], stabil: [1.07], gap: [1.0, 1.06], cta: [1.0]},
+  focus: {to: E('hook') + 0.15},
   music: {file: 'bgm.mp3', startAt: 120},
 };
 export const KayaSimpanan: React.FC<EditProps> = (p) => <Edit def={v22} {...p} />;

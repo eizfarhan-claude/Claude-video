@@ -5,6 +5,11 @@ description: The owner's required TikTok (1080×1920) + Instagram (1080×1350) c
 
 # Cover TikTok + Instagram (owner's standing request)
 
+**Template = Style B — the owner's approved reference: `.claude/skills/cover/reference-style-b.png`**
+(v12 "Penyimpan emas / TUKAR SEMUA DUIT / JADI EMAS? / 3 strategi yang lebih tepat"). Always use this template:
+big face from the exact source frame, yellow kicker pill, white line 1, bigger gold line 2, white sub-line, dark fade
+behind the text. Code: `CoverB` + `COVERS` in `src/covers.tsx`.
+
 Owner: *"Buat cover pages sekali untuk TT dan IG"*, *"setiap final akan ada Final video + Cover IG dan TT"*.
 Every final = `<Comp>_final.mp4` + `cover_tiktok.png` (1080×1920) + `cover_instagram.png` (1080×1350);
 `scripts/final.sh <id> <Comp>` renders all three. Covers also go out with each preview (`out/covers/`).
@@ -16,10 +21,10 @@ engaged expression. Bad: pursed lips / "oo" mouth, eyes closed or half-closed, l
 # contact sheet every 3 s with frame numbers
 ffmpeg -i public/v20/source/video.mp4 -vf "select='not(mod(n\,90))',scale=150:-1,drawtext=text='%{eif\:n*90\:d}':x=4:y=4:fontsize=15:fontcolor=yellow:box=1:boxcolor=black@0.5,tile=11x4" -frames:v 1 sheet.png
 # close-ups of the best areas (crop on the face), then fix the exact frame:
-scripts/cover-frame.sh v20 3600          # -> public/covers/v20.jpg (exact still; OffthreadVideo seeks are imprecise)
+scripts/cover-frame.sh v20 3600          # -> public/covers/v20.png (exact still; OffthreadVideo seeks are imprecise)
 ```
 
-## 2. Add the cover entry (`src/covers/Cover.tsx` → `COVERS`)
+## 2. Add the cover entry (`src/covers.tsx` → `COVERS`)
 ```ts
 v20: {id: 'v20', frame: 3600, tag: 'Kos haji', line1: 'MAHAL DALAM RINGGIT', line2: 'MURAH DALAM EMAS', sub: '1998 vs hari ini'},
 ```

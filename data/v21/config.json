@@ -2,18 +2,63 @@
  "id": "v21",
  "title": "Menabung = Bina Kekayaan",
  "ranges": [
-  ["hook", 0.68, 8.70],
-  ["belanja", 9.02, 11.50],
-  ["kaya", 17.54, 21.44],
-  ["paksa", 21.44, 30.60],
-  ["why", 30.60, 37.92],
-  ["gaji", 74.96, 79.90],
-  ["peluang", 80.40, 85.18],
-  ["positif", 85.18, 91.26],
-  ["cta", 91.64, 104.20]
+  [
+   "hook",
+   0.68,
+   3.98
+  ],
+  [
+   "lawan",
+   3.98,
+   8.7
+  ],
+  [
+   "belanja",
+   9.02,
+   11.5
+  ],
+  [
+   "kaya",
+   17.54,
+   21.44
+  ],
+  [
+   "paksa",
+   21.44,
+   30.6
+  ],
+  [
+   "why",
+   30.6,
+   37.92
+  ],
+  [
+   "gaji",
+   74.96,
+   79.9
+  ],
+  [
+   "peluang",
+   80.4,
+   85.18
+  ],
+  [
+   "positif",
+   85.18,
+   91.26
+  ],
+  [
+   "cta",
+   91.64,
+   104.2
+  ]
  ],
  "cuts": [],
- "fix": {"mafaatkan": "manfaatkan", "keadaan": "kaedah", "otomatik": "automatik"},
+ "fix": {
+  "mafaatkan": "manfaatkan",
+  "keadaan": "kaedah",
+  "otomatik": "automatik"
+ },
  "drop": [],
  "pad_out": 0.2
 }

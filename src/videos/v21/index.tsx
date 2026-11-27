@@ -3,6 +3,7 @@ import React from 'react';
 import edlJson from './edl.json';
 import captionsJson from './captions.json';
 import {Edit, EditProps, Sfx, VideoDef} from '../../engine/Edit';
+import {IntroFlash, TitleIntro} from '../../engine/kit2';
 import {Edl, makeTimeline, Word} from '../../engine/timeline';
 import {ChecklistCard, Choices, CtaCard, GItem, IconCalendar, IconWallet, Schedule, Subtitles, TitleCard, motionBusy} from '../../engine/kit';
 import {IconArrowUp, IconCoin} from '../../engine/ui';
@@ -12,9 +13,9 @@ const {at, sectionStart: S, sectionEnd: E} = tl;
 
 const M = {
   hook: 0.05,
-  berbelanja: at('hook', 'berbelanja'),
-  menabung1: at('hook', 'menabung', 1),
-  lawan: at('hook', 'lawan'),
+  berbelanja: at('lawan', 'berbelanja'),
+  menabung1: at('lawan', 'menabung'),
+  lawan: at('lawan', 'lawan'),
   belanja: S('belanja'),
   sikitkan: at('belanja', 'sikitkan'),
   kaya: S('kaya'),
@@ -39,8 +40,11 @@ const M = {
 };
 
 const ITEMS: GItem[] = [
-  {from: M.hook, to: M.menabung1 - 0.1, render: (d, r) => (
-    <TitleCard dur={d} icon={<IconWallet size={86} />} label="Bila sebut tentang menabung" title="TAK SEMUA SUKA" gold={false} size={62} sub="sebab kita lebih suka berbelanja" subAt={r(M.berbelanja)} />
+  {from: 0.0, to: E('hook') + 0.15, render: (d) => (
+    <TitleIntro dur={d} tag="Bila sebut tentang menabung" line1="TAK SEMUA ORANG" line2="SUKA MENABUNG" l2At={14} />
+  )},
+  {from: E('hook') + 0.15, to: M.menabung1 - 0.1, render: (d) => (
+    <TitleCard dur={d} icon={<IconWallet size={86} />} label="Sebab kita lebih suka" title="BERBELANJA" gold={false} size={70} />
   )},
   {from: M.menabung1 - 0.1, to: M.kaya - 0.1, render: (d, r) => (
     <Choices dur={d} items={[
@@ -76,8 +80,12 @@ const ITEMS: GItem[] = [
 ];
 
 const SFX: Sfx[] = [
-  {t: M.hook, f: 'whoosh_cine', v: 0.45},
-  {t: M.hook + 0.05, f: 'impact_deep', v: 0.26},
+  {t: 0.0, f: 'whoosh_impact', v: 0.26},
+  {t: 0.1, f: 'tech_slide', v: 0.12},
+  {t: 0.2, f: 'zoom_impact', v: 0.18},
+  {t: 0.47, f: 'impact_deep', v: 0.13},
+  {t: 0.7, f: 'sparkle', v: 0.12},
+  {t: E('hook') + 0.15, f: 'whoosh_small', v: 0.28},
   {t: M.berbelanja, f: 'pop_msg', v: 0.34},
   {t: M.menabung1 - 0.1, f: 'whoosh_small', v: 0.3},
   {t: M.lawan, f: 'pop_hard', v: 0.34},
@@ -103,6 +111,7 @@ const SFX: Sfx[] = [
 
 const Overlays: React.FC<{hq: boolean}> = () => (
   <>
+    <IntroFlash />
     <Schedule items={ITEMS} total={tl.total} />
     <Subtitles words={captionsJson as Word[]} busy={motionBusy(ITEMS, SFX)} />
   </>
@@ -111,7 +120,8 @@ const Overlays: React.FC<{hq: boolean}> = () => (
 export const v21: VideoDef = {
   id: 'v21', tl, Overlays, sfx: SFX,
   punches: [M.lawan, M.membina, M.paksa1, M.kekayaan, M.bonus, M.cepat],
-  zoom: {hook: [1.12, 1.0], belanja: [1.06], kaya: [1.0], paksa: [1.07], why: [1.0], gaji: [1.06], peluang: [1.0], positif: [1.08], cta: [1.0]},
+  zoom: {hook: [1.0], lawan: [1.12, 1.0], belanja: [1.06], kaya: [1.0], paksa: [1.07], why: [1.0], gaji: [1.06], peluang: [1.0], positif: [1.08], cta: [1.0]},
+  focus: {to: E('hook') + 0.15},
   music: {file: 'bgm.mp3', startAt: 40},
 };
 export const MenabungKaya: React.FC<EditProps> = (p) => <Edit def={v21} {...p} />;
